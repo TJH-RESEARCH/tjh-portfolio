@@ -1,0 +1,38 @@
+project:
+  type: website
+
+website:
+  title: "Tommy Hodges"
+  navbar:
+    left:
+      - href: index.qmd
+        text: About
+      - href: cv/index.qmd
+        text: CV
+      - href: blog/index.qmd
+        text: Blog
+      - href: research/index.qmd
+        text: Research
+        
+    right: 
+      - text: "{{< iconify bi envelope size=1.1em title='E-mail' >}}"
+        href: "mailto:tommyjhodges@gmail.com"
+      - text: "{{< iconify bi github size=1.1em title='GitHub' >}}"
+        href: https://github.com/TJH-RESEARCH
+        rel: me
+      - text: "{{< iconify bi linkedin size=1.1em title='LinkedIn' >}}"
+        href: https://www.linkedin.com/in/tom-hodges
+        rel: me
+        
+
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+editor: visual
+

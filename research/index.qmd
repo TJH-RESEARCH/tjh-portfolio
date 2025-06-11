@@ -1,0 +1,29 @@
+---
+title: "Research"
+listing:
+  - id: articles
+    contents: "articles/*/index.qmd"
+    sort: "date desc"
+    categories: true
+  - id: reviews
+    contents: "reviews/*/index.qmd"
+    sort: "date desc"
+    categories: true
+page-layout: full
+include-back-link: false
+toc-location: right
+---
+
+My research focuses on mental health, conflict resolution, and identity.
+
+## Journal articles
+
+::: {#articles}
+:::
+
+## Book and Film Reviews
+
+::: {#reviews}
+:::
+
+## 

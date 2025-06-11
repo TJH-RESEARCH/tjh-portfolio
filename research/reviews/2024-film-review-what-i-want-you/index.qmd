@@ -1,0 +1,35 @@
+---
+title: "Seeking justice through moral injury: A review of the documentary film What I Want You to Know"
+date: 2024-11-01
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+categories:
+  - Moral Injury
+  - Veterans
+  - International Conflict
+pub-info:
+  links:
+    - name: Final version
+      url: https://www.peacejusticestudies.org/wp-content/uploads/2024/10/Seeking-Justice-Through-Moral-Injury-A-Review-of-the-Documentary-Film-What-I-Want-You-to-Know.pdf
+      icon: fa-solid fa-scroll
+---
+
+## Important links
+
+-   [Paper](https://www.peacejusticestudies.org/wp-content/uploads/2024/10/Seeking-Justice-Through-Moral-Injury-A-Review-of-the-Documentary-Film-What-I-Want-You-to-Know.pdf)
+
+## Abstract
+
+Throughout *What I Want You to Know*, we see how the loss of a purpose for fighting tips the moral scales.
+
+## Citation
+
+``` bibtex
+@article{Hodges:2024,
+    Author = {Thomas J. Hodges},
+    Journal = {Peace Chronicle},
+    Title = {Seeking justice through moral injury: A review of the documentary film What I Want You to Know},
+    Year = {2024}}
+```

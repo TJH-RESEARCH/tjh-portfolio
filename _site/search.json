@@ -1,0 +1,219 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Tommy Hodges",
+    "section": "",
+    "text": "I am Tommy Hodges, a researcher, data scientist, and conflict management specialist.\nI am an expert in people analytics, with expertise in designing, delivering, and evaluating employee wellness programs as an organizational psychologist, resulting in 38 organizational health assessments.\nI am a leader in survey design, with extensive experience collecting employee wellness data, having administered 24 unique surveys that have collected over 13.6K responses from employees and community members.\nI am fluent in mixed methods research and data science, conducting data collection, survey design, focus groups, data cleaning, statistical analysis, and data visualization, with expertise in R, and proficiency in git, python, and SQL, demonstrated in 9 publications and 23 public presentations.\nFinally, I have strong business acumen and communication skills, with ability to translate complex data science concepts in written documents, verbal presentations, and data visualizations, mentoring 13 junior analysts."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Blog Posts",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "This is my longform academic C.V. For a professional resume, send me an email.\n[CV Document]"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "research/research.html",
+    "href": "research/research.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research focuses on mental health, conflict resolution, and identity. {{&lt; ai blank-just-to-add-ai-dependency-to-this-page &gt;}}"
+  },
+  {
+    "objectID": "research/research.html#journal-articles",
+    "href": "research/research.html#journal-articles",
+    "title": "Research",
+    "section": "Journal articles",
+    "text": "Journal articles\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research focuses on mental health, conflict resolution, and identity."
+  },
+  {
+    "objectID": "research.html#journal-articles",
+    "href": "research.html#journal-articles",
+    "title": "Research",
+    "section": "Journal articles",
+    "text": "Journal articles\n\n\n\n\n\n\n\n\n\n\nMoral injury and identity: Examining moral injury as identity loss and identity change\n\n\n\n\n\n\nMoral Injury\n\n\nIdentity\n\n\nReintegration\n\n\nVeterans\n\n\n\n\n\n\n\n\n\nInvalid Date\n\n\nThomas J. Hodges, Tyler L. Collette, Brian A. Moore\n\n\n\n\n\n\n\n\n\n\n\n\nRethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment\n\n\n\n\n\n\nIdentity\n\n\nMilitary Health\n\n\nReintegration\n\n\nVeterans\n\n\n\n\n\n\n\n\n\nApr 17, 2025\n\n\nThomas J. Hodges, Nilofer K. Bharwani, Eric Manley, Darlene Xiomara Rodriguez\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/articles/2025-moral-injury-identity/index.html",
+    "href": "research/articles/2025-moral-injury-identity/index.html",
+    "title": "Moral injury and identity: Examining moral injury as identity loss and identity change",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/articles/2025-moral-injury-identity/index.html#important-links",
+    "href": "research/articles/2025-moral-injury-identity/index.html#important-links",
+    "title": "Moral injury and identity: Examining moral injury as identity loss and identity change",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/articles/2025-moral-injury-identity/index.html#abstract",
+    "href": "research/articles/2025-moral-injury-identity/index.html#abstract",
+    "title": "Moral injury and identity: Examining moral injury as identity loss and identity change",
+    "section": "Abstract",
+    "text": "Abstract\nAlthough it is widely accepted among theorists and clinicians that moral injury can affect identity, these claims are rarely specified, let alone investigated empirically. Among scholars of moral injury, an emerging explanation is that moral injury leads to a loss of identity. However, psychologists studying the relationship between identity and trauma argue that some traumatic experiences can reaffirm a person’s identity. Such reaffirmation may lead to a maintenance of identity rather than a loss, helping people make sense of traumatic experiences and be resilient to traumatic stress disorders. Drawing on this model, the Social Identity Model of Identity Change, the current article discusses these two potential processes—identity loss and identity maintenance—in the case of military moral injury. Using data from a survey of United States veterans, it models an indirect association between morally traumatic experiences and moral injury symptoms via military identity. The results indicate that identity is related to moral injury symptoms, although it is unclear if potentially morally injurious events are associated with identity. Moreover, the results depend on how identity is operationalized."
+  },
+  {
+    "objectID": "research/articles/2025-moral-injury-identity/index.html#citation",
+    "href": "research/articles/2025-moral-injury-identity/index.html#citation",
+    "title": "Moral injury and identity: Examining moral injury as identity loss and identity change",
+    "section": "Citation",
+    "text": "Citation\n\n{{&lt; ai zotero &gt;}} Add to Zotero {{&lt; fa square-arrow-up-right &gt;}}\n\n@article{HodgesColletteMoore:2025,\n    Author = {Thomas J. Hodges and Tyler L. Collette and Brian A. Moore},\n    Doi = {10.1037/trm0000587},\n    Journal = {Traumatology},\n    Title = {Moral injury and identity: Examining moral injury as identity loss and identity change},\n    Year = {2025}}"
+  },
+  {
+    "objectID": "research/articles/2025-rethinking-acculturation/index.html",
+    "href": "research/articles/2025-rethinking-acculturation/index.html",
+    "title": "Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/articles/2025-rethinking-acculturation/index.html#important-links",
+    "href": "research/articles/2025-rethinking-acculturation/index.html#important-links",
+    "title": "Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/articles/2025-rethinking-acculturation/index.html#abstract",
+    "href": "research/articles/2025-rethinking-acculturation/index.html#abstract",
+    "title": "Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment",
+    "section": "Abstract",
+    "text": "Abstract\nVeterans are like migrants, at least according to some military researchers. When service members leave the military, they leave a strong military culture for civilian life, needing to adapt socially, psychologically, and economically to their new life. Confusing this comparison between veterans and migrants; however, is that some veterans are also migrants, born outside their country of military service, raising the question of whether leaving the military is on par with migration as an intercultural transition. Drawing on the example of foreign-born service members, we problematize the notion of “civilian culture.” Then, we reformulate military acculturation theory as military-civilian biculturalism and put forward six questions forming an agenda for future research."
+  },
+  {
+    "objectID": "research/articles/2025-rethinking-acculturation/index.html#citation",
+    "href": "research/articles/2025-rethinking-acculturation/index.html#citation",
+    "title": "Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment",
+    "section": "Citation",
+    "text": "Citation\n\n{{&lt; ai zotero &gt;}} Add to Zotero {{&lt; fa square-arrow-up-right &gt;}}\n\n@article{HodgesBharwaniManleyRodriguez:2025,\n    Author = {Thomas J. Hodges and Nilofer K. Bharwani and Eric Manley and Darlene Xiomara Rodriguez},\n    Doi = {10.21061/jvs.v11i1.678},\n    Journal = {Journal of Veterans Studies},\n    Title = {Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment},\n    Year = {2025}}"
+  },
+  {
+    "objectID": "cv/index.html",
+    "href": "cv/index.html",
+    "title": "Curriculum vitae",
+    "section": "",
+    "text": "This is my long-form academic C.V. For a professional resume, send me an email."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research focuses on mental health, conflict resolution, and identity."
+  },
+  {
+    "objectID": "research/index.html#journal-articles",
+    "href": "research/index.html#journal-articles",
+    "title": "Research",
+    "section": "Journal articles",
+    "text": "Journal articles\n\n\n\n\n\n\n\n\n\n\nMoral injury and identity: Examining moral injury as identity loss and identity change\n\n\n\n\n\n\nMoral Injury\n\n\nIdentity\n\n\nReintegration\n\n\nVeterans\n\n\n\n\n\n\n\n\n\nJun 6, 2025\n\n\nThomas J. Hodges, Tyler L. Collette, Brian A. Moore\n\n\n\n\n\n\n\n\n\n\n\n\nRethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment\n\n\n\n\n\n\nIdentity\n\n\nMilitary Health\n\n\nReintegration\n\n\nVeterans\n\n\n\n\n\n\n\n\n\nApr 17, 2025\n\n\nThomas J. Hodges, Nilofer K. Bharwani, Eric Manley, Darlene Xiomara Rodriguez\n\n\n\n\n\n\n\n\n\n\n\n\nFemale leadership in climate change mitigation and environmental sustainability\n\n\n\n\n\n\nGender\n\n\nClimate Change\n\n\nGlobal Development\n\n\nManagement\n\n\n\n\n\n\n\n\n\nAug 15, 2024\n\n\nThomas J. Hodges, Nilofer K. Bharwani, Darlene Xiomara Rodriguez\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#book-and-film-reviews",
+    "href": "research/index.html#book-and-film-reviews",
+    "title": "Research",
+    "section": "Book and Film Reviews",
+    "text": "Book and Film Reviews\n\n\n\n\n\n\n\n\n\n\nSeeking justice through moral injury: A review of the documentary film What I Want You to Know\n\n\n\n\n\n\nMoral Injury\n\n\nVeterans\n\n\nInternational Conflict\n\n\n\n\n\n\n\n\n\nNov 1, 2024\n\n\nThomas J. Hodges\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/articles/2024-just-lider-no/index.html",
+    "href": "research/articles/2024-just-lider-no/index.html",
+    "title": "Female leadership in climate change mitigation and environmental sustainability",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/articles/2024-just-lider-no/index.html#important-links",
+    "href": "research/articles/2024-just-lider-no/index.html#important-links",
+    "title": "Female leadership in climate change mitigation and environmental sustainability",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/articles/2024-just-lider-no/index.html#abstract",
+    "href": "research/articles/2024-just-lider-no/index.html#abstract",
+    "title": "Female leadership in climate change mitigation and environmental sustainability",
+    "section": "Abstract",
+    "text": "Abstract\nAs environmental disasters disproportionately affect women, international guidelines to address the disparity focus on the inclusion of women in disaster risk reduction programs. While inclusion is a noble pursuit, it may fall short of equitable outcomes and instead lead to tokenization. Drawing on standpoint feminism and intersectionality, the goal of this study was to investigate tensions between inclusion and equity for women working in disaster risk reduction. We interviewed women from Ecuador and Tajikistan and asked them about the ways that gender shapes their experiences working in disaster risk reduction. We found that the women reflect upon themselves as agents with various forms of privilege and disadvantage, based on their multifaceted identities and differing levels of perceived discrimination within their professions. The findings suggest that inclusion, while necessary, can fall short of its promises. We recommend that organizational guidelines make everyone responsible for fostering equitable workplaces for disaster risk reduction."
+  },
+  {
+    "objectID": "research/articles/2024-just-lider-no/index.html#citation",
+    "href": "research/articles/2024-just-lider-no/index.html#citation",
+    "title": "Female leadership in climate change mitigation and environmental sustainability",
+    "section": "Citation",
+    "text": "Citation\n@article{BharwaniHodgesLepadatuRodriguez:2024,\n    Author = {Nilofer K. Bharwani and Thomas J. Hodges and Darina Lepadatu and Darlene Xiomara Rodriguez},\n    Doi = {10.1088/2752-5295/ad6a7a},\n    Journal = {Environmental Research: Climate},\n    Title = {Female leadership in climate change mitigation and environmental sustainability},\n    Year = {2024}}"
+  },
+  {
+    "objectID": "research/reviews/2024-film-review-what-i-want-you/index.html",
+    "href": "research/reviews/2024-film-review-what-i-want-you/index.html",
+    "title": "Seeking justice through moral injury: A review of the documentary film What I Want You to Know",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/reviews/2024-film-review-what-i-want-you/index.html#important-links",
+    "href": "research/reviews/2024-film-review-what-i-want-you/index.html#important-links",
+    "title": "Seeking justice through moral injury: A review of the documentary film What I Want You to Know",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/reviews/2024-film-review-what-i-want-you/index.html#abstract",
+    "href": "research/reviews/2024-film-review-what-i-want-you/index.html#abstract",
+    "title": "Seeking justice through moral injury: A review of the documentary film What I Want You to Know",
+    "section": "Abstract",
+    "text": "Abstract\nThroughout What I Want You to Know, we see how the loss of a purpose for fighting tips the moral scales."
+  },
+  {
+    "objectID": "research/reviews/2024-film-review-what-i-want-you/index.html#citation",
+    "href": "research/reviews/2024-film-review-what-i-want-you/index.html#citation",
+    "title": "Seeking justice through moral injury: A review of the documentary film What I Want You to Know",
+    "section": "Citation",
+    "text": "Citation\n@article{Hodges:2024,\n    Author = {Thomas J. Hodges},\n    Journal = {Peace Chronicle},\n    Title = {Seeking justice through moral injury: A review of the documentary film What I Want You to Know},\n    Year = {2024}}"
+  }
+]

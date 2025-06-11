@@ -1,0 +1,13 @@
+---
+title: "Tommy Hodges"
+---
+
+I am Tommy Hodges, a researcher, data scientist, and conflict management specialist.
+
+I am an expert in people analytics, with expertise in designing, delivering, and evaluating employee wellness programs as an organizational psychologist, resulting in 38 organizational health assessments.
+
+I am a leader in survey design, with extensive experience collecting employee wellness data, having administered 24 unique surveys that have collected over 13.6K responses from employees and community members.
+
+I am fluent in mixed methods research and data science, conducting data collection, survey design, focus groups, data cleaning, statistical analysis, and data visualization, with expertise in R, and proficiency in git, python, and SQL, demonstrated in 9 publications and 23 public presentations.
+
+Finally, I have strong business acumen and communication skills, with ability to translate complex data science concepts in written documents, verbal presentations, and data visualizations, mentoring 13 junior analysts.

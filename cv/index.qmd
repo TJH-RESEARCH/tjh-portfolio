@@ -1,0 +1,13 @@
+---
+title: Curriculum vitae
+description: "Tommy Hodges' CV"
+date: 2025-01-01
+title-block-banner: "#000000"
+published-title: CV last updated
+engine: knitr
+freeze: false
+cv:
+  pdf: "#curriculum-vitae.pdf"
+---
+
+This is my long-form academic C.V. For a professional resume, send me an email.
