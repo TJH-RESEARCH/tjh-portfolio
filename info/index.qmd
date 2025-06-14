@@ -1,0 +1,5 @@
+---
+title: "Info"
+---
+
+-   This site took inspiration from Andrew Heiss' [excellent website and blog](https://www.andrewheiss.com).
