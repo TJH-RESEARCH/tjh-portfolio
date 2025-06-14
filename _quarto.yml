@@ -23,13 +23,17 @@ website:
       - text: "{{< iconify bi linkedin size=1.1em title='LinkedIn' >}}"
         href: https://www.linkedin.com/in/tom-hodges
         rel: me
-        
+
+  page-footer:
+    center: |
+      <span>{{< fa brands creative-commons >}} {{< var years >}} Tommy Hodges </span>
+       <span>{{< fa brands orcid >}} <strong>ORCID</strong> [{{< var orcid >}}](https://orcid.org/{{< var orcid >}})</span>
 
 
 format:
   html:
     theme:
-      - cosmo
+      - lux
       - brand
     css: styles.css
     toc: true

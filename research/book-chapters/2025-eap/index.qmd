@@ -1,0 +1,55 @@
+---
+title: "Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters"
+date: 2025-06-12
+author:
+  - name: Thomas J. Hodges
+    orcid: "{{var orcid}}"
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+    
+  - name: Kristin A. Horan
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Adrian Alicea
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Edwin Trejo-Rivera
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Sophie R. Vincent
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Phaina Dubuisson
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Katherine Moore
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Bianca Channer
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Chris Hess
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Brian A. Moore
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+    
+categories:
+  - Management
+  - Organizational Psychology
+  - Mental Health
+  - First Responders
+pub-info:
+  links:
+    - name: 
+      url: 
+      icon: fa-solid fa-scroll
+---
+
+## Important links
+
+## Abstract
+
+...
+
+## Citation
+
+``` bibtex
+@unpublished{Hodges:2024,
+    Author = {Thomas J. Hodges and Kristin A. Horan and Adrian Alicea and Edwin Trejo-Rivera and Sophie R. Vincent and Phaina Dubuisson and Katherine Moore and Bianca Channer and Chris Hess and Brian A. Moore},
+    Book = {Advances in first responder mental health: Research, training, and practice},
+    Title = {Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters},
+    Editor = {},
+    Year = {2025}}
+```

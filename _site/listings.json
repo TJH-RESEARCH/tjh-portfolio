@@ -24,14 +24,21 @@
   },
   {
     "listing": "/blog/index.html",
-    "items": []
+    "items": [
+      "/blog/posts/reproducible-workflows/index.html",
+      "/blog/posts/simulation-for-power-analysis/index.html",
+      "/blog/posts/simulation-p-values/index.html"
+    ]
   },
   {
     "listing": "/research/index.html",
     "items": [
       "/research/articles/2025-moral-injury-identity/index.html",
       "/research/articles/2025-rethinking-acculturation/index.html",
+      "/research/articles/2024-la-senorita/index.html",
       "/research/articles/2024-just-lider-no/index.html",
+      "/research/articles/2022-avp/index.html",
+      "/research/articles/2024-ssmvs/index.html",
       "/research/reviews/2024-film-review-what-i-want-you/index.html"
     ]
   }

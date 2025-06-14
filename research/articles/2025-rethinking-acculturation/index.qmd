@@ -3,10 +3,10 @@ title: "Rethinking Acculturation and Military Transition: An Agenda for Military
 date: 2025-04-17
 author:
   - name: Thomas J. Hodges
-    orcid: 0000-0002-5184-7346
+    orcid: "{{< var orcid >}}"
     affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
   - name: Nilofer K. Bharwani
-    orcid: 0009-0000-6078-4431
+    orcid: "{{< var orcid_bharwani >}}"
     affiliation: School of Conflict Management, Peacebuilding, and Development, Kennesaw State University
   - name: Eric Manley
     affiliation: School of Conflict Management, Peacebuilding, and Development, Kennesaw State University

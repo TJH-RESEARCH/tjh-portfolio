@@ -3,10 +3,10 @@ title: "Female leadership in climate change mitigation and environmental sustain
 date: 2024-08-15
 author:
   - name: Thomas J. Hodges
-    orcid: 0000-0002-5184-7346
+    orcid: "{{< var orcid >}}"
     affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
   - name: Nilofer K. Bharwani
-    orcid: 0009-0000-6078-4431
+    orcid: "{{< var orcid_bharwani >}}"
     affiliation: School of Conflict Management, Peacebuilding, and Development, Kennesaw State University
   - name: Darlene Xiomara Rodriguez
     orcid: 0000-0001-6627-1899

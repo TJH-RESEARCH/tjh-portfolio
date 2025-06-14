@@ -1,0 +1,46 @@
+---
+title: "Conflict resolution workshops for service members and families: The potentials of Alternatives to Violence Project (AVP) to address military domestic violence"
+date: 2022-09-01
+author:
+  - name: Thomas J. Hodges
+    orcid: "{{< var orcid >}}"
+    affiliation: School of Conflict Management, Peacebuilding and Development, Kennesaw State University
+  - name: Shubam Sharma
+    affiliation: Department of Psychological Science, Kennesaw State University
+  - name: Déja S. Nicolas
+    affiliation: College of Life Sciences, Thomas Jefferson University
+  - name: Brian A. Moore
+    affiliation: Department of Psychological Science, Kennesaw State University
+categories:
+  - Conflict Management
+  - Gender
+  - Veterans
+pub-info:
+  links:
+    - name: Final version
+      url: https://linkinghub.elsevier.com/retrieve/pii/S1359178922000179
+      icon: fa-solid fa-scroll
+    - name: Add to Zotero
+      url: https://www.zotero.org/save?type=doi&q=10.1016/j.avb.2022.101736
+      icon: ai ai-zotero
+doi: 10.1016/j.avb.2022.101736
+---
+
+## Important links
+
+-   [Paper](https://linkinghub.elsevier.com/retrieve/pii/S1359178922000179)
+
+## Abstract
+
+Although the violence of war is well-known, members of the United States military also struggle with domestic violence, including intimate partner violence and child abuse and neglect. The prevalence of domestic violence is not necessarily higher in the military than in the general population. However, military domestic violence does occur under institutional and cultural conditions quite different from civilian life. Further, service members are at elevated risk for health dysfunctions that can contribute to violence. The current review delineates how domestic violence in the military may be reduced by Alternatives to Violence Project, a widely used, community-based training program in conflict resolution. Specifically, we suggest Alternatives to Violence Project facilitates space to learn interpersonal skills and engage in creative discussions about the stresses and cultural norms that contribute to domestic violence in the military. As Alternatives to Violence Project and similar training does not change the stressors of military life, nor has extensive research documented its impact on violence, additional work is needed. This manuscript represents a first step toward situating conflict resolution in a framework for military domestic violence reduction, showing the potentials and limitations of Alternatives to Violence Project and making recommendations for future research and interventions.
+
+## Citation
+
+``` bibtex
+@article{HodgesSharmaNicolasMoore:2022,
+    Author = {Thomas J. Hodges and Shubam Sharma and Déja S. Nicholas and Brian A. Moore},
+    Doi = {10.1016/j.avb.2022.101736},
+    Journal = {Aggression and Violent Behavior},
+    Title = {Conflict resolution workshops for service members and families: The potentials of Alternatives to Violence Project (AVP) to address military domestic violence},
+    Year = {2022}}
+```

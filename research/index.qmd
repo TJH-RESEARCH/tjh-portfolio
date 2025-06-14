@@ -14,7 +14,7 @@ include-back-link: false
 toc-location: right
 ---
 
-My research focuses on mental health, conflict resolution, and identity.
+My research spans fields including organizational psychology, health, conflict resolution, and international affairs.
 
 ## Journal articles
 
@@ -25,5 +25,13 @@ My research focuses on mental health, conflict resolution, and identity.
 
 ::: {#reviews}
 :::
+
+## 
+
+## Book Chapters
+
+<div>
+
+</div>
 
 ## 

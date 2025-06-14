@@ -1,8 +1,8 @@
 ---
 title: "Blog"
 listing: 
-  contents: blog # this name matchs the subdirectory for the blog posts
-  type: grid # or `default` or `table`
-  sort: "date desc" # can also sort on more than one field
-  categories: true # allows you to sort posts by assigned categories 
+    contents: "posts/*/index.qmd"
+    type: default # or `default` or `table`
+    sort: "date desc" # can also sort on more than one field
+    categories: true # allows you to sort posts by assigned categories 
 ---

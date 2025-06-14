@@ -1,0 +1,18 @@
+---
+title: "Reproducible Workflows for Data Science and Analytics"
+description: ""
+author:
+  - name: Tommy Hodges
+    url: 
+    orcid: 
+    affiliation: Center for the Advancement of Military and Emergency Services Research, Kennesaw State University
+affiliation-url: https://www.kennesaw.edu/research/centers-facilities/ames-center/index.php
+date: 2025-06-11
+#categories: \[R, Statistics, Research Design\] \# self-defined categories
+#citation: 
+#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
+#image: 
+draft: true \# setting this to \`true\` will prevent your post from appearing on your listing page until you're ready!
+---
+
+## 
