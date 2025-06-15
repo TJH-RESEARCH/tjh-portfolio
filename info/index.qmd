@@ -2,4 +2,5 @@
 title: "Info"
 ---
 
--   This site took inspiration from Andrew Heiss' [excellent website and blog](https://www.andrewheiss.com).
+-   I took inspiration for this site from Andrew Heiss' [excellent website and blog](https://www.andrewheiss.com).
+-   I used [Quarto](https://quarto.org/docs/websites/) to create the site.
