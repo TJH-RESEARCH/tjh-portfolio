@@ -1,5 +1,9 @@
 [build]
-  command = "bash install_quarto.sh && quarto render"
+  command = """
+    wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.550/quarto-1.4.550-linux-amd64.tar.gz &&
+    tar -xvzf quarto-1.4.550-linux-amd64.tar.gz &&
+    ./quarto-1.4.550/bin/quarto render
+  """
   publish = "_site"
 
 [build.environment]
