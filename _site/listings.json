@@ -1,7 +1,9 @@
 [
   {
     "listing": "/blog/index.html",
-    "items": []
+    "items": [
+      "/blog/posts/simulation-for-power-analysis/index.html"
+    ]
   },
   {
     "listing": "/research/index.html",

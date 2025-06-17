@@ -20,23 +20,25 @@ $gray-900: #212529 !default;
 $black:    #000 !default;
 
 
-$red:     #b24422 !default;
-$pink:    #c44d76 !default;
-$teal:    #4457a5 !default;
-$blue:    #13315f !default;
-$purple:  #b1a1cc !default;
-$indigo:  #59386c !default;
-$green:   #447861 !default;
-$cyan:    #7caf5c !default;
+
+
+
+
+$red:     #931e18 !default;
+$orange:  #da7901 !default;
+$yellow:  #f0be3d !default;
+$blue:    #04a3bd !default;
+$indigo:  #20235b !default;
+$green:   #247d3f !default;
 
 // $orange:  #e95420 !default;
 // $yellow:  #efb73e !default;
 
-$primary:       $teal !default;
+$primary:       $indigo !default;
 $secondary:     $gray-500 !default;
-$success:       $cyan !default;
+$success:       $green !default;
 $info:          $green !default;
-$warning:       $pink !default;
+$warning:       $orange !default;
 $danger:        $red !default;
 $light:         $gray-200 !default;
 $dark:          $indigo !default;
@@ -48,15 +50,15 @@ $min-contrast-ratio:   1.8 !default;
 $body-color:                $gray-800 !default;
 
 // Links
-$link-color: $red !default;
+$link-color: $orange !default;
 $link-decoration: none !default;
-$link-hover-color: $purple !default;
+$link-hover-color: $orange !default;
 $link-hover-decoration: underline !default;
 
 // Navbar
-$navbar-bg: $blue !default;
+$navbar-bg: $gray-900 !default;
 $navbar-fg: $white !default;
-$navbar-hl: $cyan !default;
+$navbar-hl: $green !default;
 
 // Title Banner
 $banner-bg: $gray-800;

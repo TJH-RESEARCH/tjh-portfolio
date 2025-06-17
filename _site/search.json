@@ -331,8 +331,36 @@
   {
     "objectID": "info/index.html",
     "href": "info/index.html",
-    "title": "Info",
+    "title": "Site Info",
     "section": "",
-    "text": "I took inspiration for this site from Andrew Heiss’ excellent website and blog.\nI used Quarto to create the site."
+    "text": "I took inspiration for this site from Andrew Heiss’ excellent website and blog.\nI used Quarto to create the site.\nThe color scheme for the site comes from the Lakota palette in the MetBrewer library for R and Python. The palettes are Inspired by displays at the Metropolitan Museum of Art in New York Specifically, I use the Lakota palette."
+  },
+  {
+    "objectID": "blog/posts/simulation-for-power-analysis/index.html",
+    "href": "blog/posts/simulation-for-power-analysis/index.html",
+    "title": "Why your employees aren’t engaging with your employee engagement survey",
+    "section": "",
+    "text": "Tl;dr: they don’t trust that your survey is truly anonymous, they think you’ll use it against them, and they might be right. I’ll tell you how to solve that.\nPeople don’t trust surveys.\nEmployees think they are being spied on. They think an engagement survey is an elaborate trap to find people who are not committed to the organization. For certain occupations, the fear is even worse. For example, police officers might worry that a mental health survey will be used to label them as unfit for duty.\nEven outside of the workplace, people might fear their data is used to label  them as problematic. Or with public polling surveys, like the ones used in the run up to an election, people can mistrust pollsters or the news media that will report on the poll.\nThe good news is that these fears are mostly unfounded. People analytics teams want to improve workplaces, not surveil deviant workers. When we run health surveys at the AMES Research Center, we use to data to tailor services for our client’s specific needs.\nStill, survey fears are problem for survey admins trying to do the right thing. Fear can lead to low participation. It can also cause participants to lie on their survey. Or they might respond carelessly in other ways, such as “straightlining” or “Christmas treeing.”\nOne easy workaround is to make surveys anonymous. The survey’s don’t ask for your name, so how can they be used to track you and punish you? This poses a problem, however, for longitudinal surveys: those where you want to survey the same people at repeated points over time.\nIn this post I’ll tell you how we solve these problems of trust, anonymity, and data qualiity in our work with organizations and communities and the problems we still face. I will also demonstrate how to clean bad data with R and why linking surveys over time helps your statistical analysis."
+  },
+  {
+    "objectID": "blog/posts/simulation-for-power-analysis/index.html#is-your-survey-really-anonymous",
+    "href": "blog/posts/simulation-for-power-analysis/index.html#is-your-survey-really-anonymous",
+    "title": "Why your employees aren’t engaging with your employee engagement survey",
+    "section": "Is your survey really anonymous?",
+    "text": "Is your survey really anonymous?\nWhenever possible, you should make your surveys anonymous. Truly anonymous. To start, this means you should not ask participants their name. But there are other ways to identify responses. Survey hosts such as Qualtrics collect IP Address, Latitude, and Longitude by default, even for its “anonymous” QR code or link. You can and should disable this. Then you should tell your participants that you disabled them. Build trust by being open and transparent and by making strong claims about how you are protecting their privacy."
+  },
+  {
+    "objectID": "blog/posts/simulation-for-power-analysis/index.html#is-your-survey-really-benevolent",
+    "href": "blog/posts/simulation-for-power-analysis/index.html#is-your-survey-really-benevolent",
+    "title": "Why your employees aren’t engaging with your employee engagement survey",
+    "section": "Is your survey really benevolent?",
+    "text": "Is your survey really benevolent?"
+  },
+  {
+    "objectID": "blog/posts/simulation-for-power-analysis/index.html#anonymous-surveys-a-partial-solution",
+    "href": "blog/posts/simulation-for-power-analysis/index.html#anonymous-surveys-a-partial-solution",
+    "title": "Why your employees aren’t engaging with your employee engagement survey",
+    "section": "Anonymous Surveys: A Partial Solution",
+    "text": "Anonymous Surveys: A Partial Solution"
   }
 ]
