@@ -1,0 +1,123 @@
+/*-- scss:defaults --*/
+// quarto-scss-analysis-annotation { "origin": "united (builtin theme)" }
+
+$theme: "united" !default;
+
+//
+// Color system
+//
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #aea79f !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #333 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+
+$red:     #b24422 !default;
+$pink:    #c44d76 !default;
+$teal:    #4457a5 !default;
+$blue:    #13315f !default;
+$purple:  #b1a1cc !default;
+$indigo:  #59386c !default;
+$green:   #447861 !default;
+$cyan:    #7caf5c !default;
+
+// $orange:  #e95420 !default;
+// $yellow:  #efb73e !default;
+
+$primary:       $teal !default;
+$secondary:     $gray-500 !default;
+$success:       $cyan !default;
+$info:          $green !default;
+$warning:       $pink !default;
+$danger:        $red !default;
+$light:         $gray-200 !default;
+$dark:          $indigo !default;
+
+$min-contrast-ratio:   1.8 !default;
+
+// Body
+
+$body-color:                $gray-800 !default;
+
+// Links
+$link-color: $red !default;
+$link-decoration: none !default;
+$link-hover-color: $purple !default;
+$link-hover-decoration: underline !default;
+
+// Navbar
+$navbar-bg: $blue !default;
+$navbar-fg: $white !default;
+$navbar-hl: $cyan !default;
+
+// Title Banner
+$banner-bg: $gray-800;
+$banner-text: $white;
+
+// Footer
+$footer-bg: $gray-900 !default;
+$footer-fg: $gray-200 !default;
+
+
+
+// Fonts
+
+// stylelint-disable-next-line value-keyword-case
+$font-body: Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-heading: Oswald, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:      Oswald, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+
+
+// Tables
+
+$table-dark-bg:               $dark !default;
+$table-dark-border-color:     darken($dark, 5%) !default;
+
+
+
+/*-- scss:rules --*/
+
+
+// Fonts 
+body {
+  font-family: $font-body;
+}
+
+h1, h2, h3, h4, h5, h6,
+.title, .title-block-title {
+  font-family: $font-heading;
+}
+
+
+// Title Block Banners
+.quarto-title-banner {
+  background-color: $banner-bg;
+  color: $banner-text;
+}
+
+// Variables
+
+$web-font-path: "https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Ubuntu:wght@400;700&display=swap" !default;
+@if $web-font-path {
+  @import url($web-font-path);
+}
+
+// Indicators
+
+.badge {
+  &.bg-light {
+    color: $body-color;
+  }
+}
+
+
+// quarto-scss-analysis-annotation { "origin": null }

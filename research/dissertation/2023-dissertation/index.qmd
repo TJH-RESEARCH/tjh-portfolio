@@ -1,0 +1,36 @@
+---
+title: "Moral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans"
+date: 2023-12-06
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+categories:
+  - Moral Injury
+  - Veterans
+  - Health
+  - Reintegration
+pub-info:
+  links:
+    - name: Final version
+      url: https://digitalcommons.kennesaw.edu/incmdoc_etd/52/
+      icon: fa-solid fa-scroll
+---
+
+## Important links
+
+-   [Paper](https://digitalcommons.kennesaw.edu/incmdoc_etd/52/)
+
+## Abstract
+
+How do military moral injuries affect reintegration? All service members leave the military eventually, but reintegration can be challenging, bringing changes in career, family life, and friendships, potentially prompting a loss of purpose, drive, and connection. Service members may also struggle with a crisis of identity upon separating from the military, feeling their military identity is incompatible with civilian life. While these difficulties are common for service members in reintegration, they may be worsened by moral injury, the adverse biological, social, psychological, and spiritual effects of experiencing an event that deeply offends a person’s sense of right and wrong. People with moral injuries may experience severe inner conflict, guilt, shame, and loss of trust in self, others, and a higher power. These issues may impede reintegration, causing disconnect and alienation in civilian life. Experts believe moral injuries can prompt crises of identity in their own right, which may compound the identity dissonance that commonly follows military separation, although few studies have tried to confirm this belief. In this dissertation, I conceptualize reintegration and identity dissonance, using higher education and family life as examples and drawing on two articles I previously co-authored. I articulate a theoretical framework based on the study of acculturation, the adaptation of people undergoing an international transition. Using evidence from a cross-sectional survey of separated United States service members, I test if moral injury symptoms are associated with reintegration difficulty and to what extent identity dissonance mediates this relationship observed in the sample.
+
+## Citation
+
+``` bibtex
+@phdthesis{Hodges:2023,
+    Author = {Thomas J. Hodges},
+    Title = {Moral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans},
+    School = {Kennesaw State University},
+    Year = {2023}}
+```
