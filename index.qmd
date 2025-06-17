@@ -1,21 +1,11 @@
 ---
-title: "Tommy Hodges"
+title: "About Me"
 ---
 
-I am Tommy Hodges, a people analytics expert, combining academic rigour with business acumen.\
+I am Thomas Hodges, a data scientist, research, and expert in people analytics.\
 \
-During my PhD studies, I helped to found the AMES Research Center. We use analytics and research-based programs to improve the workplace wellbeing of veterans, police, firefighters, and medics. In 3 years, we grew to a staff of 20 with a yearly revenue of \$1.9M in contracts and grants. We have trained 1.6K employees and conducted assessments for 38 client organizations and 13.5K personnel.\
+During my PhD studies, I helped to found the [AMES Research Center](https://www.kennesaw.edu/research/centers-facilities/ames-center/index.php). We use analytics and research-based programs to improve the workplace well-being of veterans, police, firefighters, and medics. In 3 years, we grew to a staff of 20 with a yearly revenue of \$1.9M in contracts and grants. We have trained 1.6K employees and conducted assessments for 38 client organizations and 13.5K personnel.\
 \
 I wear a lot of hats. I developed our conflict management training program, training over 150 individuals in constructive conflict resolution. I also act as a project manager, data scientist, and consultant. I’ve given 23 public presentations, published 8 articles, and written 3 reports for state agencies.\
 \
 I’ve had a nonlinear career path. Before my PhD, I worked a few years in HR and Business Development. But I developed a temporary disability, overcame it, then took time to travel, volunteer, intern, and go to grad school. I’ve been driven by learning and growing into a person who can have an impact.\
-\
-As I transition out of academia, I am looking for roles in Data Science, People Operations, People Analytics, Employee Experience, Engagement, and Change Management at firms that view their people as a strategic investment.\
-\
-My values are:\
-\
-🤝 𝐁𝐞 𝐫𝐞𝐚𝐥: I want to work for a company that values transparency, participation, and fairness.\
-❤️ 𝐂𝐚𝐫𝐞 𝐟𝐨𝐫 𝐞𝐚𝐜𝐡 𝐨𝐭𝐡𝐞𝐫: I work best on a team that fosters communication and work-life balance.\
-🧑‍🎓 𝐍𝐞𝐯𝐞𝐫 𝐬𝐭𝐨𝐩 𝐠𝐫𝐨𝐰𝐢𝐧𝐠: I will thrive at an organization that values learning and curiosity.\
-✌️ 𝐃𝐨 𝐭𝐡𝐞 𝐫𝐢𝐠𝐡𝐭 𝐭𝐡𝐢𝐧𝐠: I want to work for a company that roots its strategy in impact, peace, and sustainability.\
-🐕‍🦺 Love dogs: I’m a best friend to 2 Weimaraners.

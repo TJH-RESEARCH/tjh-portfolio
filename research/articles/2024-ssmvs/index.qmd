@@ -3,7 +3,7 @@ title: "Unlocking SSM/V success: Welcoming student service members and veterans 
 date: 2022-03-10
 author:
   - name: Thomas J. Hodges
-    orcid: "{{< var orcid >}}"
+    orcid: 0000-0002-5184-7346
     affiliation: School of Conflict Management, Peacebuilding and Development, Kennesaw State University
   - name: Kimberly D. Gomes
     affiliation: Kennesaw State University
@@ -12,6 +12,7 @@ author:
   - name: Tyler L. Collette
     affiliation: Department of Psychological Science, Kennesaw State University
   - name: Brian A. Moore
+    orcid: 0000-0003-0273-7236
     affiliation: Department of Psychological Science, Kennesaw State University
 categories:
   - Higher Education
@@ -28,15 +29,18 @@ pub-info:
 doi: 10.1177/15210251221086851
 ---
 
-## Important links
+## Links
 
 -   [Paper](http://journals.sagepub.com/doi/10.1177/15210251221086851)
+-   [Paywall-Free Paper](https://www.researchgate.net/publication/358824046_Unlocking_SSMV_Success_Welcoming_Student_Service_Members_and_Veterans_and_Supporting_SSMV_Experiences)
 
 ## Abstract
 
 Helping student service members and veterans (SSM/Vs) earn a college degree is central to supporting them post-service. Yet, this generation of SSM/Vs faces challenges in higher education, including problems adapting, poor health, and administrative constraints, contributing to worsened academic outcomes and a sense of isolation on campus. This monograph synthesizes research on the challenges facing SSM/Vs. It also frames common aspects of successful programs aiding SSM/Vs as three areas for intervention: how administrators and faculty can create a welcoming campus for SSM/Vs; ways universities can create support systems for SSM/V social, health, and academic success; and engaging community partnerships to enable these efforts. Whether SSM/Vs overcome their challenges and unlock their strengths is contingent on opportunities provided within the school itself, and by its faculty, administrators, students, and community. Central to these efforts should be the goal of inclusivity enhancement, community building, and reduction of health-related dysfunction among SSM/Vs.
 
 ## Citation
+
+Hodges, T. J., Gomes, K. D., Foral, G. C., Collette, T. L., & Moore, B. A. (2024). Unlocking SSM/V success: Welcoming student service members and veterans and supporting SSM/V experiences. *Journal of College Student Retention: Research, Theory & Practice*, *26*(2), 422–444. <https://doi.org/10.1177/15210251221086851>
 
 ``` bibtex
 @article{HodgesGomesForalColletteMoore:2024,

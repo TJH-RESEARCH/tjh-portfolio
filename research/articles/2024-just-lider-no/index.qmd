@@ -1,12 +1,15 @@
 ---
-title: "Female leadership in climate change mitigation and environmental sustainability"
+title: "‘Just leader? No, lideresa!’ Experiences of Female Leaders Working in Climate Change Disaster Risk Reduction and Environmental Sustainability in the Global South"
 date: 2024-08-15
 author:
   - name: Thomas J. Hodges
-    orcid: "{{< var orcid >}}"
+    orcid: 0000-0002-5184-7346
     affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
   - name: Nilofer K. Bharwani
-    orcid: "{{< var orcid_bharwani >}}"
+    orcid: 0009-0000-6078-4431
+    affiliation: School of Conflict Management, Peacebuilding, and Development, Kennesaw State University
+  - name: Darina Lepadatu
+    #orcid:
     affiliation: School of Conflict Management, Peacebuilding, and Development, Kennesaw State University
   - name: Darlene Xiomara Rodriguez
     orcid: 0000-0001-6627-1899
@@ -16,6 +19,7 @@ categories:
   - Climate Change
   - Global Development
   - Management
+  - Environment
 pub-info:
   links:
     - name: Final version
@@ -27,7 +31,7 @@ pub-info:
 doi: 10.1088/2752-5295/ad6a7a
 ---
 
-## Important links
+## Links
 
 -   [Paper](https://dx.doi.org/10.1088/2752-5295/ad6a7a)
 
@@ -37,11 +41,13 @@ As environmental disasters disproportionately affect women, international guidel
 
 ## Citation
 
+Bharwani, N. K., Hodges, T., Lepadatu, D., & Rodriguez, D. X. (2024). ‘Just leader? No, lideresa!’ Experiences of female leaders working in climate change disaster risk reduction and environmental sustainability in the global south. *Environmental Research: Climate*, *3*(4), 045008. <https://doi.org/10.1088/2752-5295/ad6a7a>
+
 ``` bibtex
 @article{BharwaniHodgesLepadatuRodriguez:2024,
     Author = {Nilofer K. Bharwani and Thomas J. Hodges and Darina Lepadatu and Darlene Xiomara Rodriguez},
     Doi = {10.1088/2752-5295/ad6a7a},
     Journal = {Environmental Research: Climate},
-    Title = {Female leadership in climate change mitigation and environmental sustainability},
+    Title = {‘Just leader? No, lideresa!’ Experiences of female leaders working in climate change disaster risk reduction and environmental sustainability in the global south},
     Year = {2024}}
 ```

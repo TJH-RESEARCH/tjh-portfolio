@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Research – Tommy Hodges</title>
+<title>Research – Thomas Hodges</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4968d28af72d4e5a34172c9bc5ef961b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-46b7d6bc962973f2f132242241ce5236.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
@@ -127,6 +127,62 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-chapters .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-chapters'] = new List('listing-chapters', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-dissertation .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-dissertation'] = new List('listing-dissertation', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -165,12 +221,12 @@ window.Quarto = {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Tommy Hodges</span>
+    <span class="navbar-title">Thomas Hodges</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -181,7 +237,7 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../cv/index.html"> 
@@ -194,6 +250,10 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link active" href="../research/index.html" aria-current="page"> 
 <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../info/index.html"> 
+<span class="menu-text">Info</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -217,7 +277,23 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Research</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -227,40 +303,25 @@ window.Quarto = {
   <ul>
   <li><a href="#journal-articles" id="toc-journal-articles" class="nav-link active" data-scroll-target="#journal-articles">Journal articles</a></li>
   <li><a href="#book-and-film-reviews" id="toc-book-and-film-reviews" class="nav-link" data-scroll-target="#book-and-film-reviews">Book and Film Reviews</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   <li><a href="#book-chapters" id="toc-book-chapters" class="nav-link" data-scroll-target="#book-chapters">Book Chapters</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#dissertation" id="toc-dissertation" class="nav-link" data-scroll-target="#dissertation">Dissertation</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Q2xpbWF0ZSUyMENoYW5nZQ==">Climate Change <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29uZmxpY3QlMjBNYW5hZ2VtZW50">Conflict Management <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2VuZGVy">Gender <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R2xvYmFsJTIwRGV2ZWxvcG1lbnQ=">Global Development <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SGlnaGVyJTIwRWR1Y2F0aW9u">Higher Education <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SWRlbnRpdHk=">Identity <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SW50ZXJuYXRpb25hbCUyMENvbmZsaWN0">International Conflict <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFuYWdlbWVudA==">Management <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWlsaXRhcnklMjBIZWFsdGg=">Military Health <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9yYWwlMjBJbmp1cnk=">Moral Injury <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVpbnRlZ3JhdGlvbg==">Reintegration <span class="quarto-category-count">(3)</span></div><div class="category" data-category="VmV0ZXJhbnM=">Veterans <span class="quarto-category-count">(5)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Q2xpbWF0ZSUyMENoYW5nZQ==">Climate Change <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29uZmxpY3QlMjBNYW5hZ2VtZW50">Conflict Management <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RW52aXJvbm1lbnQ=">Environment <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Rmlyc3QlMjBSZXNwb25kZXJz">First Responders <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R2VuZGVy">Gender <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R2xvYmFsJTIwRGV2ZWxvcG1lbnQ=">Global Development <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SGVhbHRo">Health <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SGlnaGVyJTIwRWR1Y2F0aW9u">Higher Education <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SWRlbnRpdHk=">Identity <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SW50ZXJuYXRpb25hbCUyMENvbmZsaWN0">International Conflict <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFuYWdlbWVudA==">Management <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWVudGFsJTIwSGVhbHRo">Mental Health <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWlsaXRhcnklMjBIZWFsdGg=">Military Health <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9yYWwlMjBJbmp1cnk=">Moral Injury <span class="quarto-category-count">(3)</span></div><div class="category" data-category="T3JnYW5pemF0aW9uYWwlMjBQc3ljaG9sb2d5">Organizational Psychology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVpbnRlZ3JhdGlvbg==">Reintegration <span class="quarto-category-count">(4)</span></div><div class="category" data-category="VmV0ZXJhbnM=">Veterans <span class="quarto-category-count">(6)</span></div></div></div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Research</h1>
-</div>
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<p>My research spans fields including organizational psychology, health, conflict resolution, and international affairs.</p>
+<p>I do applied research in workplaces and communities. My research focuses on understanding factors that impact people’s mental health. I draw on organizational psychology, conflict resolution, international affairs, sociology, and other fields.</p>
+<p>Currently, I am a Senior Research Associate for the <a href="https://www.kennesaw.edu/research/centers-facilities/ames-center/index.php">Center for the Advancement of Military and Emergency Services Research (AMES)</a> at <a href="kennesaw.edu">Kennesaw State University</a>.</p>
 <section id="journal-articles" class="level2">
 <h2 class="anchored" data-anchor-id="journal-articles">Journal articles</h2>
 <div id="listing-articles" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TW9yYWwlMjBJbmp1cnklMkNJZGVudGl0eSUyQ1JlaW50ZWdyYXRpb24lMkNWZXRlcmFucw==" data-listing-date-sort="1749182400000" data-listing-file-modified-sort="1749694299751" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="233">
+<div class="quarto-post image-right" data-index="0" data-categories="TW9yYWwlMjBJbmp1cnklMkNJZGVudGl0eSUyQ1JlaW50ZWdyYXRpb24lMkNWZXRlcmFucw==" data-listing-date-sort="1749182400000" data-listing-file-modified-sort="1749997740070" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270">
 <div class="thumbnail">
 <p><a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external"></a></p><a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -268,7 +329,7 @@ window.Quarto = {
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external">Moral injury and identity: Examining moral injury as identity loss and identity change</a>
+<a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external">Moral Injury and Identity: Examining Moral Injury as Identity Loss and Identity Change</a>
 </h3>
 <div class="listing-subtitle">
 <a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external"></a>
@@ -302,7 +363,7 @@ Thomas J. Hodges, Tyler L. Collette, Brian A. Moore
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="SWRlbnRpdHklMkNNaWxpdGFyeSUyMEhlYWx0aCUyQ1JlaW50ZWdyYXRpb24lMkNWZXRlcmFucw==" data-listing-date-sort="1744862400000" data-listing-file-modified-sort="1749694421539" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="190">
+<div class="quarto-post image-right" data-index="1" data-categories="SWRlbnRpdHklMkNNaWxpdGFyeSUyMEhlYWx0aCUyQ1JlaW50ZWdyYXRpb24lMkNWZXRlcmFucw==" data-listing-date-sort="1744862400000" data-listing-file-modified-sort="1749997761284" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="209">
 <div class="thumbnail">
 <p><a href="../research/articles/2025-rethinking-acculturation/index.html" class="no-external"></a></p><a href="../research/articles/2025-rethinking-acculturation/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -344,30 +405,36 @@ Thomas J. Hodges, Nilofer K. Bharwani, Eric Manley, Darlene Xiomara Rodriguez
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="R2xvYmFsJTIwRGV2ZWxvcG1lbnQ=" data-listing-date-sort="1736312400000" data-listing-file-modified-sort="1749694393814" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="135">
+<div class="quarto-post image-right" data-index="2" data-categories="R2xvYmFsJTIwRGV2ZWxvcG1lbnQlMkNFbnZpcm9ubWVudCUyQ0hpZ2hlciUyMEVkdWNhdGlvbg==" data-listing-date-sort="1736312400000" data-listing-file-modified-sort="1749997704540" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="161">
 <div class="thumbnail">
-<p><a href="../research/articles/2024-la-senorita/index.html" class="no-external"></a></p><a href="../research/articles/2024-la-senorita/index.html" class="no-external">
+<p><a href="../research/articles/2025-la-senorita/index.html" class="no-external"></a></p><a href="../research/articles/2025-la-senorita/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../research/articles/2024-la-senorita/index.html" class="no-external"></a></p>
+</a><p><a href="../research/articles/2025-la-senorita/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../research/articles/2024-la-senorita/index.html" class="no-external">Becoming ‘La Señorita de Inglés’ in the U.S. Peace Corps: My Journey from Practitioner to Ph.D.</a>
+<a href="../research/articles/2025-la-senorita/index.html" class="no-external">Becoming ‘La Señorita de Inglés’ in the U.S. Peace Corps: My Journey from Practitioner to Ph.D.</a>
 </h3>
 <div class="listing-subtitle">
-<a href="../research/articles/2024-la-senorita/index.html" class="no-external"></a>
+<a href="../research/articles/2025-la-senorita/index.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R2xvYmFsJTIwRGV2ZWxvcG1lbnQ='); return false;">
 Global Development
 </div>
+<div class="listing-category" onclick="window.quartoListingCategory('RW52aXJvbm1lbnQ='); return false;">
+Environment
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('SGlnaGVyJTIwRWR1Y2F0aW9u'); return false;">
+Higher Education
+</div>
 </div>
 <div class="listing-description">
-<a href="../research/articles/2024-la-senorita/index.html" class="no-external">The Peace Corps is a governmental organization, founded in 1961 by President John F. Kennedy, with the objective of connecting United States citizens to the global community…</a>
+<a href="../research/articles/2025-la-senorita/index.html" class="no-external">The Peace Corps is a governmental organization, founded in 1961 by President John F. Kennedy, with the objective of connecting United States citizens to the global community…</a>
 </div>
 </div>
 <div class="metadata">
-<a href="../research/articles/2024-la-senorita/index.html" class="no-external">
+<a href="../research/articles/2025-la-senorita/index.html" class="no-external">
 <div class="listing-date">
 Jan 8, 2025
 </div>
@@ -377,7 +444,7 @@ Nilofer K. Bharwani, Thomas J. Hodges
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="R2VuZGVyJTJDQ2xpbWF0ZSUyMENoYW5nZSUyQ0dsb2JhbCUyMERldmVsb3BtZW50JTJDTWFuYWdlbWVudA==" data-listing-date-sort="1723694400000" data-listing-file-modified-sort="1749694408241" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="209">
+<div class="quarto-post image-right" data-index="3" data-categories="R2VuZGVyJTJDQ2xpbWF0ZSUyMENoYW5nZSUyQ0dsb2JhbCUyMERldmVsb3BtZW50JTJDTWFuYWdlbWVudCUyQ0Vudmlyb25tZW50" data-listing-date-sort="1723694400000" data-listing-file-modified-sort="1749997661054" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="261">
 <div class="thumbnail">
 <p><a href="../research/articles/2024-just-lider-no/index.html" class="no-external"></a></p><a href="../research/articles/2024-just-lider-no/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -385,7 +452,7 @@ Nilofer K. Bharwani, Thomas J. Hodges
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../research/articles/2024-just-lider-no/index.html" class="no-external">Female leadership in climate change mitigation and environmental sustainability</a>
+<a href="../research/articles/2024-just-lider-no/index.html" class="no-external">‘Just leader? No, lideresa!’ Experiences of Female Leaders Working in Climate Change Disaster Risk Reduction and Environmental Sustainability in the Global South</a>
 </h3>
 <div class="listing-subtitle">
 <a href="../research/articles/2024-just-lider-no/index.html" class="no-external"></a>
@@ -403,6 +470,9 @@ Global Development
 <div class="listing-category" onclick="window.quartoListingCategory('TWFuYWdlbWVudA=='); return false;">
 Management
 </div>
+<div class="listing-category" onclick="window.quartoListingCategory('RW52aXJvbm1lbnQ='); return false;">
+Environment
+</div>
 </div>
 <div class="listing-description">
 <a href="../research/articles/2024-just-lider-no/index.html" class="no-external">As environmental disasters disproportionately affect women, international guidelines to address the disparity focus on the inclusion of women in disaster risk reduction…</a>
@@ -414,12 +484,12 @@ Management
 Aug 15, 2024
 </div>
 <div class="listing-author">
-Thomas J. Hodges, Nilofer K. Bharwani, Darlene Xiomara Rodriguez
+Thomas J. Hodges, Nilofer K. Bharwani, Darina Lepadatu, Darlene Xiomara Rodriguez
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Q29uZmxpY3QlMjBNYW5hZ2VtZW50JTJDR2VuZGVyJTJDVmV0ZXJhbnM=" data-listing-date-sort="1662004800000" data-listing-file-modified-sort="1749694343744" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270">
+<div class="quarto-post image-right" data-index="4" data-categories="Q29uZmxpY3QlMjBNYW5hZ2VtZW50JTJDR2VuZGVyJTJDVmV0ZXJhbnM=" data-listing-date-sort="1662004800000" data-listing-file-modified-sort="1749997635544" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="320">
 <div class="thumbnail">
 <p><a href="../research/articles/2022-avp/index.html" class="no-external"></a></p><a href="../research/articles/2022-avp/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -427,7 +497,7 @@ Thomas J. Hodges, Nilofer K. Bharwani, Darlene Xiomara Rodriguez
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../research/articles/2022-avp/index.html" class="no-external">Conflict resolution workshops for service members and families: The potentials of Alternatives to Violence Project (AVP) to address military domestic violence</a>
+<a href="../research/articles/2022-avp/index.html" class="no-external">Conflict Resolution Workshops for Service Members and Families: The Potentials of Alternatives to Violence Project (AVP) to Address Military Domestic Violence</a>
 </h3>
 <div class="listing-subtitle">
 <a href="../research/articles/2022-avp/index.html" class="no-external"></a>
@@ -458,7 +528,7 @@ Thomas J. Hodges, Shubam Sharma, Déja S. Nicolas, Brian A. Moore
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="SGlnaGVyJTIwRWR1Y2F0aW9uJTJDUmVpbnRlZ3JhdGlvbiUyQ1ZldGVyYW5z" data-listing-date-sort="1646888400000" data-listing-file-modified-sort="1749694433607" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="223">
+<div class="quarto-post image-right" data-index="5" data-categories="SGlnaGVyJTIwRWR1Y2F0aW9uJTJDUmVpbnRlZ3JhdGlvbiUyQ1ZldGVyYW5z" data-listing-date-sort="1646888400000" data-listing-file-modified-sort="1749997680632" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="268">
 <div class="thumbnail">
 <p><a href="../research/articles/2024-ssmvs/index.html" class="no-external"></a></p><a href="../research/articles/2024-ssmvs/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -552,17 +622,142 @@ No matching items
 </div>
 </div>
 </section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
-</section>
 <section id="book-chapters" class="level2">
 <h2 class="anchored" data-anchor-id="book-chapters">Book Chapters</h2>
-<div>
-
+<div id="listing-chapters" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="TWFuYWdlbWVudCUyQ09yZ2FuaXphdGlvbmFsJTIwUHN5Y2hvbG9neSUyQ01lbnRhbCUyMEhlYWx0aCUyQ0ZpcnN0JTIwUmVzcG9uZGVycw==" data-listing-file-modified-sort="1749997827552" data-listing-reading-time-sort="1" data-listing-word-count-sort="185">
+<div class="thumbnail">
+<p><a href="../research/book-chapters/2025-eap/index.html" class="no-external"></a></p><a href="../research/book-chapters/2025-eap/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../research/book-chapters/2025-eap/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../research/book-chapters/2025-eap/index.html" class="no-external">Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../research/book-chapters/2025-eap/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('TWFuYWdlbWVudA=='); return false;">
+Management
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('T3JnYW5pemF0aW9uYWwlMjBQc3ljaG9sb2d5'); return false;">
+Organizational Psychology
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('TWVudGFsJTIwSGVhbHRo'); return false;">
+Mental Health
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Rmlyc3QlMjBSZXNwb25kZXJz'); return false;">
+First Responders
+</div>
+</div>
+<div class="listing-description">
+<a href="../research/book-chapters/2025-eap/index.html" class="no-external">Coming Soon.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../research/book-chapters/2025-eap/index.html" class="no-external"></a></p><a href="../research/book-chapters/2025-eap/index.html" class="no-external">
+<div class="listing-author">
+Thomas J. Hodges, Kristin A. Horan, Adrian Alicea, Edwin Trejo-Rivera, Sophie R. Vincent, Phaina Dubuisson, Katherine Moore, Bianca Channer, Chris Hess, Brian A. Moore
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="Rmlyc3QlMjBSZXNwb25kZXJzJTJDT3JnYW5pemF0aW9uYWwlMjBQc3ljaG9sb2d5JTJDSGVhbHRo" data-listing-file-modified-sort="1749997873770" data-listing-reading-time-sort="1" data-listing-word-count-sort="154">
+<div class="thumbnail">
+<p><a href="../research/book-chapters/2025-firefighter/index.html" class="no-external"></a></p><a href="../research/book-chapters/2025-firefighter/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../research/book-chapters/2025-firefighter/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../research/book-chapters/2025-firefighter/index.html" class="no-external">Mental and Occupational Health of Fire Rescue Personnel: A model for Conducting Organizational Health Assessments</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../research/book-chapters/2025-firefighter/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Rmlyc3QlMjBSZXNwb25kZXJz'); return false;">
+First Responders
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('T3JnYW5pemF0aW9uYWwlMjBQc3ljaG9sb2d5'); return false;">
+Organizational Psychology
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('SGVhbHRo'); return false;">
+Health
+</div>
+</div>
+<div class="listing-description">
+<a href="../research/book-chapters/2025-firefighter/index.html" class="no-external">Coming Soon.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../research/book-chapters/2025-firefighter/index.html" class="no-external"></a></p><a href="../research/book-chapters/2025-firefighter/index.html" class="no-external">
+<div class="listing-author">
+Bianca Channer, Micheal Schlenk, Israel Sanchez-Cardona, Tyler L. Collette, Kristin A. Horan, Chris Hess, Thomas J. Hodges, Brian A. Moore
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
 </div>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1"></h2>
+<section id="dissertation" class="level2">
+<h2 class="anchored" data-anchor-id="dissertation">Dissertation</h2>
+<div id="listing-dissertation" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="TW9yYWwlMjBJbmp1cnklMkNWZXRlcmFucyUyQ0hlYWx0aCUyQ1JlaW50ZWdyYXRpb24=" data-listing-date-sort="1701838800000" data-listing-file-modified-sort="1749997890143" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="296">
+<div class="thumbnail">
+<p><a href="../research/dissertation/2023-dissertation/index.html" class="no-external"></a></p><a href="../research/dissertation/2023-dissertation/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../research/dissertation/2023-dissertation/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../research/dissertation/2023-dissertation/index.html" class="no-external">Moral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../research/dissertation/2023-dissertation/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('TW9yYWwlMjBJbmp1cnk='); return false;">
+Moral Injury
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('VmV0ZXJhbnM='); return false;">
+Veterans
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('SGVhbHRo'); return false;">
+Health
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UmVpbnRlZ3JhdGlvbg=='); return false;">
+Reintegration
+</div>
+</div>
+<div class="listing-description">
+<a href="../research/dissertation/2023-dissertation/index.html" class="no-external">How do military moral injuries affect reintegration? All service members leave the military eventually, but reintegration can be challenging, bringing changes in career…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../research/dissertation/2023-dissertation/index.html" class="no-external">
+<div class="listing-date">
+Dec 6, 2023
+</div>
+<div class="listing-author">
+Thomas J. Hodges
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 
 
 
@@ -993,7 +1188,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p><span><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2025 Tommy Hodges </span> <span><i class="fa-brands fa-orcid" aria-label="orcid"></i> <strong>ORCID</strong> <a href="https://orcid.org/0000-0002-5184-7346">0000-0002-5184-7346</a></span></p>
+<p><span><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2025 Thomas Hodges </span> <span><i class="fa-brands fa-orcid" aria-label="orcid"></i> <strong>ORCID</strong> <a href="https://orcid.org/0000-0002-5184-7346">0000-0002-5184-7346</a></span></p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

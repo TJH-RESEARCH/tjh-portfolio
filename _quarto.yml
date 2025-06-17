@@ -3,17 +3,19 @@ project:
   output-dir: _site
 
 website:
-  title: "Tommy Hodges"
+  title: "Thomas Hodges"
   navbar:
     left:
       - href: index.qmd
-        text: About
+        text: About Me
       - href: cv/index.qmd
         text: CV
       - href: blog/index.qmd
         text: Blog
       - href: research/index.qmd
         text: Research
+      - href: info/index.qmd
+        text: Info
         
     right: 
       - text: "{{< iconify bi envelope size=1.1em title='E-mail' >}}"
@@ -27,17 +29,18 @@ website:
 
   page-footer:
     center: |
-      <span>{{< fa brands creative-commons >}} {{< var years >}} Tommy Hodges </span>
+      <span>{{< fa brands creative-commons >}} {{< var years >}} Thomas Hodges </span>
        <span>{{< fa brands orcid >}} <strong>ORCID</strong> [{{< var orcid >}}](https://orcid.org/{{< var orcid >}})</span>
 
 
 format:
   html:
     theme:
-      - lux
-      - brand
+      - html/united-custom.scss
     css: styles.css
     toc: true
+    google-fonts: 
+      - Oswald
 
 editor: visual
 

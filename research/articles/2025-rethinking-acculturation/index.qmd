@@ -3,10 +3,10 @@ title: "Rethinking Acculturation and Military Transition: An Agenda for Military
 date: 2025-04-17
 author:
   - name: Thomas J. Hodges
-    orcid: "{{< var orcid >}}"
+    orcid: 0000-0002-5184-7346
     affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
   - name: Nilofer K. Bharwani
-    orcid: "{{< var orcid_bharwani >}}"
+    orcid: 0009-0000-6078-4431
     affiliation: School of Conflict Management, Peacebuilding, and Development, Kennesaw State University
   - name: Eric Manley
     affiliation: School of Conflict Management, Peacebuilding, and Development, Kennesaw State University
@@ -29,9 +29,9 @@ pub-info:
 doi: 10.21061/jvs.v11i1.678
 ---
 
-## Important links
+## Links
 
--   [Paper](https://doi.org/10.21061/jvs.v11i1.678)
+-   [Paper (No Paywall)](https://doi.org/10.21061/jvs.v11i1.678)
 
 ## Abstract
 
@@ -39,11 +39,7 @@ Veterans are like migrants, at least according to some military researchers. Whe
 
 ## Citation
 
-<p class="buttons" style="text-align:center;">
-
-<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.21061/jvs.v11i1.678">{{< ai zotero >}} Add to Zotero {{< fa square-arrow-up-right >}}</a>
-
-</p>
+Hodges, T. J., Bharwani, N. K., Manley, E., & Xiomara Rodriguez, D. (2025). Rethinking acculturation and military transition: An agenda for military-civilian biculturalism, reintegration, and adjustment. *Journal of Veterans Studies*, *11*(1), 161–171. <https://doi.org/10.21061/jvs.v11i1.678>
 
 ``` bibtex
 @article{HodgesBharwaniManleyRodriguez:2025,
