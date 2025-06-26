@@ -1,7 +1,0 @@
----
-title: "Site Info"
----
-
--   I took inspiration for this site from Andrew Heiss' [excellent website and blog](https://www.andrewheiss.com).
--   I used [Quarto](https://quarto.org/docs/websites/) to create the site.
--   The color scheme for the site comes from the Lakota palette in the [MetBrewer](https://github.com/BlakeRMills/MetBrewer) library for R and Python. The palettes are Inspired by displays at the [Metropolitan Museum of Art in New York](https://www.metmuseum.org) Specifically, I use the [Lakota palette](https://www.metmuseum.org/art/collection/search/751512).
