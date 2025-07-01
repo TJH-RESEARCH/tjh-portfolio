@@ -1,0 +1,19 @@
+---
+title: "The role of trust in Employee Assistance Programs for first responders"
+description: ""
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+date: 2025-07-10
+#categories: \[R, Statistics, Research Design\] \# self-defined categories
+#citation: 
+#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
+#image: 
+draft: true
+---
+
+# Summary
+
+# Slides
+
+# Citation

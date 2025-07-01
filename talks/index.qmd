@@ -1,10 +1,27 @@
 ---
 title: "Talks"
 listing: 
-    contents: "talks/*/index.qmd"
-    type: default # or `default` or `table`
-    sort: "date desc" # can also sort on more than one field
-    categories: true # allows you to sort posts by assigned categories 
+  - id: presentations
+    contents: "presentations/*/index.qmd"
+    sort: "date desc"
+    categories: true
+  - id: posters
+    contents: "posters/*/index.qmd"
+    sort: "date desc"
+    categories: true
+page-layout: full
+include-back-link: false
+toc-location: right
 ---
+
+## Research Talks
+
+::: {#presentations}
+:::
+
+## Poster Presentations
+
+::: {#posters}
+:::
 
 ## 
