@@ -1,10 +1,10 @@
 ---
-title: "Unsupervised Learning: Cluster Analysis to Handle Multivairate Messiness"
+title: "EAP..."
 description: ""
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
-#date: 2025-06-25
+date: 2025-07-11
 #categories: \[R, Statistics, Research Design\] \# self-defined categories
 #citation: 
 #  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
@@ -12,19 +12,6 @@ author:
 draft: true
 ---
 
-# Summary
+Summary
 
--   git hub
-
--   paper
-
--   talk
-
-# Skills Demonstrated
-
-1.  Machine Learning
-2.  Unsupervised Learning
-
-# Real-World Applications
-
-# Key Highligts
+Slides

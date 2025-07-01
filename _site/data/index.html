@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Thomas Hodges">
-<meta name="dcterms.date" content="2025-06-11">
-<meta name="description" content="Why it’s a problem and what you can do about it">
 
-<title>Why your employees aren’t engaging with your employee engagement survey – Thomas Hodges</title>
+<title>Data Science Portfolio – Thomas Hodges</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,25 +23,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-e20215962ef214578c61958a43b8f709.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
-<script src="../../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e20215962ef214578c61958a43b8f709.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>
 
       .quarto-title-block .quarto-title-banner {
@@ -79,8 +107,37 @@ ul.task-list li input[type="checkbox"] {
       }
 </style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../../styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -90,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Thomas Hodges</span>
     </a>
   </div>
@@ -101,23 +158,27 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../cv/index.html"> 
+    <a class="nav-link" href="../cv/index.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../blog/index.html"> 
+    <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../research/index.html"> 
+    <a class="nav-link active" href="../data/index.html" aria-current="page"> 
+<span class="menu-text">Data Portfolo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../research/index.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../info/index.html"> 
+    <a class="nav-link" href="../info/index.html"> 
 <span class="menu-text">Info</span></a>
   </li>  
 </ul>
@@ -145,38 +206,14 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Why your employees aren’t engaging with your employee engagement survey</h1>
-                  <div>
-        <div class="description">
-          Why it’s a problem and what you can do about it
-        </div>
-      </div>
-                </div>
+      <h1 class="title">Data Science Portfolio</h1>
+                      </div>
   </div>
     
-  <div class="quarto-title-meta-author">
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-heading">Affiliation</div>
-    
-      <div class="quarto-title-meta-contents">
-      <p class="author">Thomas Hodges <a href="https://orcid.org/0000-0002-5184-7346" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-    </div>
-    <div class="quarto-title-meta-contents">
-          <p class="affiliation">
-              Center for the Advancement of Military and Emergency Services Research, Kennesaw State University
-            </p>
-        </div>
-    </div>
-
+  
   <div class="quarto-title-meta">
 
-        
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">June 11, 2025</p>
-      </div>
-    </div>
+      
     
       
     </div>
@@ -186,16 +223,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#is-your-survey-really-anonymous" id="toc-is-your-survey-really-anonymous" class="nav-link active" data-scroll-target="#is-your-survey-really-anonymous">Is your survey really anonymous?</a></li>
-  <li><a href="#is-your-survey-really-benevolent" id="toc-is-your-survey-really-benevolent" class="nav-link" data-scroll-target="#is-your-survey-really-benevolent">Is your survey really benevolent?</a></li>
-  <li><a href="#anonymous-surveys-a-partial-solution" id="toc-anonymous-surveys-a-partial-solution" class="nav-link" data-scroll-target="#anonymous-surveys-a-partial-solution">Anonymous Surveys: A Partial Solution</a></li>
-  </ul>
-</nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -203,30 +232,120 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<blockquote class="blockquote">
-<p>Tl;dr: they don’t trust that your survey is truly anonymous, they think you’ll use it against them, and they might be right. I’ll tell you how to solve that.</p>
-</blockquote>
-<p>People don’t trust surveys.&nbsp;</p>
-<p>Employees think they are being spied on. They think an engagement survey is an elaborate trap to find people who are not committed to the organization.&nbsp;For certain occupations, the fear is even worse. For example, police officers might worry that a mental health survey will be used to label them as unfit for duty.&nbsp;</p>
-<p>Even outside of the workplace, people might fear their data is used to label&nbsp; them as problematic. Or with public polling surveys, like the ones used in the run up to an election, people can <a href="https://www.wnycstudios.org/podcasts/otm/segments/can-we-trust-polls-on-the-media">mistrust pollsters</a> or the news media that will report on the poll.&nbsp;</p>
-<p>The good news is that these fears are mostly unfounded. People analytics teams want to improve workplaces, not surveil deviant workers. When we run health surveys at the <a href="https://www.kennesaw.edu/research/centers-facilities/ames-center/">AMES Research Center</a>, we use to data to tailor services for our client’s specific needs.&nbsp;</p>
-<p>Still, survey fears are problem for survey admins trying to do the right thing. Fear can lead to low participation. It can also cause participants to lie on their survey. Or they might respond carelessly in other ways, such as “straightlining” or “Christmas treeing.”&nbsp;</p>
-<p>One easy workaround is to make surveys anonymous. The survey’s don’t ask for your name, so how can they be used to track you and punish you? This poses a problem, however, for longitudinal surveys: those where you want to survey the same people at repeated points over time.&nbsp;</p>
-<p>In this post I’ll tell you how we solve these problems of trust, anonymity, and data qualiity in our work with organizations and communities and the problems we still face. I will also demonstrate how to clean bad data with R and why linking surveys over time helps your statistical analysis.</p>
-<section id="is-your-survey-really-anonymous" class="level2">
-<h2 class="anchored" data-anchor-id="is-your-survey-really-anonymous">Is your survey really anonymous?</h2>
-<p>Whenever possible, you should make your surveys anonymous. Truly anonymous. To start, this means you should not ask participants their name. But there are other ways to identify responses. Survey hosts such as <a href="https://www.qualtrics.com/support/getting-started-qualtrics/minimizing-personal-data-collection-and-use-in-qualtrics/">Qualtrics</a> collect IP Address, Latitude, and Longitude by default, even for its “anonymous” QR code or link. You can and should disable this. Then you should tell your participants that you disabled them. Build trust by being open and transparent and by making strong claims about how you are protecting their privacy.</p>
-</section>
-<section id="is-your-survey-really-benevolent" class="level2">
-<h2 class="anchored" data-anchor-id="is-your-survey-really-benevolent">Is your survey really benevolent?</h2>
-</section>
-<section id="anonymous-surveys-a-partial-solution" class="level2">
-<h2 class="anchored" data-anchor-id="anonymous-surveys-a-partial-solution">Anonymous Surveys: A Partial Solution</h2>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1751337072338" data-listing-reading-time-sort="1" data-listing-word-count-sort="30">
+<div class="thumbnail">
+<p><a href="../data/posts/bayes/index.html" class="no-external"></a></p><a href="../data/posts/bayes/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../data/posts/bayes/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../data/posts/bayes/index.html" class="no-external">Bayesian Modeling of Health Data of Military Veterans</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../data/posts/bayes/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../data/posts/bayes/index.html" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../data/posts/bayes/index.html" class="no-external"></a></p><a href="../data/posts/bayes/index.html" class="no-external">
+<div class="listing-author">
+Thomas Hodges
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1751336126160" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="thumbnail">
+<p><a href="../data/posts/cluster/index.html" class="no-external"></a></p><a href="../data/posts/cluster/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../data/posts/cluster/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../data/posts/cluster/index.html" class="no-external">Unsupervised Learning: Cluster Analysis to Handle Multivairate Messiness</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../data/posts/cluster/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../data/posts/cluster/index.html" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../data/posts/cluster/index.html" class="no-external"></a></p><a href="../data/posts/cluster/index.html" class="no-external">
+<div class="listing-author">
+Thomas Hodges
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1751337066241" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="thumbnail">
+<p><a href="../data/posts/war/index.html" class="no-external"></a></p><a href="../data/posts/war/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../data/posts/war/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../data/posts/war/index.html" class="no-external">Machine Learning Models to Predict and Prevent War</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../data/posts/war/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../data/posts/war/index.html" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../data/posts/war/index.html" class="no-external"></a></p><a href="../data/posts/war/index.html" class="no-external">
+<div class="listing-author">
+Thomas Hodges
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1750824000000" data-listing-file-modified-sort="1751337065518" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="128">
+<div class="thumbnail">
+<p><a href="../data/posts/data-cleaning/index.html" class="no-external"></a></p><a href="../data/posts/data-cleaning/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../data/posts/data-cleaning/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../data/posts/data-cleaning/index.html" class="no-external">Cleaning and Screening Messy Real-World Survey Data</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../data/posts/data-cleaning/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../data/posts/data-cleaning/index.html" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<a href="../data/posts/data-cleaning/index.html" class="no-external">
+<div class="listing-date">
+Jun 25, 2025
+</div>
+<div class="listing-author">
+Thomas Hodges
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -651,7 +770,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p><span><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2025 Thomas Hodges </span> <span><i class="fa-brands fa-orcid" aria-label="orcid"></i> <strong>ORCID</strong> <a href="https://orcid.org/0000-0002-5184-7346">0000-0002-5184-7346</a></span></p>
+<p><span><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2025 Thomas Hodges </span> <span><i class="fa-brands fa-orcid" aria-label="orcid"></i> <strong>ORCID</strong> <a href="https://orcid.org/?var:orcid"><strong>?var:orcid</strong></a></span></p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

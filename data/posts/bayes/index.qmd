@@ -1,19 +1,61 @@
+---
+title: "Bayesian Modeling of Health Data of Military Veterans"
+description: ""
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+#date: 2025-06-25
+#categories: \[R, Statistics\] \# self-defined categories
+#citation: 
+#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
+#image: 
+draft: true
+---
 
-Demonstrates:
+# Summary 
 
-1. Advanced statistics 
-- Bayesian data analysis
-- prior selection and justification
-- prior predictive checks
-- posterior predictions
+See the
 
-2. R programming
+-   git hub
 
-3. Data Visualization
+-   paper
 
-4. Data Collection
-- Analysis of Survey Data
-- Survey Design
-- Quality Assurance
+-   talk
 
+# Skills Demonstrated
 
+1.  Advanced statistics
+
+-   Bayesian data analysis
+-   prior selection and justification
+-   prior predictive checks
+-   posterior predictions
+-   marginal effects
+
+2.  R programming
+
+3.  Data Visualization
+
+# Real-World Applications
+
+-   Employee Health and Well-being
+
+# Key Highligts
+
+-   Prior Predictive Checks
+
+    -   Sampled from the prior only
+
+    -   Used visualizations to assess if priors were reasonable
+
+-   Zero-Hurdle Modeling
+
+    -   visualizations of distributions
+
+    -   model selection and comparison
+
+    -   interpreting results
+
+-   Visualizing and Summarizing Posterior Predictive Distributions, Marginal Effects
+
+    -   

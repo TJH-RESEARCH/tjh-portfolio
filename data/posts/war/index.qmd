@@ -1,0 +1,59 @@
+---
+title: "Machine Learning Models to Predict and Prevent War"
+description: ""
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+#date: 2025-06-25
+#categories: \[Python, Machine Learning, Predictive Analytics\] \ categories
+#citation: 
+#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
+#image: 
+draft: true
+---
+
+# Summary
+
+-   git hub
+
+-   paper
+
+-   talk
+
+# Skills Demonstrated
+
+-   Python
+
+    -   Numpy
+
+    -   Pandas
+
+    -   Scikit-learn
+
+-   SQL
+
+-   Predictive and prescriptive analytics
+
+-   Machine Learning
+
+-   Time Series Analysis
+
+# Real-World Applications
+
+-   Risk Management
+
+-   Global Security
+
+-   International Trade
+
+-   Geopolitical Strategy
+
+# Key Highlights
+
+-   SQL data joins
+
+-   Machine Learning algorithm comparison
+
+-   Hyperparameter tuning
+
+-   Model ensemble

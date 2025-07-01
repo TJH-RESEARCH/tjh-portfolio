@@ -13,9 +13,11 @@ website:
       - href: blog/index.qmd
         text: Blog
       - href: data/index.qmd
-        text: Data Portfolo
+        text: Data
       - href: research/index.qmd
         text: Research
+      - href: talks/index.qmd
+        text: Talks
       - href: info/index.qmd
         text: Info
         

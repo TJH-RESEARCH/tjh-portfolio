@@ -1,7 +1,12 @@
 [
   {
-    "listing": "/blog/index.html",
-    "items": []
+    "listing": "/data/index.html",
+    "items": [
+      "/data/posts/bayes/index.html",
+      "/data/posts/cluster/index.html",
+      "/data/posts/war/index.html",
+      "/data/posts/data-cleaning/index.html"
+    ]
   },
   {
     "listing": "/research/index.html",
@@ -17,5 +22,9 @@
       "/research/book-chapters/2025-firefighter/index.html",
       "/research/dissertation/2023-dissertation/index.html"
     ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": []
   }
 ]

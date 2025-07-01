@@ -1,241 +1,73 @@
 [
   {
-    "objectID": "cv/index.html",
-    "href": "cv/index.html",
-    "title": "Curriculum vitae",
+    "objectID": "data/index.html",
+    "href": "data/index.html",
+    "title": "Data Science Portfolio",
     "section": "",
-    "text": "This is my long-form academic C.V. For a shorter, professional-focused resume, send me an email.\n\n\n\n\n\n\n\n  \n     Download current CV"
+    "text": "Bayesian Modeling of Health Data of Military Veterans\n\n\n\n\n\n\n\n\n\n\n\nThomas Hodges\n\n\n\n\n\n\n\n\n\n\n\n\nUnsupervised Learning: Cluster Analysis to Handle Multivairate Messiness\n\n\n\n\n\n\n\n\n\n\n\nThomas Hodges\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learning Models to Predict and Prevent War\n\n\n\n\n\n\n\n\n\n\n\nThomas Hodges\n\n\n\n\n\n\n\n\n\n\n\n\nCleaning and Screening Messy Real-World Survey Data\n\n\n\n\n\n\n\n\n\n\n\nJun 25, 2025\n\n\nThomas Hodges\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "About Me",
+    "objectID": "info/index.html",
+    "href": "info/index.html",
+    "title": "Site Info",
     "section": "",
-    "text": "I am Thomas Hodges, a data scientist, research, and expert in people analytics.\n\nDuring my PhD studies, I helped to found the AMES Research Center. We use analytics and research-based programs to improve the workplace well-being of veterans, police, firefighters, and medics. In 3 years, we grew to a staff of 20 with a yearly revenue of $1.9M in contracts and grants. We have trained 1.6K employees and conducted assessments for 38 client organizations and 13.5K personnel.\n\nI wear a lot of hats. I developed our conflict management training program, training over 150 individuals in constructive conflict resolution. I also act as a project manager, data scientist, and consultant. I’ve given 23 public presentations, published 8 articles, and written 3 reports for state agencies.\n\nI’ve had a nonlinear career path. Before my PhD, I worked a few years in HR and Business Development. But I developed a temporary disability, overcame it, then took time to travel, volunteer, intern, and go to grad school. I’ve been driven by learning and growing into a person who can have an impact."
+    "text": "I took inspiration for this site from Andrew Heiss’ excellent website and blog.\nI used Quarto to create the site.\nThe color scheme for the site comes from the Lakota palette in the MetBrewer library for R and Python. The palettes are Inspired by displays at the Metropolitan Museum of Art in New York Specifically, I use the Lakota palette."
   },
   {
-    "objectID": "research/dissertation/2023-dissertation/index.html",
-    "href": "research/dissertation/2023-dissertation/index.html",
-    "title": "Moral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans",
-    "section": "",
-    "text": "Paper"
-  },
-  {
-    "objectID": "research/dissertation/2023-dissertation/index.html#important-links",
-    "href": "research/dissertation/2023-dissertation/index.html#important-links",
-    "title": "Moral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans",
+    "objectID": "research/reviews/2024-film-review-what-i-want-you/index.html",
+    "href": "research/reviews/2024-film-review-what-i-want-you/index.html",
+    "title": "Seeking justice through moral injury: A review of the documentary film What I Want You to Know",
     "section": "",
     "text": "Paper"
   },
   {
-    "objectID": "research/dissertation/2023-dissertation/index.html#abstract",
-    "href": "research/dissertation/2023-dissertation/index.html#abstract",
-    "title": "Moral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans",
+    "objectID": "research/reviews/2024-film-review-what-i-want-you/index.html#important-links",
+    "href": "research/reviews/2024-film-review-what-i-want-you/index.html#important-links",
+    "title": "Seeking justice through moral injury: A review of the documentary film What I Want You to Know",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/reviews/2024-film-review-what-i-want-you/index.html#abstract",
+    "href": "research/reviews/2024-film-review-what-i-want-you/index.html#abstract",
+    "title": "Seeking justice through moral injury: A review of the documentary film What I Want You to Know",
     "section": "Abstract",
-    "text": "Abstract\nHow do military moral injuries affect reintegration? All service members leave the military eventually, but reintegration can be challenging, bringing changes in career, family life, and friendships, potentially prompting a loss of purpose, drive, and connection. Service members may also struggle with a crisis of identity upon separating from the military, feeling their military identity is incompatible with civilian life. While these difficulties are common for service members in reintegration, they may be worsened by moral injury, the adverse biological, social, psychological, and spiritual effects of experiencing an event that deeply offends a person’s sense of right and wrong. People with moral injuries may experience severe inner conflict, guilt, shame, and loss of trust in self, others, and a higher power. These issues may impede reintegration, causing disconnect and alienation in civilian life. Experts believe moral injuries can prompt crises of identity in their own right, which may compound the identity dissonance that commonly follows military separation, although few studies have tried to confirm this belief. In this dissertation, I conceptualize reintegration and identity dissonance, using higher education and family life as examples and drawing on two articles I previously co-authored. I articulate a theoretical framework based on the study of acculturation, the adaptation of people undergoing an international transition. Using evidence from a cross-sectional survey of separated United States service members, I test if moral injury symptoms are associated with reintegration difficulty and to what extent identity dissonance mediates this relationship observed in the sample."
+    "text": "Abstract\nThroughout What I Want You to Know, we see how the loss of a purpose for fighting tips the moral scales of military service, putting service members at risk for moral injury."
   },
   {
-    "objectID": "research/dissertation/2023-dissertation/index.html#citation",
-    "href": "research/dissertation/2023-dissertation/index.html#citation",
-    "title": "Moral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans",
+    "objectID": "research/reviews/2024-film-review-what-i-want-you/index.html#citation",
+    "href": "research/reviews/2024-film-review-what-i-want-you/index.html#citation",
+    "title": "Seeking justice through moral injury: A review of the documentary film What I Want You to Know",
     "section": "Citation",
-    "text": "Citation\n@phdthesis{Hodges:2023,\n    Author = {Thomas J. Hodges},\n    Title = {Moral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans},\n    School = {Kennesaw State University},\n    Year = {2023}}"
+    "text": "Citation\n@article{Hodges:2024,\n    Author = {Thomas J. Hodges},\n    Journal = {Peace Chronicle},\n    Title = {Seeking justice through moral injury: A review of the documentary film What I Want You to Know},\n    Year = {2024}}"
   },
   {
-    "objectID": "research/book-chapters/2025-firefighter/index.html",
-    "href": "research/book-chapters/2025-firefighter/index.html",
-    "title": "Mental and Occupational Health of Fire Rescue Personnel: A model for Conducting Organizational Health Assessments",
+    "objectID": "research/book-chapters/2025-eap/index.html",
+    "href": "research/book-chapters/2025-eap/index.html",
+    "title": "Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters",
     "section": "",
     "text": "Coming Soon."
   },
   {
-    "objectID": "research/book-chapters/2025-firefighter/index.html#links",
-    "href": "research/book-chapters/2025-firefighter/index.html#links",
-    "title": "Mental and Occupational Health of Fire Rescue Personnel: A model for Conducting Organizational Health Assessments",
+    "objectID": "research/book-chapters/2025-eap/index.html#links",
+    "href": "research/book-chapters/2025-eap/index.html#links",
+    "title": "Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters",
     "section": "",
     "text": "Coming Soon."
   },
   {
-    "objectID": "research/book-chapters/2025-firefighter/index.html#abstract",
-    "href": "research/book-chapters/2025-firefighter/index.html#abstract",
-    "title": "Mental and Occupational Health of Fire Rescue Personnel: A model for Conducting Organizational Health Assessments",
+    "objectID": "research/book-chapters/2025-eap/index.html#abstract",
+    "href": "research/book-chapters/2025-eap/index.html#abstract",
+    "title": "Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters",
     "section": "Abstract",
     "text": "Abstract\nComing soon."
   },
   {
-    "objectID": "research/book-chapters/2025-firefighter/index.html#citation",
-    "href": "research/book-chapters/2025-firefighter/index.html#citation",
-    "title": "Mental and Occupational Health of Fire Rescue Personnel: A model for Conducting Organizational Health Assessments",
+    "objectID": "research/book-chapters/2025-eap/index.html#citation",
+    "href": "research/book-chapters/2025-eap/index.html#citation",
+    "title": "Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters",
     "section": "Citation",
-    "text": "Citation\nChanner, B., Schlenk, M., Sanchez-Cardona, I., Collette, T. L., Horan, K., Hess, C., Hodges, T. J., & Moore, B. A. (in press). Mental and occupational health of fire rescue personnel: A model for conducting organizational health assessments. In V. B. Van Hasselt & R. A. Black (Eds.), Advances in first responder mental health: Research, training, and practice. Springer.\n@incollection{ChannerSchlenkEtAl:2025,\n    Author = {Bianca Channer and Micheal Schlenk and Israel Sanchez-Cardona and Tyler L. Collette and Kristin A. Horan and Chris Hess and Thomas J. Hodges and Brian A. Moore},\n    Title = {Mental and occupational health of fire rescue personnel: A model for conducting organizational health assessments},\n    Booktitle = {Advances in first responder mental health: Research, training, and practice},\n    Editor = {Vincent Van Hasselt and Ryan Black},\n    Publisher = {Springer},\n    Year = {in press}}"
-  },
-  {
-    "objectID": "research/articles/2025-rethinking-acculturation/index.html",
-    "href": "research/articles/2025-rethinking-acculturation/index.html",
-    "title": "Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment",
-    "section": "",
-    "text": "Paper (No Paywall)"
-  },
-  {
-    "objectID": "research/articles/2025-rethinking-acculturation/index.html#links",
-    "href": "research/articles/2025-rethinking-acculturation/index.html#links",
-    "title": "Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment",
-    "section": "",
-    "text": "Paper (No Paywall)"
-  },
-  {
-    "objectID": "research/articles/2025-rethinking-acculturation/index.html#abstract",
-    "href": "research/articles/2025-rethinking-acculturation/index.html#abstract",
-    "title": "Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment",
-    "section": "Abstract",
-    "text": "Abstract\nVeterans are like migrants, at least according to some military researchers. When service members leave the military, they leave a strong military culture for civilian life, needing to adapt socially, psychologically, and economically to their new life. Confusing this comparison between veterans and migrants; however, is that some veterans are also migrants, born outside their country of military service, raising the question of whether leaving the military is on par with migration as an intercultural transition. Drawing on the example of foreign-born service members, we problematize the notion of “civilian culture.” Then, we reformulate military acculturation theory as military-civilian biculturalism and put forward six questions forming an agenda for future research."
-  },
-  {
-    "objectID": "research/articles/2025-rethinking-acculturation/index.html#citation",
-    "href": "research/articles/2025-rethinking-acculturation/index.html#citation",
-    "title": "Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment",
-    "section": "Citation",
-    "text": "Citation\nHodges, T. J., Bharwani, N. K., Manley, E., & Xiomara Rodriguez, D. (2025). Rethinking acculturation and military transition: An agenda for military-civilian biculturalism, reintegration, and adjustment. Journal of Veterans Studies, 11(1), 161–171. https://doi.org/10.21061/jvs.v11i1.678\n@article{HodgesBharwaniManleyRodriguez:2025,\n    Author = {Thomas J. Hodges and Nilofer K. Bharwani and Eric Manley and Darlene Xiomara Rodriguez},\n    Doi = {10.21061/jvs.v11i1.678},\n    Journal = {Journal of Veterans Studies},\n    Title = {Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment},\n    Year = {2025}}"
-  },
-  {
-    "objectID": "research/articles/2022-avp/index.html",
-    "href": "research/articles/2022-avp/index.html",
-    "title": "Conflict Resolution Workshops for Service Members and Families: The Potentials of Alternatives to Violence Project (AVP) to Address Military Domestic Violence",
-    "section": "",
-    "text": "Paper\nPaywall-Free Paper\nAlternatives to Violence Project USA"
-  },
-  {
-    "objectID": "research/articles/2022-avp/index.html#links",
-    "href": "research/articles/2022-avp/index.html#links",
-    "title": "Conflict Resolution Workshops for Service Members and Families: The Potentials of Alternatives to Violence Project (AVP) to Address Military Domestic Violence",
-    "section": "",
-    "text": "Paper\nPaywall-Free Paper\nAlternatives to Violence Project USA"
-  },
-  {
-    "objectID": "research/articles/2022-avp/index.html#abstract",
-    "href": "research/articles/2022-avp/index.html#abstract",
-    "title": "Conflict Resolution Workshops for Service Members and Families: The Potentials of Alternatives to Violence Project (AVP) to Address Military Domestic Violence",
-    "section": "Abstract",
-    "text": "Abstract\nAlthough the violence of war is well-known, members of the United States military also struggle with domestic violence, including intimate partner violence and child abuse and neglect. The prevalence of domestic violence is not necessarily higher in the military than in the general population. However, military domestic violence does occur under institutional and cultural conditions quite different from civilian life. Further, service members are at elevated risk for health dysfunctions that can contribute to violence. The current review delineates how domestic violence in the military may be reduced by Alternatives to Violence Project, a widely used, community-based training program in conflict resolution. Specifically, we suggest Alternatives to Violence Project facilitates space to learn interpersonal skills and engage in creative discussions about the stresses and cultural norms that contribute to domestic violence in the military. As Alternatives to Violence Project and similar training does not change the stressors of military life, nor has extensive research documented its impact on violence, additional work is needed. This manuscript represents a first step toward situating conflict resolution in a framework for military domestic violence reduction, showing the potentials and limitations of Alternatives to Violence Project and making recommendations for future research and interventions."
-  },
-  {
-    "objectID": "research/articles/2022-avp/index.html#citation",
-    "href": "research/articles/2022-avp/index.html#citation",
-    "title": "Conflict Resolution Workshops for Service Members and Families: The Potentials of Alternatives to Violence Project (AVP) to Address Military Domestic Violence",
-    "section": "Citation",
-    "text": "Citation\nHodges, T. J., Sharma, S., Nicolas, D. S., & Moore, B. A. (2022). Conflict resolution workshops for service members and families: The potentials of Alternatives to Violence Project (AVP) to address military domestic violence. Aggression and Violent Behavior, 66(101736). https://doi.org/10.1016/j.avb.2022.101736\n@article{HodgesSharmaNicolasMoore:2022,\n    Author = {Thomas J. Hodges and Shubam Sharma and Déja S. Nicholas and Brian A. Moore},\n    Doi = {10.1016/j.avb.2022.101736},\n    Journal = {Aggression and Violent Behavior},\n    Title = {Conflict resolution workshops for service members and families: The potentials of Alternatives to Violence Project (AVP) to address military domestic violence},\n    Year = {2022}}"
-  },
-  {
-    "objectID": "research/articles/2024-ssmvs/index.html",
-    "href": "research/articles/2024-ssmvs/index.html",
-    "title": "Unlocking SSM/V success: Welcoming student service members and veterans and supporting SSM/V experiences",
-    "section": "",
-    "text": "Paper\nPaywall-Free Paper"
-  },
-  {
-    "objectID": "research/articles/2024-ssmvs/index.html#links",
-    "href": "research/articles/2024-ssmvs/index.html#links",
-    "title": "Unlocking SSM/V success: Welcoming student service members and veterans and supporting SSM/V experiences",
-    "section": "",
-    "text": "Paper\nPaywall-Free Paper"
-  },
-  {
-    "objectID": "research/articles/2024-ssmvs/index.html#abstract",
-    "href": "research/articles/2024-ssmvs/index.html#abstract",
-    "title": "Unlocking SSM/V success: Welcoming student service members and veterans and supporting SSM/V experiences",
-    "section": "Abstract",
-    "text": "Abstract\nHelping student service members and veterans (SSM/Vs) earn a college degree is central to supporting them post-service. Yet, this generation of SSM/Vs faces challenges in higher education, including problems adapting, poor health, and administrative constraints, contributing to worsened academic outcomes and a sense of isolation on campus. This monograph synthesizes research on the challenges facing SSM/Vs. It also frames common aspects of successful programs aiding SSM/Vs as three areas for intervention: how administrators and faculty can create a welcoming campus for SSM/Vs; ways universities can create support systems for SSM/V social, health, and academic success; and engaging community partnerships to enable these efforts. Whether SSM/Vs overcome their challenges and unlock their strengths is contingent on opportunities provided within the school itself, and by its faculty, administrators, students, and community. Central to these efforts should be the goal of inclusivity enhancement, community building, and reduction of health-related dysfunction among SSM/Vs."
-  },
-  {
-    "objectID": "research/articles/2024-ssmvs/index.html#citation",
-    "href": "research/articles/2024-ssmvs/index.html#citation",
-    "title": "Unlocking SSM/V success: Welcoming student service members and veterans and supporting SSM/V experiences",
-    "section": "Citation",
-    "text": "Citation\nHodges, T. J., Gomes, K. D., Foral, G. C., Collette, T. L., & Moore, B. A. (2024). Unlocking SSM/V success: Welcoming student service members and veterans and supporting SSM/V experiences. Journal of College Student Retention: Research, Theory & Practice, 26(2), 422–444. https://doi.org/10.1177/15210251221086851\n@article{HodgesGomesForalColletteMoore:2024,\n    Author = {Thomas J. Hodges and Kimberly D. Gomes and Geno C. Foral and Tyler L. Collette and Brian A. Moore},\n    Doi = {10.1177/15210251221086851},\n    Journal = {Journal of College Student Retention: Research, Theory & Practice},\n    Title = {Unlocking SSM/V success: Welcoming student service members and veterans and supporting SSM/V experiences},\n    Year = {2024}}"
-  },
-  {
-    "objectID": "research/articles/2024-just-lider-no/index.html",
-    "href": "research/articles/2024-just-lider-no/index.html",
-    "title": "‘Just leader? No, lideresa!’ Experiences of Female Leaders Working in Climate Change Disaster Risk Reduction and Environmental Sustainability in the Global South",
-    "section": "",
-    "text": "Paper"
-  },
-  {
-    "objectID": "research/articles/2024-just-lider-no/index.html#links",
-    "href": "research/articles/2024-just-lider-no/index.html#links",
-    "title": "‘Just leader? No, lideresa!’ Experiences of Female Leaders Working in Climate Change Disaster Risk Reduction and Environmental Sustainability in the Global South",
-    "section": "",
-    "text": "Paper"
-  },
-  {
-    "objectID": "research/articles/2024-just-lider-no/index.html#abstract",
-    "href": "research/articles/2024-just-lider-no/index.html#abstract",
-    "title": "‘Just leader? No, lideresa!’ Experiences of Female Leaders Working in Climate Change Disaster Risk Reduction and Environmental Sustainability in the Global South",
-    "section": "Abstract",
-    "text": "Abstract\nAs environmental disasters disproportionately affect women, international guidelines to address the disparity focus on the inclusion of women in disaster risk reduction programs. While inclusion is a noble pursuit, it may fall short of equitable outcomes and instead lead to tokenization. Drawing on standpoint feminism and intersectionality, the goal of this study was to investigate tensions between inclusion and equity for women working in disaster risk reduction. We interviewed women from Ecuador and Tajikistan and asked them about the ways that gender shapes their experiences working in disaster risk reduction. We found that the women reflect upon themselves as agents with various forms of privilege and disadvantage, based on their multifaceted identities and differing levels of perceived discrimination within their professions. The findings suggest that inclusion, while necessary, can fall short of its promises. We recommend that organizational guidelines make everyone responsible for fostering equitable workplaces for disaster risk reduction."
-  },
-  {
-    "objectID": "research/articles/2024-just-lider-no/index.html#citation",
-    "href": "research/articles/2024-just-lider-no/index.html#citation",
-    "title": "‘Just leader? No, lideresa!’ Experiences of Female Leaders Working in Climate Change Disaster Risk Reduction and Environmental Sustainability in the Global South",
-    "section": "Citation",
-    "text": "Citation\nBharwani, N. K., Hodges, T., Lepadatu, D., & Rodriguez, D. X. (2024). ‘Just leader? No, lideresa!’ Experiences of female leaders working in climate change disaster risk reduction and environmental sustainability in the global south. Environmental Research: Climate, 3(4), 045008. https://doi.org/10.1088/2752-5295/ad6a7a\n@article{BharwaniHodgesLepadatuRodriguez:2024,\n    Author = {Nilofer K. Bharwani and Thomas J. Hodges and Darina Lepadatu and Darlene Xiomara Rodriguez},\n    Doi = {10.1088/2752-5295/ad6a7a},\n    Journal = {Environmental Research: Climate},\n    Title = {‘Just leader? No, lideresa!’ Experiences of female leaders working in climate change disaster risk reduction and environmental sustainability in the global south},\n    Year = {2024}}"
-  },
-  {
-    "objectID": "research/articles/2025-moral-injury-identity/index.html",
-    "href": "research/articles/2025-moral-injury-identity/index.html",
-    "title": "Moral Injury and Identity: Examining Moral Injury as Identity Loss and Identity Change",
-    "section": "",
-    "text": "Paper\nPaywall-Free Paper\nGitHub Repository\nSupplemental Material"
-  },
-  {
-    "objectID": "research/articles/2025-moral-injury-identity/index.html#links",
-    "href": "research/articles/2025-moral-injury-identity/index.html#links",
-    "title": "Moral Injury and Identity: Examining Moral Injury as Identity Loss and Identity Change",
-    "section": "",
-    "text": "Paper\nPaywall-Free Paper\nGitHub Repository\nSupplemental Material"
-  },
-  {
-    "objectID": "research/articles/2025-moral-injury-identity/index.html#abstract",
-    "href": "research/articles/2025-moral-injury-identity/index.html#abstract",
-    "title": "Moral Injury and Identity: Examining Moral Injury as Identity Loss and Identity Change",
-    "section": "Abstract",
-    "text": "Abstract\nAlthough it is widely accepted among theorists and clinicians that moral injury can affect identity, these claims are rarely specified, let alone investigated empirically. Among scholars of moral injury, an emerging explanation is that moral injury leads to a loss of identity. However, psychologists studying the relationship between identity and trauma argue that some traumatic experiences can reaffirm a person’s identity. Such reaffirmation may lead to a maintenance of identity rather than a loss, helping people make sense of traumatic experiences and be resilient to traumatic stress disorders. Drawing on this model, the Social Identity Model of Identity Change, the current article discusses these two potential processes—identity loss and identity maintenance—in the case of military moral injury. Using data from a survey of United States veterans, it models an indirect association between morally traumatic experiences and moral injury symptoms via military identity. The results indicate that identity is related to moral injury symptoms, although it is unclear if potentially morally injurious events are associated with identity. Moreover, the results depend on how identity is operationalized."
-  },
-  {
-    "objectID": "research/articles/2025-moral-injury-identity/index.html#citation",
-    "href": "research/articles/2025-moral-injury-identity/index.html#citation",
-    "title": "Moral Injury and Identity: Examining Moral Injury as Identity Loss and Identity Change",
-    "section": "Citation",
-    "text": "Citation\nHodges, T. J., Collette, T. L., & Moore, B. A. (2025). Moral injury and identity: Examining moral injury as identity loss and identity change. Traumatology. https://doi.org/10.1037/trm0000587\n@article{HodgesColletteMoore:2025,\n    Author = {Thomas J. Hodges and Tyler L. Collette and Brian A. Moore},\n    Doi = {10.1037/trm0000587},\n    Journal = {Traumatology},\n    Title = {Moral injury and identity: Examining moral injury as identity loss and identity change},\n    Year = {2025}}"
-  },
-  {
-    "objectID": "research/articles/2025-la-senorita/index.html",
-    "href": "research/articles/2025-la-senorita/index.html",
-    "title": "Becoming ‘La Señorita de Inglés’ in the U.S. Peace Corps: My Journey from Practitioner to Ph.D.",
-    "section": "",
-    "text": "Paper (No Paywall)"
-  },
-  {
-    "objectID": "research/articles/2025-la-senorita/index.html#links",
-    "href": "research/articles/2025-la-senorita/index.html#links",
-    "title": "Becoming ‘La Señorita de Inglés’ in the U.S. Peace Corps: My Journey from Practitioner to Ph.D.",
-    "section": "",
-    "text": "Paper (No Paywall)"
-  },
-  {
-    "objectID": "research/articles/2025-la-senorita/index.html#abstract",
-    "href": "research/articles/2025-la-senorita/index.html#abstract",
-    "title": "Becoming ‘La Señorita de Inglés’ in the U.S. Peace Corps: My Journey from Practitioner to Ph.D.",
-    "section": "Abstract",
-    "text": "Abstract\nThe Peace Corps is a governmental organization, founded in 1961 by President John F. Kennedy, with the objective of connecting United States citizens to the global community through service, community engagement, intercultural exchange, and collaboration. Peace Corps Volunteers (PCVs) serve in communities around the globe, promoting improved health, education, agriculture, and commerce. This essay provides a reflection on Peace Corps service and its impact on research."
-  },
-  {
-    "objectID": "research/articles/2025-la-senorita/index.html#citation",
-    "href": "research/articles/2025-la-senorita/index.html#citation",
-    "title": "Becoming ‘La Señorita de Inglés’ in the U.S. Peace Corps: My Journey from Practitioner to Ph.D.",
-    "section": "Citation",
-    "text": "Citation\nBharwani, N. K., & Hodges, T. J. (2025). Becoming “La Señorita de Inglés” in the U.S. Peace Corps: My Journey From Practitioner to Ph.D. Journal of Community Engagement and Scholarship, 17(3). https://doi.org/10.54656/jces.v17i3.672\n@article{BharwaniHodges:2024,\n    Author = {Nilofer K. Bharwani and Thomas J. Hodges},\n    Doi = {10.54656/jces.v17i3.672},\n    Journal = {Journal of Community Engagement and Scholarship},\n    Title = {Becoming ‘La Señorita de Inglés’ in the U.S. Peace Corps: My Journey from Practitioner to Ph.D.},\n    Year = {2024}}"
+    "text": "Citation\nHodges, T. J., Horan, K., Alicera, A., Trejo-Rivera, E., Vincent, S., Dubuisson, P., Moore, K., Channer, B., Hess, C., & Moore, B. A. (in press). Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters. In V. B. Van Hasselt & R. A. Black (Eds.), Advances in first responder mental health: Research, training, and practice. Springer.\n@incollection{HodgesHoranEtAl:2025,\n    Author = {Thomas J. Hodges and Kristin A. Horan and Adrian Alicea and Edwin Trejo-Rivera and Sophie R. Vincent and Phaina Dubuisson and Katherine Moore and Bianca Channer and Chris Hess and Brian A. Moore},\n    Booktitle = {Advances in first responder mental health: Research, training, and practice},\n    Title = {Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters},\n    Editor = {Vincent Van Hasselt and Ryan Black},\n    Publisher = {Springer},\n    Year = {in press}}"
   },
   {
     "objectID": "research/index.html",
@@ -273,136 +105,248 @@
     "text": "Dissertation\n\n\n\n\n\n\n\n\n\n\nMoral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans\n\n\n\n\n\n\nMoral Injury\n\n\nVeterans\n\n\nHealth\n\n\nReintegration\n\n\n\n\n\n\n\n\n\nDec 6, 2023\n\n\nThomas J. Hodges\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "research/book-chapters/2025-eap/index.html",
-    "href": "research/book-chapters/2025-eap/index.html",
-    "title": "Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters",
+    "objectID": "research/articles/2025-la-senorita/index.html",
+    "href": "research/articles/2025-la-senorita/index.html",
+    "title": "Becoming ‘La Señorita de Inglés’ in the U.S. Peace Corps: My Journey from Practitioner to Ph.D.",
+    "section": "",
+    "text": "Paper (No Paywall)"
+  },
+  {
+    "objectID": "research/articles/2025-la-senorita/index.html#links",
+    "href": "research/articles/2025-la-senorita/index.html#links",
+    "title": "Becoming ‘La Señorita de Inglés’ in the U.S. Peace Corps: My Journey from Practitioner to Ph.D.",
+    "section": "",
+    "text": "Paper (No Paywall)"
+  },
+  {
+    "objectID": "research/articles/2025-la-senorita/index.html#abstract",
+    "href": "research/articles/2025-la-senorita/index.html#abstract",
+    "title": "Becoming ‘La Señorita de Inglés’ in the U.S. Peace Corps: My Journey from Practitioner to Ph.D.",
+    "section": "Abstract",
+    "text": "Abstract\nThe Peace Corps is a governmental organization, founded in 1961 by President John F. Kennedy, with the objective of connecting United States citizens to the global community through service, community engagement, intercultural exchange, and collaboration. Peace Corps Volunteers (PCVs) serve in communities around the globe, promoting improved health, education, agriculture, and commerce. This essay provides a reflection on Peace Corps service and its impact on research."
+  },
+  {
+    "objectID": "research/articles/2025-la-senorita/index.html#citation",
+    "href": "research/articles/2025-la-senorita/index.html#citation",
+    "title": "Becoming ‘La Señorita de Inglés’ in the U.S. Peace Corps: My Journey from Practitioner to Ph.D.",
+    "section": "Citation",
+    "text": "Citation\nBharwani, N. K., & Hodges, T. J. (2025). Becoming “La Señorita de Inglés” in the U.S. Peace Corps: My Journey From Practitioner to Ph.D. Journal of Community Engagement and Scholarship, 17(3). https://doi.org/10.54656/jces.v17i3.672\n@article{BharwaniHodges:2024,\n    Author = {Nilofer K. Bharwani and Thomas J. Hodges},\n    Doi = {10.54656/jces.v17i3.672},\n    Journal = {Journal of Community Engagement and Scholarship},\n    Title = {Becoming ‘La Señorita de Inglés’ in the U.S. Peace Corps: My Journey from Practitioner to Ph.D.},\n    Year = {2024}}"
+  },
+  {
+    "objectID": "research/articles/2025-moral-injury-identity/index.html",
+    "href": "research/articles/2025-moral-injury-identity/index.html",
+    "title": "Moral Injury and Identity: Examining Moral Injury as Identity Loss and Identity Change",
+    "section": "",
+    "text": "Paper\nPaywall-Free Paper\nGitHub Repository\nSupplemental Material"
+  },
+  {
+    "objectID": "research/articles/2025-moral-injury-identity/index.html#links",
+    "href": "research/articles/2025-moral-injury-identity/index.html#links",
+    "title": "Moral Injury and Identity: Examining Moral Injury as Identity Loss and Identity Change",
+    "section": "",
+    "text": "Paper\nPaywall-Free Paper\nGitHub Repository\nSupplemental Material"
+  },
+  {
+    "objectID": "research/articles/2025-moral-injury-identity/index.html#abstract",
+    "href": "research/articles/2025-moral-injury-identity/index.html#abstract",
+    "title": "Moral Injury and Identity: Examining Moral Injury as Identity Loss and Identity Change",
+    "section": "Abstract",
+    "text": "Abstract\nAlthough it is widely accepted among theorists and clinicians that moral injury can affect identity, these claims are rarely specified, let alone investigated empirically. Among scholars of moral injury, an emerging explanation is that moral injury leads to a loss of identity. However, psychologists studying the relationship between identity and trauma argue that some traumatic experiences can reaffirm a person’s identity. Such reaffirmation may lead to a maintenance of identity rather than a loss, helping people make sense of traumatic experiences and be resilient to traumatic stress disorders. Drawing on this model, the Social Identity Model of Identity Change, the current article discusses these two potential processes—identity loss and identity maintenance—in the case of military moral injury. Using data from a survey of United States veterans, it models an indirect association between morally traumatic experiences and moral injury symptoms via military identity. The results indicate that identity is related to moral injury symptoms, although it is unclear if potentially morally injurious events are associated with identity. Moreover, the results depend on how identity is operationalized."
+  },
+  {
+    "objectID": "research/articles/2025-moral-injury-identity/index.html#citation",
+    "href": "research/articles/2025-moral-injury-identity/index.html#citation",
+    "title": "Moral Injury and Identity: Examining Moral Injury as Identity Loss and Identity Change",
+    "section": "Citation",
+    "text": "Citation\nHodges, T. J., Collette, T. L., & Moore, B. A. (2025). Moral injury and identity: Examining moral injury as identity loss and identity change. Traumatology. https://doi.org/10.1037/trm0000587\n@article{HodgesColletteMoore:2025,\n    Author = {Thomas J. Hodges and Tyler L. Collette and Brian A. Moore},\n    Doi = {10.1037/trm0000587},\n    Journal = {Traumatology},\n    Title = {Moral injury and identity: Examining moral injury as identity loss and identity change},\n    Year = {2025}}"
+  },
+  {
+    "objectID": "research/articles/2024-just-lider-no/index.html",
+    "href": "research/articles/2024-just-lider-no/index.html",
+    "title": "‘Just leader? No, lideresa!’ Experiences of Female Leaders Working in Climate Change Disaster Risk Reduction and Environmental Sustainability in the Global South",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/articles/2024-just-lider-no/index.html#links",
+    "href": "research/articles/2024-just-lider-no/index.html#links",
+    "title": "‘Just leader? No, lideresa!’ Experiences of Female Leaders Working in Climate Change Disaster Risk Reduction and Environmental Sustainability in the Global South",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/articles/2024-just-lider-no/index.html#abstract",
+    "href": "research/articles/2024-just-lider-no/index.html#abstract",
+    "title": "‘Just leader? No, lideresa!’ Experiences of Female Leaders Working in Climate Change Disaster Risk Reduction and Environmental Sustainability in the Global South",
+    "section": "Abstract",
+    "text": "Abstract\nAs environmental disasters disproportionately affect women, international guidelines to address the disparity focus on the inclusion of women in disaster risk reduction programs. While inclusion is a noble pursuit, it may fall short of equitable outcomes and instead lead to tokenization. Drawing on standpoint feminism and intersectionality, the goal of this study was to investigate tensions between inclusion and equity for women working in disaster risk reduction. We interviewed women from Ecuador and Tajikistan and asked them about the ways that gender shapes their experiences working in disaster risk reduction. We found that the women reflect upon themselves as agents with various forms of privilege and disadvantage, based on their multifaceted identities and differing levels of perceived discrimination within their professions. The findings suggest that inclusion, while necessary, can fall short of its promises. We recommend that organizational guidelines make everyone responsible for fostering equitable workplaces for disaster risk reduction."
+  },
+  {
+    "objectID": "research/articles/2024-just-lider-no/index.html#citation",
+    "href": "research/articles/2024-just-lider-no/index.html#citation",
+    "title": "‘Just leader? No, lideresa!’ Experiences of Female Leaders Working in Climate Change Disaster Risk Reduction and Environmental Sustainability in the Global South",
+    "section": "Citation",
+    "text": "Citation\nBharwani, N. K., Hodges, T., Lepadatu, D., & Rodriguez, D. X. (2024). ‘Just leader? No, lideresa!’ Experiences of female leaders working in climate change disaster risk reduction and environmental sustainability in the global south. Environmental Research: Climate, 3(4), 045008. https://doi.org/10.1088/2752-5295/ad6a7a\n@article{BharwaniHodgesLepadatuRodriguez:2024,\n    Author = {Nilofer K. Bharwani and Thomas J. Hodges and Darina Lepadatu and Darlene Xiomara Rodriguez},\n    Doi = {10.1088/2752-5295/ad6a7a},\n    Journal = {Environmental Research: Climate},\n    Title = {‘Just leader? No, lideresa!’ Experiences of female leaders working in climate change disaster risk reduction and environmental sustainability in the global south},\n    Year = {2024}}"
+  },
+  {
+    "objectID": "research/articles/2024-ssmvs/index.html",
+    "href": "research/articles/2024-ssmvs/index.html",
+    "title": "Unlocking SSM/V success: Welcoming student service members and veterans and supporting SSM/V experiences",
+    "section": "",
+    "text": "Paper\nPaywall-Free Paper"
+  },
+  {
+    "objectID": "research/articles/2024-ssmvs/index.html#links",
+    "href": "research/articles/2024-ssmvs/index.html#links",
+    "title": "Unlocking SSM/V success: Welcoming student service members and veterans and supporting SSM/V experiences",
+    "section": "",
+    "text": "Paper\nPaywall-Free Paper"
+  },
+  {
+    "objectID": "research/articles/2024-ssmvs/index.html#abstract",
+    "href": "research/articles/2024-ssmvs/index.html#abstract",
+    "title": "Unlocking SSM/V success: Welcoming student service members and veterans and supporting SSM/V experiences",
+    "section": "Abstract",
+    "text": "Abstract\nHelping student service members and veterans (SSM/Vs) earn a college degree is central to supporting them post-service. Yet, this generation of SSM/Vs faces challenges in higher education, including problems adapting, poor health, and administrative constraints, contributing to worsened academic outcomes and a sense of isolation on campus. This monograph synthesizes research on the challenges facing SSM/Vs. It also frames common aspects of successful programs aiding SSM/Vs as three areas for intervention: how administrators and faculty can create a welcoming campus for SSM/Vs; ways universities can create support systems for SSM/V social, health, and academic success; and engaging community partnerships to enable these efforts. Whether SSM/Vs overcome their challenges and unlock their strengths is contingent on opportunities provided within the school itself, and by its faculty, administrators, students, and community. Central to these efforts should be the goal of inclusivity enhancement, community building, and reduction of health-related dysfunction among SSM/Vs."
+  },
+  {
+    "objectID": "research/articles/2024-ssmvs/index.html#citation",
+    "href": "research/articles/2024-ssmvs/index.html#citation",
+    "title": "Unlocking SSM/V success: Welcoming student service members and veterans and supporting SSM/V experiences",
+    "section": "Citation",
+    "text": "Citation\nHodges, T. J., Gomes, K. D., Foral, G. C., Collette, T. L., & Moore, B. A. (2024). Unlocking SSM/V success: Welcoming student service members and veterans and supporting SSM/V experiences. Journal of College Student Retention: Research, Theory & Practice, 26(2), 422–444. https://doi.org/10.1177/15210251221086851\n@article{HodgesGomesForalColletteMoore:2024,\n    Author = {Thomas J. Hodges and Kimberly D. Gomes and Geno C. Foral and Tyler L. Collette and Brian A. Moore},\n    Doi = {10.1177/15210251221086851},\n    Journal = {Journal of College Student Retention: Research, Theory & Practice},\n    Title = {Unlocking SSM/V success: Welcoming student service members and veterans and supporting SSM/V experiences},\n    Year = {2024}}"
+  },
+  {
+    "objectID": "research/articles/2022-avp/index.html",
+    "href": "research/articles/2022-avp/index.html",
+    "title": "Conflict Resolution Workshops for Service Members and Families: The Potentials of Alternatives to Violence Project (AVP) to Address Military Domestic Violence",
+    "section": "",
+    "text": "Paper\nPaywall-Free Paper\nAlternatives to Violence Project USA"
+  },
+  {
+    "objectID": "research/articles/2022-avp/index.html#links",
+    "href": "research/articles/2022-avp/index.html#links",
+    "title": "Conflict Resolution Workshops for Service Members and Families: The Potentials of Alternatives to Violence Project (AVP) to Address Military Domestic Violence",
+    "section": "",
+    "text": "Paper\nPaywall-Free Paper\nAlternatives to Violence Project USA"
+  },
+  {
+    "objectID": "research/articles/2022-avp/index.html#abstract",
+    "href": "research/articles/2022-avp/index.html#abstract",
+    "title": "Conflict Resolution Workshops for Service Members and Families: The Potentials of Alternatives to Violence Project (AVP) to Address Military Domestic Violence",
+    "section": "Abstract",
+    "text": "Abstract\nAlthough the violence of war is well-known, members of the United States military also struggle with domestic violence, including intimate partner violence and child abuse and neglect. The prevalence of domestic violence is not necessarily higher in the military than in the general population. However, military domestic violence does occur under institutional and cultural conditions quite different from civilian life. Further, service members are at elevated risk for health dysfunctions that can contribute to violence. The current review delineates how domestic violence in the military may be reduced by Alternatives to Violence Project, a widely used, community-based training program in conflict resolution. Specifically, we suggest Alternatives to Violence Project facilitates space to learn interpersonal skills and engage in creative discussions about the stresses and cultural norms that contribute to domestic violence in the military. As Alternatives to Violence Project and similar training does not change the stressors of military life, nor has extensive research documented its impact on violence, additional work is needed. This manuscript represents a first step toward situating conflict resolution in a framework for military domestic violence reduction, showing the potentials and limitations of Alternatives to Violence Project and making recommendations for future research and interventions."
+  },
+  {
+    "objectID": "research/articles/2022-avp/index.html#citation",
+    "href": "research/articles/2022-avp/index.html#citation",
+    "title": "Conflict Resolution Workshops for Service Members and Families: The Potentials of Alternatives to Violence Project (AVP) to Address Military Domestic Violence",
+    "section": "Citation",
+    "text": "Citation\nHodges, T. J., Sharma, S., Nicolas, D. S., & Moore, B. A. (2022). Conflict resolution workshops for service members and families: The potentials of Alternatives to Violence Project (AVP) to address military domestic violence. Aggression and Violent Behavior, 66(101736). https://doi.org/10.1016/j.avb.2022.101736\n@article{HodgesSharmaNicolasMoore:2022,\n    Author = {Thomas J. Hodges and Shubam Sharma and Déja S. Nicholas and Brian A. Moore},\n    Doi = {10.1016/j.avb.2022.101736},\n    Journal = {Aggression and Violent Behavior},\n    Title = {Conflict resolution workshops for service members and families: The potentials of Alternatives to Violence Project (AVP) to address military domestic violence},\n    Year = {2022}}"
+  },
+  {
+    "objectID": "research/articles/2025-rethinking-acculturation/index.html",
+    "href": "research/articles/2025-rethinking-acculturation/index.html",
+    "title": "Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment",
+    "section": "",
+    "text": "Paper (No Paywall)"
+  },
+  {
+    "objectID": "research/articles/2025-rethinking-acculturation/index.html#links",
+    "href": "research/articles/2025-rethinking-acculturation/index.html#links",
+    "title": "Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment",
+    "section": "",
+    "text": "Paper (No Paywall)"
+  },
+  {
+    "objectID": "research/articles/2025-rethinking-acculturation/index.html#abstract",
+    "href": "research/articles/2025-rethinking-acculturation/index.html#abstract",
+    "title": "Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment",
+    "section": "Abstract",
+    "text": "Abstract\nVeterans are like migrants, at least according to some military researchers. When service members leave the military, they leave a strong military culture for civilian life, needing to adapt socially, psychologically, and economically to their new life. Confusing this comparison between veterans and migrants; however, is that some veterans are also migrants, born outside their country of military service, raising the question of whether leaving the military is on par with migration as an intercultural transition. Drawing on the example of foreign-born service members, we problematize the notion of “civilian culture.” Then, we reformulate military acculturation theory as military-civilian biculturalism and put forward six questions forming an agenda for future research."
+  },
+  {
+    "objectID": "research/articles/2025-rethinking-acculturation/index.html#citation",
+    "href": "research/articles/2025-rethinking-acculturation/index.html#citation",
+    "title": "Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment",
+    "section": "Citation",
+    "text": "Citation\nHodges, T. J., Bharwani, N. K., Manley, E., & Xiomara Rodriguez, D. (2025). Rethinking acculturation and military transition: An agenda for military-civilian biculturalism, reintegration, and adjustment. Journal of Veterans Studies, 11(1), 161–171. https://doi.org/10.21061/jvs.v11i1.678\n@article{HodgesBharwaniManleyRodriguez:2025,\n    Author = {Thomas J. Hodges and Nilofer K. Bharwani and Eric Manley and Darlene Xiomara Rodriguez},\n    Doi = {10.21061/jvs.v11i1.678},\n    Journal = {Journal of Veterans Studies},\n    Title = {Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment},\n    Year = {2025}}"
+  },
+  {
+    "objectID": "research/book-chapters/2025-firefighter/index.html",
+    "href": "research/book-chapters/2025-firefighter/index.html",
+    "title": "Mental and Occupational Health of Fire Rescue Personnel: A model for Conducting Organizational Health Assessments",
     "section": "",
     "text": "Coming Soon."
   },
   {
-    "objectID": "research/book-chapters/2025-eap/index.html#links",
-    "href": "research/book-chapters/2025-eap/index.html#links",
-    "title": "Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters",
+    "objectID": "research/book-chapters/2025-firefighter/index.html#links",
+    "href": "research/book-chapters/2025-firefighter/index.html#links",
+    "title": "Mental and Occupational Health of Fire Rescue Personnel: A model for Conducting Organizational Health Assessments",
     "section": "",
     "text": "Coming Soon."
   },
   {
-    "objectID": "research/book-chapters/2025-eap/index.html#abstract",
-    "href": "research/book-chapters/2025-eap/index.html#abstract",
-    "title": "Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters",
+    "objectID": "research/book-chapters/2025-firefighter/index.html#abstract",
+    "href": "research/book-chapters/2025-firefighter/index.html#abstract",
+    "title": "Mental and Occupational Health of Fire Rescue Personnel: A model for Conducting Organizational Health Assessments",
     "section": "Abstract",
     "text": "Abstract\nComing soon."
   },
   {
-    "objectID": "research/book-chapters/2025-eap/index.html#citation",
-    "href": "research/book-chapters/2025-eap/index.html#citation",
-    "title": "Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters",
+    "objectID": "research/book-chapters/2025-firefighter/index.html#citation",
+    "href": "research/book-chapters/2025-firefighter/index.html#citation",
+    "title": "Mental and Occupational Health of Fire Rescue Personnel: A model for Conducting Organizational Health Assessments",
     "section": "Citation",
-    "text": "Citation\nHodges, T. J., Horan, K., Alicera, A., Trejo-Rivera, E., Vincent, S., Dubuisson, P., Moore, K., Channer, B., Hess, C., & Moore, B. A. (in press). Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters. In V. B. Van Hasselt & R. A. Black (Eds.), Advances in first responder mental health: Research, training, and practice. Springer.\n@incollection{HodgesHoranEtAl:2025,\n    Author = {Thomas J. Hodges and Kristin A. Horan and Adrian Alicea and Edwin Trejo-Rivera and Sophie R. Vincent and Phaina Dubuisson and Katherine Moore and Bianca Channer and Chris Hess and Brian A. Moore},\n    Booktitle = {Advances in first responder mental health: Research, training, and practice},\n    Title = {Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters},\n    Editor = {Vincent Van Hasselt and Ryan Black},\n    Publisher = {Springer},\n    Year = {in press}}"
+    "text": "Citation\nChanner, B., Schlenk, M., Sanchez-Cardona, I., Collette, T. L., Horan, K., Hess, C., Hodges, T. J., & Moore, B. A. (in press). Mental and occupational health of fire rescue personnel: A model for conducting organizational health assessments. In V. B. Van Hasselt & R. A. Black (Eds.), Advances in first responder mental health: Research, training, and practice. Springer.\n@incollection{ChannerSchlenkEtAl:2025,\n    Author = {Bianca Channer and Micheal Schlenk and Israel Sanchez-Cardona and Tyler L. Collette and Kristin A. Horan and Chris Hess and Thomas J. Hodges and Brian A. Moore},\n    Title = {Mental and occupational health of fire rescue personnel: A model for conducting organizational health assessments},\n    Booktitle = {Advances in first responder mental health: Research, training, and practice},\n    Editor = {Vincent Van Hasselt and Ryan Black},\n    Publisher = {Springer},\n    Year = {in press}}"
   },
   {
-    "objectID": "research/reviews/2024-film-review-what-i-want-you/index.html",
-    "href": "research/reviews/2024-film-review-what-i-want-you/index.html",
-    "title": "Seeking justice through moral injury: A review of the documentary film What I Want You to Know",
+    "objectID": "research/dissertation/2023-dissertation/index.html",
+    "href": "research/dissertation/2023-dissertation/index.html",
+    "title": "Moral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans",
     "section": "",
     "text": "Paper"
   },
   {
-    "objectID": "research/reviews/2024-film-review-what-i-want-you/index.html#important-links",
-    "href": "research/reviews/2024-film-review-what-i-want-you/index.html#important-links",
-    "title": "Seeking justice through moral injury: A review of the documentary film What I Want You to Know",
+    "objectID": "research/dissertation/2023-dissertation/index.html#important-links",
+    "href": "research/dissertation/2023-dissertation/index.html#important-links",
+    "title": "Moral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans",
     "section": "",
     "text": "Paper"
   },
   {
-    "objectID": "research/reviews/2024-film-review-what-i-want-you/index.html#abstract",
-    "href": "research/reviews/2024-film-review-what-i-want-you/index.html#abstract",
-    "title": "Seeking justice through moral injury: A review of the documentary film What I Want You to Know",
+    "objectID": "research/dissertation/2023-dissertation/index.html#abstract",
+    "href": "research/dissertation/2023-dissertation/index.html#abstract",
+    "title": "Moral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans",
     "section": "Abstract",
-    "text": "Abstract\nThroughout What I Want You to Know, we see how the loss of a purpose for fighting tips the moral scales of military service, putting service members at risk for moral injury."
+    "text": "Abstract\nHow do military moral injuries affect reintegration? All service members leave the military eventually, but reintegration can be challenging, bringing changes in career, family life, and friendships, potentially prompting a loss of purpose, drive, and connection. Service members may also struggle with a crisis of identity upon separating from the military, feeling their military identity is incompatible with civilian life. While these difficulties are common for service members in reintegration, they may be worsened by moral injury, the adverse biological, social, psychological, and spiritual effects of experiencing an event that deeply offends a person’s sense of right and wrong. People with moral injuries may experience severe inner conflict, guilt, shame, and loss of trust in self, others, and a higher power. These issues may impede reintegration, causing disconnect and alienation in civilian life. Experts believe moral injuries can prompt crises of identity in their own right, which may compound the identity dissonance that commonly follows military separation, although few studies have tried to confirm this belief. In this dissertation, I conceptualize reintegration and identity dissonance, using higher education and family life as examples and drawing on two articles I previously co-authored. I articulate a theoretical framework based on the study of acculturation, the adaptation of people undergoing an international transition. Using evidence from a cross-sectional survey of separated United States service members, I test if moral injury symptoms are associated with reintegration difficulty and to what extent identity dissonance mediates this relationship observed in the sample."
   },
   {
-    "objectID": "research/reviews/2024-film-review-what-i-want-you/index.html#citation",
-    "href": "research/reviews/2024-film-review-what-i-want-you/index.html#citation",
-    "title": "Seeking justice through moral injury: A review of the documentary film What I Want You to Know",
+    "objectID": "research/dissertation/2023-dissertation/index.html#citation",
+    "href": "research/dissertation/2023-dissertation/index.html#citation",
+    "title": "Moral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans",
     "section": "Citation",
-    "text": "Citation\n@article{Hodges:2024,\n    Author = {Thomas J. Hodges},\n    Journal = {Peace Chronicle},\n    Title = {Seeking justice through moral injury: A review of the documentary film What I Want You to Know},\n    Year = {2024}}"
+    "text": "Citation\n@phdthesis{Hodges:2023,\n    Author = {Thomas J. Hodges},\n    Title = {Moral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans},\n    School = {Kennesaw State University},\n    Year = {2023}}"
   },
   {
-    "objectID": "info/index.html",
-    "href": "info/index.html",
-    "title": "Site Info",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About Me",
     "section": "",
-    "text": "I took inspiration for this site from Andrew Heiss’ excellent website and blog.\nI used Quarto to create the site.\nThe color scheme for the site comes from the Lakota palette in the MetBrewer library for R and Python. The palettes are Inspired by displays at the Metropolitan Museum of Art in New York Specifically, I use the Lakota palette."
+    "text": "I am Thomas Hodges, a data scientist, research, and expert in people analytics.\n\nDuring my PhD studies, I helped to found the AMES Research Center. We use analytics and research-based programs to improve the workplace well-being of veterans, police, firefighters, and medics. In 3 years, we grew to a staff of 20 with a yearly revenue of $1.9M in contracts and grants. We have trained 1.6K employees and conducted assessments for 38 client organizations and 13.5K personnel.\n\nI wear a lot of hats. I developed our conflict management training program, training over 150 individuals in constructive conflict resolution. I also act as a project manager, data scientist, and consultant. I’ve given 23 public presentations, published 8 articles, and written 3 reports for state agencies.\n\nI’ve had a nonlinear career path. Before my PhD, I worked a few years in HR and Business Development. But I developed a temporary disability, overcame it, then took time to travel, volunteer, intern, and go to grad school. I’ve been driven by learning and growing into a person who can have an impact."
   },
   {
-    "objectID": "blog/posts/simulation-for-power-analysis/index.html",
-    "href": "blog/posts/simulation-for-power-analysis/index.html",
-    "title": "Why your employees aren’t engaging with your employee engagement survey",
+    "objectID": "cv/index.html",
+    "href": "cv/index.html",
+    "title": "Curriculum vitae",
     "section": "",
-    "text": "Tl;dr: they don’t trust that your survey is truly anonymous, they think you’ll use it against them, and they might be right. I’ll tell you how to solve that.\nPeople don’t trust surveys.\nEmployees think they are being spied on. They think an engagement survey is an elaborate trap to find people who are not committed to the organization. For certain occupations, the fear is even worse. For example, police officers might worry that a mental health survey will be used to label them as unfit for duty.\nEven outside of the workplace, people might fear their data is used to label  them as problematic. Or with public polling surveys, like the ones used in the run up to an election, people can mistrust pollsters or the news media that will report on the poll.\nThe good news is that these fears are mostly unfounded. People analytics teams want to improve workplaces, not surveil deviant workers. When we run health surveys at the AMES Research Center, we use to data to tailor services for our client’s specific needs.\nStill, survey fears are problem for survey admins trying to do the right thing. Fear can lead to low participation. It can also cause participants to lie on their survey. Or they might respond carelessly in other ways, such as “straightlining” or “Christmas treeing.”\nOne easy workaround is to make surveys anonymous. The survey’s don’t ask for your name, so how can they be used to track you and punish you? This poses a problem, however, for longitudinal surveys: those where you want to survey the same people at repeated points over time.\nIn this post I’ll tell you how we solve these problems of trust, anonymity, and data qualiity in our work with organizations and communities and the problems we still face. I will also demonstrate how to clean bad data with R and why linking surveys over time helps your statistical analysis."
+    "text": "This is my long-form academic C.V. For a shorter, professional-focused resume, send me an email.\n\n\n\n\n\n\n\n  \n     Download current CV"
   },
   {
-    "objectID": "blog/posts/simulation-for-power-analysis/index.html#is-your-survey-really-anonymous",
-    "href": "blog/posts/simulation-for-power-analysis/index.html#is-your-survey-really-anonymous",
-    "title": "Why your employees aren’t engaging with your employee engagement survey",
-    "section": "Is your survey really anonymous?",
-    "text": "Is your survey really anonymous?\nWhenever possible, you should make your surveys anonymous. Truly anonymous. To start, this means you should not ask participants their name. But there are other ways to identify responses. Survey hosts such as Qualtrics collect IP Address, Latitude, and Longitude by default, even for its “anonymous” QR code or link. You can and should disable this. Then you should tell your participants that you disabled them. Build trust by being open and transparent and by making strong claims about how you are protecting their privacy."
-  },
-  {
-    "objectID": "blog/posts/simulation-for-power-analysis/index.html#is-your-survey-really-benevolent",
-    "href": "blog/posts/simulation-for-power-analysis/index.html#is-your-survey-really-benevolent",
-    "title": "Why your employees aren’t engaging with your employee engagement survey",
-    "section": "Is your survey really benevolent?",
-    "text": "Is your survey really benevolent?"
-  },
-  {
-    "objectID": "blog/posts/simulation-for-power-analysis/index.html#anonymous-surveys-a-partial-solution",
-    "href": "blog/posts/simulation-for-power-analysis/index.html#anonymous-surveys-a-partial-solution",
-    "title": "Why your employees aren’t engaging with your employee engagement survey",
-    "section": "Anonymous Surveys: A Partial Solution",
-    "text": "Anonymous Surveys: A Partial Solution"
-  },
-  {
-    "objectID": "blog/posts/trust-surveys/index.html",
-    "href": "blog/posts/trust-surveys/index.html",
-    "title": "Why your employees aren’t engaging with your employee engagement survey",
+    "objectID": "data/posts/bayes/index.html",
+    "href": "data/posts/bayes/index.html",
+    "title": "Bayesian Modeling of Health Data of Military Veterans",
     "section": "",
-    "text": "Tl;dr: they don’t trust that your survey is truly anonymous, they think you’ll use it against them, and they might be right. I’ll tell you how to solve that.\nPeople don’t trust surveys.\nEmployees think they are being spied on. They think an engagement survey is an elaborate trap to find people who are not committed to the organization. For certain occupations, the fear is even worse. For example, police officers might worry that a mental health survey will be used to label them as unfit for duty.\nEven outside of the workplace, people might fear their data is used to label  them as problematic. Or with public polling surveys, like the ones used in the run up to an election, people can mistrust pollsters or the news media that will report on the poll.\nThe good news is that these fears are mostly unfounded. People analytics teams want to improve workplaces, not surveil deviant workers. When we run health surveys at the AMES Research Center, we use to data to tailor services for our client’s specific needs.\nStill, survey fears are problem for survey admins trying to do the right thing. Fear can lead to low participation. It can also cause participants to lie on their survey. Or they might respond carelessly in other ways, such as “straightlining” or “Christmas treeing.”\nOne easy workaround is to make surveys anonymous. The survey’s don’t ask for your name, so how can they be used to track you and punish you? This poses a problem, however, for longitudinal surveys: those where you want to survey the same people at repeated points over time.\nIn this post I’ll tell you how we solve these problems of trust, anonymity, and data qualiity in our work with organizations and communities and the problems we still face. I will also demonstrate how to clean bad data with R using the careless package and why linking surveys over time helps your statistical analysis."
-  },
-  {
-    "objectID": "blog/posts/trust-surveys/index.html#is-your-survey-really-anonymous",
-    "href": "blog/posts/trust-surveys/index.html#is-your-survey-really-anonymous",
-    "title": "Why your employees aren’t engaging with your employee engagement survey",
-    "section": "Is your survey really anonymous?",
-    "text": "Is your survey really anonymous?\nWhenever possible, you should make your surveys anonymous. Truly anonymous. To start, this means you should not ask participants their name. But there are other ways to identify responses. Survey hosts such as Qualtrics collect IP Address, Latitude, and Longitude by default, even for its “anonymous” QR code or link. You can and should disable this. Then you should tell your participants that you disabled them. Build trust by being open and transparent and by making strong claims about how you are protecting their privacy.\nThe problem is a bit more difficult. Depending on the number of people in your organization, the questions you ask can narrow down respondents. This is especially true for demographic questions. To demonstrate this problem, let’s simulate a survey using R.\nAssume there are two teams in your organization, marketing and accounting. Each team has 3 people, and half of the employees are men and half are women. First we will create this data:\n\nlibrary(tidyverse) # Load this package for convenient R functions\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n## Create the data:\n(employees &lt;-\n  tibble(\n    employee = c(\"Tom\", \"Thula\", \"Tim\", \"Paulina\", \"Pedro\", \"Priscilla\"),\n    gender = rep(c('Male', \"Female\"), 3),\n    team = c(rep(\"Marketing\", 3), rep(\"Accounting\", 3))\n  )\n)\n\n# A tibble: 6 × 3\n  employee  gender team      \n  &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;     \n1 Tom       Male   Marketing \n2 Thula     Female Marketing \n3 Tim       Male   Marketing \n4 Paulina   Female Accounting\n5 Pedro     Male   Accounting\n6 Priscilla Female Accounting\n\n\nNow let’s administer a survey. Assume there is a 50% chance of employees responding. On the survey, we ask people what team they work on and what their gender is.\n\n## make it random, but use this \"seed\" to replciate my results\nset.seed(369)\n\n(responses &lt;-\nemployees %&gt;% \n  mutate(\n    respond = sample(c(\"Yes\", \"No\"), size = 6, replace = TRUE, prob = c(.50, .50))\n  ) %&gt;% \n  select(-employee) %&gt;% \n  filter(respond == \"Yes\")\n)\n\n# A tibble: 3 × 3\n  gender team       respond\n  &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;  \n1 Male   Marketing  Yes    \n2 Female Accounting Yes    \n3 Male   Accounting Yes    \n\n\nIn these results, the first row is either Tom or Tim, the two males in marketing. There is a 50% chance of it being either other of them. The second row is either Paulina or Priscilla with a 50% chance. The third row is 100% Pedro, the only guy in accounting.\nLet’s calculate these percentages in R so we can scale up the simulation. To do so, we will need to add the number of people per team, and the number of males/females per team.\n\n## First calculate the team size\n(employees &lt;-\n  employees %&gt;% \n  mutate(\n    female = ifelse(gender == \"Female\", 1, 0),\n  ) %&gt;% \n  group_by(team) %&gt;% \n  mutate(team_size = n(), n_females = sum(female)) %&gt;% \n  ungroup()\n)\n\n# A tibble: 6 × 6\n  employee  gender team       female team_size n_females\n  &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;       &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;\n1 Tom       Male   Marketing       0         3         1\n2 Thula     Female Marketing       1         3         1\n3 Tim       Male   Marketing       0         3         1\n4 Paulina   Female Accounting      1         3         2\n5 Pedro     Male   Accounting      0         3         2\n6 Priscilla Female Accounting      1         3         2\n\n\nNow add the percentages.\n\n(employees &lt;-\n  employees %&gt;% \n  mutate(\n    perc = \n      ifelse(female == 1, \n           1 / n_females,\n           1 / (team_size - n_females)\n           )\n  )\n)\n\n# A tibble: 6 × 7\n  employee  gender team       female team_size n_females  perc\n  &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;       &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt; &lt;dbl&gt;\n1 Tom       Male   Marketing       0         3         1   0.5\n2 Thula     Female Marketing       1         3         1   1  \n3 Tim       Male   Marketing       0         3         1   0.5\n4 Paulina   Female Accounting      1         3         2   0.5\n5 Pedro     Male   Accounting      0         3         2   1  \n6 Priscilla Female Accounting      1         3         2   0.5\n\n\nLet’s wrap these scripts in a few functions to reuse them.\n\ncreate_data &lt;- function(team_size) {\n  employees &lt;-\n  tibble(\n    employee_id = c(1:(team_size * 2)),\n    gender = rep(c('Male', \"Female\"), team_size),\n    team = c(rep(\"Marketing\", team_size), rep(\"Accounting\", team_size))\n  )\n  return(employees)\n}\n\ncalculate_perc &lt;-\n  function(data){\n    \n    data &lt;-\n    data %&gt;% \n    mutate(female = ifelse(gender == \"Female\", 1, 0)) %&gt;% \n    group_by(team) %&gt;% \n    mutate(team_size = n(), n_females = sum(female)) %&gt;% \n    mutate(perc = ifelse(female == 1, 1 / n_females, 1 / (team_size - n_females))) %&gt;% \n    ungroup()\n    \n    return(data)\n  }\n\nrun_survey &lt;- function(data){\n  responses &lt;-\n    data %&gt;% \n    mutate(\n      respond = sample(c(\"Yes\", \"No\"), size = nrow(.), replace = TRUE, prob = c(.50, .50))\n    ) %&gt;% \n    filter(respond == \"Yes\")\n  \n  return(responses)\n}\n\nWith out function ready, let’s increase the size of the teams from 3 to 7, then add our percentages, and run our survey.\n\n(responses &lt;-\n  create_data(team_size = 7) %&gt;% \n  calculate_perc() %&gt;% \n  run_survey()\n)\n\n# A tibble: 5 × 8\n  employee_id gender team       female team_size n_females  perc respond\n        &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;       &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  \n1           1 Male   Marketing       0         7         3 0.25  Yes    \n2           5 Male   Marketing       0         7         3 0.25  Yes    \n3           6 Female Marketing       1         7         3 0.333 Yes    \n4          10 Female Accounting      1         7         4 0.25  Yes    \n5          13 Male   Accounting      0         7         4 0.333 Yes    \n\n\nNotice that men and women are distributed as evenly as possible, although the odd-number team size means that the minority gender on a team has a higher chance of identification. With even number teams, and an evenly split gender balance, the chance of identification is equal.:\n\n(responses &lt;- create_data(team_size = 4) %&gt;% calculate_perc() %&gt;% run_survey())\n\n# A tibble: 2 × 8\n  employee_id gender team       female team_size n_females  perc respond\n        &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;       &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  \n1           2 Female Marketing       1         4         2   0.5 Yes    \n2           8 Female Accounting      1         4         2   0.5 Yes    \n\n\nApart from parity, there is also safety in large numbers, such as 100-person teams:\n\n(responses &lt;- create_data(team_size = 100) %&gt;% calculate_perc() %&gt;% run_survey())\n\n# A tibble: 109 × 8\n   employee_id gender team      female team_size n_females  perc respond\n         &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  \n 1           1 Male   Marketing      0       100        50  0.02 Yes    \n 2           2 Female Marketing      1       100        50  0.02 Yes    \n 3           4 Female Marketing      1       100        50  0.02 Yes    \n 4           7 Male   Marketing      0       100        50  0.02 Yes    \n 5          10 Female Marketing      1       100        50  0.02 Yes    \n 6          12 Female Marketing      1       100        50  0.02 Yes    \n 7          16 Female Marketing      1       100        50  0.02 Yes    \n 8          17 Male   Marketing      0       100        50  0.02 Yes    \n 9          19 Male   Marketing      0       100        50  0.02 Yes    \n10          23 Male   Marketing      0       100        50  0.02 Yes    \n# ℹ 99 more rows\n\n\nThe math behind this is really simple. Take 100% and divide it by the number of people in each group. If you ask no demographic questions, then all you know is they come from your organization. Take 100% and divide it by the number of people in the organization, say 50. That’s a 2% chance that a response is from any given employee. This starts to get narrower the more demographic questions you ask. If you know their team, then there is 100% chance shared among the team members. If there are 20 team members, it’s a 5% chance each.\nFor each demographic question you add, the group gets even smaller. There are only so many left-handed, female, accountants who were born in Michigan in the 1990s. In fact, a study from 2000 found that 87% of Americans could be identified in Census data using only their ZIP code, gender, and date of birth. Think about it. Even if there are 100,000 people in your ZIP code, roughly half are male, then that’s 50,000 people left. Take the roughly 365 potential birthdays and multiply that by about 80 years, the average lifespan. That’s 2.92^{4} birthdays. Divide that by 5,000 people, that’s a 58% chance.\nWhat does this mean for employee surveys? If you want it to be truly anonymous, don’t ask people a combination of questions that put them in tiny groups.\nFor smaller organizations, that limits the questions you can ask. Even large organizations can have a problem with combinations of questions or questions that narrow down respondents too much. For example, asking about how many years a person has worked for the company.\nIn these cases, you have a few options. You can combine multiple answers into a single answer category. Instead of allowing participants to give you the specific number of years, you ask them to pick from several categories:\n\nOne year or less\nBetween 1 and 2 years\n3 to 5 years\n6 to 10 years\nOver 10 years\n\nYour second option is to gather the data anyways, but realize that some people will have less trust in the survey. There are still things you can do to mitigate that."
-  },
-  {
-    "objectID": "blog/posts/trust-surveys/index.html#messaging-surveys-for-trust",
-    "href": "blog/posts/trust-surveys/index.html#messaging-surveys-for-trust",
-    "title": "Why your employees aren’t engaging with your employee engagement survey",
-    "section": "Messaging Surveys for Trust",
-    "text": "Messaging Surveys for Trust\nFew employee surveys start with an “informed consent.” The informed consent is ubiquitous in academic research. Researchers are held to strict standards, including those based in law. One of those standards is “respect for persons,” which means treating people as autonomous; giving them the choice to participate in research or not. This choice needs to be a well-informed decision. The way researchers inform people is through the informed consent form.\nThe typical informed consent form has the following information:\n\nthe study’s research question\nthe study’s procedure\nrisks of the study\nbenefits to participants\nbenefits to society\ncontact info for the researchers"
-  },
-  {
-    "objectID": "blog/posts/war-part-1/index.html",
-    "href": "blog/posts/war-part-1/index.html",
-    "title": "Starting a New Data Science Project with Python and Zsh: Predicting War and Peace",
-    "section": "",
-    "text": "This post is first in a series. We are starting a journey to explain and predict war using data.\nWhy are we doing this? Nothing could be more important than understanding war. War’s winners gain rights, money, land, and identity. They get to tell the history. They get to decide what happens next. War’s losers lose their rights, money, land, and identity. They have to hear the winner’s version of history. And lots of people lose. They die. They are maimed. They are psychologically scarred. Their houses are demolished. There cities are ruined. Their environments are polluted. The stakes of war are high, making peace an imperative. If war can be explained, it can be predicted. If war can be predicted, it can be stopped, along with countless deaths and untold suffering.\nWhat will you learn along the way? A few things. First, obviously, we are learning about war and peace: its onset, duration, end, recurrence, and prevention. We will learn from data, as well as from published research.\nWhen I say data, I am referring to publicly available datasets, including those from the Correlates of War project or the Uppsala Conflict Data Project. These data sets have recorded every war that has happened since 1946, including civil wars and international wars.\nOur second goal is to learn about data in general. We will learn how to learn from data using the tools and techniques of data science. Tools like SQL, R, Python, git, and the command line. Techniques like data cleaning, data exploration, data modeling, data visualization, statistics, machine learning, and artificial intelligence (AI).\nWhile we learn, we want to practice good habits, like version control, environmental management, and project organization. If you are an aspiring researcher, data analyst, or data scientist, you will learn how to assemble these tools and techniques into a coherent project that can have scientific and real-world impact.\nWhy should I be your guide on this journey? I studied international conflict, but my research focuses on its psychological impact on individuals. That means I have a good background to guide us, but I don’t have enough specialization to know everything about war already. On this journey, we will learn together. And we will learn in public. Blogging is a way to share this knowledge with the world while we are acquiring it.\nWe will start by exploring the data and research on war. This is an open-ended start. We don’t know exactly where it will lead. But we do have 3 general general ideas of where to go: a data science idea, a scientific idea, and a practical idea.\nWhen it comes to data science, we want to think about moving from exploration to “production.” Exploration means we are learning about the data for ourselves. We will get a feel for what it is and what we can do with it. Production means the project we create gets used by other people. This could be in the form of a dashboard or product. Production is polished work.\nWhen it comes to science, we want to learn something important about war that we didn’t know before and couldn’t learn from reading. This means we need to build on previous knowledge. We need to read, take notes, and see what people already know or think they know. We can try to build on what has been done before. Imitate it. Replicate it. Eventually innovate it.\nFinally we want our work to have a practical impact. Whether in business, academia, government, or the social sector, this means helping people, helping customers, helping employees, helping the world.\nThe journey is just beginning, so I do not know where this will lead. But here is a general roadmap we will follow.\nThis first post starts from the very beginning: a brand new project: getting set up with the tools and organization we need: pulling in a data set, and brainstorming some ideas about how to use the data, both by looking at previous research as well as exploring the data itself.\nExploring\nBoth science and data science\nStates exploratory, then move to production"
-  },
-  {
-    "objectID": "blog/posts/war-part-1/index.html#set-up-a-project-structure",
-    "href": "blog/posts/war-part-1/index.html#set-up-a-project-structure",
-    "title": "Starting a New Data Science Project with Python and Zsh: Predicting War and Peace",
-    "section": "Set up a project structure",
-    "text": "Set up a project structure"
-  },
-  {
-    "objectID": "blog/posts/war-part-1/index.html#download-the-data",
-    "href": "blog/posts/war-part-1/index.html#download-the-data",
-    "title": "Starting a New Data Science Project with Python and Zsh: Predicting War and Peace",
-    "section": "Download the Data",
-    "text": "Download the Data\nThere’s a few ways to get the data. One simple way is to use curl on the command line.\ncd data\ncurl -o ucp-armed-conflict-25-1.csv https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-251-csv.zipcd"
+    "text": "Demonstrates:\n\nAdvanced statistics\n\n\nBayesian data analysis\nprior selection and justification\nprior predictive checks\nposterior predictions\n\n\nR programming\nData Visualization"
   }
 ]
