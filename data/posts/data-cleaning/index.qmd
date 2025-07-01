@@ -1,0 +1,39 @@
+---
+title: "Cleaning and Screening Messy Real-World Survey Data"
+description: ""
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+date: 2025-06-25
+#categories: \[R, Statistics, Research Design\] \# self-defined categories
+#citation: 
+#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
+#image: 
+draft: true
+---
+
+> You analyze the data you have, not the data you want. 
+
+I have conducted over X survey with employees, students, and community members. A common issue with surveys is data quality. 
+
+For this project, I used cutting-edge methods to detect poor-quality survey responses. I then repeated the process for two additional surveys, resulting in clean data sets that have been used for X scientific publications. Additionally, I am drafting a paper that outlines the methods in an accessible way. 
+
+This portfolio post highlights the data problem I faced and the methods I used to over come it. 
+
+Tools: R, Careless
+Project Repo: 
+
+## Dirty Data
+
+Data is never easy. 
+
+Careless survey responding
+
+Examples using R visualizations
+
+## 
+
+
+
+
+

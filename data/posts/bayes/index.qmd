@@ -1,0 +1,19 @@
+
+Demonstrates:
+
+1. Advanced statistics 
+- Bayesian data analysis
+- prior selection and justification
+- prior predictive checks
+- posterior predictions
+
+2. R programming
+
+3. Data Visualization
+
+4. Data Collection
+- Analysis of Survey Data
+- Survey Design
+- Quality Assurance
+
+

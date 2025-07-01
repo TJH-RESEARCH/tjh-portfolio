@@ -1,0 +1,51 @@
+---
+title: "Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment"
+date: 2025-04-17
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Nilofer K. Bharwani
+    orcid: 0009-0000-6078-4431
+    affiliation: School of Conflict Management, Peacebuilding, and Development, Kennesaw State University
+  - name: Eric Manley
+    affiliation: School of Conflict Management, Peacebuilding, and Development, Kennesaw State University
+  - name: Darlene Xiomara Rodriguez
+    orcid: 0000-0001-6627-1899
+    affiliation: Department of Social Work and Human Services, Kennesaw State University
+categories:
+  - Identity
+  - Military Health
+  - Reintegration
+  - Veterans
+pub-info:
+  links:
+    - name: Final version
+      url: https://doi.org/10.21061/jvs.v11i1.678
+      icon: fa-solid fa-scroll
+    - name: Add to Zotero
+      url: https://www.zotero.org/save?type=doi&q=10.21061/jvs.v11i1.678
+      icon: ai ai-zotero
+doi: 10.21061/jvs.v11i1.678
+---
+
+## Links
+
+-   [Paper (No Paywall)](https://doi.org/10.21061/jvs.v11i1.678)
+
+## Abstract
+
+Veterans are like migrants, at least according to some military researchers. When service members leave the military, they leave a strong military culture for civilian life, needing to adapt socially, psychologically, and economically to their new life. Confusing this comparison between veterans and migrants; however, is that some veterans are also migrants, born outside their country of military service, raising the question of whether leaving the military is on par with migration as an intercultural transition. Drawing on the example of foreign-born service members, we problematize the notion of “civilian culture.” Then, we reformulate military acculturation theory as military-civilian biculturalism and put forward six questions forming an agenda for future research.
+
+## Citation
+
+Hodges, T. J., Bharwani, N. K., Manley, E., & Xiomara Rodriguez, D. (2025). Rethinking acculturation and military transition: An agenda for military-civilian biculturalism, reintegration, and adjustment. *Journal of Veterans Studies*, *11*(1), 161–171. <https://doi.org/10.21061/jvs.v11i1.678>
+
+``` bibtex
+@article{HodgesBharwaniManleyRodriguez:2025,
+    Author = {Thomas J. Hodges and Nilofer K. Bharwani and Eric Manley and Darlene Xiomara Rodriguez},
+    Doi = {10.21061/jvs.v11i1.678},
+    Journal = {Journal of Veterans Studies},
+    Title = {Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment},
+    Year = {2025}}
+```

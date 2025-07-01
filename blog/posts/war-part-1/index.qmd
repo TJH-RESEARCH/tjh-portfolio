@@ -12,9 +12,133 @@ date: 2025-06-25
 draft: true
 ---
 
-This post is first in a series. We are setting out on a journey to explain and predict war using data. 
+# Introduction
 
-Why are we doing this? Nothing could be more important than understanding war? If we can explain it, we can act on it. If we can predict it, then we can act in the right place and right time. All this could save countless lives and endless suffering. 
+This post is first in a series. We are starting a journey to explain and predict war using data. 
+
+Why are we doing this? Nothing could be more important than understanding war. War's winners gain rights, money, land, and identity. They get to tell the history. They get to decide what happens next. War's losers lose their rights, money, land, and identity. They have to hear the winner's version of history. And lots of people lose. They die. They are maimed. They are psychologically scarred. Their houses are demolished. There cities are ruined. Their environments are polluted. The stakes of war are high, making peace an imperative. If war can be explained, it can be predicted. If war can be predicted, it can be stopped, along with countless deaths and untold suffering. That's our journey.
+
+It's a journey because we aren't there yet. We do not know that much. Well, I don't know that much. I assume you don't either, but I could be wrong. I assume you are here to learn. I am too. What will we learn along the way? Lots of stuff, but two main things. First, obviously, we are learning about when, where, and why wars happen. Why do wars start? Why do they last as long as they do? Why and how do they end? Why do they recur? How can we prevent them?
+
+We will learn from data, as well as from published research.
+
+When I say data, I am referring to publicly available data sets, including those from the [Correlates of War](https://correlatesofwar.org) project or the [Uppsala Conflict Data Project](https://ucdp.uu.se/encyclopedia). These data sets have recorded every war that has happened since 1946, including civil wars and international wars. We can also join data from other sources, such as the political and economic characteristics of warring parties.
+
+Our second goal is to learn about data *in general.* We will learn how to learn from data using the tools and techniques of data science. Tools like SQL, R, Python, git, and the command line. Techniques like data cleaning, data exploration, data modeling, data visualization, statistics, machine learning, and artificial intelligence (AI).
+
+While we learn, we want to practice good habits, like version control, environmental management, and project organization. If you are an aspiring researcher, data analyst, or data scientist, you will learn how to assemble these tools and techniques into a coherent project that can have scientific and real-world impact.
+
+Why should I be your guide on this journey? I studied [international conflict](https://www.kennesaw.edu/radow/degrees-programs/graduate/phd-international-conflict-management/index.php), but my research focuses on its psychological impact on individuals. That means I have a good background to guide us, but I don't have enough specialization to know everything about war already. On this journey, we will learn together. And we will learn in public. Blogging is a way to share this knowledge with the world while we are acquiring it.
+
+We will start by exploring the data and research on war. This is an open-ended start. We don't know exactly where it will lead. But we do have 3 general general ideas of where to go: a data science idea, a scientific idea, and a practical idea.
+
+When it comes to **data science**, we want to think about moving from exploration to "production." Exploration means we are learning about the data for ourselves. We will get a feel for what it is and what we can do with it. Production means the project we create gets used by other people. This could be in the form of a dashboard or product. Production is polished work.
+
+When it comes to **science**, we want to learn something important about war that we didn't know before and couldn't learn from reading. This means we need to build on previous knowledge. We need to read, take notes, and see what people already know or think they know. We can try to build on what has been done before. Imitate it. Replicate it. Eventually innovate it.
+
+Finally we want our work to have a **practical impact**. Whether in business, academia, government, or the social sector, this means helping people, helping customers, helping employees, helping citizens, helping the environment.
+
+The journey is just beginning, so I do not know where this will lead. But here is a general **roadmap** we will follow.
+
+1.  First Steps: Setting up a Data Science Project the Right Way
+2.  Exploring War Data With R, Python
+3.  Joining Data Sets with SQL to Predict War and Peace
+4.  Combining R and Python...
+5.  The Two Cultures of Data Analysis: Prediction vs. Explanation War Edition
+6.  Description, Predictive, and Prescriptive Analytics: How to Prevent War with Data
+
+This first post starts from the very beginning: a brand new project: getting set up with the tools and organization we need: pulling in a data set, and brainstorming some ideas about how to use the data, both by looking at previous research as well as exploring the data itself. 
+
+I'll add to these descriptions as I write new posts.
+
+# 1. Starting Our Data Project
+
+## Getting it Right
+
+When you start a project, you need a few guiding principles.
+
+First **transparency**: [openly documenting the decisions made in an analysis and the steps taken to collect and work with the data.](#0) Transparency gives us assurance in the process, and insight into the reasons the data was analyzed how it was.
+
+Second, **repeatability**: The steps we took in our data analysis should be repeatable.
+
+Computer programming — coding — can serve both transparency and repeatability. We are not just going to execute codes. We will save the code in files in an organized folder, creating both a transparent record and a way to repeat the analysis. We execute the code in a particular order. And we use these transparent tools to do everything: no part of the analysis should be left out of the record or done off the books. We will also use version control to track our changes over time.
+
+## Version Control
+
+Git is a program you can use to save versions of your project. You tell Git to live in a folder on your computer. It will watch everything contained in that folder. We tell Git to save a record of the current contents, a "commit." With consistent commits, Git creates a record of your project.
+
+We can also keep a public copy of the Git record, called a repository or "repo," on the website GitHub. This copy is useful because it saves a copy that does not live our your hard drive alone. Useful if you ever break your computer or need to work from multiple computers.
+
+Second, it shares the project with anyone who wants to see it. They can look at it. They can download it and use it themselves. They can repeat the analysis exactly as you did. In fact, shared repos are way for multiple programers to work on the same project, even simultaneously.
+
+To set up a repo on github, first make an account then click "new repository." Add a readme file, a .gitignore file, and a license.
+
+While GitHub is fairly easy, the harder part is connecting your computer to Git. A great resource for this is [Happy Git for the UseR](https://happygitwithr.com).
+
+Using Git to make commits and "push" them to your GitHub repo requires using the command line.
+
+Open the terminal on your computer, and follow the steps to link your GitHub account to your
+
+Then we can clone the repo to our computer. I do so while in my `data-science` folder where I keep all my data projects. This is how I stay organized. From the command line, you can use `mkdir data-science` to "make" a new "directory" or folder. Then use `cd data-science` to open that folder. Once inside, use `git clone` to copy the repo from GitHub.:
+
+```         
+$ mkdir data-science
+$ cd data-science
+$ git clone git@github.com:TJH-RESEARCH/war.git
+```
+
+The .gitignore file will tell git not to track certain kinds of files. We'll use GitHub's default Python .gitignore file.:
+
+\[screen shot\]
+
+The license will tell other people what they can do with your project. Research the optional licenses with a quick search, and pick one that suits your needs.
+
+Finally, we will add a ReadMe file. It will say in plain langauge how the project works and why.
+
+``` md
+# War
+
+The goal of this project is to explain and predict war using data.
+
+This is an exploratory project that I expect to evolve. It is inspired by a large amount of publicly available data on war and peace. These include data from [Uppsala Conflict Data Program (UCDP)](https://ucdp.uu.se).
+```
+
+After editing the README, it's time to make the first commit. In general, we want to perform atomic commits. We want to commit each time we make a specific change. We want that change to be one thing that we can summarize in one sentence.
+
+```         
+$ git add .
+$ git commit -m "Updated README"
+$ git push origin main
+```
+
+## Downloading the Tools: R and Python
+
+R and Python are the two Tier 1 computer programs we can use.
+
+Which IDE? There are three strong options for data science: VS Code, RStudio, or Positron.
+
+## **Environments**
+
+Environments are
+
+There are several options for environments for Python: conda, pyenv...
+
+R comes with a virtual environment, but we still need to manage dependencies with `renv`.
+
+## Set up a project structure
+
+## Download the Data
+
+There's a few ways to get the data. One simple way is to use `curl` on the command line.
+
+```         
+cd data
+curl -o ucp-armed-conflict-25-1.csv https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-251-csv.zipcd
+```
+
+## 
+
+# SCRAPS
 
 1.  sharing - science in the open refs
 
@@ -42,67 +166,82 @@ The moral end of understanding a deadly and transformation part of society. 
 
 In doing this, I want to show good data science, good science, and practical business and societal applications of what we learn. 
 
-This first post starts from the very beginning: a brand new project: getting set up with the tools and organization we need: pulling in a data set, and brainstorming some ideas about how to use the data, both by looking at previous research as well as exploring the data itself. 
-
 Exploring 
 
 Both science and data science
 
 States exploratory, then move to production 
 
-# Starting Our Data Project
+# 2. Comparing COW and UCDP War Data With R and Python
 
-# Version Control
+## Goals
 
-Set up the repo on github.
+By the end of this post, we will be able to:
 
-Then we can clone the repo to our computer. I do so while in my `data-science` folder where I keep my data projects.
+1.  Describe some of the core similarities and differences between R and Python when it comes to downloading, cleaning, and visualizing data.
+2.  List some of the main data sets available to study war.
+3.  Explore and visualize some main variables related to war.
 
-```{zsh}
-cd data-science
-git clone git@github.com:TJH-RESEARCH/war.git
-```
+## R or Python
 
-Add a readme file, a .gitignore file, and a license.
+R and Python are the two top-of-the-line data analysis programs. But which one should we use? The question has haunted me for years. I learned R first, but find that more jobs and professionals want data scientists who know Python.
 
-The .gitignore file will tell git not to track certain kinds of files. We'll use GitHub's default Python .gitignore file.:
+When you try to find out why Python is preferred to R, there is little help. Often you hear that "Python is better for production." Or "Python is better for Machine Learing."
 
-\[screen shot\]
+Whether it is statistics or production-level code, their capabilities are the same. Moreoever R and Python are interoperable, so if there were something that could only be done in one language, it would be easy to pass data between the two programs.
 
-The license
+The main difference comes down to working well with other people. Software developers who are not data scientists are unlikely to know R. But there is a decent chance that they know Python. When it is time to get their help in people a model into production, it will be useful for you to know enough Python to facilitate that. Ultimately, it comes down to speaking a language that other people know — or at least being able to translate between languages.
 
-Readme files ... As we go, we will add more detail to explain how the project works and why.
+So, whether R or Python here are a few guidelines:
 
-``` md
-# War
+-   Don't be a snob
 
-The goal of this project is to explain and predict war using data.
+-   Specialize in one, but know both
 
-This is an exploratory project that I expect to evolve. It is inspired by a large amount of publicly available data on war and peace. These include data from [Uppsala Conflict Data Program (UCDP)](https://ucdp.uu.se).
-```
+-   Learn how to translate between them
 
-After editing the README, it's time to make the first commit. In general, we want to perform atomic commits. We want to commit each time we make a specific change. We want that change to be one thing that we can summarize in one sentence.
+For our journey, we will use both. Since some things are easier in R, we will use R. Since I want to learn Python better, we will also use Python. This post will use both, highlighting the similarities and differences.
 
-```{zsh}
-git add .
-git commit -m "Updated README"
-git push origin main
-```
+## War Data
 
-## Set up a project structure
+There are two main places to get data on war: [Correlates of War (CoW)](https://correlatesofwar.org) and the [Uppsala Conflict Data Program (UCDP)](https://ucdp.uu.se).
 
-## Download the Data
+Correlates of War was started in the Xs by David Singer, a political scientist and scholar of international relations.
 
-There's a few ways to get the data. One simple way is to use `curl` on the command line.
+The Uppsala Conflict Data Program....
 
-```{zsh}
-cd data
-curl -o ucp-armed-conflict-25-1.csv https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-251-csv.zipcd
-```
+Although they both are a record of war, CoW and UCDP differ.
+
+Each has a main data set which contains all the wars: these include wars between countries (i.e., "interstate war") and civil wars within countries (i.e., "intrastate wars").
+
+In COW this main data set is [COW War Data, 1816 – 2007](https://correlatesofwar.org/data-sets/cow-war/) (currently on version 4.0).
+
+For UCDP the main data set is the [UCDP/PRIO Armed Conflict Dataset version 25.1](https://ucdp.uu.se/downloads/index.html#armedconflict)
+
+Right away we notice they cover different time frames. COW reaches back to 1816, which is when....
+
+UCDP's data goes back to 1946, the end of World War II, but it lasts until 2024, just last year.
+
+Let's load in each set of data and inspects it further to learn how they differ and what they share in common.
+
+## Downloading Data
+
+R
+
+Python
+
+## Exploring Data
+
+R
+
+Python
+
+## Visualizing Data
+
+R
+
+Python
+
+## Takeaways and Next Steps
 
 ## 
-
-## 
-
-
-

@@ -1,0 +1,52 @@
+---
+title: "Moral Injury and Identity: Examining Moral Injury as Identity Loss and Identity Change"
+date: 2025-06-06
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Tyler L. Collette
+    #orcid:
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Brian A. Moore
+    orcid: 0000-0003-0273-7236
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+categories:
+  - Moral Injury
+  - Identity
+  - Reintegration
+  - Veterans
+pub-info:
+  links:
+    - name: Final version
+      url: https://doi.org/10.1037/trm0000587
+      icon: fa-solid fa-scroll
+    - name: Add to Zotero
+      url: https://www.zotero.org/save?type=doi&q=10.1037/trm0000587
+      icon: ai ai-zotero
+doi: 10.1037/trm0000587
+---
+
+## Links
+
+-   [Paper](https://doi.org/10.1037/trm0000587)
+-   [Paywall-Free Paper](https://www.researchgate.net/publication/392357064_Moral_injury_and_identity_Examining_moral_injury_as_identity_loss_and_identity_change)
+-   [GitHub Repository](https://github.com/TJH-RESEARCH/moral-injury-identity)
+-   [Supplemental Material](https://osf.io/j37xp/)
+
+## Abstract
+
+Although it is widely accepted among theorists and clinicians that moral injury can affect identity, these claims are rarely specified, let alone investigated empirically. Among scholars of moral injury, an emerging explanation is that moral injury leads to a loss of identity. However, psychologists studying the relationship between identity and trauma argue that some traumatic experiences can reaffirm a person’s identity. Such reaffirmation may lead to a maintenance of identity rather than a loss, helping people make sense of traumatic experiences and be resilient to traumatic stress disorders. Drawing on this model, the Social Identity Model of Identity Change, the current article discusses these two potential processes—identity loss and identity maintenance—in the case of military moral injury. Using data from a survey of United States veterans, it models an indirect association between morally traumatic experiences and moral injury symptoms via military identity. The results indicate that identity is related to moral injury symptoms, although it is unclear if potentially morally injurious events are associated with identity. Moreover, the results depend on how identity is operationalized.
+
+## Citation
+
+Hodges, T. J., Collette, T. L., & Moore, B. A. (2025). Moral injury and identity: Examining moral injury as identity loss and identity change. *Traumatology*. <https://doi.org/10.1037/trm0000587>
+
+``` bibtex
+@article{HodgesColletteMoore:2025,
+    Author = {Thomas J. Hodges and Tyler L. Collette and Brian A. Moore},
+    Doi = {10.1037/trm0000587},
+    Journal = {Traumatology},
+    Title = {Moral injury and identity: Examining moral injury as identity loss and identity change},
+    Year = {2025}}
+```

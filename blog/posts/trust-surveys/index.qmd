@@ -1,0 +1,206 @@
+---
+title: "Why your employees aren’t engaging with your employee engagement survey"
+description: "Why it’s a problem and what you can do about it"
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+    affiliation: Center for the Advancement of Military and Emergency Services Research, Kennesaw State University
+affiliation-url: https://www.kennesaw.edu/research/centers-facilities/ames-center/index.php
+date: 2025-06-11
+#categories: \[R, Statistics, Research Design\] \# self-defined categories
+#citation: 
+#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
+#image: 
+draft: true
+---
+
+> Tl;dr: they don’t trust that your survey is truly anonymous, they think you’ll use it against them, and they might be right. I’ll tell you how to solve that.
+
+People don’t trust surveys. 
+
+Employees think they are being spied on. They think an engagement survey is an elaborate trap to find people who are not committed to the organization. For certain occupations, the fear is even worse. For example, police officers might worry that a mental health survey will be used to label them as unfit for duty. 
+
+Even outside of the workplace, people might fear their data is used to label  them as problematic. Or with public polling surveys, like the ones used in the run up to an election, people can [mistrust pollsters](https://www.wnycstudios.org/podcasts/otm/segments/can-we-trust-polls-on-the-media) or the news media that will report on the poll. 
+
+The good news is that these fears are mostly unfounded. People analytics teams want to improve workplaces, not surveil deviant workers. When we run health surveys at the [AMES Research Center](https://www.kennesaw.edu/research/centers-facilities/ames-center/), we use to data to tailor services for our client’s specific needs. 
+
+Still, survey fears are problem for survey admins trying to do the right thing. Fear can lead to low participation. It can also cause participants to lie on their survey. Or they might respond carelessly in other ways, such as "straightlining" or "Christmas treeing." 
+
+One easy workaround is to make surveys anonymous. The survey’s don’t ask for your name, so how can they be used to track you and punish you? This poses a problem, however, for longitudinal surveys: those where you want to survey the same people at repeated points over time. 
+
+In this post I’ll tell you how we solve these problems of trust, anonymity, and data qualiity in our work with organizations and communities and the problems we still face. I will also demonstrate how to clean bad data with R using the [careless package](https://github.com/ryentes/careless) and why linking surveys over time helps your statistical analysis.
+
+## Is your survey really anonymous?
+
+Whenever possible, you should make your surveys anonymous. Truly anonymous. To start, this means you should not ask participants their name. But there are other ways to identify responses. Survey hosts such as [Qualtrics](https://www.qualtrics.com/support/getting-started-qualtrics/minimizing-personal-data-collection-and-use-in-qualtrics/) collect IP Address, Latitude, and Longitude by default, even for its "anonymous" QR code or link. You can and should disable this. Then you should tell your participants that you disabled them. Build trust by being open and transparent and by making strong claims about how you are protecting their privacy.
+
+The problem is a bit more difficult. Depending on the number of people in your organization, the questions you ask can narrow down respondents. This is especially true for demographic questions. To demonstrate this problem, let's simulate a survey using R.
+
+Assume there are two teams in your organization, marketing and accounting. Each team has 3 people, and half of the employees are men and half are women. First we will create this data:
+
+```{r}
+library(tidyverse) # Load this package for convenient R functions
+
+## Create the data:
+(employees <-
+  tibble(
+    employee = c("Tom", "Thula", "Tim", "Paulina", "Pedro", "Priscilla"),
+    gender = rep(c('Male', "Female"), 3),
+    team = c(rep("Marketing", 3), rep("Accounting", 3))
+  )
+)
+
+```
+
+Now let's administer a survey. Assume there is a 50% chance of employees responding. On the survey, we ask people what team they work on and what their gender is.
+
+```{r}
+## make it random, but use this "seed" to replciate my results
+set.seed(369)
+
+(responses <-
+employees %>% 
+  mutate(
+    respond = sample(c("Yes", "No"), size = 6, replace = TRUE, prob = c(.50, .50))
+  ) %>% 
+  select(-employee) %>% 
+  filter(respond == "Yes")
+)
+```
+
+In these results, the first row is either Tom or Tim, the two males in marketing. There is a 50% chance of it being either other of them. The second row is either Paulina or Priscilla with a 50% chance. The third row is 100% Pedro, the only guy in accounting.
+
+Let's calculate these percentages in R so we can scale up the simulation. To do so, we will need to add the number of people per team, and the number of males/females per team.
+
+```{r}
+
+## First calculate the team size
+(employees <-
+  employees %>% 
+  mutate(
+    female = ifelse(gender == "Female", 1, 0),
+  ) %>% 
+  group_by(team) %>% 
+  mutate(team_size = n(), n_females = sum(female)) %>% 
+  ungroup()
+)
+```
+
+Now add the percentages.
+
+```{r}
+(employees <-
+  employees %>% 
+  mutate(
+    perc = 
+      ifelse(female == 1, 
+           1 / n_females,
+           1 / (team_size - n_females)
+           )
+  )
+)
+```
+
+Let's wrap these scripts in a few functions to reuse them.
+
+```{r}
+
+create_data <- function(team_size) {
+  employees <-
+  tibble(
+    employee_id = c(1:(team_size * 2)),
+    gender = rep(c('Male', "Female"), team_size),
+    team = c(rep("Marketing", team_size), rep("Accounting", team_size))
+  )
+  return(employees)
+}
+
+calculate_perc <-
+  function(data){
+    
+    data <-
+    data %>% 
+    mutate(female = ifelse(gender == "Female", 1, 0)) %>% 
+    group_by(team) %>% 
+    mutate(team_size = n(), n_females = sum(female)) %>% 
+    mutate(perc = ifelse(female == 1, 1 / n_females, 1 / (team_size - n_females))) %>% 
+    ungroup()
+    
+    return(data)
+  }
+
+run_survey <- function(data){
+  responses <-
+    data %>% 
+    mutate(
+      respond = sample(c("Yes", "No"), size = nrow(.), replace = TRUE, prob = c(.50, .50))
+    ) %>% 
+    filter(respond == "Yes")
+  
+  return(responses)
+}
+```
+
+With out function ready, let's increase the size of the teams from 3 to 7, then add our percentages, and run our survey.
+
+```{r}
+(responses <-
+  create_data(team_size = 7) %>% 
+  calculate_perc() %>% 
+  run_survey()
+)
+```
+
+Notice that men and women are distributed as evenly as possible, although the odd-number team size means that the minority gender on a team has a higher chance of identification. With even number teams, and an evenly split gender balance, the chance of identification is equal.:
+
+```{r}
+(responses <- create_data(team_size = 4) %>% calculate_perc() %>% run_survey())
+```
+
+Apart from parity, there is also safety in large numbers, such as 100-person teams:
+
+```{r}
+(responses <- create_data(team_size = 100) %>% calculate_perc() %>% run_survey())
+```
+
+The math behind this is really simple. Take 100% and divide it by the number of people in each group. If you ask no demographic questions, then all you know is they come from your organization. Take 100% and divide it by the number of people in the organization, say 50. That's a 2% chance that a response is from any given employee. This starts to get narrower the more demographic questions you ask. If you know their team, then there is 100% chance shared among the team members. If there are 20 team members, it's a 5% chance each.
+
+For each demographic question you add, the group gets even smaller. There are only so many left-handed, female, accountants who were born in Michigan in the 1990s. In fact, a study from 2000 found that [87% of Americans could be identified in Census data using only their ZIP code, gender, and date of birth](https://privacytools.seas.harvard.edu/sites/g/files/omnuum6656/files/privacytools/files/paper1.pdf). Think about it. Even if there are 100,000 people in your ZIP code, roughly half are male, then that's 50,000 people left. Take the roughly 365 potential birthdays and multiply that by about 80 years, the average lifespan. That's `r round(80 * 365, 0)` birthdays. Divide that by 5,000 people, that's a `r round((365*80) / 50000, 2) * 100`% chance.
+
+What does this mean for employee surveys? If you want it to be truly anonymous, don't ask people a combination of questions that put them in tiny groups.
+
+For smaller organizations, that limits the questions you can ask. Even large organizations can have a problem with combinations of questions or questions that narrow down respondents too much. For example, asking about how many years a person has worked for the company.
+
+In these cases, you have a few options. You can combine multiple answers into a single answer category. Instead of allowing participants to give you the specific number of years, you ask them to pick from several categories:
+
+-   One year or less
+
+-   Between 1 and 2 years
+
+-   3 to 5 years
+
+-   6 to 10 years
+
+-   Over 10 years
+
+Your second option is to gather the data anyways, but realize that some people will have less trust in the survey. There are still things you can do to mitigate that.
+
+## Messaging Surveys for Trust
+
+Few employee surveys start with an "informed consent." The informed consent is ubiquitous in academic research. Researchers are held to strict standards, including those based in law. One of those standards is "respect for persons," which means treating people as autonomous; giving them the choice to participate in research or not. This choice needs to be a well-informed decision. The way researchers inform people is through the informed consent form.
+
+The typical informed consent form has the following information:
+
+-   the study's research question
+
+-   the study's procedure
+
+-   risks of the study
+
+-   benefits to participants
+
+-   benefits to society
+
+-   contact info for the researchers
+
+## 

@@ -1,0 +1,61 @@
+---
+title: "Mental and Occupational Health of Fire Rescue Personnel: A model for Conducting Organizational Health Assessments"
+#date: 2025-06-14
+author:
+  - name: Bianca Channer
+    orcid: 0009-0000-6151-488X
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Micheal Schlenk
+    #orcid: 
+    affiliation: University of Central Florida
+  - name: Israel Sanchez-Cardona
+    #orcid: 
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Tyler L. Collette
+    #orcid: 
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Kristin A. Horan
+    orcid: 0000-0001-9318-044X
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Chris Hess
+    orcid: 0000-0003-3005-7780
+    url: https://hesscl.com
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Brian A. Moore
+    orcid: 0000-0003-0273-7236
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+categories:
+  - First Responders
+  - Organizational Psychology
+  - Health
+pub-info:
+  links:
+    - name:
+      url: 
+      icon: fa-solid fa-scroll
+---
+
+## Links
+
+Coming Soon.
+
+## Abstract
+
+Coming soon.
+
+## Citation
+
+Channer, B., Schlenk, M., Sanchez-Cardona, I., Collette, T. L., Horan, K., Hess, C., Hodges, T. J., & Moore, B. A. (in press). Mental and occupational health of fire rescue personnel: A model for conducting organizational health assessments. In V. B. Van Hasselt & R. A. Black (Eds.), *Advances in first responder mental health: Research, training, and practice*. Springer.
+
+``` bibtex
+@incollection{ChannerSchlenkEtAl:2025,
+    Author = {Bianca Channer and Micheal Schlenk and Israel Sanchez-Cardona and Tyler L. Collette and Kristin A. Horan and Chris Hess and Thomas J. Hodges and Brian A. Moore},
+    Title = {Mental and occupational health of fire rescue personnel: A model for conducting organizational health assessments},
+    Booktitle = {Advances in first responder mental health: Research, training, and practice},
+    Editor = {Vincent Van Hasselt and Ryan Black},
+    Publisher = {Springer},
+    Year = {in press}}
+```
