@@ -1,6 +1,6 @@
 ---
 title: "Using research to enhance the practice of suicide prevention"
-description: "Let's Connect Summit, Kennesaw, 2023"
+description: "Let's Connect Summit, Kennesaw"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346

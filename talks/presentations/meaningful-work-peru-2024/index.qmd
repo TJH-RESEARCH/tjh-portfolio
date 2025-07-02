@@ -1,19 +1,23 @@
 ---
 title: "The influence of meaningful work on appraising job demands"
-description: ""
+description: "IX Congreso Regional de Sociedad Interamericana de Psicología, Arequipa"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
-date: 2024-07-01
+date: 2024-06-26
 #categories: \[R, Statistics, Research Design\] \# self-defined categories
 #citation: 
 #  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
 #image: 
-draft: true
+draft: false
 ---
 
 # Summary
 
+<https://www.facebook.com/congresoregionalsipperu2024/?locale=es_LA>
+
 # Slides
 
 # Citation
+
+Trejo-Rivera, E., Sánchez-Cardona, I., Hodges, T.J., Horan, K., Collette, T.L., Moore, B.A., & Channer, B. (June 2024). “The influence of meaningful work on appraising job demands.” IX Congreso Regional de Sociedad Interamericana de Psicología. Arequipa, Perú.

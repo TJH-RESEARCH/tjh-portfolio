@@ -1,6 +1,6 @@
 ---
 title: "Transitioning identities from the military to civilian life"
-description: ""
+description: "Let's Connect Suicide Prevention Summit, Pine Mountain"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
@@ -9,7 +9,7 @@ date: 2024-06-01
 #citation: 
 #  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
 #image: 
-draft: true
+draft: false
 ---
 
 # Summary
@@ -17,3 +17,5 @@ draft: true
 # Slides
 
 # Citation
+
+**Hodges, T. J.** (June 2024). “Transitioning identities from the military to civilian life.” Let’s Connect Summit Conference. Pine Mountain Georgia.

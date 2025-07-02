@@ -1,6 +1,6 @@
 ---
 title: "Employee Assistance Programs for first responders"
-description: "Georgia Injury Prevention Advisory Council, Online, 2024"
+description: "Georgia Injury Prevention Advisory Council, Online"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346

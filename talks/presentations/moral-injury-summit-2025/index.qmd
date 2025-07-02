@@ -1,6 +1,6 @@
 ---
 title: "Understanding moral injury for suicide prevention"
-description: "Let's Connect Summit, Savannah, 2025"
+description: "Let's Connect Summit, Savannah"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346

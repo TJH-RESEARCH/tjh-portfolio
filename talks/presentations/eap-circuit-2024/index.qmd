@@ -1,6 +1,6 @@
 ---
 title: "Overcoming barriers to Employee Assistance Programs for public safety professionals"
-description: "11th Circuit Crisis Response Conference, Forsyth, 2024"
+description: "11th Circuit Crisis Response Conference, Forsyth"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346

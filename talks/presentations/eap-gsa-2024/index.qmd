@@ -1,6 +1,6 @@
 ---
 title: "Building Trust in Employee Assistance Programs among first responders: Focus groups on EAPs with police and fire personnel"
-description: "Georgia Sociological Association Annual Conference, Columbus, 2024"
+description: "Georgia Sociological Association Annual Conference, Columbus"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346

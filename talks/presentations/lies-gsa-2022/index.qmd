@@ -1,0 +1,21 @@
+---
+title: "Lies, Damn Lies, and Grad School in the McWorld: An Autoethnography"
+description: "Georgia Sociological Association Annual Conference, Pine Mountain"
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+date: 2022-11-04
+#categories: \[R, Statistics, Research Design\] \# self-defined categories
+#citation: 
+#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
+#image: 
+draft: false
+---
+
+# Summary
+
+Presented at the [2022 conference](https://www.georgiasociology.com/uploads/9/6/4/8/96484124/2022_gsa_final_program.pdf) of the [Georgia Sociological Association](https://www.georgiasociology.com).
+
+# Citation
+
+**Hodges, T. J.** (November 2022). “Lies, Damn Lies, and Grad School in the McWorld: An Autoethnography.” Georgia Sociological Association Annual Conference, Pine Mountain, Georgia.

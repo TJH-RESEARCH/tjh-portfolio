@@ -1,10 +1,10 @@
 ---
 title: "Role of grassroots workers in bringing peace to local communities"
-description: "Peace360, Online, 2021"
+description: "Peace360, Online"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
-date: 2021-01-01
+date: 2021-08-21
 #categories: \[R, Statistics, Research Design\] \# self-defined categories
 #citation: 
 #  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
@@ -14,8 +14,10 @@ draft: false
 
 # Summary
 
-Presentation for Peace360 on a grassroots conflict management program: Alternatives to Violence Project. The talk eventually was developed into a paper, published in
+Presentation for Peace360 on a grassroots conflict management program: Alternatives to Violence Project. The talk eventually was developed into a paper, published in *Aggression and Violent Behavior*.
 
-# Slides
+\[Link to AVP\]
 
 # Citation
+
+Hodges, T. J. (August 2021). “Role of grassroots workers in bringing peace to local communities” *Art of Conflict Transformation Speaker Series*. Peace360. Online.

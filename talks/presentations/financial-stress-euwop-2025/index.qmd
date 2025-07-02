@@ -1,15 +1,15 @@
 ---
 title: "Financial stress and work-family conflict in public safety: Role of perceived organizational support"
-description: ""
+description: "European Congress of Work and Organizational Psychology, Prague"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
-date: 2025-05-01
+date: 2025-05-22
 #categories: \[R, Statistics, Research Design\] \# self-defined categories
 #citation: 
 #  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
 #image: 
-draft: true
+draft: false
 ---
 
 # Summary
@@ -17,3 +17,5 @@ draft: true
 # Slides
 
 # Citation
+
+Sánchez-Cardona, I., Peterson, C., Trejo-Rivera, E., Vera, M., **Hodges, T.,** Hess, C., Moore, K., Channer, B., Moore, B.A. (May 2025). Financial stress and work-family conflict in public safety: Role of perceived organizational support. *European Congress of Work and Organizational Psychology*. Prague, Czech Republic.

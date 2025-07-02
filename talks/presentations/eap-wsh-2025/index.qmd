@@ -1,6 +1,6 @@
 ---
 title: "The role of trust in Employee Assistance Programs for first responders"
-description: "Work, Stress, and Health Conference, Seattle, 2025"
+description: "Work, Stress, and Health Conference, Seattle"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346

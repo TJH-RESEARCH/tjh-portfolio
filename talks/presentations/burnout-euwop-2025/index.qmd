@@ -1,6 +1,6 @@
 ---
 title: "Understanding the role of recovery and dysfunctional cognitions on burnout in public safety"
-description: "European Congress of Work and Organizational Psychology, Prague, 2025"
+description: "European Congress of Work and Organizational Psychology, Prague"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346

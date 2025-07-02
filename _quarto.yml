@@ -18,8 +18,6 @@ website:
         text: Research
       - href: talks/index.qmd
         text: Talks
-      - href: info/index.qmd
-        text: Info
         
     right: 
       - text: "{{< iconify bi envelope size=1.1em title='E-mail' >}}"

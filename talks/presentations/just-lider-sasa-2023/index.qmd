@@ -1,19 +1,23 @@
 ---
 title: "Female leadership in climate change mitigation and environmental sustainability"
-description: ""
+description: "Southeastern American Studies Association, Biannual Meeting, Atlanta"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
-date: 2023-09-01
+date: 2023-09-28
 #categories: \[R, Statistics, Research Design\] \# self-defined categories
 #citation: 
 #  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
 #image: 
-draft: true
+draft: false
 ---
 
 # Summary
 
-# Slides
+Presentation at the [Southeastern American Studies Association](https://southeasternasa.org) biannual conference in [Atlanta, 2024](https://southeasternasa.org/past-conferences/).
+
+The paper was a work in progress at the time, but it has since been published \[link coming soon\].
 
 # Citation
+
+Bharwani, N.K., Hodges, T. & Lepadatu, D., & Rodriguez, D.X. (September 2023). “’Just leader, no *lideresa:’* Female leadership in climate change mitigation and environmental sustainability.” Southeastern American Studies Association Biannual Conference, Atlanta Georgia.

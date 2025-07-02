@@ -1,0 +1,23 @@
+---
+title: "Moral injury and military reintegration: The role of identity dissonance in a survey of United States military veterans"
+description: "Georgia Sociological Association Annual Conference, Augusta"
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+date: 2023-10-27
+#categories: \[R, Statistics, Research Design\] \# self-defined categories
+#citation: 
+#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
+#image: 
+draft: false
+---
+
+# Summary
+
+Presentation, just before my dissertation defense, of my dissertation data. \[link coming soon\]
+
+# Slides
+
+# Citation
+
+Hodges, T. J. (October 2023). “Moral injury and military reintegration: The role of identity dissonance in a survey of United States military veterans.” Georgia Sociological Association Annual Conference, Augusta, Georgia.
