@@ -1,6 +1,6 @@
 ---
 title: "Understanding moral injury for suicide prevention"
-description: ""
+description: "Let's Connect Summit, Savannah, 2025"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
@@ -9,11 +9,19 @@ date: 2025-06-10
 #citation: 
 #  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
 #image: 
-draft: true
+draft: false
 ---
 
 # Summary
 
+While posttraumatic stress disorder (PTSD) is widely known, a newer concept of trauma, "moral injury," is often mistaken for PTSD. This presentation at the 2025 Let's Connect Summit clarified the overlaps and differences between PTSD and moral injury, as well as their impact on suicide.
+
+\[images coming soon\]
+
 # Slides
 
+Coming soon.
+
 # Citation
+
+Hodges, T.J. (10 June 2025). “Understanding moral injury for suicide prevention.” Let’s Connect Summit. Savannah, Georgia.

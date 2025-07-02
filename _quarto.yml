@@ -30,6 +30,9 @@ website:
       - text: "{{< iconify bi linkedin size=1.1em title='LinkedIn' >}}"
         href: https://www.linkedin.com/in/tom-hodges
         rel: me
+      - text: "{{< iconify bi researchgate size=1.1em title='LinkedIn' >}}"
+        href: https://www.researchgate.net/profile/Thomas-Hodges-4?ev=hdr_xprf
+        rel: me
 
   page-footer:
     center: |

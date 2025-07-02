@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Research – Thomas Hodges</title>
+<title>Talks – Thomas Hodges</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-articles .list');
+    const listingTargetEl = window.document.querySelector('#listing-presentations .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -87,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-articles'] = new List('listing-articles', options);
+    window['quarto-listings']['listing-presentations'] = new List('listing-presentations', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -102,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-reviews .list');
+    const listingTargetEl = window.document.querySelector('#listing-posters .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -115,63 +115,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-reviews'] = new List('listing-reviews', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-chapters .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-chapters'] = new List('listing-chapters', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-dissertation .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-dissertation'] = new List('listing-dissertation', options);
+    window['quarto-listings']['listing-posters'] = new List('listing-posters', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -187,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
 <style>
 
       .quarto-title-block .quarto-title-banner {
-        background: #04a3bd;
+        background: #212529;
       }
 </style>
 
@@ -258,11 +202,11 @@ window.Quarto = {
 <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../research/index.html" aria-current="page"> 
+    <a class="nav-link" href="../research/index.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../talks/index.html"> 
+    <a class="nav-link active" href="../talks/index.html" aria-current="page"> 
 <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
@@ -294,7 +238,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">Research</h1>
+      <h1 class="title">Talks</h1>
                       </div>
   </div>
     
@@ -315,13 +259,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#journal-articles" id="toc-journal-articles" class="nav-link active" data-scroll-target="#journal-articles">Journal articles</a></li>
-  <li><a href="#book-and-film-reviews" id="toc-book-and-film-reviews" class="nav-link" data-scroll-target="#book-and-film-reviews">Book and Film Reviews</a></li>
-  <li><a href="#book-chapters" id="toc-book-chapters" class="nav-link" data-scroll-target="#book-chapters">Book Chapters</a></li>
-  <li><a href="#dissertation" id="toc-dissertation" class="nav-link" data-scroll-target="#dissertation">Dissertation</a></li>
+  <li><a href="#research-talks" id="toc-research-talks" class="nav-link active" data-scroll-target="#research-talks">Research Talks</a></li>
+  <li><a href="#poster-presentations" id="toc-poster-presentations" class="nav-link" data-scroll-target="#poster-presentations">Poster Presentations</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Q2xpbWF0ZSUyMENoYW5nZQ==">Climate Change <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29uZmxpY3QlMjBNYW5hZ2VtZW50">Conflict Management <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RW52aXJvbm1lbnQ=">Environment <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Rmlyc3QlMjBSZXNwb25kZXJz">First Responders <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R2VuZGVy">Gender <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R2xvYmFsJTIwRGV2ZWxvcG1lbnQ=">Global Development <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SGVhbHRo">Health <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SGlnaGVyJTIwRWR1Y2F0aW9u">Higher Education <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SWRlbnRpdHk=">Identity <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SW50ZXJuYXRpb25hbCUyMENvbmZsaWN0">International Conflict <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFuYWdlbWVudA==">Management <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWVudGFsJTIwSGVhbHRo">Mental Health <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWlsaXRhcnklMjBIZWFsdGg=">Military Health <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9yYWwlMjBJbmp1cnk=">Moral Injury <span class="quarto-category-count">(3)</span></div><div class="category" data-category="T3JnYW5pemF0aW9uYWwlMjBQc3ljaG9sb2d5">Organizational Psychology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVpbnRlZ3JhdGlvbg==">Reintegration <span class="quarto-category-count">(4)</span></div><div class="category" data-category="VmV0ZXJhbnM=">Veterans <span class="quarto-category-count">(6)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -329,254 +272,286 @@ window.Quarto = {
 
 
 
-<p>I do applied research in workplaces and communities. My research focuses on understanding factors that impact people’s mental health. I draw on organizational psychology, conflict resolution, international affairs, sociology, and other fields.</p>
-<p>Currently, I am a Senior Research Associate for the <a href="https://www.kennesaw.edu/research/centers-facilities/ames-center/index.php">Center for the Advancement of Military and Emergency Services Research (AMES)</a> at <a href="kennesaw.edu">Kennesaw State University</a>.</p>
-<section id="journal-articles" class="level2">
-<h2 class="anchored" data-anchor-id="journal-articles">Journal articles</h2>
-<div id="listing-articles" class="quarto-listing quarto-listing-container-default">
+<section id="research-talks" class="level2">
+<h2 class="anchored" data-anchor-id="research-talks">Research Talks</h2>
+<div id="listing-presentations" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TW9yYWwlMjBJbmp1cnklMkNJZGVudGl0eSUyQ1JlaW50ZWdyYXRpb24lMkNWZXRlcmFucw==" data-listing-date-sort="1749182400000" data-listing-file-modified-sort="1749997740070" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1752120000000" data-listing-file-modified-sort="1751418384096" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="83">
 <div class="thumbnail">
-<p><a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external"></a></p><a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external">
+<p><a href="../talks/presentations/eap-wsh-2025/index.html" class="no-external"></a></p><a href="../talks/presentations/eap-wsh-2025/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external"></a></p>
+</a><p><a href="../talks/presentations/eap-wsh-2025/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external">Moral Injury and Identity: Examining Moral Injury as Identity Loss and Identity Change</a>
+<a href="../talks/presentations/eap-wsh-2025/index.html" class="no-external">The role of trust in Employee Assistance Programs for first responders</a>
 </h3>
 <div class="listing-subtitle">
-<a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TW9yYWwlMjBJbmp1cnk='); return false;">
-Moral Injury
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('SWRlbnRpdHk='); return false;">
-Identity
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UmVpbnRlZ3JhdGlvbg=='); return false;">
-Reintegration
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('VmV0ZXJhbnM='); return false;">
-Veterans
-</div>
+<a href="../talks/presentations/eap-wsh-2025/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external">Although it is widely accepted among theorists and clinicians that moral injury can affect identity, these claims are rarely specified, let alone investigated empirically.…</a>
+<a href="../talks/presentations/eap-wsh-2025/index.html" class="no-external">Work, Stress, and Health Conference, Seattle, 2025</a>
 </div>
 </div>
 <div class="metadata">
-<a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external">
+<a href="../talks/presentations/eap-wsh-2025/index.html" class="no-external">
 <div class="listing-date">
-Jun 6, 2025
+Jul 10, 2025
 </div>
 <div class="listing-author">
-Thomas J. Hodges, Tyler L. Collette, Brian A. Moore
+Thomas Hodges
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="SWRlbnRpdHklMkNNaWxpdGFyeSUyMEhlYWx0aCUyQ1JlaW50ZWdyYXRpb24lMkNWZXRlcmFucw==" data-listing-date-sort="1744862400000" data-listing-file-modified-sort="1749997761284" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="209">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1749528000000" data-listing-file-modified-sort="1751420533031" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="37">
 <div class="thumbnail">
-<p><a href="../research/articles/2025-rethinking-acculturation/index.html" class="no-external"></a></p><a href="../research/articles/2025-rethinking-acculturation/index.html" class="no-external">
+<p><a href="../talks/presentations/conflict-suicide-summit-2025/index.html" class="no-external"></a></p><a href="../talks/presentations/conflict-suicide-summit-2025/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../research/articles/2025-rethinking-acculturation/index.html" class="no-external"></a></p>
+</a><p><a href="../talks/presentations/conflict-suicide-summit-2025/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../research/articles/2025-rethinking-acculturation/index.html" class="no-external">Rethinking Acculturation and Military Transition: An Agenda for Military-Civilian Biculturalism, Reintegration, and Adjustment</a>
+<a href="../talks/presentations/conflict-suicide-summit-2025/index.html" class="no-external">Constructive conflict management for suicide prevention</a>
 </h3>
 <div class="listing-subtitle">
-<a href="../research/articles/2025-rethinking-acculturation/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('SWRlbnRpdHk='); return false;">
-Identity
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TWlsaXRhcnklMjBIZWFsdGg='); return false;">
-Military Health
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UmVpbnRlZ3JhdGlvbg=='); return false;">
-Reintegration
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('VmV0ZXJhbnM='); return false;">
-Veterans
-</div>
+<a href="../talks/presentations/conflict-suicide-summit-2025/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<a href="../research/articles/2025-rethinking-acculturation/index.html" class="no-external">Veterans are like migrants, at least according to some military researchers. When service members leave the military, they leave a strong military culture for civilian life…</a>
+<a href="../talks/presentations/conflict-suicide-summit-2025/index.html" class="no-external">Let’s Connect Summit, Savannah, 2025</a>
 </div>
 </div>
 <div class="metadata">
-<a href="../research/articles/2025-rethinking-acculturation/index.html" class="no-external">
+<a href="../talks/presentations/conflict-suicide-summit-2025/index.html" class="no-external">
 <div class="listing-date">
-Apr 17, 2025
+Jun 10, 2025
 </div>
 <div class="listing-author">
-Thomas J. Hodges, Nilofer K. Bharwani, Eric Manley, Darlene Xiomara Rodriguez
+Thomas Hodges
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="R2xvYmFsJTIwRGV2ZWxvcG1lbnQlMkNFbnZpcm9ubWVudCUyQ0hpZ2hlciUyMEVkdWNhdGlvbg==" data-listing-date-sort="1736312400000" data-listing-file-modified-sort="1749997704540" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="161">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1749528000000" data-listing-file-modified-sort="1751418535555" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="65">
 <div class="thumbnail">
-<p><a href="../research/articles/2025-la-senorita/index.html" class="no-external"></a></p><a href="../research/articles/2025-la-senorita/index.html" class="no-external">
+<p><a href="../talks/presentations/moral-injury-summit-2025/index.html" class="no-external"></a></p><a href="../talks/presentations/moral-injury-summit-2025/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../research/articles/2025-la-senorita/index.html" class="no-external"></a></p>
+</a><p><a href="../talks/presentations/moral-injury-summit-2025/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../research/articles/2025-la-senorita/index.html" class="no-external">Becoming ‘La Señorita de Inglés’ in the U.S. Peace Corps: My Journey from Practitioner to Ph.D.</a>
+<a href="../talks/presentations/moral-injury-summit-2025/index.html" class="no-external">Understanding moral injury for suicide prevention</a>
 </h3>
 <div class="listing-subtitle">
-<a href="../research/articles/2025-la-senorita/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R2xvYmFsJTIwRGV2ZWxvcG1lbnQ='); return false;">
-Global Development
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RW52aXJvbm1lbnQ='); return false;">
-Environment
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('SGlnaGVyJTIwRWR1Y2F0aW9u'); return false;">
-Higher Education
-</div>
+<a href="../talks/presentations/moral-injury-summit-2025/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<a href="../research/articles/2025-la-senorita/index.html" class="no-external">The Peace Corps is a governmental organization, founded in 1961 by President John F. Kennedy, with the objective of connecting United States citizens to the global community…</a>
+<a href="../talks/presentations/moral-injury-summit-2025/index.html" class="no-external">Let’s Connect Summit, Savannah, 2025</a>
 </div>
 </div>
 <div class="metadata">
-<a href="../research/articles/2025-la-senorita/index.html" class="no-external">
+<a href="../talks/presentations/moral-injury-summit-2025/index.html" class="no-external">
 <div class="listing-date">
-Jan 8, 2025
+Jun 10, 2025
 </div>
 <div class="listing-author">
-Nilofer K. Bharwani, Thomas J. Hodges
+Thomas Hodges
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="R2VuZGVyJTJDQ2xpbWF0ZSUyMENoYW5nZSUyQ0dsb2JhbCUyMERldmVsb3BtZW50JTJDTWFuYWdlbWVudCUyQ0Vudmlyb25tZW50" data-listing-date-sort="1723694400000" data-listing-file-modified-sort="1749997661054" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="261">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1747886400000" data-listing-file-modified-sort="1751419182891" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
 <div class="thumbnail">
-<p><a href="../research/articles/2024-just-lider-no/index.html" class="no-external"></a></p><a href="../research/articles/2024-just-lider-no/index.html" class="no-external">
+<p><a href="../talks/presentations/burnout-euwop-2025/index.html" class="no-external"></a></p><a href="../talks/presentations/burnout-euwop-2025/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../research/articles/2024-just-lider-no/index.html" class="no-external"></a></p>
+</a><p><a href="../talks/presentations/burnout-euwop-2025/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../research/articles/2024-just-lider-no/index.html" class="no-external">‘Just leader? No, lideresa!’ Experiences of Female Leaders Working in Climate Change Disaster Risk Reduction and Environmental Sustainability in the Global South</a>
+<a href="../talks/presentations/burnout-euwop-2025/index.html" class="no-external">Understanding the role of recovery and dysfunctional cognitions on burnout in public safety</a>
 </h3>
 <div class="listing-subtitle">
-<a href="../research/articles/2024-just-lider-no/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R2VuZGVy'); return false;">
-Gender
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Q2xpbWF0ZSUyMENoYW5nZQ=='); return false;">
-Climate Change
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R2xvYmFsJTIwRGV2ZWxvcG1lbnQ='); return false;">
-Global Development
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TWFuYWdlbWVudA=='); return false;">
-Management
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RW52aXJvbm1lbnQ='); return false;">
-Environment
-</div>
+<a href="../talks/presentations/burnout-euwop-2025/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<a href="../research/articles/2024-just-lider-no/index.html" class="no-external">As environmental disasters disproportionately affect women, international guidelines to address the disparity focus on the inclusion of women in disaster risk reduction…</a>
+<a href="../talks/presentations/burnout-euwop-2025/index.html" class="no-external">European Congress of Work and Organizational Psychology, Prague, 2025</a>
 </div>
 </div>
 <div class="metadata">
-<a href="../research/articles/2024-just-lider-no/index.html" class="no-external">
+<a href="../talks/presentations/burnout-euwop-2025/index.html" class="no-external">
 <div class="listing-date">
-Aug 15, 2024
+May 22, 2025
 </div>
 <div class="listing-author">
-Thomas J. Hodges, Nilofer K. Bharwani, Darina Lepadatu, Darlene Xiomara Rodriguez
+Thomas Hodges
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Q29uZmxpY3QlMjBNYW5hZ2VtZW50JTJDR2VuZGVyJTJDVmV0ZXJhbnM=" data-listing-date-sort="1662004800000" data-listing-file-modified-sort="1749997635544" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="320">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1739854800000" data-listing-file-modified-sort="1751420215609" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="68">
 <div class="thumbnail">
-<p><a href="../research/articles/2022-avp/index.html" class="no-external"></a></p><a href="../research/articles/2022-avp/index.html" class="no-external">
+<p><a href="../talks/presentations/suicidality-spc-2025/index.html" class="no-external"></a></p><a href="../talks/presentations/suicidality-spc-2025/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../research/articles/2022-avp/index.html" class="no-external"></a></p>
+</a><p><a href="../talks/presentations/suicidality-spc-2025/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../research/articles/2022-avp/index.html" class="no-external">Conflict Resolution Workshops for Service Members and Families: The Potentials of Alternatives to Violence Project (AVP) to Address Military Domestic Violence</a>
+<a href="../talks/presentations/suicidality-spc-2025/index.html" class="no-external">Evaluating suicidality: Examining risk and protective factors for Georgia’s veterans and families</a>
 </h3>
 <div class="listing-subtitle">
-<a href="../research/articles/2022-avp/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Q29uZmxpY3QlMjBNYW5hZ2VtZW50'); return false;">
-Conflict Management
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R2VuZGVy'); return false;">
-Gender
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('VmV0ZXJhbnM='); return false;">
-Veterans
-</div>
+<a href="../talks/presentations/suicidality-spc-2025/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<a href="../research/articles/2022-avp/index.html" class="no-external">Although the violence of war is well-known, members of the United States military&nbsp;also struggle with domestic violence, including intimate partner violence and child abuse…</a>
+<a href="../talks/presentations/suicidality-spc-2025/index.html" class="no-external">Georgia Suicide Prevention Conference, Peachtree City, 2025</a>
 </div>
 </div>
 <div class="metadata">
-<a href="../research/articles/2022-avp/index.html" class="no-external">
+<a href="../talks/presentations/suicidality-spc-2025/index.html" class="no-external">
 <div class="listing-date">
-Sep 1, 2022
+Feb 18, 2025
 </div>
 <div class="listing-author">
-Thomas J. Hodges, Shubam Sharma, Déja S. Nicolas, Brian A. Moore
+Thomas Hodges
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="SGlnaGVyJTIwRWR1Y2F0aW9uJTJDUmVpbnRlZ3JhdGlvbiUyQ1ZldGVyYW5z" data-listing-date-sort="1646888400000" data-listing-file-modified-sort="1749997680632" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="268">
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1728619200000" data-listing-file-modified-sort="1751420161067" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="92">
 <div class="thumbnail">
-<p><a href="../research/articles/2024-ssmvs/index.html" class="no-external"></a></p><a href="../research/articles/2024-ssmvs/index.html" class="no-external">
+<p><a href="../talks/presentations/eap-gsa-2024/index.html" class="no-external"></a></p><a href="../talks/presentations/eap-gsa-2024/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../research/articles/2024-ssmvs/index.html" class="no-external"></a></p>
+</a><p><a href="../talks/presentations/eap-gsa-2024/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../research/articles/2024-ssmvs/index.html" class="no-external">Unlocking SSM/V success: Welcoming student service members and veterans and supporting SSM/V experiences</a>
+<a href="../talks/presentations/eap-gsa-2024/index.html" class="no-external">Building Trust in Employee Assistance Programs among first responders: Focus groups on EAPs with police and fire personnel</a>
 </h3>
 <div class="listing-subtitle">
-<a href="../research/articles/2024-ssmvs/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('SGlnaGVyJTIwRWR1Y2F0aW9u'); return false;">
-Higher Education
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UmVpbnRlZ3JhdGlvbg=='); return false;">
-Reintegration
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('VmV0ZXJhbnM='); return false;">
-Veterans
-</div>
+<a href="../talks/presentations/eap-gsa-2024/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<a href="../research/articles/2024-ssmvs/index.html" class="no-external">Helping student service members and veterans (SSM/Vs) earn a college degree is central to supporting them post-service. Yet, this generation of SSM/Vs faces challenges in…</a>
+<a href="../talks/presentations/eap-gsa-2024/index.html" class="no-external">Georgia Sociological Association Annual Conference, Columbus, 2024</a>
 </div>
 </div>
 <div class="metadata">
-<a href="../research/articles/2024-ssmvs/index.html" class="no-external">
+<a href="../talks/presentations/eap-gsa-2024/index.html" class="no-external">
 <div class="listing-date">
-Mar 10, 2022
+Oct 11, 2024
 </div>
 <div class="listing-author">
-Thomas J. Hodges, Kimberly D. Gomes, Geno C. Foral, Tyler L. Collette, Brian A. Moore
+Thomas Hodges
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1722571200000" data-listing-file-modified-sort="1751420086912" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="95">
+<div class="thumbnail">
+<p><a href="../talks/presentations/eap-gipac-2024/index.html" class="no-external"></a></p><a href="../talks/presentations/eap-gipac-2024/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../talks/presentations/eap-gipac-2024/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talks/presentations/eap-gipac-2024/index.html" class="no-external">Employee Assistance Programs for first responders</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talks/presentations/eap-gipac-2024/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../talks/presentations/eap-gipac-2024/index.html" class="no-external">Georgia Injury Prevention Advisory Council, Online, 2024</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talks/presentations/eap-gipac-2024/index.html" class="no-external">
+<div class="listing-date">
+Aug 2, 2024
+</div>
+<div class="listing-author">
+Thomas Hodges
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1684987200000" data-listing-file-modified-sort="1751420189435" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="62">
+<div class="thumbnail">
+<p><a href="../talks/presentations/suicide-summit-2023/index.html" class="no-external"></a></p><a href="../talks/presentations/suicide-summit-2023/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../talks/presentations/suicide-summit-2023/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talks/presentations/suicide-summit-2023/index.html" class="no-external">Using research to enhance the practice of suicide prevention</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talks/presentations/suicide-summit-2023/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../talks/presentations/suicide-summit-2023/index.html" class="no-external">Let’s Connect Summit, Kennesaw, 2023</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talks/presentations/suicide-summit-2023/index.html" class="no-external">
+<div class="listing-date">
+May 25, 2023
+</div>
+<div class="listing-author">
+Thomas Hodges
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1681963200000" data-listing-file-modified-sort="1751420293560" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
+<div class="thumbnail">
+<p><a href="../talks/presentations/profiles-sss-2023/index.html" class="no-external"></a></p><a href="../talks/presentations/profiles-sss-2023/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../talks/presentations/profiles-sss-2023/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talks/presentations/profiles-sss-2023/index.html" class="no-external">Profiles of Resilience: Examining the Stories of First Responder and Military Families</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talks/presentations/profiles-sss-2023/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../talks/presentations/profiles-sss-2023/index.html" class="no-external">Symposium of Student Scholars, Kennesaw, 2023</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talks/presentations/profiles-sss-2023/index.html" class="no-external">
+<div class="listing-date">
+Apr 20, 2023
+</div>
+<div class="listing-author">
+Thomas Hodges
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-listing-date-sort="1609477200000" data-listing-file-modified-sort="1751420563543" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
+<div class="thumbnail">
+<p><a href="../talks/presentations/grassroots-peace-2021/index.html" class="no-external"></a></p><a href="../talks/presentations/grassroots-peace-2021/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../talks/presentations/grassroots-peace-2021/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talks/presentations/grassroots-peace-2021/index.html" class="no-external">Role of grassroots workers in bringing peace to local communities</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talks/presentations/grassroots-peace-2021/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../talks/presentations/grassroots-peace-2021/index.html" class="no-external">Peace360, Online, 2021</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talks/presentations/grassroots-peace-2021/index.html" class="no-external">
+<div class="listing-date">
+Jan 1, 2021
+</div>
+<div class="listing-author">
+Thomas Hodges
 </div>
 </a>
 </div>
@@ -587,45 +562,36 @@ No matching items
 </div>
 </div>
 </section>
-<section id="book-and-film-reviews" class="level2">
-<h2 class="anchored" data-anchor-id="book-and-film-reviews">Book and Film Reviews</h2>
-<div id="listing-reviews" class="quarto-listing quarto-listing-container-default">
+<section id="poster-presentations" class="level2">
+<h2 class="anchored" data-anchor-id="poster-presentations">Poster Presentations</h2>
+<div id="listing-posters" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TW9yYWwlMjBJbmp1cnklMkNWZXRlcmFucyUyQ0ludGVybmF0aW9uYWwlMjBDb25mbGljdA==" data-listing-date-sort="1730433600000" data-listing-file-modified-sort="1749690889749" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="81">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1743480000000" data-listing-file-modified-sort="1751406188903" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="../research/reviews/2024-film-review-what-i-want-you/index.html" class="no-external"></a></p><a href="../research/reviews/2024-film-review-what-i-want-you/index.html" class="no-external">
+<p><a href="../talks/posters/somatic-stress-sss-2025/index.html" class="no-external"></a></p><a href="../talks/posters/somatic-stress-sss-2025/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../research/reviews/2024-film-review-what-i-want-you/index.html" class="no-external"></a></p>
+</a><p><a href="../talks/posters/somatic-stress-sss-2025/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../research/reviews/2024-film-review-what-i-want-you/index.html" class="no-external">Seeking justice through moral injury: A review of the documentary film What I Want You to Know</a>
+<a href="../talks/posters/somatic-stress-sss-2025/index.html" class="no-external">Evaluating dual identities and somatic stress during veteran reintegration</a>
 </h3>
 <div class="listing-subtitle">
-<a href="../research/reviews/2024-film-review-what-i-want-you/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TW9yYWwlMjBJbmp1cnk='); return false;">
-Moral Injury
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('VmV0ZXJhbnM='); return false;">
-Veterans
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('SW50ZXJuYXRpb25hbCUyMENvbmZsaWN0'); return false;">
-International Conflict
-</div>
+<a href="../talks/posters/somatic-stress-sss-2025/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<a href="../research/reviews/2024-film-review-what-i-want-you/index.html" class="no-external">Throughout <em>What I Want You to Know</em>, we see how the loss of a purpose for fighting tips the moral scales of military service, putting service members at risk for moral injury.</a>
+<a href="../talks/posters/somatic-stress-sss-2025/index.html" class="no-external">
+
+</a>
 </div>
 </div>
 <div class="metadata">
-<a href="../research/reviews/2024-film-review-what-i-want-you/index.html" class="no-external">
+<a href="../talks/posters/somatic-stress-sss-2025/index.html" class="no-external">
 <div class="listing-date">
-Nov 1, 2024
+Apr 1, 2025
 </div>
 <div class="listing-author">
-Thomas J. Hodges
+Thomas Hodges
 </div>
 </a>
 </div>
@@ -636,142 +602,8 @@ No matching items
 </div>
 </div>
 </section>
-<section id="book-chapters" class="level2">
-<h2 class="anchored" data-anchor-id="book-chapters">Book Chapters</h2>
-<div id="listing-chapters" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TWFuYWdlbWVudCUyQ09yZ2FuaXphdGlvbmFsJTIwUHN5Y2hvbG9neSUyQ01lbnRhbCUyMEhlYWx0aCUyQ0ZpcnN0JTIwUmVzcG9uZGVycw==" data-listing-file-modified-sort="1750191518717" data-listing-reading-time-sort="1" data-listing-word-count-sort="185">
-<div class="thumbnail">
-<p><a href="../research/book-chapters/2025-eap/index.html" class="no-external"></a></p><a href="../research/book-chapters/2025-eap/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../research/book-chapters/2025-eap/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../research/book-chapters/2025-eap/index.html" class="no-external">Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../research/book-chapters/2025-eap/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TWFuYWdlbWVudA=='); return false;">
-Management
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('T3JnYW5pemF0aW9uYWwlMjBQc3ljaG9sb2d5'); return false;">
-Organizational Psychology
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TWVudGFsJTIwSGVhbHRo'); return false;">
-Mental Health
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Rmlyc3QlMjBSZXNwb25kZXJz'); return false;">
-First Responders
-</div>
-</div>
-<div class="listing-description">
-<a href="../research/book-chapters/2025-eap/index.html" class="no-external">Coming Soon.</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="../research/book-chapters/2025-eap/index.html" class="no-external"></a></p><a href="../research/book-chapters/2025-eap/index.html" class="no-external">
-<div class="listing-author">
-Thomas J. Hodges, Kristin A. Horan, Adrian Alicea, Edwin Trejo-Rivera, Sophie R. Vincent, Phaina Dubuisson, Katherine Moore, Bianca Channer, Chris Hess, Brian A. Moore
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Rmlyc3QlMjBSZXNwb25kZXJzJTJDT3JnYW5pemF0aW9uYWwlMjBQc3ljaG9sb2d5JTJDSGVhbHRo" data-listing-file-modified-sort="1750191508157" data-listing-reading-time-sort="1" data-listing-word-count-sort="154">
-<div class="thumbnail">
-<p><a href="../research/book-chapters/2025-firefighter/index.html" class="no-external"></a></p><a href="../research/book-chapters/2025-firefighter/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../research/book-chapters/2025-firefighter/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../research/book-chapters/2025-firefighter/index.html" class="no-external">Mental and Occupational Health of Fire Rescue Personnel: A model for Conducting Organizational Health Assessments</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../research/book-chapters/2025-firefighter/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Rmlyc3QlMjBSZXNwb25kZXJz'); return false;">
-First Responders
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('T3JnYW5pemF0aW9uYWwlMjBQc3ljaG9sb2d5'); return false;">
-Organizational Psychology
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('SGVhbHRo'); return false;">
-Health
-</div>
-</div>
-<div class="listing-description">
-<a href="../research/book-chapters/2025-firefighter/index.html" class="no-external">Coming Soon.</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="../research/book-chapters/2025-firefighter/index.html" class="no-external"></a></p><a href="../research/book-chapters/2025-firefighter/index.html" class="no-external">
-<div class="listing-author">
-Bianca Channer, Micheal Schlenk, Israel Sanchez-Cardona, Tyler L. Collette, Kristin A. Horan, Chris Hess, Thomas J. Hodges, Brian A. Moore
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="dissertation" class="level2">
-<h2 class="anchored" data-anchor-id="dissertation">Dissertation</h2>
-<div id="listing-dissertation" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TW9yYWwlMjBJbmp1cnklMkNWZXRlcmFucyUyQ0hlYWx0aCUyQ1JlaW50ZWdyYXRpb24=" data-listing-date-sort="1701838800000" data-listing-file-modified-sort="1749997890143" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="296">
-<div class="thumbnail">
-<p><a href="../research/dissertation/2023-dissertation/index.html" class="no-external"></a></p><a href="../research/dissertation/2023-dissertation/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../research/dissertation/2023-dissertation/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../research/dissertation/2023-dissertation/index.html" class="no-external">Moral Injury, Identity Dissonance, and Reintegration: A Compendium of Reintegration and Survey of United States Military Veterans</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../research/dissertation/2023-dissertation/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TW9yYWwlMjBJbmp1cnk='); return false;">
-Moral Injury
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('VmV0ZXJhbnM='); return false;">
-Veterans
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('SGVhbHRo'); return false;">
-Health
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UmVpbnRlZ3JhdGlvbg=='); return false;">
-Reintegration
-</div>
-</div>
-<div class="listing-description">
-<a href="../research/dissertation/2023-dissertation/index.html" class="no-external">How do military moral injuries affect reintegration? All service members leave the military eventually, but reintegration can be challenging, bringing changes in career…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../research/dissertation/2023-dissertation/index.html" class="no-external">
-<div class="listing-date">
-Dec 6, 2023
-</div>
-<div class="listing-author">
-Thomas J. Hodges
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
 
 
 

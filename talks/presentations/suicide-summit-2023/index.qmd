@@ -1,19 +1,21 @@
 ---
 title: "Using research to enhance the practice of suicide prevention"
-description: ""
+description: "Let's Connect Summit, Kennesaw, 2023"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
-date: 2025-076-10
+date: 2023-05-25
 #categories: \[R, Statistics, Research Design\] \# self-defined categories
 #citation: 
 #  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
 #image: 
-draft: true
+draft: false
 ---
 
 # Summary
 
-# Slides
+This panel discussion featured researchers from the Center for the Advancement of Military and Emergency Services Research (AMES) at Kennesaw State University. The panel discussed the nexus of research and practice in suicide prevention.
 
 # Citation
+
+Hess, C., Horan, K., Moore, B.A. (May 2023). “Using research to enhance the practice of suicide prevention.” Hodges, T.J., Panel Moderator. Let’s Connect Summit Conference. Kennesaw, Georgia, Public.

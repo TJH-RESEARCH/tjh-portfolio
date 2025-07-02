@@ -1,6 +1,6 @@
 ---
 title: "The role of trust in Employee Assistance Programs for first responders"
-description: ""
+description: "Work, Stress, and Health Conference, Seattle, 2025"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
@@ -9,11 +9,17 @@ date: 2025-07-10
 #citation: 
 #  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
 #image: 
-draft: true
+draft: false
 ---
 
 # Summary
 
+Presentation at the [Work, Stress, and Health 2025 conference](https://sohp-online.org). While EAPs are an available resource to promote behavioral health, many of Georgia's first responders say they will not use them. Concerns include confidentiality and a culture of stoicism and stigma.
+
 # Slides
 
+Coming soon.
+
 # Citation
+
+Hodges, T.J., Horan, K.A., Alicea, A. Trejo-Rivera, E., Vincent, S. R., Dubuisson, P., Moore, K., Channer, B., Hess, C. & Moore,B.A. (forthcoming). “The role of trust in Employee Assistance Programs for first responders” Work, Stress, and Health Conference 2025. Seattle, Washington*.*

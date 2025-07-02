@@ -1,0 +1,27 @@
+---
+title: "Building Trust in Employee Assistance Programs among first responders: Focus groups on EAPs with police and fire personnel"
+description: "Georgia Sociological Association Annual Conference, Columbus, 2024"
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+date: 2024-10-11
+#categories: \[R, Statistics, Research Design\] \# self-defined categories
+#citation: 
+#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
+#image: 
+draft: false
+---
+
+# Summary
+
+Research talk on first responders use of a workplace wellness benefit, Employee Assistance Programs (EAPs). While EAPs are an available resource, many of Georgia's first responders say they will not use them. Concerns include confidentiality and a culture of stoicism and stigma.
+
+<https://www.georgiasociology.com>
+
+# Slides
+
+Coming soon.
+
+# Citation
+
+Hodges, T.J., Horan, K.A., Alicea, A. Trejo-Rivera, E., Vincent, S. R., Dubuisson, P., Moore, K., Channer, B., Hess, C. & Moore,B.A. (October 2024). “Building Trust in Employee Assistance Programs among first responders: Focus groups on EAPs with police and fire personnel” Georgia Sociological Association Annual Conference. Columbus, Georgia*.*

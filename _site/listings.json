@@ -1,12 +1,7 @@
 [
   {
     "listing": "/data/index.html",
-    "items": [
-      "/data/posts/bayes/index.html",
-      "/data/posts/cluster/index.html",
-      "/data/posts/war/index.html",
-      "/data/posts/data-cleaning/index.html"
-    ]
+    "items": []
   },
   {
     "listing": "/research/index.html",
@@ -26,5 +21,21 @@
   {
     "listing": "/blog/index.html",
     "items": []
+  },
+  {
+    "listing": "/talks/index.html",
+    "items": [
+      "/talks/presentations/eap-wsh-2025/index.html",
+      "/talks/presentations/conflict-suicide-summit-2025/index.html",
+      "/talks/presentations/moral-injury-summit-2025/index.html",
+      "/talks/presentations/burnout-euwop-2025/index.html",
+      "/talks/presentations/suicidality-spc-2025/index.html",
+      "/talks/presentations/eap-gsa-2024/index.html",
+      "/talks/presentations/eap-gipac-2024/index.html",
+      "/talks/presentations/suicide-summit-2023/index.html",
+      "/talks/presentations/profiles-sss-2023/index.html",
+      "/talks/presentations/grassroots-peace-2021/index.html",
+      "/talks/posters/somatic-stress-sss-2025/index.html"
+    ]
   }
 ]

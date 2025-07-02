@@ -1,19 +1,25 @@
 ---
 title: "Employee Assistance Programs for first responders"
-description: ""
+description: "Georgia Injury Prevention Advisory Council, Online, 2024"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
-date: 2024-08-01
+date: 2024-08-02
 #categories: \[R, Statistics, Research Design\] \# self-defined categories
 #citation: 
 #  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
 #image: 
-draft: true
+draft: false
 ---
 
 # Summary
 
+A presentation to the [Georgia Injury Prevention Advisory Council (GIPAC)](https://dph.georgia.gov/health-topics/injury-prevention-program/georgia-injury-prevention-advisory-council-gipac): While first responders are at risk for psychological and physical injuries, many of Georgia's first responders we interviewed told us they would not use an available free resource: Employee Assistance Programs (EAP). These interviews suggest a need to reduce stigma of mental health and increase awareness of EAPs.
+
 # Slides
 
+Coming soon.
+
 # Citation
+
+Hodges, T.J., Horan, K.A., Alicea, A. Trejo-Rivera, E., Vincent, S. R., Dubuisson, P. Moore, K., Channer, B., Hess, C. & Moore,B.A. (August 2024). “Employee Assistance Programs for first responders.” Georgia Injury Prevention Advisory Council. Online.

@@ -1,19 +1,25 @@
 ---
 title: "Profiles of Resilience: Examining the Stories of First Responder and Military Families"
-description: ""
+description: "Symposium of Student Scholars, Kennesaw, 2023"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
-date: 2023-04-01
+date: 2023-04-20
 #categories: \[R, Statistics, Research Design\] \# self-defined categories
 #citation: 
 #  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
 #image: 
-draft: true
+draft: false
 ---
 
 # Summary
 
+Profiles in Resilience is an initiative to document stories of resilience in first responders, veterans, caretakers, and their family members.
+
 # Slides
 
+Coming soon.
+
 # Citation
+
+Gomes, K. D., Hodges, T., Moore, K., Channer, B., & Moore, B. A. (April 2023) “Profiles of Resilience: Examining the Stories of First Responder and Military Families.” Kennesaw State University Symposium of Student Scholars, Kennesaw, Georgia.

@@ -1,10 +1,10 @@
 ---
 title: "Overcoming barriers to Employee Assistance Programs for public safety professionals"
-description: ""
+description: "11th Circuit Crisis Response Conference, Forsyth, 2024"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
-date: 2024-08-01
+date: 2024-08-07
 #categories: \[R, Statistics, Research Design\] \# self-defined categories
 #citation: 
 #  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
@@ -14,6 +14,12 @@ draft: true
 
 # Summary
 
+A presentation at the [11th Circuit Crisis Response Conference](https://spalding.gafcp.org/event/11th-circuit-crisis-response-conference/) to an audience of public safety, judicial personnel, behavioral health providers, and community advocates from the Southeastern U.S. While first responders are at risk for psychological and physical injuries, many of Georgia's first responders we interviewed told us they would not use an available free resource: Employee Assistance Programs (EAP). These interviews suggest a need to reduce stigma of mental health and increase awareness of EAPs.
+
 # Slides
 
+Coming soon.
+
 # Citation
+
+**Hodges, T.J.**, Horan, K.A., Alicea, A. Trejo-Rivera, E., Vincent, S. R., Dubuisson, P., Moore, K., Channer, B., Hess, C. & Moore,B.A. (October 2024). “Overcoming barriers to Employee Assistance Programs for public safety professionals.” 11^th^ Circuit Crisis Response Conference. Forsyth, Georgia.

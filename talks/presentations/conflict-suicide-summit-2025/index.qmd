@@ -1,6 +1,6 @@
 ---
 title: "Constructive conflict management for suicide prevention"
-description: ""
+description: "Let’s Connect Summit, Savannah, 2025"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
@@ -9,11 +9,17 @@ date: 2025-06-10
 #citation: 
 #  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
 #image: 
-draft: true
+draft: false
 ---
 
 # Summary
 
+Presentation at the 2025 Let's Connect Suicide Prevention Summit on how conflict resolution can be used in suicide prevention.
+
 # Slides
 
+Coming soon.
+
 # Citation
+
+Hodges, T.J. (10 June 2025). “Constructive conflict management for suicide prevention.” Let’s Connect Summit. Savannah, Georgia.
