@@ -30,8 +30,14 @@ website:
       - text: "{{< iconify bi linkedin size=1.1em title='LinkedIn' >}}"
         href: https://www.linkedin.com/in/tom-hodges
         rel: me
-      - text: "{{< iconify bi researchgate size=1.1em title='LinkedIn' >}}"
+      - text: "{{< iconify fa-brands:researchgate size=1.1em title='Research Gate' >}}"
         href: https://www.researchgate.net/profile/Thomas-Hodges-4?ev=hdr_xprf
+        rel: me
+      - text: "{{< ai google-scholar size=1.1em title='Google Scholar' >}}"
+        href: https://scholar.google.com/citations?hl=en&authuser=3&user=wG3FltQAAAAJ
+        rel: me
+      - text: "{{< ai orcid size=1.1em title='Google Scholar' >}}"
+        href: https://orcid.org/my-orcid?orcid=0000-0002-5184-7346
         rel: me
 
   page-footer:
