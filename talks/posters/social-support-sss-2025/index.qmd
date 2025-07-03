@@ -1,19 +1,22 @@
 ---
 title: "Military-civilian identity as a moderator: Social support and moral injury during veteran transition"
-description: ""
+description: "Symposium of Student Scholars, Kennesaw"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
-date: 2025-04-01
-#categories: \[R, Statistics, Research Design\] \# self-defined categories
-#citation: 
-#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
-#image: 
-draft: true
+date: 2025-04-17
+categories:
+  - Identity
+  - Mental Health
+  - Veterans
+  - Reintegration
+draft: false
 ---
 
 # Summary
 
-# Slides
+Poster presented by Birdie Berie.
 
 # Citation
+
+Berie, B., Adeboye, T., Collette, T. L., **Hodges, T. J.** (April 2025). “Military-civilian identity as a moderator: Social support and moral injury during veteran transition.” Spring 2025 Symposium of Student Scholars. Kennesaw State University, Kennesaw, Georgia.

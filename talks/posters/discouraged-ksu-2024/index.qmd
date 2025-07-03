@@ -1,0 +1,21 @@
+---
+title: "Evaluating dual identities and somatic stress during veteran reintegration"
+description: "Analytics Day, Kennesaw"
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+date: 2024-11-22
+categories:
+  - Economics
+  - Machile Learning
+  - Statistics
+draft: false
+---
+
+# Summary
+
+Poster presented by Edwin Trejo-Rivera.
+
+# Citation
+
+Trejo-Rivera, E., Martinez, D., & **Hodges, T.J.** (November 2024). “Identifying the discouraged workforce: A dual model analysis with logistic regression and random forest.” Poster presentation at the *Fall 2024 Kennesaw State University’s Analytics Day*, Kennesaw, Georgia.

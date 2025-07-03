@@ -1,0 +1,21 @@
+---
+title: "Moral injury and military-to-civilian identity transition: Moral injury associated with identity dissonance but not identity loss"
+description: "STRONG STAR Combat PTSD Conference, San Antonio"
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+date: 2024-10-01
+categories:
+  - Economics
+  - Machile Learning
+  - Statistics
+draft: false
+---
+
+# Summary
+
+Poster presented in San Antonio. Presented a work in progress which has since been published in *Traumatology*. \[link\]
+
+# Citation
+
+**Hodges, T. J.,** Collette, T. L., & Moore, B. A. (October 2024). “Moral injury and military-to-civilian identity transition: Moral injury associated with identity dissonance but not identity loss.” 9th annual STRONG STAR Combat PTSD Conference. San Antonio, Texas.

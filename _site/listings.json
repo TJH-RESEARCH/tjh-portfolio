@@ -20,11 +20,7 @@
   },
   {
     "listing": "/blog/index.html",
-    "items": [
-      "/blog/posts/war-part-1/index.html",
-      "/blog/posts/psychosocial-functioning/index.html",
-      "/blog/posts/trust-surveys/index.html"
-    ]
+    "items": []
   },
   {
     "listing": "/talks/index.html",
@@ -45,7 +41,13 @@
       "/talks/presentations/profiles-sss-2023/index.html",
       "/talks/presentations/lies-gsa-2022/index.html",
       "/talks/presentations/grassroots-peace-2021/index.html",
-      "/talks/posters/somatic-stress-sss-2025/index.html"
+      "/talks/posters/social-support-sss-2025/index.html",
+      "/talks/posters/somatic-stress-sss-2025/index.html",
+      "/talks/posters/discouraged-ksu-2024/index.html",
+      "/talks/posters/moral-injury-strong-star-2024/index.html",
+      "/talks/posters/identity-va-2024/index.html",
+      "/talks/posters/conflict-resolution-strong-star-2021/index.html",
+      "/talks/posters/ssmv-strong-star-2021/index.html"
     ]
   }
 ]

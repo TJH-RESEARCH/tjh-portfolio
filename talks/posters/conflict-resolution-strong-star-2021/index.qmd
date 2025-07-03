@@ -1,0 +1,22 @@
+---
+title: "Conflict resolution workshops for service members and their families: The potentials of Alternatives to Violence Project (AVP) to address military domestic violence"
+description: "STRONG STAR Combat PTSD Conference, Online"
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+date: 2021-10-20
+categories:
+  - Conflict Resolution
+  - Veterans
+  - Identity
+  - Reintegration
+draft: false
+---
+
+# Summary
+
+Presented a work in progress which has since been published \[link\].
+
+# Citation
+
+**Hodges, T. J.,** Nicolas, D. S., Sharma, S., Moore, B. A. (October 2021). “Conflict resolution workshops for service members and their families: The potentials of Alternatives to Violence Project (AVP) to address military domestic violence.” 6th annual STRONG STAR Combat PTSD Conference. San Antonio, Texas. Online.
