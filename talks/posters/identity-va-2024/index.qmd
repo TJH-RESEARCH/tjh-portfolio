@@ -9,7 +9,7 @@ categories:
   - Identity
   - Veterans
   - Reintegration
-  - Machile Learning
+  - Machine Learning
   - Unsupervised Learning
   - Cluster Analysis
 draft: false
@@ -17,7 +17,7 @@ draft: false
 
 # Summary
 
-Presented a work in progress which is still in progress. \[link\]
+A poster I presented at the Atlanta Veterans Affairs (VA) Research Day in 2024. It won Best Poster in the Health Services Category. It outlined a work in progress which is [still in progress](../../../research/working-papers/identity-reintegration/index.qmd).
 
 # Citation
 

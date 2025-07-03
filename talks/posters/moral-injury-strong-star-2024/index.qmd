@@ -7,14 +7,14 @@ author:
 date: 2024-10-01
 categories:
   - Economics
-  - Machile Learning
+  - Machine Learning
   - Statistics
 draft: false
 ---
 
 # Summary
 
-Poster presented in San Antonio. Presented a work in progress which has since been published in *Traumatology*. \[link\]
+Poster presented in San Antonio. Presented a work in progress which has since [been published in *Traumatology*](../../../research/articles/2025-moral-injury-identity/index.qmd).
 
 # Citation
 

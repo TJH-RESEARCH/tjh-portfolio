@@ -17,6 +17,10 @@ listing:
     contents: "dissertation/*/index.qmd"
     sort: "date desc"
     categories: true
+  - id: working
+    contents: "working-papers/*/index.qmd"
+    sort: "date desc"
+    categories: true
 page-layout: full
 include-back-link: false
 toc-location: right
@@ -44,4 +48,9 @@ Currently, I am a Senior Research Associate for the [Center for the Advancement 
 ## Dissertation
 
 ::: {#dissertation}
+:::
+
+## Working Papers
+
+::: {#working}
 :::

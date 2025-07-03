@@ -15,9 +15,7 @@ draft: false
 
 # Summary
 
-Presentation, just before my dissertation defense, of my dissertation data. \[link coming soon\]
-
-# Slides
+I presented my [dissertation](../../../research/dissertation/2023-dissertation/index.qmd) just a few days before the official dissertation defense.
 
 # Citation
 

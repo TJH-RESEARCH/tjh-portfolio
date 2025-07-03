@@ -15,7 +15,7 @@ draft: false
 
 # Summary
 
-Poster presented by Birdie Berie.
+Poster presented by Birdie Berie, a First Year Scholar whom I advised. She presented on an analysis of some new data I collected with military veterans.
 
 # Citation
 

@@ -1,17 +1,19 @@
 ---
-title: "About Me"
+title: "Thomas Hodges"
 ---
+
+### About me
 
 I am Thomas Hodges, a data scientist, research, and expert in people analytics.\
 \
 During my PhD studies, I helped to found the [AMES Research Center](https://www.kennesaw.edu/research/centers-facilities/ames-center/index.php). We use analytics and research-based programs to improve the workplace well-being of veterans, police, firefighters, and medics. In 3 years, we grew to a staff of 20 with a yearly revenue of \$1.9M in contracts and grants. We have trained 1.6K employees and conducted assessments for 38 client organizations and 13.5K personnel.\
 \
-I wear a lot of hats. I developed our conflict management training program, training over 150 individuals in constructive conflict resolution. I also act as a project manager, data scientist, and consultant. I’ve given 23 public presentations, published 8 articles, and written 3 reports for state agencies.\
+I wear a lot of hats. I developed our conflict management training program, training over 150 individuals in constructive conflict resolution. I also act as a project manager, data scientist, and consultant. I’ve given [23 public presentations](talks/index.qmd), published [8 articles](research/index.qmd), and written [3 reports for state agencies.](research/index.qmd)\
 \
-I’ve had a nonlinear career path. Before my PhD, I worked a few years in HR and Business Development. But I developed a temporary disability, overcame it, then took time to travel, volunteer, intern, and go to grad school. I’ve been driven by learning and growing into a person who can have an impact.\
+I’ve had a nonlinear [career path.](cv/index.qmd) Before my PhD, I worked a few years in HR and Business Development. But I developed a temporary disability, overcame it, then took time to travel, volunteer, intern, and go to grad school. I’ve been driven by learning and growing into a person who can have an impact.\
 
 ### Site Info
 
 -   I took inspiration for this site from Andrew Heiss' [excellent website and blog](https://www.andrewheiss.com).
 -   I used [Quarto](https://quarto.org/docs/websites/) to create the site.
--   The color scheme for the site comes from the Lakota palette in the [MetBrewer](https://github.com/BlakeRMills/MetBrewer) library for R and Python. The palettes are Inspired by displays at the [Metropolitan Museum of Art in New York](https://www.metmuseum.org) Specifically, I use the [Lakota palette](https://www.metmuseum.org/art/collection/search/751512).
+-   The color scheme for the site comes from the [Lakota palette](https://www.metmuseum.org/art/collection/search/751512) in the [MetBrewer](https://github.com/BlakeRMills/MetBrewer) library for R and Python. The palettes are Inspired by displays at the [Metropolitan Museum of Art in New York](https://www.metmuseum.org).

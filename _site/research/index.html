@@ -185,6 +185,34 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-working .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-working'] = new List('listing-working', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 <style>
 
@@ -329,9 +357,10 @@ window.Quarto = {
   <li><a href="#book-and-film-reviews" id="toc-book-and-film-reviews" class="nav-link" data-scroll-target="#book-and-film-reviews">Book and Film Reviews</a></li>
   <li><a href="#book-chapters" id="toc-book-chapters" class="nav-link" data-scroll-target="#book-chapters">Book Chapters</a></li>
   <li><a href="#dissertation" id="toc-dissertation" class="nav-link" data-scroll-target="#dissertation">Dissertation</a></li>
+  <li><a href="#working-papers" id="toc-working-papers" class="nav-link" data-scroll-target="#working-papers">Working Papers</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Q2xpbWF0ZSUyMENoYW5nZQ==">Climate Change <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29uZmxpY3QlMjBNYW5hZ2VtZW50">Conflict Management <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RW52aXJvbm1lbnQ=">Environment <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Rmlyc3QlMjBSZXNwb25kZXJz">First Responders <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R2VuZGVy">Gender <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R2xvYmFsJTIwRGV2ZWxvcG1lbnQ=">Global Development <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SGVhbHRo">Health <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SGlnaGVyJTIwRWR1Y2F0aW9u">Higher Education <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SWRlbnRpdHk=">Identity <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SW50ZXJuYXRpb25hbCUyMENvbmZsaWN0">International Conflict <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFuYWdlbWVudA==">Management <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWVudGFsJTIwSGVhbHRo">Mental Health <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWlsaXRhcnklMjBIZWFsdGg=">Military Health <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9yYWwlMjBJbmp1cnk=">Moral Injury <span class="quarto-category-count">(3)</span></div><div class="category" data-category="T3JnYW5pemF0aW9uYWwlMjBQc3ljaG9sb2d5">Organizational Psychology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVpbnRlZ3JhdGlvbg==">Reintegration <span class="quarto-category-count">(4)</span></div><div class="category" data-category="VmV0ZXJhbnM=">Veterans <span class="quarto-category-count">(6)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="Q2xpbWF0ZSUyMENoYW5nZQ==">Climate Change <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29uZmxpY3QlMjBNYW5hZ2VtZW50">Conflict Management <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RW52aXJvbm1lbnQ=">Environment <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Rmlyc3QlMjBSZXNwb25kZXJz">First Responders <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R2VuZGVy">Gender <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R2xvYmFsJTIwRGV2ZWxvcG1lbnQ=">Global Development <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SGVhbHRo">Health <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SGlnaGVyJTIwRWR1Y2F0aW9u">Higher Education <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SWRlbnRpdHk=">Identity <span class="quarto-category-count">(3)</span></div><div class="category" data-category="SW50ZXJuYXRpb25hbCUyMENvbmZsaWN0">International Conflict <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFuYWdlbWVudA==">Management <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWVudGFsJTIwSGVhbHRo">Mental Health <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWlsaXRhcnklMjBIZWFsdGg=">Military Health <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9yYWwlMjBJbmp1cnk=">Moral Injury <span class="quarto-category-count">(3)</span></div><div class="category" data-category="T3JnYW5pemF0aW9uYWwlMjBQc3ljaG9sb2d5">Organizational Psychology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVpbnRlZ3JhdGlvbg==">Reintegration <span class="quarto-category-count">(5)</span></div><div class="category" data-category="VmV0ZXJhbnM=">Veterans <span class="quarto-category-count">(7)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -345,7 +374,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="journal-articles">Journal articles</h2>
 <div id="listing-articles" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TW9yYWwlMjBJbmp1cnklMkNJZGVudGl0eSUyQ1JlaW50ZWdyYXRpb24lMkNWZXRlcmFucw==" data-listing-date-sort="1749182400000" data-listing-file-modified-sort="1749997740070" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270">
+<div class="quarto-post image-right" data-index="0" data-categories="TW9yYWwlMjBJbmp1cnklMkNJZGVudGl0eSUyQ1JlaW50ZWdyYXRpb24lMkNWZXRlcmFucw==" data-listing-date-sort="1749182400000" data-listing-file-modified-sort="1751510420270" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="273">
 <div class="thumbnail">
 <p><a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external"></a></p><a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -373,7 +402,7 @@ Veterans
 </div>
 </div>
 <div class="listing-description">
-<a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external">Although it is widely accepted among theorists and clinicians that moral injury can affect identity, these claims are rarely specified, let alone investigated empirically.…</a>
+<a href="../research/articles/2025-moral-injury-identity/index.html" class="no-external">Paper</a>
 </div>
 </div>
 <div class="metadata">
@@ -773,6 +802,52 @@ Dec 6, 2023
 </div>
 <div class="listing-author">
 Thomas J. Hodges
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="working-papers" class="level2">
+<h2 class="anchored" data-anchor-id="working-papers">Working Papers</h2>
+<div id="listing-working" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="SWRlbnRpdHklMkNSZWludGVncmF0aW9uJTJDVmV0ZXJhbnM=" data-listing-file-modified-sort="1751507763005" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../research/working-papers/identity-reintegration/index.html" class="no-external"></a></p><a href="../research/working-papers/identity-reintegration/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../research/working-papers/identity-reintegration/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../research/working-papers/identity-reintegration/index.html" class="no-external">Comparing reintegration by military identity: Clusters of military identity and post-service adjustment</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../research/working-papers/identity-reintegration/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('SWRlbnRpdHk='); return false;">
+Identity
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UmVpbnRlZ3JhdGlvbg=='); return false;">
+Reintegration
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('VmV0ZXJhbnM='); return false;">
+Veterans
+</div>
+</div>
+<div class="listing-description">
+<a href="../research/working-papers/identity-reintegration/index.html" class="no-external">Hodges, T. J. &amp; Moore, B. A. (In preparation). “Comparing reintegration by military identity: Clusters of military identity and post-service adjustment.” Target Journal: <em>Self…</em></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../research/working-papers/identity-reintegration/index.html" class="no-external"></a></p><a href="../research/working-papers/identity-reintegration/index.html" class="no-external">
+<div class="listing-author">
+Thomas J. Hodges, Tyler L. Collette, Brian A. Moore
 </div>
 </a>
 </div>

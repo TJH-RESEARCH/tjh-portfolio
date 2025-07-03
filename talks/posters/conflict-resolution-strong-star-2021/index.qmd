@@ -15,8 +15,8 @@ draft: false
 
 # Summary
 
-Presented a work in progress which has since been published \[link\].
+I presented a work in progress which has [since been published in Aggression and Violent Behavior](../../../research/articles/2022-avp/index.qmd).
 
 # Citation
 
-**Hodges, T. J.,** Nicolas, D. S., Sharma, S., Moore, B. A. (October 2021). “Conflict resolution workshops for service members and their families: The potentials of Alternatives to Violence Project (AVP) to address military domestic violence.” 6th annual STRONG STAR Combat PTSD Conference. San Antonio, Texas. Online.
+Hodges, T. J., Nicolas, D. S., Sharma, S., Moore, B. A. (October 2021). “Conflict resolution workshops for service members and their families: The potentials of Alternatives to Violence Project (AVP) to address military domestic violence.” 6th annual STRONG STAR Combat PTSD Conference. San Antonio, Texas. Online.

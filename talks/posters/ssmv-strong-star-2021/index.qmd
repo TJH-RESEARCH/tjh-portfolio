@@ -15,7 +15,7 @@ draft: false
 
 # Summary
 
-Presented a work in progress which has since been published \[link\].
+Presented a work in progress which has since been [published in Journal of College Student Retention](research/articles/2024-ssmvs/index.qmd).
 
 # Citation
 

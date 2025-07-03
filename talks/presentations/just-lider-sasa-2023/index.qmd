@@ -16,8 +16,8 @@ draft: false
 
 Presentation at the [Southeastern American Studies Association](https://southeasternasa.org) biannual conference in [Atlanta, 2024](https://southeasternasa.org/past-conferences/).
 
-The paper was a work in progress at the time, but it has since been published \[link coming soon\].
+The paper was a work in progress at the time, but it has [since been published.](../../../research/articles/2024-just-lider-no/index.qmd)
 
 # Citation
 
-Bharwani, N.K., Hodges, T. & Lepadatu, D., & Rodriguez, D.X. (September 2023). “’Just leader, no *lideresa:’* Female leadership in climate change mitigation and environmental sustainability.” Southeastern American Studies Association Biannual Conference, Atlanta Georgia.
+Bharwani, N.K., Hodges, T. & Lepadatu, D., & Rodriguez, D.X. (September 2023). “’Just leader, no *lideresa:’* Female leadership in climate change mitigation and environmental sustainability.” Southeastern American Studies Association Biannual Conference, Atlanta Georgia.

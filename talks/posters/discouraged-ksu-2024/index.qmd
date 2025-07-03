@@ -7,15 +7,15 @@ author:
 date: 2024-11-22
 categories:
   - Economics
-  - Machile Learning
+  - Machine Learning
   - Statistics
 draft: false
 ---
 
 # Summary
 
-Poster presented by Edwin Trejo-Rivera.
+Poster presented by Edwin Trejo-Rivera. I served as adviser and statistical consultant. The poster won third place in the conference's Best Poster competition.
 
 # Citation
 
-Trejo-Rivera, E., Martinez, D., & **Hodges, T.J.** (November 2024). “Identifying the discouraged workforce: A dual model analysis with logistic regression and random forest.” Poster presentation at the *Fall 2024 Kennesaw State University’s Analytics Day*, Kennesaw, Georgia.
+Trejo-Rivera, E., Martinez, D., & Hodges, T.J. (November 2024). “Identifying the discouraged workforce: A dual model analysis with logistic regression and random forest.” Poster presentation at the *Fall 2024 Kennesaw State University’s Analytics Day*, Kennesaw, Georgia.
