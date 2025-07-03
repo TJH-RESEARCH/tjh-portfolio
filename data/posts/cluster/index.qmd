@@ -4,11 +4,11 @@ description: ""
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
-#date: 2025-06-25
-#categories: \[R, Statistics, Research Design\] \# self-defined categories
-#citation: 
-#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
-#image: 
+categories: 
+  - R
+  - Machine Learning
+  - Unsupervised Learning
+  - Cluster Analysis
 draft: true
 ---
 

@@ -20,7 +20,11 @@
   },
   {
     "listing": "/blog/index.html",
-    "items": []
+    "items": [
+      "/blog/posts/war-part-1/index.html",
+      "/blog/posts/psychosocial-functioning/index.html",
+      "/blog/posts/trust-surveys/index.html"
+    ]
   },
   {
     "listing": "/talks/index.html",

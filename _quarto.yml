@@ -34,14 +34,13 @@ website:
       - text: "{{< ai google-scholar size=1.1em title='Google Scholar' >}}"
         href: https://scholar.google.com/citations?hl=en&authuser=3&user=wG3FltQAAAAJ
         rel: me
-      - text: "{{< ai orcid size=1.1em title='Google Scholar' >}}"
-        href: https://orcid.org/my-orcid?orcid=0000-0002-5184-7346
+      - text: "{{< ai orcid size=1.1em title='ORCID' >}}"
+        href: https://orcid.org/0000-0002-5184-7346
         rel: me
 
   page-footer:
     center: |
       <span>{{< fa brands creative-commons >}} {{< var years >}} Thomas Hodges </span>
-       <span>{{< fa brands orcid >}} <strong>ORCID</strong> [{{< var orcid >}}](https://orcid.org/{{< var orcid >}})</span>
 
 
 format:

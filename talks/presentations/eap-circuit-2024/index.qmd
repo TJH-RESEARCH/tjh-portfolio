@@ -5,10 +5,10 @@ author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
 date: 2024-08-07
-#categories: \[R, Statistics, Research Design\] \# self-defined categories
-#citation: 
-#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
-#image: 
+categories:
+  - Management
+  - Mental Health
+  - First Responders
 draft: true
 ---
 

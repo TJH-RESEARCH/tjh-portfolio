@@ -4,11 +4,14 @@ description: ""
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
-#date: 2025-06-25
-#categories: \[Python, Machine Learning, Predictive Analytics\] \ categories
-#citation: 
-#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
-#image: 
+categories: 
+  - Python
+  - R
+  - SQL
+  - Predictive Analytics
+  - Prescriptive Analytics
+  - Time Series Analysis
+  - Machine Learning
 draft: true
 ---
 
