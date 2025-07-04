@@ -1,0 +1,114 @@
+- title: "Identifying the discouraged workforce: A dual model analysis with logistic regression and random forest"
+  date: 2024-11-22
+  description: "Poster presented by Edwin Trejo-Rivera. I served as adviser and statistical consultant. The poster won third place in the conference's Best Poster competition."
+  location: Kennesaw
+  links:
+  - name: Edwin Trejo-Rivera
+    url: https://www.linkedin.com/in/edwin-trejo-rivera-68702a292/
+    icon: fa-solid fa-user
+  categories:
+  - Machine Learning
+  - Data Analysis
+  - Statistics
+
+- title: "Building Trust in Employee Assistance Programs among first responders: Focus groups on EAPs with police and fire personnel"
+  date: 2024-10-11
+  description: "A presentation at the Georgia Sociological Association Annual Conference on work that has since been published"
+  location: Columbus
+  links:
+  - name: Paper
+    url: ../research/book-chapters/2025-eap/index.qmd
+    icon: fa-solid fa-file
+  categories:
+  - Management
+  - Mental Health
+  - First Responders
+
+- title: "Moral injury and military-to-civilian identity transition: Moral injury associated with identity dissonance but not identity loss"
+  date: 2024-10-01
+  description: "Poster presented at the STRONG STAR Combat PTSD Conference, based on work which has since been published in Traumatology"
+  location: San Antonio
+  links:
+  - name: Paper
+    url: ../research/articles/2025-moral-injury-identity/index.qmd
+    icon: fa-solid fa-file
+  categories:
+  - Veterans
+  - Reintegration
+  - Identity
+  - Cluster Analysis
+  - Unsupervised Learning
+  - Machine Learning
+  
+- title: "Overcoming barriers to Employee Assistance Programs for public safety professionals"
+  date: 2024-08-07
+  description: "A presentation at the 11th Circuit Crisis Response Conference on work that has since been published."
+  location: Forsyth
+  links:
+  - name: Paper
+    url: ../research/book-chapters/2025-eap/index.qmd
+    icon: fa-solid fa-file
+  categories:
+  - Management
+  - Mental Health
+  - First Responders
+
+- title: "Employee Assistance Programs for first responders"
+  date: 2024-08-02
+  description: "A presentation to the Georgia Injury Prevention Advisory Council (GIPAC) on work that has since been published."
+  location: Online
+  links:
+  - name: Georgia Injury Prevention Advisory Council (GIPAC)
+    url: https://dph.georgia.gov/health-topics/injury-prevention-program/georgia-injury-prevention-advisory-council-gipac
+    icon: fa-solid fa-circle-info
+  - name: Paper
+    url: ../research/book-chapters/2025-eap/index.qmd
+    icon: fa-solid fa-file
+  categories:
+  - Management
+  - Mental Health
+  - First Responders
+  
+- title: "The influence of meaningful work on appraising job demands"
+  date: 2024-06-26
+  description: "Edwin Trejo-Rivera presented this project at the IX Congreso Regional de Sociedad Interamericana de Psicología"
+  location: Arequipa
+  links:
+  - name: Edwin Trejo-Rivera
+    url: https://www.linkedin.com/in/edwin-trejo-rivera-68702a292/
+    icon: fa-solid fa-user
+  categories:
+  - Mental Health
+  - Management
+  - Organizational Psychology
+
+
+- title: "Transitioning identities from the military to civilian life"
+  date: 2024-06-01
+  description: "A presentation at the Let's Connect Suicide Prevention Conference"
+  location: Pine Mountain
+  categories:
+  - Mental Health
+  - Veterans
+  - Reintegration
+  - Identity
+
+
+- title: "Comparing reintegration by military identity: Military identity and post-service adjustment"
+  date: 2024-05-16
+  description: "A poster I presented at the Atlanta Veterans Affairs (VA) Research Day in 2024. It won Best Poster in the Health Services Category. It outlined a work in progress which is still in progress"
+  location: Atlanta
+  links:
+  - name: Paper
+    url: ../research/work-papers/identity-reintegration/index.qmd
+    icon: fa-solid fa-file
+  - name: Poster
+    url: https://drive.google.com/file/d/1oF3CEP0jGuDz1zMXLGioEIdpvk_OqrBJ/view?usp=share_link
+    icon: fa-solid fa-person-chalkboard
+  categories:
+  - Veterans
+  - Reintegration
+  - Identity
+  - Cluster Analysis
+  - Unsupervised Learning
+  - Machine Learning

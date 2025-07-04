@@ -1,0 +1,67 @@
+---
+title: "Unsupervised Learning: Cluster Analysis to Handle Multivairate Messiness"
+description: "Finding hidden patterns in data using clustering"
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+categories: 
+  - R
+  - Machine Learning
+  - Unsupervised Learning
+  - Cluster Analysis
+draft: false
+---
+
+## Project Summary
+
+Sometimes you have too many variables. Which ones do you choose? That's the case with a set of variables from a survey I collected with some veterans. I want to know how veteran identities affects a person's integration into civilian life. Luckily, there is a validated measure of veterans identity: the "Warrior Identity Scale." Unluckily, it measures 7 different aspects of military identity, each of which is considered a separate variable.
+
+This presented me with the "curse of dimensionality," having more dimensions to the data than I can easily use. Several options were available. First, I could have used all 7 of the variables. Second, I could have chosen 1 or more of the variables as the most important variables. There are problems with both of these options. Using all the variables leads to a messier model. It has lots of predictor variables — all 7 of the Warrior Identity Scale measures — but it is hard to make sense of how those predictor variables are related. And we should expect some sort of relationship(s). After all, these are all aspects of the same phenomenon, identity.
+
+The second option would be to select 1 or more of the identity variables. The problem is this becomes picking and choosing which identity variables matter if it is not done in regards to a particular theory. As research on military identity is still growing, it makes sense to learn from the data about configurations of military identity.
+
+I used **clustering** to uncover latent groups of veterans based on their identity.
+
+The complete [analysis code is available on GitHub](https://github.com/TJH-RESEARCH/identity-reintegration). A [paper detailing the analysis](../research/working-papers/identity-reintegration/index.qmd) is currently in the works. I presented a [poster based on this work](../../talks.index) at the Atlanta VA. Below you can find a walkthrough of the data analysis. 
+
+## Skills Demonstrated
+
+1.  Machine Learning
+2.  Unsupervised Learning
+3.  Regression analysis
+
+## Real-World Applications
+
+### Dimension Reduction
+
+Clustering analysis can be used to address the "curse of dimensionality." It is one tool for "dimensional reduction," reducing the number of variables you have.
+
+I used **clustering** to uncover latent groups of veterans based on their identity. Clustering analysis is an type of unsupervised learning. It finds groups of variables in multiple dimensions. That is, if on a 2 dimensional plot, we could circle apparent groups:
+
+\[image\]
+
+The same could be done with a 3D plot
+
+\[image\]
+
+While we cannot visualize past three dimensions, mathematically we can use the same clustering algorithms in more than three dimensions.
+
+### Data Mining Hidden patterns
+
+This approach of learning from the data can be called **data mining**....Another way of thinking about it is **unsupervised learning**, a form of machine learning where we use a model to categorize data without having a "true" category to compare the model categorizations to. In other words, there are no "true" configurations of veterans identity that have been named and observed in the data. We are trying to uncover these unlabeled "latent" groupings in the data.
+
+In the real world...
+
+In this project....
+
+A key issue with unsupervised learning is not having a ground truth to compare the model. No matter how good it fits the data you have, it is not possible to know if clusters corresponds to real groupings.
+
+In the real world....
+
+In this project....
+
+## Key Highlights
+
+### Cluster Analysis
+
+### Validating Clusters

@@ -1,0 +1,17 @@
+---
+title: "Screening bad survey data: A tutorial on screening invalid, careless, and inattentive survey responses"
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+categories:
+  - Survey Research
+  - Statistics
+---
+
+## Abstract
+
+While online surveys are convenient to administer and can help recruit participants for research studies, data quality is hard to verify. Knowing how to screen poor-quality results can help researchers to use surveys with confidence and report better results to the scientific community. However, while existing guidelines discuss multiple ways to screen data, these guidelines can be difficult to follow, and rarely is guidance given on how to implement screeners. In trying to implement screeners, several practical issues can arise that cast doubt over some existing guidance. The data quality devil is in the details. This tutorial uses an example from the author’s dissertation, along with publicly available R code, to show how to implement data screening measures, particularly on the platform Qualtrics.
+
+## Citation
+
+**Hodges, T. J.** (In preparation). “Screening bad survey data: A tutorial on screening invalid, careless, and inattentive survey responses.” Target Journal: *Psychological Methods.*

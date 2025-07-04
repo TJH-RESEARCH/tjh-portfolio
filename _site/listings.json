@@ -16,7 +16,9 @@
       "/research/book-chapters/2025-eap/index.html",
       "/research/book-chapters/2025-firefighter/index.html",
       "/research/dissertation/2023-dissertation/index.html",
-      "/research/working-papers/identity-reintegration/index.html"
+      "/research/working-papers/identity-reintegration/index.html",
+      "/research/working-papers/moral-injury-functioning/index.html",
+      "/research/working-papers/screening/index.html"
     ]
   },
   {
@@ -25,31 +27,15 @@
   },
   {
     "listing": "/talks/index.html",
+    "items": []
+  },
+  {
+    "listing": "/data-science/index.html",
     "items": [
-      "/talks/presentations/eap-wsh-2025/index.html",
-      "/talks/presentations/conflict-suicide-summit-2025/index.html",
-      "/talks/presentations/moral-injury-summit-2025/index.html",
-      "/talks/presentations/burnout-euwop-2025/index.html",
-      "/talks/presentations/financial-stress-euwop-2025/index.html",
-      "/talks/presentations/suicidality-spc-2025/index.html",
-      "/talks/presentations/eap-gsa-2024/index.html",
-      "/talks/presentations/eap-circuit-2024/index.html",
-      "/talks/presentations/eap-gipac-2024/index.html",
-      "/talks/presentations/meaningful-work-peru-2024/index.html",
-      "/talks/presentations/identity-summit-2024/index.html",
-      "/talks/presentations/moral-injury-gsa-2023/index.html",
-      "/talks/presentations/just-lider-sasa-2023/index.html",
-      "/talks/presentations/suicide-summit-2023/index.html",
-      "/talks/presentations/profiles-sss-2023/index.html",
-      "/talks/presentations/lies-gsa-2022/index.html",
-      "/talks/presentations/grassroots-peace-2021/index.html",
-      "/talks/posters/social-support-sss-2025/index.html",
-      "/talks/posters/somatic-stress-sss-2025/index.html",
-      "/talks/posters/discouraged-ksu-2024/index.html",
-      "/talks/posters/moral-injury-strong-star-2024/index.html",
-      "/talks/posters/identity-va-2024/index.html",
-      "/talks/posters/conflict-resolution-strong-star-2021/index.html",
-      "/talks/posters/ssmv-strong-star-2021/index.html"
+      "/data-science/posts/bayes/index.html",
+      "/data-science/posts/cluster/index.html",
+      "/data-science/posts/war/index.html",
+      "/data-science/posts/data-cleaning/index.html"
     ]
   }
 ]

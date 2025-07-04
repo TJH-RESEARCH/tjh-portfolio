@@ -1,0 +1,60 @@
+---
+title: "Machine Learning Models to Predict and Prevent War"
+description: "Promoting peace through data analysis and machine learning"
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+categories: 
+  - Python
+  - R
+  - SQL
+  - Predictive Analytics
+  - Prescriptive Analytics
+  - Time Series Analysis
+  - Machine Learning
+draft: false
+---
+
+## Summary
+
+This project is a work in progress. You can see more about it on my blog.
+
+The plan is to use publicly available data to predict the occurrence of war.
+
+## Skills Demonstrated
+
+-   Python
+
+    -   Numpy
+
+    -   Pandas
+
+    -   Scikit-learn
+
+-   SQL
+
+-   Predictive and prescriptive analytics
+
+-   Machine Learning
+
+-   Time Series Analysis
+
+## Real-World Applications
+
+-   Risk Management
+
+-   Global Security
+
+-   International Trade
+
+-   Geopolitical Strategy
+
+## Key Highlights
+
+-   SQL data joins
+
+-   Machine Learning algorithm comparison
+
+-   Hyperparameter tuning
+
+-   Model ensemble

@@ -1,0 +1,10 @@
+---
+title: Data Science Portfolio
+listing: 
+    contents: "posts/*/index.qmd"
+    type: default # or `default` or `table`
+    sort: "date desc" # can also sort on more than one field
+    categories: true # allows you to sort posts by assigned categories 
+---
+
+Here are some selected data science projects I have completed. You can learn more about the project, see the analysis code, and view some of the highlights from each project.

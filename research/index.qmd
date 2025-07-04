@@ -4,22 +4,27 @@ listing:
   - id: articles
     contents: "articles/*/index.qmd"
     sort: "date desc"
+    template: ../html/research/listing.ejs
     categories: true
   - id: reviews
     contents: "reviews/*/index.qmd"
     sort: "date desc"
+    template: ../html/research/listing.ejs
     categories: true
   - id: chapters
     contents: "book-chapters/*/index.qmd"
     sort: "date desc"
+    template: ../html/research/listing.ejs
     categories: true
   - id: dissertation
     contents: "dissertation/*/index.qmd"
     sort: "date desc"
+    template: ../html/research/listing.ejs
     categories: true
   - id: working
     contents: "working-papers/*/index.qmd"
     sort: "date desc"
+    template: ../html/research/listing.ejs
     categories: true
 page-layout: full
 include-back-link: false

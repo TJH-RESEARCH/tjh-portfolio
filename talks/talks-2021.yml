@@ -1,0 +1,42 @@
+- title: "Role of grassroots workers in bringing peace to local communities"
+  date: 2021-08-21
+  description: "Panel discussion for Peace360 on Alternatives to Violence Project (AVP)"
+  location: Online
+  links:
+  - name: Alternatives to Violence Project
+    url: https://avpusa.org
+    icon: fa-solid fa-circle-info
+  - name: Manuscript
+    url: ../research/articles/2022-avp/index.qmd
+    icon: fa-solid fa-file
+  - name: Peace 360
+    url: https://peace360initiative.org
+    icon: fa-solid fa-peace
+    
+    
+- title: "Conflict resolution workshops for service members and their families: The potentials of Alternatives to Violence Project (AVP) to address military domestic violence"
+  date: 2021-10-20
+  description: "Poster presented at the STRONG STAR Combat PTSD Conference"
+  location: Online
+  links:
+  - name: STRONG Star
+    url: https://www.strongstar.org
+    icon: fa-solid fa-circle-info
+  - name: Paper
+    url: ../research/articles/2022-avp/index.qmd
+    icon: fa-solid fa-file
+    
+    
+- title: "Unlocking SSM/V success: Welcoming and supporting student service members and veterans"
+  date: 2021-10-20
+  description: "Poster presented at the STRONG STAR Combat PTSD Conference"
+  location: Online
+  links:
+  - name: STRONG Star
+    url: https://www.strongstar.org
+    icon: fa-solid fa-circle-info
+  - name: Paper
+    url: ../research/articles/2024-ssmvs/index.qmd
+    icon: fa-solid fa-file
+
+

@@ -1,0 +1,50 @@
+- title: "Moral injury and military reintegration: The role of identity dissonance in a survey of United States military veterans"
+  date: 2023-10-27
+  description: "Talk presenting my dissertation research at the Georgia Sociological Association Annual Conference"
+  location: Kennesaw
+  links:
+  - name: Georgia Sociological Association
+    url: https://www.georgiasociology.com
+    icon: fa-solid fa-circle-info
+  - name: Dissertation
+    url: ../research/dissertation/2023-dissertation/index.qmd
+    icon: fa-solid fa-file
+
+- title: "Female leadership in climate change mitigation and environmental sustainability"
+  date: 2023-09-28
+  description: "Nilofer Bharwani presented our study at the Southeastern American Sutdies Association Conference"
+  location: Atlanta
+  links:
+  - name: Southeastern American Studies Association
+    url: https://southeasternasa.org
+    icon: fa-solid fa-circle-info
+  - name: Paper
+    url: ../research/articles/2024-just-lider-no/index.qmd
+    icon: fa-solid fa-file
+  - name: Nilofer Bharwani
+    url: https://www.linkedin.com/in/nilofer-bharwani-conflictmgmt/
+    icon: fa-solid fa-user
+
+- title: "Using research to enhance the practice of suicide prevention"
+  date: 2023-05-25
+  description: "I moderated a panel of researchers from AMES at the Let's Connect Suicide Prevention Summit"
+  location: Kennesaw
+  links:
+  - name: Let's Connect Summit 2023
+    url: https://www.kennesaw.edu/research/centers-facilities/ames-center/lets-connect-summit/docs/lets-connect-summit-conference-program-final.pdf
+    icon: fa-solid fa-circle-info
+  - name: AMES Research Center
+    url: https://www.kennesaw.edu/research/centers-facilities/ames-center/index.php
+    icon: fa-solid fa-building-columns
+    
+- title: "Profiles of Resilience: Examining the Stories of First Responder and Military Families"
+  date: 2023-04-20
+  description: "Kimberly Gomes presented our work at the Kennesaw State University Symposium of Student Scholars"
+  location: Kennesaw
+  links:
+  - name: Kimberly Gomes
+    url: https://www.kennesaw.edu/research/news/posts/ksu-student-researchers-phd-program.php
+    icon: fa-solid fa-user
+  - name: AMES Research Center
+    url: https://www.kennesaw.edu/research/centers-facilities/ames-center/index.php
+    icon: fa-solid fa-building-columns

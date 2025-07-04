@@ -1,0 +1,84 @@
+---
+title: "Bayesian Hurdle Model of Mental Health Data"
+description: "Using Bayesian data analysis to describe zero-inflated data"
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+#date: 2025-06-25
+categories: 
+  - Statistics
+  - Bayesian Modeling
+  - R
+draft: false
+---
+
+## Project Summary
+
+This projects uses advanced statistics to describe the relationship between trauma and functioning. I used data from three surveys collected over 4 years. The first asks about the relationship between PTSD and functioning. The second focuses on a different kind of trauma, moral injury. The third data set has both PTSD and moral injury. This analysis could help clinicians working with military veterans to understand how different kinds of trauma affect daily living.
+
+There were several challenges to this analysis:
+
+1.  **The data was messy**: Answers were missing and some responses were straight-lined or Christmas-treed. All three data sets required cleaning and screening. See my other portfolio post to learn how I tackled this challenge.
+2.  **The data was zero-inflated**: There were lots of 0s in the data, which is a problem for linear models. To overcome this, I fit a zero-inflated gamma regression.
+3.  **I had three similar but not identical data sets**: I used Bayesian methods to integrate the findings.
+
+The complete [analysis code is available on GitHub](https://github.com/TJH-RESEARCH/trauma-psychosocial-functioning), but below you can find the highlights.
+
+A paper detailing the analysis and its findings is currently in the works.
+
+I will present the work in progress at the 2025 VA Atlanta Joint Research Symposium.
+
+## Skills Demonstrated
+
+1.  Advanced statistics:
+    1.  Bayesian data analysis
+    2.  prior selection and justification
+    3.  prior predictive checks
+    4.  posterior predictions
+    5.  marginal effects
+
+<!-- -->
+
+2.  R programming
+
+3.  Data Visualization
+
+## Real-World Applications
+
+-   **People Listening**: Survey data is often messy and of questionable quality. Cleaning and screening methods give confidence to analysts and stakeholders. They make results from employee surveys more accurate and credible.
+
+-   **People Analytics**: In real-world settings, testing hypotheses is often less important than quantifying relationships. Bayesian methods is particularly useful for the later.
+
+-   **Health and Well-being**: We know that mental disorders are bad for people, but just how bad? How do different disorders compare to each other? Comparing the impact of different kinds of trauma can be useful for clinicians and support programs to tailor programs appropriately.
+
+## Key Highlights
+
+### **Prior Predictive Checks**
+
+Bayesian methods make use of external information: "the prior." This external information can help models to "regularize" — give plausible values rather than extreme ones, especially when data is sparse.
+
+However, priors are often criticized (unfairly) as being completely subjective, akin to falsifying data. While that's a wrong way of looking at priors, you still need to pick good ones and justify them.
+
+-   Sampled from the prior only
+
+-   Used visualizations to assess if priors were reasonable
+
+### Zero-Inflated Hurdle Models
+
+Lots of data are "zero-inflated" meaning they have too-many 0s. That makes typical statistical models a poor fit for the data.
+
+-   visualizations of distributions
+
+-   model selection and comparison
+
+-   interpreting results
+
+### Interpreting Complex Models
+
+Bayesian models are fairly easy to understand.
+
+Complex models such as zero-inflated hurdle models are more difficult to understand.
+
+-   Visualizing and Summarizing Posterior Predictive Distributions, Marginal Effects
+
+    -   

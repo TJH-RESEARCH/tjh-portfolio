@@ -1,0 +1,24 @@
+---
+title: "Predicting the Harm of Military Trauma on Functioning: Bayesian Models of Moral Injury and PTSD Related Psychosocial Functioning"
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+    affiliation: AMES Research Center, Kennesaw State University
+  - name: Tyler L. Collette
+    affiliation: AMES Research Center, Kennesaw State University
+  - name: Brian A. Moore
+    orcid: 0000-0003-0273-7236
+    affiliation: AMES Research Center, Kennesaw State University
+categories:
+  - Identity
+  - Reintegration
+  - Veterans
+---
+
+## Abstract
+
+At the end of their military service, veterans may struggle to adapt to civilian life for a variety of reasons, including traumas experienced during military service. While posttraumatic stress disorder is well known, less is known about how it interacts with the emerging construct of moral injury to affect veterans’ psychosocial functioning. Studies examining the relationship between trauma and functioning have tended to rely on Frequentist data analysis, potentially leading to a focus on testing for the presence of a relationship rather than quantifying the magnitude of the relationship. With the current article, we use Bayesian methods to estimate the effect of posttraumatic stress disorder, moral injury, and their interaction on psychosocial functioning. We draw on survey data from three studies of United States military veterans. The model allows us to quantify a range of probable effects that trauma has on psychosocial functioning.
+
+## Citation
+
+Hodges, T. J., Trejo-Rivera, E., Collette, T.L. Moore, B. A. (in preparation). “Predicting the Harm of Military Trauma on Functioning: Bayesian Models of Moral Injury and PTSD Related Psychosocial Functioning.” Target Journal: TBD.

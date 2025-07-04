@@ -1,0 +1,113 @@
+- title: "Building Trust in Employee Assistance Programs among first responders: Focus groups on EAPs with police and fire personnel"
+  date: 2025-07-10
+  description: "A presentation at the Work, Stress, and Health Conference on work that has since been published"
+  location: Seattle
+  links:
+  - name: Paper
+    url: ../research/book-chapters/2025-eap/index.qmd
+    icon: fa-solid fa-file
+  - name: Slides
+    url: https://drive.google.com/file/d/1nRfsmSkJMpROCI4CsVuWIBfMZZT5K4tT/view?usp=share_link
+    icon: fa-solid fa-file-powerpoint
+  categories:
+  - Management
+  - Mental Health
+  - First Responders
+  - Organizational Psychology
+
+- title: "Evaluating suicidality: Examining risk and protective factors for Georgia’s veterans and families"
+  date: 2025-02-18
+  description: "A presentation at the Georgia Suicide Prevention Conference"
+  location: Peachtree City
+  links:
+  - name: Suicide Prevention Conference
+    url: https://preventsuicidega.org/event/conference-25/
+    icon: fa-solid fa-info-circle
+  - name: Slides 
+    url: https://drive.google.com/file/d/15Omi9ZrvRrXaU29X57mRKc0knIXrx0eM/view?usp=share_link
+    icon: fa-solid fa-file-powerpoint
+  categories:
+  - Mental Health
+  - Veterans
+  - Suicide Prevention
+
+
+- title: "Understanding moral injury for suicide prevention"
+  date: 2025-06-10
+  description: "A presentation at the Let's Connect Suicide Prevention Summit on the overlap and differences between PTSD and moral injury, and impact on suicide"
+  location: Savannah
+  links:
+  - name: Slides
+    url: https://drive.google.com/file/d/1l0d5Lt1-c1jXyWygymBHGUl8CDHd88F9/view?usp=share_link
+    icon: fa-solid fa-file-powerpoint
+  categories:
+  - Mental Health
+  - Veterans
+  - Suicide Prevention
+
+
+- title: "Constructive conflict management for suicide prevention"
+  date: 2025-06-10
+  description: "A presentation at the Let's Connect Suicide Prevention Summit"
+  location: Savannah
+  links:
+  - name: Slides
+    url: https://drive.google.com/file/d/1Nz1dEeLEfbuqkz_f3XXMqE3p5wKCx_c3/view?usp=share_link
+    icon: fa-solid fa-file-powerpoint
+  categories:
+  - Conflict Resolution
+  - Mental Health
+  - Suicide Prevention
+
+
+
+
+- title: "Understanding the role of recovery and dysfunctional cognitions on burnout in public safety"
+  date: 2025-05-22
+  description: "A presentation by Edwin Trejo-Rivera at the European Congress of Work and Organizational Psychology"
+  location: Prague
+  categories:
+  - Mental Health
+  - Organizational Psychology
+  - Management
+  
+  
+- title: "Financial stress and work-family conflict in public safety: Role of perceived organizational support"
+  date: 2025-05-22
+  description: "A presentation by Israel Sánchez-Cardona at the European Congress of Work and Organizational Psychology"
+  location: Prague
+  categories:
+  - Mental Health
+  - Organizational Psychology
+  - Management
+
+
+- title: "Evaluating dual identities and somatic stress during veteran reintegration"
+  date: 2025-04-17
+  description: "Poster presented by Tola Adeboye at the Symposium of Student Scholars"
+  location: Kennesaw
+  links:
+  - name: KSU Symposium of Student Scholars
+    url: https://www.kennesaw.edu/research/undergraduate-research/events/symposium/ksu-spring2025-symposiumprogram-updatedapril17.pdf
+    icon: fa-solid fa-info-circle
+  categories:
+  - Identity
+  - Mental Health
+  - Veterans
+  - Reintegration
+
+
+
+- title: "Military-civilian identity as a moderator: Social support and moral injury during veteran transition"
+  date: 2025-04-17
+  description: "Poster presented by Birdie Berie at the Symposium of Student Scholars"
+  location: Kennesaw
+  links:
+  - name: KSU Symposium of Student Scholars
+    url: https://www.kennesaw.edu/research/undergraduate-research/events/symposium/ksu-spring2025-symposiumprogram-updatedapril17.pdf
+    icon: fa-solid fa-info-circle
+  categories:
+  - Identity
+  - Mental Health
+  - Veterans
+  - Reintegration

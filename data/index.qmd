@@ -1,8 +1,0 @@
----
-title: Data Science Portfolio
-listing: 
-    contents: "posts/*/index.qmd"
-    type: default # or `default` or `table`
-    sort: "date desc" # can also sort on more than one field
-    categories: true # allows you to sort posts by assigned categories 
----
