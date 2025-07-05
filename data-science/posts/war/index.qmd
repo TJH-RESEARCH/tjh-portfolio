@@ -1,16 +1,10 @@
 ---
-title: "Machine Learning Models to Predict and Prevent War"
+title: "Machine Learning to Predict and Prevent War"
 description: "Promoting peace through data analysis and machine learning"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
 categories: 
-  - Python
-  - R
-  - SQL
-  - Predictive Analytics
-  - Prescriptive Analytics
-  - Time Series Analysis
   - Machine Learning
 draft: false
 ---

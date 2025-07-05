@@ -1,0 +1,25 @@
+```{=html}
+
+<div class="data-science">
+    <% for (const item of items) { %>
+    <div class="data-science-entry">
+        <div class="metadata">          
+            <% if(item.categories) { %>
+            <div class="project-categories">
+                <% for (const cat of item.categories) { %>
+                    <div class="project-category">
+                            <%= cat %>
+                        </a></div>
+                    <% } %>
+            </div>
+
+                <% } %>
+        </div>
+        <div class="body">
+            <div class="title"> <a href="<%- item.path %>" > <%= item.title %> </a> </div>
+            <p class="description"><%= item.description %>  </p>
+        </div>
+    </div>
+    <% } %>
+</div>
+```

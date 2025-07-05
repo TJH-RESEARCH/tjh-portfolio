@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ff15aa31598e8f32624db62775c3d02d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3f585a1236b6a6dfa5cbd67a5337ea81.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
@@ -83,9 +83,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-project','listing-website','listing-format','listing-editor','listing-_quarto-vars','listing-language','listing-freeze','listing-title-block-banner','listing-title','listing-description','listing-author','listing-categories','listing-draft','listing-path','listing-outputHref','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-date','listing-date-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-editor","listing-_quarto-vars","listing-language","listing-freeze","listing-title-block-banner","listing-title","listing-description","listing-author","listing-categories","listing-draft","listing-path","listing-outputHref","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-date","listing-date-modified"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -215,13 +215,13 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
+    <div class="quarto-title column-page-left">
       <h1 class="title">Data Science Portfolio</h1>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -229,14 +229,14 @@ window.Quarto = {
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QmF5ZXNpYW4lMjBNb2RlbGluZw==">Bayesian Modeling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q2x1c3RlciUyMEFuYWx5c2lz">Cluster Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGF0YSUyMENsZWFuc2luZw==">Data Cleansing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFjaGluZSUyMExlYXJuaW5n">Machine Learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UHJlZGljdGl2ZSUyMEFuYWx5dGljcw==">Predictive Analytics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHJlc2NyaXB0aXZlJTIwQW5hbHl0aWNz">Prescriptive Analytics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(4)</span></div><div class="category" data-category="U1FM">SQL <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3RhdGlzdGljcw==">Statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGltZSUyMFNlcmllcyUyMEFuYWx5c2lz">Time Series Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VW5zdXBlcnZpc2VkJTIwTGVhcm5pbmc=">Unsupervised Learning <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Q2x1c3RlciUyMEFuYWx5c2lz">Cluster Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGF0YSUyMENsZWFuc2luZw==">Data Cleansing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFjaGluZSUyMExlYXJuaW5n">Machine Learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3RhdGlzdGljcw==">Statistics <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
@@ -247,170 +247,102 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="U3RhdGlzdGljcyUyQ0JheWVzaWFuJTIwTW9kZWxpbmclMkNS" data-listing-file-modified-sort="1751567392394" data-listing-reading-time-sort="3" data-listing-word-count-sort="515">
-<div class="thumbnail">
-<p><a href="../data-science/posts/bayes/index.html" class="no-external"></a></p><a href="../data-science/posts/bayes/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../data-science/posts/bayes/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../data-science/posts/bayes/index.html" class="no-external">Bayesian Hurdle Model of Mental Health Data</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../data-science/posts/bayes/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljcw=='); return false;">
-Statistics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('QmF5ZXNpYW4lMjBNb2RlbGluZw=='); return false;">
-Bayesian Modeling
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-</div>
-<div class="listing-description">
-<a href="../data-science/posts/bayes/index.html" class="no-external">Using Bayesian data analysis to describe zero-inflated data</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="../data-science/posts/bayes/index.html" class="no-external"></a></p><a href="../data-science/posts/bayes/index.html" class="no-external">
-<div class="listing-author">
-Thomas Hodges
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UiUyQ01hY2hpbmUlMjBMZWFybmluZyUyQ1Vuc3VwZXJ2aXNlZCUyMExlYXJuaW5nJTJDQ2x1c3RlciUyMEFuYWx5c2lz" data-listing-file-modified-sort="1751588565838" data-listing-reading-time-sort="3" data-listing-word-count-sort="533">
-<div class="thumbnail">
-<p><a href="../data-science/posts/cluster/index.html" class="no-external"></a></p><a href="../data-science/posts/cluster/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../data-science/posts/cluster/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../data-science/posts/cluster/index.html" class="no-external">Unsupervised Learning: Cluster Analysis to Handle Multivairate Messiness</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../data-science/posts/cluster/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">
-Machine Learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('VW5zdXBlcnZpc2VkJTIwTGVhcm5pbmc='); return false;">
-Unsupervised Learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Q2x1c3RlciUyMEFuYWx5c2lz'); return false;">
-Cluster Analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="../data-science/posts/cluster/index.html" class="no-external">Finding hidden patterns in data using clustering</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="../data-science/posts/cluster/index.html" class="no-external"></a></p><a href="../data-science/posts/cluster/index.html" class="no-external">
-<div class="listing-author">
-Thomas Hodges
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="UHl0aG9uJTJDUiUyQ1NRTCUyQ1ByZWRpY3RpdmUlMjBBbmFseXRpY3MlMkNQcmVzY3JpcHRpdmUlMjBBbmFseXRpY3MlMkNUaW1lJTIwU2VyaWVzJTIwQW5hbHlzaXMlMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-file-modified-sort="1751567561386" data-listing-reading-time-sort="1" data-listing-word-count-sort="112">
-<div class="thumbnail">
-<p><a href="../data-science/posts/war/index.html" class="no-external"></a></p><a href="../data-science/posts/war/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../data-science/posts/war/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../data-science/posts/war/index.html" class="no-external">Machine Learning Models to Predict and Prevent War</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../data-science/posts/war/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">
-Python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('U1FM'); return false;">
-SQL
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UHJlZGljdGl2ZSUyMEFuYWx5dGljcw=='); return false;">
-Predictive Analytics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UHJlc2NyaXB0aXZlJTIwQW5hbHl0aWNz'); return false;">
-Prescriptive Analytics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('VGltZSUyMFNlcmllcyUyMEFuYWx5c2lz'); return false;">
-Time Series Analysis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">
-Machine Learning
-</div>
-</div>
-<div class="listing-description">
-<a href="../data-science/posts/war/index.html" class="no-external">Promoting peace through data analysis and machine learning</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="../data-science/posts/war/index.html" class="no-external"></a></p><a href="../data-science/posts/war/index.html" class="no-external">
-<div class="listing-author">
-Thomas Hodges
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="RGF0YSUyMENsZWFuc2luZyUyQ1Vuc3VwZXJ2aXNlZCUyMExlYXJuaW5nJTJDUg==" data-listing-date-sort="1750824000000" data-listing-file-modified-sort="1751567465397" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="127">
-<div class="thumbnail">
-<p><a href="../data-science/posts/data-cleaning/index.html" class="no-external"></a></p><a href="../data-science/posts/data-cleaning/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../data-science/posts/data-cleaning/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../data-science/posts/data-cleaning/index.html" class="no-external">Cleaning and Screening Messy Real-World Survey Data</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../data-science/posts/data-cleaning/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMENsZWFuc2luZw=='); return false;">
-Data Cleansing
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('VW5zdXBlcnZpc2VkJTIwTGVhcm5pbmc='); return false;">
-Unsupervised Learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-</div>
-<div class="listing-description">
-<a href="../data-science/posts/data-cleaning/index.html" class="no-external">You analyze the data you have, not the data you want</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../data-science/posts/data-cleaning/index.html" class="no-external">
-<div class="listing-date">
-Jun 25, 2025
-</div>
-<div class="listing-author">
-Thomas Hodges
-</div>
-</a>
-</div>
-</div>
+<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
+
+<div class="data-science">
+    
+    <div class="data-science-entry">
+        <div class="metadata">          
+            
+            <div class="project-categories">
+                
+                    <div class="project-category">
+                            Statistics
+                        </div>
+                    
+            </div>
+
+                
+        </div>
+        <div class="body">
+            
+            <div class="title">
+                    <a href="../data-science/posts/bayes/index.html"> Bayesian Hurdle Model of Mental Health Data </a>
+            </div>
+
+            <p class="description">Using Bayesian data analysis to describe zero-inflated data  </p>
+        </div>
+    </div>
+    
+    <div class="data-science-entry">
+        <div class="metadata">          
+            
+            <div class="project-categories">
+                
+                    <div class="project-category">
+                            Cluster Analysis
+                        </div>
+                    
+            </div>
+
+                
+        </div>
+        <div class="body">
+            
+            <div class="title">
+                    <a href="../data-science/posts/cluster/index.html"> Unsupervised Learning: Cluster Analysis to Handle Multivairate Messiness </a>
+            </div>
+
+            <p class="description">Finding hidden patterns in data using clustering  </p>
+        </div>
+    </div>
+    
+    <div class="data-science-entry">
+        <div class="metadata">          
+            
+            <div class="project-categories">
+                
+                    <div class="project-category">
+                            Machine Learning
+                        </div>
+                    
+            </div>
+
+                
+        </div>
+        <div class="body">
+            
+            <div class="title">
+                    <a href="../data-science/posts/war/index.html"> Machine Learning to Predict and Prevent War </a>
+            </div>
+
+            <p class="description">Promoting peace through data analysis and machine learning  </p>
+        </div>
+    </div>
+    
+    <div class="data-science-entry">
+        <div class="metadata">          
+            
+            <div class="project-categories">
+                
+                    <div class="project-category">
+                            Data Cleansing
+                        </div>
+                    
+            </div>
+
+                
+        </div>
+        <div class="body">
+            
+            <div class="title">
+                    <a href="../data-science/posts/data-cleaning/index.html"> Cleaning and Screening Messy Real-World Survey Data </a>
+            </div>
+
+            <p class="description">You analyze the data you have, not the data you want  </p>
+        </div>
+    </div>
+    
 </div>
 <div class="listing-no-matching d-none">
 No matching items

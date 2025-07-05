@@ -5,9 +5,6 @@ author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
 categories: 
-  - R
-  - Machine Learning
-  - Unsupervised Learning
   - Cluster Analysis
 draft: false
 ---
@@ -22,7 +19,7 @@ The second option would be to select 1 or more of the identity variables. The pr
 
 I used **clustering** to uncover latent groups of veterans based on their identity.
 
-The complete [analysis code is available on GitHub](https://github.com/TJH-RESEARCH/identity-reintegration). A [paper detailing the analysis](../research/working-papers/identity-reintegration/index.qmd) is currently in the works. I presented a [poster based on this work](../../talks.index) at the Atlanta VA. Below you can find a walkthrough of the data analysis. 
+The complete [analysis code is available on GitHub](https://github.com/TJH-RESEARCH/identity-reintegration). A [paper detailing the analysis](../research/working-papers/identity-reintegration/index.qmd) is currently in the works. I presented a [poster based on this work](../../talks.index) at the Atlanta VA. Below you can find a walkthrough of the data analysis.
 
 ## Skills Demonstrated
 
