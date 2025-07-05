@@ -6,24 +6,23 @@
     <div class="item-entry">
         
         <div class="metadata">          
-            <p class="date"><%= item.date %></p>
-            
+            <p class="date"><%= item.date %></p>         
         </div>
 
-        <div class="body">
-            <p class="title"><%= item.title %></p>
+        <div class="body">  
+            <div class="title"> <a href="<%- item.path %>" > <%= item.title %> </a> </div>
+
             <p class="author"><%= item.author %></p>
             
             <% if(item.categories) { %>
-            <div class="project-categories">
-                <% for (const cat of item.categories) { %>
-                    <div class="project-category"><a href="#category=<%= cat %>">
-                            <%= cat %>
-                        </a></div>
+                <div class="project-categories">
+                    <% for (const cat of item.categories) { %>
+                        <div class="project-category"><a href="#category=<%= cat %>">
+                                <%= cat %>
+                            </a></div>
                     <% } %>
-            </div>
-
-        <% } %>
+                </div>
+            <% } %>
         </div>
         
     </div>
