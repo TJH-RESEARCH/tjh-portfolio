@@ -100,7 +100,7 @@
   location: Atlanta
   links:
   - name: Paper
-    url: ../research/work-papers/identity-reintegration/index.qmd
+    url: ../research/working-papers/identity-reintegration/index.qmd
     icon: fa-solid fa-file
   - name: Poster
     url: https://drive.google.com/file/d/1oF3CEP0jGuDz1zMXLGioEIdpvk_OqrBJ/view?usp=share_link

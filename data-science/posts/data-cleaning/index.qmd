@@ -4,33 +4,29 @@ description: "You analyze the data you have, not the data you want"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
-date: 2025-06-25
+date: 2025-06-04
 categories: 
   - Data Cleansing
 draft: false
 ---
 
-# Summary
+## Project Summary
 
-I have conducted dozens of surveys with employees, students, and community members. A common issue with surveys is data quality. For this project, I used cutting-edge methods to detect poor-quality survey responses. I then repeated the process for two additional surveys, resulting in clean data sets that have been used for X scientific publications. Additionally, I am drafting a paper that outlines the methods in an accessible way.
+I have conducted dozens of surveys with employees, students, and community members. A common issue with surveys is data quality. People skip answers, they lie, they straight-line, they respond in a random pattern, they take the wrong version of surveys. I've seen it all.
 
--   git hub
+Luckily there are tools to screen and clean bad survey data. For this project, I used cutting-edge methods to detect poor-quality survey responses. I then repeated the process for two additional surveys.
 
--   paper
+The results are clean data sets that have been used for several scientific publications. Additionally, I am drafting a paper that outlines the methods in an accessible way.
 
--   talk
+Find the complete analysis code on GitHub and a walkthrough below.
 
-# Skills Demonstrated
+## Skills Demonstrated
 
 1.  R Programming
-
-<!-- -->
-
 2.  Data Quality Assurance
-
 3.  Survey Design and Analysis
 
-# Real-World Applications:
+## Real-World Applications:
 
 -   People Analytics
 
@@ -38,10 +34,241 @@ I have conducted dozens of surveys with employees, students, and community membe
 
 -   Employee Engagement and Satisfaction surveys
 
-# Key Highlights
+## Walkthrough
 
-Dirty Data: Careless survey responding. Examples using R visualizations
+What's the problem: Real-World
 
-Developing an Order of Operations
+Let me walk you through the problem and solution. Imagine you just completed a survey with your employees, customers, or another group of stakeholders. Here I have a survey with a group of veterans. You might be quick to import your data and start to analyze it. Using R, let's download the data and look at it:
+
+```{r import}
+library(tidyverse,quietly = TRUE)
+
+data <- read_csv("data/veterans.csv")
+data %>% select(StartDate, ResponseId, pcl_1, pcl_2, pcl_3) %>% slice_head(n = 7)
+
+
+```
+
+We have 234 rows. In this case, that's supposed to be 234 US military veterans who each responded to the survey 1 time.
+
+The participants were recruited online, so we cannot be sure that these are all veterans. To ensure these people we veterans, we asked two questions. To participate, you have to have previously served in the military, but not currently be on active duty:
+
+1.  Did you serve in the United States military?
+
+2.  Are you now separated from the military? (e.g., discharged, released from active duty, transferred to the Inactive Ready Reserve)
+
+    ```{r screeners}
+    data %>% count(military_screener)
+    data %>% count(veteran_screener)
+    ```
+
+Luckily, no one ever lies on the internet. But let's assume they did. Maybe there are people out there who spend all day looking for surveys to take. Maybe that's because some surveys offer money or compensation for responses.
+
+How can we tell who is legit? We can build some security into the survey with a "validity check." We ask a question that only a legit respondent knows. Or, we ask a series of questions and test if people are logically consistent.
+
+In this case, we asked participants which military rank was higher, and provided them with two military ranks. For anyone in the military, it should be immediately obvious which rank is higher and lower. For people outside of the military, this is a little more difficult. not impossible, but not immediately obvious. That's perfect. We want it to be so easy that 100% of legit people can answer it accurately. This doesn't mean the liers can't answer it correctly, but it does give us one way to weed them out.
+
+> Which military rank is higher, private or lieutenant?
+
+How many people got the answer wrong?:
+
+```{r validity-check}
+
+data %>% 
+  filter(!is.na(validity_check)) %>% 
+  count(validity_check) %>% 
+  mutate(perc = n / sum(n))
+
+```
+
+14 of the 200 people who said they were veterans did not answer a simple question testing their basic military knowledge. For an online survey, that's grounds for screening your response. Let's go ahead and filter based on the screener questions and validity checks.:
+
+```{r}
+
+data <-
+  data %>% 
+  filter(
+    age_screener == 1, 
+    military_screener == 1, 
+    veteran_screener == 1, 
+    validity_check == 1
+  )
+
+data %>% nrow()
+
+```
+
+We can also test for logical inconsistencies or impossibilities.
+
+For example, we might compare the rank that participants claimed to have achieved with the number of years they claimed to have served. If they report a really high rank in too few years, then they are lying about something. For example, it is VERY impressible although not impossible to reach the rank of E-7 in 7 years. This is the so-called "7 in 7." Anyone who claims 7 in 7 on an online is probably lying, but they might be telling the trust. But anyone who claims to have reached 7 in fewer years is almost certainly lying. Did we have this problem in our data?
+
+```{r}
+data %>%
+  filter(pay_grade == "E-7 to E-9") %>% 
+  ggplot(aes(years_served)) +
+  geom_histogram() + 
+  labs(x = 'Years Served', y = "n", "Pay Grade E-7 to E-9") + 
+  theme_minimal()
+```
+
+As a final note, you should also check the bot detection, duplicate, and fraud stats that are available from survey hosts like Qualtrics:
+"A score of Less than 0.5 means the respondent is likely a bot." https://www.qualtrics.com/support/survey-platform/survey-module/survey-checker/fraud-detection/#RelevantID
+
+"A score greater than or equal to 30 means the response is likely fraudulent and a bot."
+
+A score of greater than or equal to 75 means the response is likely a duplicate. https://www.qualtrics.com/support/survey-platform/survey-module/survey-checker/fraud-detection/#RelevantID
+  )
+
+```{r}
+#Q_RecaptchaScore >= .5
+#Q_RelevantIDFraudScore < 30
+#Q_RelevantIDDuplicateScore < 75
+
+data %>% ggplot(aes(Q_RecaptchaScore)) + geom_histogram()
+data %>% ggplot(aes(Q_RelevantIDFraudScore)) + geom_histogram()
+data %>% ggplot(aes(Q_RelevantIDDuplicateScore)) + geom_histogram()
+```
+
+
+
+
+But a big problem with surveys is data quality. People skip answers, they lie, they straight-line, they respond in a random pattern, they take the wrong version of surveys. Depending how the data was collected, some of these problems can be worse than others.
+
+In this case, we recruited the survey participants online. You know how easy it is to lie online. Some people probably took the survey who were not supposed to. We used a screener question to automatically kick these people out, but some may have lied. In this case, we asked two questions.
+
+```{r}
+# Psychometric Synonyms/Antonyms ------------------------------------------------
+
+## set the cutoffs
+cutoff_psychsyn <- 0 # set the cutoff to screen results for psychometric synonyms
+cutoff_psychant <- 0 # set the cutoff to screen results for psychometric antonyms
+
+## calculate the metric  
+data <- 
+  data %>% 
+  select(mios_1:cos_16) %>%  # select only the scale items
+  transmute(
+    psychsyn = careless::psychsyn(., critval = 0.60), # calculate the psychometric synonyms using a critical value of r = .60
+    psychant = careless::psychant(., critval = -0.60) # calculate the psychometric antonyms using a critical value of r = -.60
+  ) %>% 
+  bind_cols(data) # add the psychometrics synonym/antonym scores to the data
+
+
+
+
+# Longstring
+
+## Calculate longstring and average string without reverse scoring
+data <-
+  data %>% 
+  select(biis_1:cos_16) %>%         # select only the scale items after PCL and MIOS
+  transmute(
+    longstring = careless::longstring(.),
+    longstring_avg = careless::longstring(., avg = TRUE)[,2]
+  ) %>% 
+  bind_cols(data)
+
+## Plot the long strings. Without the previous removals, there are 3 outliers for longstring (>15) and one for average string (>5)
+data %>% ggplot(aes(longstring)) + geom_histogram()
+data %>% ggplot(aes(longstring_avg)) + geom_histogram()
+
+## Remove the longstring/average string outliers
+data <- 
+  data %>% 
+  filter(longstring < 15,
+         longstring_avg < 5)
+
+
+
+## Arrange the data and calculate the metric
+data <-
+  data %>% 
+  select(mios_1:cos_16) %>%         # select only the scale items
+  select(-mios_9) %>%              # issue with original did not include all 14 items
+  select(-starts_with('bipf')) %>%  # Drop the inventory
+  select(
+         # MIOS Shame
+         mios_1, 
+         mios_3, 
+         mios_7, 
+         mios_8, 
+         mios_12, 
+         mios_13, 
+         mios_14,
+         
+         # MIOS Trust
+         mios_2,
+         mios_4,
+         mios_5,
+         mios_6,
+         #mios_9,
+         mios_10,
+         mios_11,
+         
+         # DRDI Dysfunction
+         drdi_2,
+         drdi_4,
+         drdi_5,
+         drdi_8,
+         drdi_10,
+         drdi_13,
+         drdi_14,
+         
+         # DRDI recovery
+         drdi_1,
+         drdi_3,
+         drdi_6,
+         drdi_7,
+         drdi_9,
+         drdi_11,
+         drdi_12,
+         everything()
+  ) %>% 
+  transmute(evenodd = 
+              careless::evenodd(x =., 
+                                # nItems in each subscale in order:
+                                factors = c(
+                                  
+                                  7,  # MIOS Shame
+                                  6,  # MIOS Trust
+                                  7,  # DRDI Dysfunction
+                                  7,  # DRDI Recovery
+                                  20, # PCL
+                                  10, # BIIS Harmony
+                                  7,  # BIIS Blended
+                                  6,  # MCARM Purpose 
+                                  4,  # MCARM Help
+                                  3,  # MCARM Civilians
+                                  3,  # MCARM Resentment
+                                  5,  # MCARM Regimentation
+                                  7,  # WIS Private Regard
+                                  7,  # WIS Interdependent
+                                  3,  # WIS Connection
+                                  3,  # WIS Family
+                                  4,  # WIS Centrality
+                                  4,  # WIS Public Regard
+                                  3,  # WIS Skills
+                                
+                                 12,  # SCC 
+                                  6,  # MPSS
+                                  8,  # SSS
+                                  8,  # COS
+                                  8)  # COS
+                                
+              )
+            ) %>% bind_cols(data) # Add the results back to the original data. 
+
+## Plot the even-odd correlation. The outliers are around -.50, but that is a fairly strong correlation, which indicates careful responding. I wont remove any based on this. 
+data %>% ggplot(aes(evenodd)) + geom_histogram()
+
+  
+```
+
+
+### Dirty Data: Careless survey responding. Examples using R visualizations
+
+### Cutpoints
+
+### Developing an Order of Operations
 
 ## 

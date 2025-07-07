@@ -1,11 +1,12 @@
 ---
-title: "Unsupervised Learning: Cluster Analysis to Handle Multivairate Messiness"
-description: "Finding hidden patterns in data using clustering"
+title: "Clustering for Dimension Reduction"
+description: "Finding hidden patterns in social science data using clustering"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
+date: 2025-06-03
 categories: 
-  - Cluster Analysis
+  - Unsupervised Learning
 draft: false
 ---
 

@@ -4,7 +4,7 @@ description: "Using Bayesian data analysis to describe zero-inflated data"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
-#date: 2025-06-25
+date: 2025-06-02
 categories: 
   - Statistics
 draft: false
@@ -29,13 +29,12 @@ I will present the work in progress at the 2025 VA Atlanta Joint Research Sympos
 ## Skills Demonstrated
 
 1.  Advanced statistics:
+
     1.  Bayesian data analysis
     2.  prior selection and justification
     3.  prior predictive checks
     4.  posterior predictions
     5.  marginal effects
-
-<!-- -->
 
 2.  R programming
 

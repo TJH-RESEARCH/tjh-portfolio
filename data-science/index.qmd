@@ -9,4 +9,4 @@ listing:
 page-layout: full
 ---
 
-Here are some selected data science projects I have completed. You can learn more about the project, see the analysis code, and view some of the highlights from each project.
+Here are some selected data science projects I have worked on. On the pages below, you can learn more about the project. Each page has a summary of the project, link to the analysis code, and a walkthrough that highlights some of the cool data science of each project.

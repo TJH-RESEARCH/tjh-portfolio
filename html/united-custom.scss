@@ -52,7 +52,7 @@ $body-color:                $gray-800 !default;
 // Links
 $link-color: $red !default;
 $link-decoration: none !default;
-$link-hover-color: $gray-800 !default;
+$link-hover-color: $black !default;
 $link-hover-decoration: none !default;
 
 // Navbar
@@ -145,10 +145,11 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&fa
         }
 
         .title {
-            font-weight: 500;
+            font-weight: 450;
             font-size: 1.8em;
             margin-bottom: 0.2em;
             line-height: 1.2;
+            
         }
 
         .location {
@@ -214,18 +215,18 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&fa
         }
 
         .title {
-            font-weight: 500;
+            font-weight: 450;
             font-size: 1.8em;
             margin-bottom: 0.2em;
             line-height: 1.2;
-            color: $black;
-        }
-
-        .location {
-            font-weight: 300; 
-            font-size: 0.85em;
-            margin-top: 0em;
-            text-align: left;
+          
+            a {
+              color: $gray-800;
+            }
+            
+            a:hover {
+              color: $red;
+            }
         }
         
         .description {
@@ -237,8 +238,10 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&fa
         .categories {
             font-weight: 300;
             font-size: 0.85em;
-            margin-top: 1.5em;
+            margin-top: 4em;
             margin-bottom: .5em;
+            border: 2em;
+            padding: 1em;
             text-align: left;
         } 
 
@@ -325,10 +328,20 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&fa
             }
     
             .title {
-                font-weight: 500;
+                font-weight: 450;
                 font-size: 1.8em;
                 margin-bottom: 0.2em;
                 line-height: 1.2;
+                
+                 a {
+                   color: $gray-800;
+                   
+                 }
+                 
+                 a:hover {
+                   color: $red;
+                   
+                 }
             }
     
             .location {

@@ -13,10 +13,6 @@ listing:
     contents: talks-2023.yml
     sort: "date desc"
     template: ../html/talks/listing.ejs
-  - id: talks_2022
-    contents: talks-2022.yml
-    sort: "date desc"
-    template: ../html/talks/listing.ejs
   - id: talks_2021
     contents: talks-2021.yml
     sort: "date desc"
@@ -41,11 +37,6 @@ date-format: "MMMM D, YYYY"
 ## 2023
 
 ::: {#talks_2023}
-:::
-
-## 2022
-
-::: {#talks_2022}
 :::
 
 ## 2021

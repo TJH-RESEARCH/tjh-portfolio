@@ -7,10 +7,8 @@ author:
     affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
   - name: Tyler L. Collette
     #orcid:
-    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
   - name: Brian A. Moore
     orcid: 0000-0003-0273-7236
-    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
 categories:
   - Moral Injury
   - Identity
@@ -34,13 +32,8 @@ Although it is widely accepted among theorists and clinicians that moral injury 
 ## Links
 
 -   [Paper](https://doi.org/10.1037/trm0000587)
-
-<!-- -->
-
 -   [Paywall-Free Paper](https://www.researchgate.net/publication/392357064_Moral_injury_and_identity_Examining_moral_injury_as_identity_loss_and_identity_change)
-
 -   [GitHub Repository](https://github.com/TJH-RESEARCH/moral-injury-identity)
-
 -   [Supplemental Material](https://osf.io/j37xp/)
 
 ## Citation

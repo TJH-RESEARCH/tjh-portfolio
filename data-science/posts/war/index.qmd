@@ -4,12 +4,13 @@ description: "Promoting peace through data analysis and machine learning"
 author:
   - name: Thomas Hodges
     orcid: 0000-0002-5184-7346
+date: 2025-06-01
 categories: 
-  - Machine Learning
+  - Predictive Analytics
 draft: false
 ---
 
-## Summary
+## Project Summary
 
 This project is a work in progress. You can see more about it on my blog.
 
