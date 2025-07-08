@@ -81,7 +81,7 @@ data %>%
 
 ```
 
-14 of the 200 people who said they were veterans did not answer a simple question testing their basic military knowledge. For an online survey, that's grounds for screening your response. Let's go ahead and filter based on the screener questions and validity checks.:
+14 of the 200 people who said they were veterans did not answer a simple question testing their basic military knowledge. For an online survey, that's grounds for screening your response. Let's go ahead and filter based on the screening questions and validity checks.:
 
 ```{r}
 
@@ -111,51 +111,54 @@ data %>%
   theme_minimal()
 ```
 
-As a final note, you should also check the bot detection, duplicate, and fraud stats that are available from survey hosts like Qualtrics:
-"A score of Less than 0.5 means the respondent is likely a bot." https://www.qualtrics.com/support/survey-platform/survey-module/survey-checker/fraud-detection/#RelevantID
+As a final note, you should also check the bot detection, duplicate, and fraud stats that are available from survey hosts like Qualtrics: "A score of Less than 0.5 means the respondent is likely a bot." https://www.qualtrics.com/support/survey-platform/survey-module/survey-checker/fraud-detection/#RelevantID
 
 "A score greater than or equal to 30 means the response is likely fraudulent and a bot."
 
-A score of greater than or equal to 75 means the response is likely a duplicate. https://www.qualtrics.com/support/survey-platform/survey-module/survey-checker/fraud-detection/#RelevantID
-  )
+A score of greater than or equal to 75 means the response is likely a duplicate. https://www.qualtrics.com/support/survey-platform/survey-module/survey-checker/fraud-detection/#RelevantID )
 
 ```{r}
-#Q_RecaptchaScore >= .5
-#Q_RelevantIDFraudScore < 30
-#Q_RelevantIDDuplicateScore < 75
 
-data %>% ggplot(aes(Q_RecaptchaScore)) + geom_histogram()
-data %>% ggplot(aes(Q_RelevantIDFraudScore)) + geom_histogram()
-data %>% ggplot(aes(Q_RelevantIDDuplicateScore)) + geom_histogram()
+#Q_RecaptchaScore >= .5
+data %>% 
+  ggplot(aes(Q_RecaptchaScore)) + 
+  geom_histogram() + 
+  labs(title = "Bots", x = "ReCAPTCHA Score", y = "n")
+
 ```
 
-
-
-
-But a big problem with surveys is data quality. People skip answers, they lie, they straight-line, they respond in a random pattern, they take the wrong version of surveys. Depending how the data was collected, some of these problems can be worse than others.
-
-In this case, we recruited the survey participants online. You know how easy it is to lie online. Some people probably took the survey who were not supposed to. We used a screener question to automatically kick these people out, but some may have lied. In this case, we asked two questions.
+```{r}
+#Q_RelevantIDDuplicateScore < 75
+data %>% 
+  ggplot(aes(Q_RelevantIDFraudScore)) + 
+  geom_histogram() +
+  labs(title = "Frauds", x = "Fraud Score", y = "n")
+```
 
 ```{r}
-# Psychometric Synonyms/Antonyms ------------------------------------------------
+#Q_RelevantIDFraudScore < 30
+data %>% 
+  ggplot(aes(Q_RelevantIDDuplicateScore)) + 
+  geom_histogram() + 
+  labs(title = "Duplicates", x = "Duplicate Score", y = "n")
+```
 
-## set the cutoffs
-cutoff_psychsyn <- 0 # set the cutoff to screen results for psychometric synonyms
-cutoff_psychant <- 0 # set the cutoff to screen results for psychometric antonyms
+### Dirty Data: Careless survey responding. Examples using R visualizations
 
-## calculate the metric  
-data <- 
-  data %>% 
-  select(mios_1:cos_16) %>%  # select only the scale items
-  transmute(
-    psychsyn = careless::psychsyn(., critval = 0.60), # calculate the psychometric synonyms using a critical value of r = .60
-    psychant = careless::psychant(., critval = -0.60) # calculate the psychometric antonyms using a critical value of r = -.60
-  ) %>% 
-  bind_cols(data) # add the psychometrics synonym/antonym scores to the data
+Even once you screen out the cheaters and bots, survey data can still have problems. People skip answers, they lie, they straight-line, they respond in a random pattern, they take the wrong version of surveys. Depending how the data was collected, some of these problems can be worse than others.
 
+We can detect two kinds of careless responding: longstringing and random responding.
 
+#### Longstringing
+
+There are 4 kinds of straightlining to watch out for. This is a combination of 2 factors: longest string or average string; and reverse-coded or not. 
+
+First, there are two ways to calculate long strings, either as the longest string legnth or as the average string length. The average string is useful to detect careless responders who occasionally vary their response. The longest string is useful to catch people who do not vary their response in the slightest. 
+
+Second, longstring can be calucaled on data that has been reverse scored or that has not yet been reverse scored. The idea here is that some respondents who long string might pay attention to the valence of the question, looking for times that the wording switches from positive to negative, and varying their responses in accordance. Therefore, it might sense to calculate longstring with both reverse-scored and non-reverse scored answers. Each can be used to detect a slightly different type of careless survey responding behavior. 
 
 
+```{r}
 # Longstring
 
 ## Calculate longstring and average string without reverse scoring
@@ -171,15 +174,18 @@ data <-
 ## Plot the long strings. Without the previous removals, there are 3 outliers for longstring (>15) and one for average string (>5)
 data %>% ggplot(aes(longstring)) + geom_histogram()
 data %>% ggplot(aes(longstring_avg)) + geom_histogram()
-
-## Remove the longstring/average string outliers
-data <- 
-  data %>% 
-  filter(longstring < 15,
-         longstring_avg < 5)
+```
 
 
+#### Random Responding
 
+Also known as Christmas-Treeing, to respond randomly to a survey means to select each answer at random, without regard for answering truthfully. 
+
+While there might be a few reasons that people respond randomly to a survey, one of the main reason is probably to finish the survey quickly. Additionally, they may seek to avoid detection for their carelessness, thus opting not to use straightlining. 
+
+The tools to detect random responding are more varied than straightlining. 
+
+```{r}
 ## Arrange the data and calculate the metric
 data <-
   data %>% 
@@ -264,11 +270,50 @@ data %>% ggplot(aes(evenodd)) + geom_histogram()
   
 ```
 
-
-### Dirty Data: Careless survey responding. Examples using R visualizations
-
 ### Cutpoints
 
-### Developing an Order of Operations
+Data science is full of decisions. Some people don't want you to know that. They want you think that data is objective. That data speaks for itself. That the numbers don't lie.
 
-## 
+It's true that data can be used to make more objective decisions, but that doesn't mean a whole lot of (potentially subjective) decisions have to be made just to analyze the data in the first place.
+
+When it comes to screening and cleaning survey data, the biggest decision is the cutpoint to use. That is, we can calculate longstring metrics and even-odd correlation, but at what value of these measures do we determine a response is bad enough to throw it out?
+
+The truth is, we do not know for sure. These are "unsupervised" models: we do not have a variable that tells us if they are truly a careful responder or not. Still, we have to make a decision, and we want it to be reasonable and well justified.
+
+My approach was to adopt cutpoints that were hard to dispute. Take for example psychometric synonyms and antonyms. Let's visualize these scores\>:
+
+```{r}
+# Psychometric Synonyms/Antonyms ------------------------------------------------
+
+## set the cutoffs
+cutoff_psychsyn <- 0 # set the cutoff to screen results for psychometric synonyms
+cutoff_psychant <- 0 # set the cutoff to screen results for psychometric antonyms
+
+## calculate the metric  
+data <- 
+  data %>% 
+  select(mios_1:cos_16) %>%  # select only the scale items
+  transmute(
+    psychsyn = careless::psychsyn(., critval = 0.60), # calculate the psychometric synonyms using a critical value of r = .60
+    psychant = careless::psychant(., critval = -0.60) # calculate the psychometric antonyms using a critical value of r = -.60
+  ) %>% 
+  bind_cols(data) # add the psychometrics synonym/antonym scores to the data
+
+
+data %>%
+  select(psychsyn, psychant) %>% 
+  pivot_longer(everything()) %>% 
+  ggplot(aes(value, fill = name)) +
+  geom_histogram() +
+  facet_wrap(~name)
+```
+
+### Order of Operations: Putting it all together
+
+Besides setting cutpoints, a second major decision to make is how to combine different screening tools.
+
+Curran advises using a "many small hurdles" approach. By that, he suggests using lots of if different tools, e.g., longstring, even-odd, psychometric synonyms/antonyms -- but being lenient with the cutoff. They idea is that a lenient cutoff will only remove the responses that are most likely to be bad. In more technical terms, the small hurdles approach is about minimizing false negatives (data we throw away but shouldn't have). If we would make the hurdles more stringent, then we are likely to catch more bad data at the expense of throwing out good data.
+
+While the small hurdles approach makes sense, there is still little guidance about how to implement it. For example, should longstringers be removed first or last? I ask because the order of operations matters. If you remove respondents for longstringing, then calculate even-odd correlation, then the even-odd metric will be different that if the longstringers were not removed. This is especially a problem when the metrics makes use of the entire sample, such as when calculating psychometric synynonyms and antonyms. It is also a problem when using relative criteria to remove responmses. For example, by removing anyone with a longstring score 2 standard deviations above the mean.
+
+In the end, I had to make a decision and do something that was reasonable, even if there was no precedent.
