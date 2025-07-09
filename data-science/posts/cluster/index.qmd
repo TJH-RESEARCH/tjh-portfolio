@@ -62,4 +62,338 @@ In this project....
 
 ### Cluster Analysis
 
+```{r}
+
+library(factoextra)
+library(NbClust)
+
+set.seed(10001)
+
+# Select WIS Data ---------------------------------------------------------
+data_cluster_wis <- 
+  data %>% 
+  select(starts_with('wis') & ends_with('total') & !wis_total) %>% 
+  scale()
+
+
+# Determine the number of clusters ----------------------------------------
+
+
+# Elbow method
+plot_elbow <-  
+fviz_nbclust(data_cluster_wis, kmeans, method = "wss") +
+    geom_vline(xintercept = 3, linetype = 2)+
+    labs(subtitle = "k-Means Clustering: Elbow method suggests 3-cluster solution")
+
+ggsave(plot = plot_elbow,
+       path = here::here('output/figures'),
+       filename = 'elbow_plot.jpg'
+      )
+
+# Silhouette method
+plot_silhouette <-
+  fviz_nbclust(data_cluster_wis, kmeans, method = "silhouette")+
+    labs(subtitle = "k-Means Clustering: Silhouette method suggests 2-cluster solution")
+
+ggsave(plot = plot_silhouette,
+       path = here::here('output/figures'),
+       filename = 'silhouette_plot.jpg'
+)
+
+# Gap statistic
+plot_gap_stat <-
+  fviz_nbclust(data_cluster_wis, 
+               kmeans, 
+               nstart = 25,  
+               print.summary = T, 
+               method = "gap_stat", 
+               nboot = 500)  +
+   labs(subtitle = "k-Means Clustering: Gap statistic method")
+
+ggsave(plot = plot_gap_stat,
+       path = here::here('output/figures'),
+       filename = 'gap_stat_plot.jpg'
+)
+
+## Gap statistic suggests 1 cluster....which isn't really a cluster now is it
+## Basically, this is an inability to reject the null hypo that the data 
+## clusters into latent groups. 
+
+
+# -------------------------------------------------------------------------
+results_kmeans <- 
+  NbClust(data = data_cluster_wis, 
+        diss = NULL, 
+        distance = "euclidean",
+        min.nc = 2, 
+        max.nc = 15, 
+        method = 'kmeans',
+        index = 'alllong')
+
+results_kmeans$All.index %>% as.data.frame() %>% tibble() %>% slice(2,3)
+results_kmeans$Best.nc
+
+# Limit the number of clusters to compare head-to-head 2 and 3 group solution
+results_kmeans_limited = 
+  NbClust(data = data_cluster_wis, 
+            diss = NULL, 
+            distance = "euclidean",
+            min.nc = 2, 
+            max.nc = 4, 
+            method = 'kmeans',
+            index = 'alllong')
+
+
+
+```
+
+```{r}
+
+
+plot_profiles <-
+  data %>% 
+  mutate(wis_skills_total = wis_skills_total / 3,
+         wis_centrality_total = wis_centrality_total / 4,
+         wis_connection_total = wis_connection_total / 3,
+         wis_family_total = wis_family_total / 3,
+         wis_interdependent_total = wis_interdependent_total / 7,
+         wis_private_regard_total = wis_private_regard_total / 7,
+         wis_public_regard_total = wis_public_regard_total / 4) %>% 
+  select(wis_skills_total,
+         wis_centrality_total,
+         wis_connection_total,
+         wis_family_total,
+         wis_interdependent_total,
+         wis_private_regard_total,
+         wis_public_regard_total,
+         cluster) %>% 
+  group_by(cluster) %>% 
+  mutate(cluster = factor(cluster)) %>%
+  summarise(across(everything(), ~ mean(.x))) %>% 
+  pivot_longer(!cluster) %>% 
+  ggplot(
+    aes(
+      name, 
+      value, 
+      color = cluster,
+      group = cluster)) + 
+  geom_point(
+    aes(
+      shape = cluster), 
+    size = 4) + 
+  geom_line(
+    aes(
+      linetype = cluster)) +
+  scale_color_manual(values = c('#440154', '#3b528b', '#5ec962')) +
+  #scale_color_viridis(option = 'C', discrete = TRUE) +
+  theme_classic() +
+  labs(title = paste0('Military Identity by Latent Groups'), 
+       x = 'Aspect of Military Identity', 
+       y = 'Identity (mean item score)') + 
+  theme(axis.text.x = element_text(angle = -30, vjust = 1, hjust = 0)) +
+  labs(color = 'Cluster',
+       shape = 'Cluster',
+       linetype = 'Cluster') +
+  scale_x_discrete(
+  labels = c('Centrality', 
+             'Connection',
+             'Family',
+             'Interdependence',
+             'Private Regard',
+             'Public Regard',
+             'Skills')
+  ) +
+  theme(axis.text = element_text(size = 11),
+        text = element_text(size = 14))
+
+plot_profiles %>% print()
+
+ggsave(plot = plot_profiles,
+       filename = paste0('output/figures/profiles-identity-', clustering, '.jpg'))
+ 
+```
+
 ### Validating Clusters
+
+A key issue with unsupervised learning is how to externally validate the clusters. How do we know if these classifications are real or just an artifact of the data?
+
+In supervised learning, validation is easier. You use the model to make some predictions on data it wasn't trained on. Then you calculate how accurate the predictions were. With unsupervised learning, we have no idea how accurate we are. Instead, we need to validate the categories in different ways. In this project, I used two different validation methods.
+
+First, the model should have some "predictive" validity. That is, the clusters should be able to predict other variables. For this project, veterans identity should predict how well they reintegrate into civilian society. Using the clusters as a predictor variable, I fit a linear regression model to a measure of reintegration. Here were the results:\
+
+```{r}
+
+# MCARM TOTAL --------------------------------------------------------------
+model_mcarm_1 <- data %>% lm(mcarm_total ~ cluster, .)
+model_mcarm_2 <- 
+  data %>% 
+  lm(mcarm_total ~ 
+       cluster +
+       race_white + 
+       race_black + 
+       sex_male +
+       enlisted +
+       service_era_post_911 + 
+       service_era_vietnam + 
+       service_era_persian_gulf +
+       military_exp_combat +
+       n_deploy +
+       branch_air_force +
+       branch_marines +
+       branch_navy, .)
+aov_mcarm_1 <- aov(model_mcarm_1)
+aov_mcarm_1 <- aov(model_mcarm_2)
+
+```
+
+```{r}
+
+
+bind_rows(
+model_civilians_2 %>% 
+  broom::tidy(conf.int = T, conf.level = 0.95) %>% 
+  mutate(se_robust = as.numeric(coeftest_civilians_2[,2])) %>% 
+  filter(term == 'clusterLower Identity' |
+           term == 'clusterHigher Identity') %>% 
+  mutate(outcome = 'Civilians') %>% 
+  mutate(term = if_else(term == 'clusterLower Identity',
+                        'Lower: Civilians', 
+                        'Higher: Civilians'
+  )), 
+
+
+model_help_seeking_2 %>% 
+  broom::tidy(conf.int = T, conf.level = 0.95) %>% 
+  mutate(se_robust = as.numeric(coeftest_help_seeking_2[,2])) %>% 
+  filter(term == 'clusterLower Identity' |
+           term == 'clusterHigher Identity') %>% 
+  mutate(outcome = 'Help Seeking') %>% 
+  mutate(term = if_else(term == 'clusterLower Identity',
+                        'Lower: Help Seeking', 
+                        'Higher: Help Seeking'
+  )), 
+
+
+model_purpose_2 %>% 
+  broom::tidy(conf.int = T, conf.level = 0.95) %>% 
+  mutate(se_robust = as.numeric(coeftest_purpose_2[,2])) %>% 
+  filter(term == 'clusterLower Identity' |
+           term == 'clusterHigher Identity') %>% 
+  mutate(outcome = 'Purpose') %>% 
+  mutate(term = if_else(term == 'clusterLower Identity',
+                        'Lower: Purpose', 
+                        'Higher: Purpose'
+  )), 
+
+
+
+model_regiment_2 %>% 
+  broom::tidy(conf.int = T, conf.level = 0.95) %>% 
+  mutate(se_robust = as.numeric(coeftest_regiment_2[,2])) %>% 
+  filter(term == 'clusterLower Identity' |
+           term == 'clusterHigher Identity') %>% 
+  mutate(outcome = 'Regimnetation') %>% 
+  mutate(term = if_else(term == 'clusterLower Identity',
+                        'Lower: Regimentation', 
+                        'Higher: Regimentation'
+  )), 
+
+
+model_resent_2 %>% 
+  broom::tidy(conf.int = T, conf.level = 0.95) %>% 
+  mutate(se_robust = as.numeric(coeftest_resent_2[,2])) %>% 
+  filter(term == 'clusterLower Identity' |
+           term == 'clusterHigher Identity') %>% 
+  mutate(outcome = 'Resentment') %>% 
+  mutate(term = if_else(term == 'clusterLower Identity',
+                        'Lower: Resentment', 
+                        'Higher: Resentment'
+  )) 
+
+) %>% 
+arrange(outcome) %>% 
+  ggplot(aes(x = estimate, 
+             y = term, 
+             xmin = (estimate - 2 * se_robust),
+             xmax = (estimate + 2 * se_robust),
+             color = outcome,
+             shape = outcome)) +
+  scale_color_manual(values = c('#440154', 
+                                  '#3b528b',
+                                  '#21908C',
+                                  '#5ec962',
+                                  '#C7E020')) +
+  geom_pointrange(size = 1.5, linewidth = 1.5) +
+  #geom_vline(aes(xintercept = 0), linetype = 2) +
+  theme_classic() +
+  theme(axis.text = element_text(size = 14),
+        text = element_text(size = 14)
+  ) +
+  xlab('Total') +
+  ylab('') +
+  scale_y_discrete( 
+    labels = c(
+      
+      `Lower: Resentment` = 'Lower Identity', 
+      `Higher: Resentment` = 'Higher Identity', 
+      
+      `Lower: Regimentation` = 'Lower Identity', 
+      `Higher: Regimentation` = 'Higher Identity',
+      
+      `Lower: Purpose` = 'Lower Identity', 
+      `Higher: Purpose` = 'Higher Identity', 
+      
+      `Lower: Help Seeking` = 'Lower Identity', 
+      `Higher: Help Seeking` = 'Higher Identity', 
+      
+      `Lower: Civilians` = 'Lower Identity', 
+      `Higher: Civilians` = 'Higher Identity'
+      
+    ),
+    limits = c(
+      'Lower: Resentment', 
+      'Higher: Resentment', 
+      
+      'Lower: Regimentation', 
+      'Higher: Regimentation',
+      
+      'Lower: Purpose', 
+      'Higher: Purpose', 
+      
+      'Lower: Help Seeking', 
+      'Higher: Help Seeking', 
+      
+      'Lower: Civilians', 
+      'Higher: Civilians'
+      
+    ) 
+  ) +
+  theme(legend.position = 'none')
+
+
+
+
+
+
+
+
+# Total -------------------------------------------------------------------
+
+
+model_mcarm_2 %>% 
+  broom::tidy(conf.int = T, conf.level = 0.95) %>% 
+  
+  # Add robust standard errors
+  mutate(se_robust = as.numeric(coeftest_mcarm_2[,2])) %>% 
+  filter(term == 'clusterLower Identity' |
+           term == 'clusterHigher Identity') %>% 
+  mutate(outcome = 'Rentegration') %>% 
+  mutate(term = if_else(term == 'clusterLower Identity',
+                        'Lower: Reintegration', 
+                        'Higher: Reintegration'
+  ))
+```
+
+Second, the cluster groupings should be replicable in other data sets. That is, if we collect new data, we should find similar groupings if the grouping are real. With this in mind, I collected some more data with a new survey. Then, I repeated the clustering in the new data set.
+
+\[example\]
