@@ -39,11 +39,7 @@ pub-info:
 
 ## Abstract
 
-Coming soon.
-
-## Links
-
-Coming Soon.
+Police and firefighters experience high levels of occupational stress and trauma and a high prevalence of mental health concerns. While public safety personnel can access resources and treatments at no cost through employer-provided Employee Assistance Programs (EAPs), reported utilization rates of EAPs in public safety workplaces are low. The aim of the current study is to examine the role of trust in first responders’ awareness, attitudes, and utilization of EAPs. We conducted eight focus group interviews and one individual interview with police and firefighters in the southeastern United States (*N* = 36). We thematically analyzed transcripts of the interviews. Participants discussed trust in peers, trust in the EAP provider, and organizational factors as important for their awareness, attitudes, and utilization of EAPs. Based on these findings, we make multiple recommendations for improving EAPs in public safety workplaces, including ways that EAP providers can build rapport and trust with first responders.
 
 ## Citation
 
