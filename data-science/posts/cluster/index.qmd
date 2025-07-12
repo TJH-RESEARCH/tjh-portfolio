@@ -12,13 +12,13 @@ draft: false
 
 ## Project Summary
 
-Sometimes you have too many variables. Which ones do you choose? That's the case with a set of variables from a survey I collected with some veterans. I want to know how veteran identities affects a person's integration into civilian life. Luckily, there is a validated measure of veterans identity: the "Warrior Identity Scale." Unluckily, it measures 7 different aspects of military identity, each of which is considered a separate variable.
+Ever heard the phrase "more money, more problems?" A similar idea exists in data science: more data, more problems. There are a few ways this comes about. Having too many cases (e.g., rows, observations) takes a lot of computing power, and can sometimes require different sets of tools and analyses. But having too many variables (e.g., columns, features) can also be a problem.
+
+That's the case with a set of variables from a survey I collected with some veterans. I want to know how veteran identities affects a person's integration into civilian life. Conveniently, there is a validated measure of veterans identity: the "Warrior Identity Scale." Unconveniently, it measures 7 different aspects of military identity, each of which is considered a separate variable.
 
 This presented me with the "curse of dimensionality," having more dimensions to the data than I can easily use. Several options were available. First, I could have used all 7 of the variables. Second, I could have chosen 1 or more of the variables as the most important variables. There are problems with both of these options. Using all the variables leads to a messier model. It has lots of predictor variables — all 7 of the Warrior Identity Scale measures — but it is hard to make sense of how those predictor variables are related. And we should expect some sort of relationship(s). After all, these are all aspects of the same phenomenon, identity.
 
-The second option would be to select 1 or more of the identity variables. The problem is this becomes picking and choosing which identity variables matter if it is not done in regards to a particular theory. As research on military identity is still growing, it makes sense to learn from the data about configurations of military identity.
-
-I used **clustering** to uncover latent groups of veterans based on their identity.
+The second option would be to select 1 or more of the identity variables. The problem is this becomes picking and choosing which identity variables matter if it is not done in regards to a particular theory. There are theories to choose from, no doubt, but again we get into the position of picking and choosing theories without justification for preferring one over the other. Analyses of this kind can still be valuable, but so too can the approach that I took: learning from the data to reduce the number of dimensions. To do so, I used **clustering** to uncover latent groups of veterans based on their identity.
 
 The complete [analysis code is available on GitHub](https://github.com/TJH-RESEARCH/identity-reintegration). A [paper detailing the analysis](../research/working-papers/identity-reintegration/index.qmd) is currently in the works. I presented a [poster based on this work](../../talks.index) at the Atlanta VA. Below you can find a walkthrough of the data analysis.
 
@@ -36,13 +36,48 @@ Clustering analysis can be used to address the "curse of dimensionality." It is 
 
 I used **clustering** to uncover latent groups of veterans based on their identity. Clustering analysis is an type of unsupervised learning. It finds groups of variables in multiple dimensions. That is, if on a 2 dimensional plot, we could circle apparent groups:
 
-\[image\]
+```{r}
+library(tidyverse)
+# Make some example data:
+tibble(x = c(1,2,3,1,2,3,9,7,8),
+       y = c(2,1,2,6,8,7,5,6,4)
+       ) %>% 
+# Graph a scatter plot:
+  ggplot(aes(x, y)) +
+  geom_point() +
+  scale_x_continuous(breaks = seq(0,10,2), limits = c(0,10)) +
+  scale_y_continuous(breaks = seq(0,10,2), limits = c(0,10)) +
+  theme_classic() +
+# Draw circles around the clusters
+  ggforce::geom_mark_circle(x = 2, y = 1.8, r = .14, color = "blue") +
+  ggforce::geom_mark_circle(x = 1.9, y = 6.8, r = .14, color = "green") +
+  ggforce::geom_mark_circle(x = 7.9, y = 5.15, r = .14, color = "red")
+```
 
 The same could be done with a 3D plot
 
-\[image\]
+```{r}
+library(rgl)
+data <- 
+  tibble(x = c(1,2,3,1,2,3,9,7,8),
+       y = c(2,1,2,6,8,7,5,6,4),
+       z = c(1,2,1,8,7,7,3,4,4),
+       color = c(rep('blue',3),rep('green', 3), rep('red', 3))
+       )
+
+plot3d(x = data$x, y = data$y, z = data$z, 
+       col = data$color, 
+       type = "s",
+       xlab = 'x', ylab = "y", zlab = "z")
+rglwidget()
+
+```
 
 While we cannot visualize past three dimensions, mathematically we can use the same clustering algorithms in more than three dimensions.
+
+Under the hood, the algorithm is trying to find the number of clusters that most reduces within cluster variance. In other words, it tries to find the multidimensional distance from each data point to every other data point in its cluster.
+
+The more clusters chosen, the lower the variance, but having the number of clusters equal to the number of data points (k = n) does us no help in reducing dimensions. Ultimately, we have to choose which solution (i.e., number of clusters) to choose, and we need to balance parsimony with fit.
 
 ### Data Mining Hidden patterns
 
