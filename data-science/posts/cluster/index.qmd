@@ -10,132 +10,173 @@ categories:
 draft: false
 ---
 
-## Project Summary
+-   Machine Learning
+
+-   Unsupervised Learning
+
+-   Regression analysis
+
+## More data, more problems
+
+> This post explains a data science project I have worked on. The complete [analysis code is available on GitHub](https://github.com/TJH-RESEARCH/identity-reintegration). A [paper detailing the analysis](../research/working-papers/identity-reintegration/index.qmd) is currently in the works. I presented a [poster based on this work](../../talks.index) at the Atlanta VA.
 
 Ever heard the phrase "more money, more problems?" A similar idea exists in data science: more data, more problems. There are a few ways this comes about. Having too many cases (e.g., rows, observations) takes a lot of computing power, and can sometimes require different sets of tools and analyses. But having too many variables (e.g., columns, features) can also be a problem.
 
-That's the case with a set of variables from a survey I collected with some veterans. I want to know how veteran identities affects a person's integration into civilian life. Conveniently, there is a validated measure of veterans identity: the "Warrior Identity Scale." Unconveniently, it measures 7 different aspects of military identity, each of which is considered a separate variable.
+That's the case with a set of variables from a survey I collected with some veterans. I want to know how veteran identities affects a person's integration into civilian life. Conveniently, there is a validated measure of veterans identity: the "Warrior Identity Scale." Inconveniently, it measures 7 different aspects of military identity, each of which is considered a separate variable.
 
 This presented me with the "curse of dimensionality," having more dimensions to the data than I can easily use. Several options were available. First, I could have used all 7 of the variables. Second, I could have chosen 1 or more of the variables as the most important variables. There are problems with both of these options. Using all the variables leads to a messier model. It has lots of predictor variables — all 7 of the Warrior Identity Scale measures — but it is hard to make sense of how those predictor variables are related. And we should expect some sort of relationship(s). After all, these are all aspects of the same phenomenon, identity.
 
-The second option would be to select 1 or more of the identity variables. The problem is this becomes picking and choosing which identity variables matter if it is not done in regards to a particular theory. There are theories to choose from, no doubt, but again we get into the position of picking and choosing theories without justification for preferring one over the other. Analyses of this kind can still be valuable, but so too can the approach that I took: learning from the data to reduce the number of dimensions. To do so, I used **clustering** to uncover latent groups of veterans based on their identity.
+The second option would be to select 1 or more of the identity variables. This is a problem to the extent that we arbitrarily pick which identity variables to include. We would ideally choose what variables to use by referencing a theory.
 
-The complete [analysis code is available on GitHub](https://github.com/TJH-RESEARCH/identity-reintegration). A [paper detailing the analysis](../research/working-papers/identity-reintegration/index.qmd) is currently in the works. I presented a [poster based on this work](../../talks.index) at the Atlanta VA. Below you can find a walkthrough of the data analysis.
+There is a third approach which is less dependent on theory and more data-driven: unsupervised learning to combine the 7 variables, reducing the 7 dimensions into 1. **Unsupervised learning** is a form of machine learning we can use to categorize data without having a "true" reference category. We are trying to uncover hidden patterns or "latent" groups.
 
-## Skills Demonstrated
+A key issue with unsupervised learning is not having a ground truth to compare the model. No matter how good it fits the data you have, it is not possible to know if clusters corresponds to real groupings. In this project, I mitigated this issue by collecting an additional sample to see if the results would replicate.
 
-1.  Machine Learning
-2.  Unsupervised Learning
-3.  Regression analysis
+### Unsupervised Learning
 
-## Real-World Applications
-
-### Dimension Reduction
-
-Clustering analysis can be used to address the "curse of dimensionality." It is one tool for "dimensional reduction," reducing the number of variables you have.
-
-I used **clustering** to uncover latent groups of veterans based on their identity. Clustering analysis is an type of unsupervised learning. It finds groups of variables in multiple dimensions. That is, if on a 2 dimensional plot, we could circle apparent groups:
+Clustering analysis can be used to address the "curse of dimensionality." It is one tool for "dimensional reduction," reducing the number of variables you have. Take the following 2 dimensional plot. Can you use it to spot groups in the data, reducing our two-dimensions to a 1-dimension categorical variable?
 
 ```{r}
 library(tidyverse)
-# Make some example data:
-tibble(x = c(1,2,3,1,2,3,9,7,8),
-       y = c(2,1,2,6,8,7,5,6,4)
-       ) %>% 
-# Graph a scatter plot:
-  ggplot(aes(x, y)) +
-  geom_point() +
-  scale_x_continuous(breaks = seq(0,10,2), limits = c(0,10)) +
-  scale_y_continuous(breaks = seq(0,10,2), limits = c(0,10)) +
-  theme_classic() +
-# Draw circles around the clusters
-  ggforce::geom_mark_circle(x = 2, y = 1.8, r = .14, color = "blue") +
-  ggforce::geom_mark_circle(x = 1.9, y = 6.8, r = .14, color = "green") +
-  ggforce::geom_mark_circle(x = 7.9, y = 5.15, r = .14, color = "red")
-```
+library(patchwork)
+library(palmerpenguins)
+library(plotly)
 
-The same could be done with a 3D plot
+# For cool fonts
+library(showtext)
+font_add_google("Outfit", family = "special")
+showtext_auto()
+
+# Create a base plot
+plot_penguins <-
+  penguins %>% 
+  ggplot(aes(bill_depth_mm, bill_length_mm)) +
+  labs(x = "Bill Depth (mm)", 
+       y = "Bill Length (g)",
+       subtitle = "Sizes of penguins from 3 different species") +
+  theme_classic() +
+  theme(
+    text = element_text(family = "special"),
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(face = "italic", size = 10),
+    plot.caption = element_text(size = 14, hjust = -.01),
+    axis.title = element_text(size = 8)
+    )
+  
+# Add points and labels to the plot. 
+plot_penguins +
+  geom_point(size = 2, alpha = .7) +
+  labs(
+    title = "Can you spot the groups in the data?", 
+    caption = "Scroll down to see if you saw the correct groupings"
+    )
+
+```
 
 ```{r}
-library(rgl)
-data <- 
-  tibble(x = c(1,2,3,1,2,3,9,7,8),
-       y = c(2,1,2,6,8,7,5,6,4),
-       z = c(1,2,1,8,7,7,3,4,4),
-       color = c(rep('blue',3),rep('green', 3), rep('red', 3))
-       )
-
-plot3d(x = data$x, y = data$y, z = data$z, 
-       col = data$color, 
-       type = "s",
-       xlab = 'x', ylab = "y", zlab = "z")
-rglwidget()
-
+plot_penguins + 
+  geom_point(aes(color = species, 
+                 shape = species),
+             size = 2, 
+             alpha = .7) + 
+  labs(
+    title = "Adding color and shape makes these groups easier to spot",
+    color = "Penguin Species", 
+    shape = "Penguin Species") +
+  theme(legend.position = 'bottom')
+  
 ```
 
-While we cannot visualize past three dimensions, mathematically we can use the same clustering algorithms in more than three dimensions.
+While we cannot [easily visualize past two or three dimensions](https://www.data-to-viz.com/caveat/3d.html), mathematically we can use the same unsupervised learning tools in as many dimensions as we want. Instead of using human eyes, unsupervised learning algorithms try to find the clusters mathematically.
+
+Let's use one unsupervised learning tool to see if it can find the same 3 groups that we did. In R, we can do this with the `kmeans()` which is in base R's stats package. We will work with the same penguin data and see if the k-means algorithm can find the species groups (note: with unsupervised learning, we typically wouldn't try to spot groups that we already have labels for, like these penguin species in this toy data set):
+
+```{r}
+results <-
+  penguins %>% 
+  select(bill_length_mm, bill_depth_mm) %>% 
+  filter(!is.na(bill_length_mm), !is.na(bill_depth_mm)) %>% 
+  kmeans(centers = 3)
+
+penguins <- 
+  penguins %>% 
+  filter(!is.na(bill_length_mm), !is.na(bill_depth_mm)) %>% 
+  mutate(cluster = factor(results$cluster),
+         correct = case_when(
+           species == 'Gentoo' & cluster == 1 ~ 'correct',
+           species == 'Gentoo' & cluster != 1 ~ 'incorrect',
+           species == 'Chinstrap' & cluster == 2 ~ 'correct',
+           species == 'Chinstrap' & cluster != 2 ~ 'incorrect',
+           species == 'Adelie' & cluster == 3 ~ 'correct',
+           species == 'Adelie' & cluster != 3 ~ 'incorrect',
+           .default = NA
+         )
+         )
+
+plot_penguins + 
+  geom_point(data = penguins, aes(color = cluster, shape = correct)) + labs(
+    title = "Did the clusters find the correct groups?",
+    captions = "k-means worked well, although not perfectly.")
+
+```
 
 Under the hood, the algorithm is trying to find the number of clusters that most reduces within cluster variance. In other words, it tries to find the multidimensional distance from each data point to every other data point in its cluster.
 
-The more clusters chosen, the lower the variance, but having the number of clusters equal to the number of data points (k = n) does us no help in reducing dimensions. Ultimately, we have to choose which solution (i.e., number of clusters) to choose, and we need to balance parsimony with fit.
+The more clusters chosen, the lower the variance, but having the number of clusters equal to the number of data points (k = n) does us no help in reducing dimensions. Ultimately, we have to choose which solution (i.e., number of clusters) to choose, and we need to balance parsimony with fit. When we already know how many clusters to choose, this is not a difficult problem. But when we have no idea how many clusters are appropriate, we compare how well the different solutions fit the data.
 
-### Data Mining Hidden patterns
+-   How many clusters should I ask the model to find? Compare the fit of different solutions.
 
-This approach of learning from the data can be called **data mining**....Another way of thinking about it is **unsupervised learning**, a form of machine learning where we use a model to categorize data without having a "true" category to compare the model categorizations to. In other words, there are no "true" configurations of veterans identity that have been named and observed in the data. We are trying to uncover these unlabeled "latent" groupings in the data.
+### Clustering Military Identity Data
 
-In the real world...
+Let's see how to compare different cluster solutions with the WIS veteran identity data. 
 
-In this project....
-
-A key issue with unsupervised learning is not having a ground truth to compare the model. No matter how good it fits the data you have, it is not possible to know if clusters corresponds to real groupings.
-
-In the real world....
-
-In this project....
-
-## Key Highlights
-
-### Cluster Analysis
+First we will load some packages and set a seed number for the pseudo-random number generator. That will allow us to repeat the result. Finally, we will load the data. I've made this data set publicly available on GitHub. The code will allow you to download the data yourself and follow along.
 
 ```{r}
+library(factoextra) # to visualize cluster
+library(NbClust) # to visualize cluster fits
 
-library(factoextra)
-library(NbClust)
+set.seed(10001) # to reproduce the results
 
-set.seed(10001)
+# download the data
+```
 
-# Select WIS Data ---------------------------------------------------------
+Then we will standardize the data. Each variable used a standardized scale, but they have different ranges. It's probably not a big deal for this data, but we can standardize it anyways to be safe. 
+
+```{r}
 data_cluster_wis <- 
   data %>% 
   select(starts_with('wis') & ends_with('total') & !wis_total) %>% 
   scale()
+```
 
 
-# Determine the number of clusters ----------------------------------------
+Then we can use tools from the packages we loaded to compare different the number of clusters. 
 
+We will start with the elbow method. 
 
-# Elbow method
+```{r}
 plot_elbow <-  
 fviz_nbclust(data_cluster_wis, kmeans, method = "wss") +
     geom_vline(xintercept = 3, linetype = 2)+
     labs(subtitle = "k-Means Clustering: Elbow method suggests 3-cluster solution")
 
-ggsave(plot = plot_elbow,
-       path = here::here('output/figures'),
-       filename = 'elbow_plot.jpg'
-      )
+```
 
-# Silhouette method
+
+The silhouette method is similar to the elbow method. 
+
+```{r}
 plot_silhouette <-
   fviz_nbclust(data_cluster_wis, kmeans, method = "silhouette")+
     labs(subtitle = "k-Means Clustering: Silhouette method suggests 2-cluster solution")
+```
 
-ggsave(plot = plot_silhouette,
-       path = here::here('output/figures'),
-       filename = 'silhouette_plot.jpg'
-)
+The gap statistic.
 
-# Gap statistic
+If the gap statistic suggests 1 cluster. That isn't really a cluster now is it. Basically, this is an inability to reject the null hypothesis that the data clusters into latent groups at all. 
+
+```{r}
 plot_gap_stat <-
   fviz_nbclust(data_cluster_wis, 
                kmeans, 
@@ -144,18 +185,11 @@ plot_gap_stat <-
                method = "gap_stat", 
                nboot = 500)  +
    labs(subtitle = "k-Means Clustering: Gap statistic method")
+```
 
-ggsave(plot = plot_gap_stat,
-       path = here::here('output/figures'),
-       filename = 'gap_stat_plot.jpg'
-)
+We can try a suite of metrics, comparing a wide range of solutions. In this case, let's compare 2 to 15 groups.
 
-## Gap statistic suggests 1 cluster....which isn't really a cluster now is it
-## Basically, this is an inability to reject the null hypo that the data 
-## clusters into latent groups. 
-
-
-# -------------------------------------------------------------------------
+```{r}
 results_kmeans <- 
   NbClust(data = data_cluster_wis, 
         diss = NULL, 
@@ -167,8 +201,11 @@ results_kmeans <-
 
 results_kmeans$All.index %>% as.data.frame() %>% tibble() %>% slice(2,3)
 results_kmeans$Best.nc
+```
 
-# Limit the number of clusters to compare head-to-head 2 and 3 group solution
+Going by those results, the 2-group and 3- group solution look the best. Let's limit the number of clusters to compare head-to-head just those 2- and 3-group solutions.
+
+```{r}
 results_kmeans_limited = 
   NbClust(data = data_cluster_wis, 
             diss = NULL, 
@@ -177,14 +214,22 @@ results_kmeans_limited =
             max.nc = 4, 
             method = 'kmeans',
             index = 'alllong')
-
-
-
 ```
 
+
+
+### Validating Clusters
+
+A key issue with unsupervised learning is how to externally validate the clusters. How do we know if these classifications are real or just an artifact of the data?
+
+In supervised learning, validation is easier. You use the model to make some predictions on data it wasn't trained on. Then you calculate how accurate the predictions were. With unsupervised learning, we have no idea how accurate we are. Instead, we need to validate the categories in different ways. In this project, I used two different validation methods.
+
+First, the model should have some "predictive" validity. That is, the clusters should be able to predict other variables. For this project, veterans identity should predict how well they reintegrate into civilian society. Using the clusters as a predictor variable, I fit a linear regression model to a measure of reintegration.\
+Second, the cluster groupings should be replicable in other data sets. That is, if we collect new data, we should find similar groupings if the grouping are real. With this in mind, I collected some more data with a new survey. Then, I repeated the clustering in the new data set.
+
+If we choose the 3-cluster solution, we can inspect the groups. Let's plot the data and take a look. 
+
 ```{r}
-
-
 plot_profiles <-
   data %>% 
   mutate(wis_skills_total = wis_skills_total / 3,
@@ -247,188 +292,3 @@ ggsave(plot = plot_profiles,
        filename = paste0('output/figures/profiles-identity-', clustering, '.jpg'))
  
 ```
-
-### Validating Clusters
-
-A key issue with unsupervised learning is how to externally validate the clusters. How do we know if these classifications are real or just an artifact of the data?
-
-In supervised learning, validation is easier. You use the model to make some predictions on data it wasn't trained on. Then you calculate how accurate the predictions were. With unsupervised learning, we have no idea how accurate we are. Instead, we need to validate the categories in different ways. In this project, I used two different validation methods.
-
-First, the model should have some "predictive" validity. That is, the clusters should be able to predict other variables. For this project, veterans identity should predict how well they reintegrate into civilian society. Using the clusters as a predictor variable, I fit a linear regression model to a measure of reintegration. Here were the results:\
-
-```{r}
-
-# MCARM TOTAL --------------------------------------------------------------
-model_mcarm_1 <- data %>% lm(mcarm_total ~ cluster, .)
-model_mcarm_2 <- 
-  data %>% 
-  lm(mcarm_total ~ 
-       cluster +
-       race_white + 
-       race_black + 
-       sex_male +
-       enlisted +
-       service_era_post_911 + 
-       service_era_vietnam + 
-       service_era_persian_gulf +
-       military_exp_combat +
-       n_deploy +
-       branch_air_force +
-       branch_marines +
-       branch_navy, .)
-aov_mcarm_1 <- aov(model_mcarm_1)
-aov_mcarm_1 <- aov(model_mcarm_2)
-
-```
-
-```{r}
-
-
-bind_rows(
-model_civilians_2 %>% 
-  broom::tidy(conf.int = T, conf.level = 0.95) %>% 
-  mutate(se_robust = as.numeric(coeftest_civilians_2[,2])) %>% 
-  filter(term == 'clusterLower Identity' |
-           term == 'clusterHigher Identity') %>% 
-  mutate(outcome = 'Civilians') %>% 
-  mutate(term = if_else(term == 'clusterLower Identity',
-                        'Lower: Civilians', 
-                        'Higher: Civilians'
-  )), 
-
-
-model_help_seeking_2 %>% 
-  broom::tidy(conf.int = T, conf.level = 0.95) %>% 
-  mutate(se_robust = as.numeric(coeftest_help_seeking_2[,2])) %>% 
-  filter(term == 'clusterLower Identity' |
-           term == 'clusterHigher Identity') %>% 
-  mutate(outcome = 'Help Seeking') %>% 
-  mutate(term = if_else(term == 'clusterLower Identity',
-                        'Lower: Help Seeking', 
-                        'Higher: Help Seeking'
-  )), 
-
-
-model_purpose_2 %>% 
-  broom::tidy(conf.int = T, conf.level = 0.95) %>% 
-  mutate(se_robust = as.numeric(coeftest_purpose_2[,2])) %>% 
-  filter(term == 'clusterLower Identity' |
-           term == 'clusterHigher Identity') %>% 
-  mutate(outcome = 'Purpose') %>% 
-  mutate(term = if_else(term == 'clusterLower Identity',
-                        'Lower: Purpose', 
-                        'Higher: Purpose'
-  )), 
-
-
-
-model_regiment_2 %>% 
-  broom::tidy(conf.int = T, conf.level = 0.95) %>% 
-  mutate(se_robust = as.numeric(coeftest_regiment_2[,2])) %>% 
-  filter(term == 'clusterLower Identity' |
-           term == 'clusterHigher Identity') %>% 
-  mutate(outcome = 'Regimnetation') %>% 
-  mutate(term = if_else(term == 'clusterLower Identity',
-                        'Lower: Regimentation', 
-                        'Higher: Regimentation'
-  )), 
-
-
-model_resent_2 %>% 
-  broom::tidy(conf.int = T, conf.level = 0.95) %>% 
-  mutate(se_robust = as.numeric(coeftest_resent_2[,2])) %>% 
-  filter(term == 'clusterLower Identity' |
-           term == 'clusterHigher Identity') %>% 
-  mutate(outcome = 'Resentment') %>% 
-  mutate(term = if_else(term == 'clusterLower Identity',
-                        'Lower: Resentment', 
-                        'Higher: Resentment'
-  )) 
-
-) %>% 
-arrange(outcome) %>% 
-  ggplot(aes(x = estimate, 
-             y = term, 
-             xmin = (estimate - 2 * se_robust),
-             xmax = (estimate + 2 * se_robust),
-             color = outcome,
-             shape = outcome)) +
-  scale_color_manual(values = c('#440154', 
-                                  '#3b528b',
-                                  '#21908C',
-                                  '#5ec962',
-                                  '#C7E020')) +
-  geom_pointrange(size = 1.5, linewidth = 1.5) +
-  #geom_vline(aes(xintercept = 0), linetype = 2) +
-  theme_classic() +
-  theme(axis.text = element_text(size = 14),
-        text = element_text(size = 14)
-  ) +
-  xlab('Total') +
-  ylab('') +
-  scale_y_discrete( 
-    labels = c(
-      
-      `Lower: Resentment` = 'Lower Identity', 
-      `Higher: Resentment` = 'Higher Identity', 
-      
-      `Lower: Regimentation` = 'Lower Identity', 
-      `Higher: Regimentation` = 'Higher Identity',
-      
-      `Lower: Purpose` = 'Lower Identity', 
-      `Higher: Purpose` = 'Higher Identity', 
-      
-      `Lower: Help Seeking` = 'Lower Identity', 
-      `Higher: Help Seeking` = 'Higher Identity', 
-      
-      `Lower: Civilians` = 'Lower Identity', 
-      `Higher: Civilians` = 'Higher Identity'
-      
-    ),
-    limits = c(
-      'Lower: Resentment', 
-      'Higher: Resentment', 
-      
-      'Lower: Regimentation', 
-      'Higher: Regimentation',
-      
-      'Lower: Purpose', 
-      'Higher: Purpose', 
-      
-      'Lower: Help Seeking', 
-      'Higher: Help Seeking', 
-      
-      'Lower: Civilians', 
-      'Higher: Civilians'
-      
-    ) 
-  ) +
-  theme(legend.position = 'none')
-
-
-
-
-
-
-
-
-# Total -------------------------------------------------------------------
-
-
-model_mcarm_2 %>% 
-  broom::tidy(conf.int = T, conf.level = 0.95) %>% 
-  
-  # Add robust standard errors
-  mutate(se_robust = as.numeric(coeftest_mcarm_2[,2])) %>% 
-  filter(term == 'clusterLower Identity' |
-           term == 'clusterHigher Identity') %>% 
-  mutate(outcome = 'Rentegration') %>% 
-  mutate(term = if_else(term == 'clusterLower Identity',
-                        'Lower: Reintegration', 
-                        'Higher: Reintegration'
-  ))
-```
-
-Second, the cluster groupings should be replicable in other data sets. That is, if we collect new data, we should find similar groupings if the grouping are real. With this in mind, I collected some more data with a new survey. Then, I repeated the clustering in the new data set.
-
-\[example\]

@@ -34,3 +34,6 @@ plot3d(x = data$x, y = data$y, z = data$z,
        xlab = 'x', ylab = "y", zlab = "z")
 rglwidget()
 
+
+# Cluster algo ------------------------------------------------------------
+data
