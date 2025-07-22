@@ -10,11 +10,14 @@ categories:
 draft: false
 ---
 
--   Machine Learning
+```{r, options, include=FALSE}
+knitr::opts_chunk$set(
+  comment = '', fig.width = 6, fig.height = 6,
+  warning = FALSE, message = FALSE, cache = TRUE
+)
 
--   Unsupervised Learning
 
--   Regression analysis
+```
 
 ## More data, more problems
 
@@ -32,20 +35,28 @@ There is a third approach which is less dependent on theory and more data-driven
 
 A key issue with unsupervised learning is not having a ground truth to compare the model. No matter how good it fits the data you have, it is not possible to know if clusters corresponds to real groupings. In this project, I mitigated this issue by collecting an additional sample to see if the results would replicate.
 
-### Unsupervised Learning
+## Unsupervised Learning
 
 Clustering analysis can be used to address the "curse of dimensionality." It is one tool for "dimensional reduction," reducing the number of variables you have. Take the following 2 dimensional plot. Can you use it to spot groups in the data, reducing our two-dimensions to a 1-dimension categorical variable?
 
-```{r}
-library(tidyverse)
-library(patchwork)
-library(palmerpenguins)
-library(plotly)
+```{r cluster}
+library(tidyverse) # for a suite of useful functions
+library(palmerpenguins) # for example data
 
 # For cool fonts
 library(showtext)
 font_add_google("Outfit", family = "special")
 showtext_auto()
+
+# For a reusable graph theme
+theme_custom <-
+  theme(
+    text = element_text(family = "special"),
+    plot.title = element_text(face = "bold", size = 18),
+    plot.subtitle = element_text(face = "italic", size = 14),
+    plot.caption = element_text(size = 16, hjust = -.01),
+    axis.title = element_text(size = 10)
+    )
 
 # Create a base plot
 plot_penguins <-
@@ -55,13 +66,8 @@ plot_penguins <-
        y = "Bill Length (g)",
        subtitle = "Sizes of penguins from 3 different species") +
   theme_classic() +
-  theme(
-    text = element_text(family = "special"),
-    plot.title = element_text(face = "bold", size = 14),
-    plot.subtitle = element_text(face = "italic", size = 10),
-    plot.caption = element_text(size = 14, hjust = -.01),
-    axis.title = element_text(size = 8)
-    )
+  theme_custom
+
   
 # Add points and labels to the plot. 
 plot_penguins +
@@ -73,7 +79,7 @@ plot_penguins +
 
 ```
 
-```{r}
+```{r cluster-penguins}
 plot_penguins + 
   geom_point(aes(color = species, 
                  shape = species),
@@ -87,11 +93,11 @@ plot_penguins +
   
 ```
 
-While we cannot [easily visualize past two or three dimensions](https://www.data-to-viz.com/caveat/3d.html), mathematically we can use the same unsupervised learning tools in as many dimensions as we want. Instead of using human eyes, unsupervised learning algorithms try to find the clusters mathematically.
+While we cannot [easily visualize past two or three dimensions](https://www.data-to-viz.com/caveat/3d.html), mathematically we can use the same unsupervised learning tools in as many dimensions as we want. Instead of using human eyes, unsupervised learning algorithms use math to find the clusters.
 
 Let's use one unsupervised learning tool to see if it can find the same 3 groups that we did. In R, we can do this with the `kmeans()` which is in base R's stats package. We will work with the same penguin data and see if the k-means algorithm can find the species groups (note: with unsupervised learning, we typically wouldn't try to spot groups that we already have labels for, like these penguin species in this toy data set):
 
-```{r}
+```{r cluster-demo}
 results <-
   penguins %>% 
   select(bill_length_mm, bill_depth_mm) %>% 
@@ -109,87 +115,118 @@ penguins <-
            species == 'Chinstrap' & cluster != 2 ~ 'incorrect',
            species == 'Adelie' & cluster == 3 ~ 'correct',
            species == 'Adelie' & cluster != 3 ~ 'incorrect',
-           .default = NA
-         )
+           .default = NA)
          )
 
 plot_penguins + 
   geom_point(data = penguins, aes(color = cluster, shape = correct)) + labs(
-    title = "Did the clusters find the correct groups?",
+    title = "Did k-means clustering find the correct groups?",
     captions = "k-means worked well, although not perfectly.")
 
 ```
 
-Under the hood, the algorithm is trying to find the number of clusters that most reduces within cluster variance. In other words, it tries to find the multidimensional distance from each data point to every other data point in its cluster.
+Besides k-means, there are other unsupervised algorithms we can use. These are:
+
+1.  Hierarchical Clustering
+2.  DBSCAN
+
+-   What unsupervised learning method is best for my problem?
+
+k-means (or related "centroid-based" clustering methods) work best when:
+
+**1.** **Euclidean Distance**. For k-means to work best, the measures are related to each other in Euclidean distance. That is, the distance between two points should be in a standard n-dimension space. Just like the distance between two houses, or between your house and the moon. This would not apply to the distance between two nodes in a social network graph. In that case, the distance between nodes is not Euclidean but rather measured in degrees of Kevin Bacon separation.
+
+A consequence of the Euclidean-distance-based algorithm is that the clusters found by k-means will be spherical. The
+
+**2. Known number of clusters.** k-means is also best when you know the correct number of clusters. Most of the time, with unsupervised learning, we do not know the number of clusters.
+
+Under the hood, the algorithm is trying to group the data to minimize within cluster variance. In other words, it tries to find the multidimensional distance from each data point to every other data point in its cluster.
+
+One main issue with k-means is that it requires specifying how many clusters there are. In this case, we told k-means that there are 3 clusters, knowing that's how many species are in the data. But truly unsupervised learning would not know the appropriate number of clusters. In these cases, it may be more appropriate to use.
+
+But it is still possible to use k-means for unsupervised learning, only we need to try different numbers of clusters and then compare these solutions.
 
 The more clusters chosen, the lower the variance, but having the number of clusters equal to the number of data points (k = n) does us no help in reducing dimensions. Ultimately, we have to choose which solution (i.e., number of clusters) to choose, and we need to balance parsimony with fit. When we already know how many clusters to choose, this is not a difficult problem. But when we have no idea how many clusters are appropriate, we compare how well the different solutions fit the data.
 
--   How many clusters should I ask the model to find? Compare the fit of different solutions.
+-   How many clusters should I ask the k-means to find? Compare the fit of different solutions.
 
-### Clustering Military Identity Data
+Hierarchical clustering provides a built-in solution to learning the best number of clusters.
 
-Let's see how to compare different cluster solutions with the WIS veteran identity data. 
+DBSCAN, which stands for density-based spatial clustering of applications with noise, is best suited to data that have irregularly shaped clusters in a Euclidean space. In other words, things that are not groups shaped as spheres.
+
+## Clustering Military Identity Data
+
+Let's see how to compare different cluster solutions with the WIS veteran identity data.
 
 First we will load some packages and set a seed number for the pseudo-random number generator. That will allow us to repeat the result. Finally, we will load the data. I've made this data set publicly available on GitHub. The code will allow you to download the data yourself and follow along.
 
-```{r}
+```{r setup}
 library(factoextra) # to visualize cluster
 library(NbClust) # to visualize cluster fits
 
 set.seed(10001) # to reproduce the results
 
-# download the data
+data <- read_csv("data_main_replicate.csv") # download the data
 ```
 
-Then we will standardize the data. Each variable used a standardized scale, but they have different ranges. It's probably not a big deal for this data, but we can standardize it anyways to be safe. 
+Then we will standardize the data. Each variable used a standardized scale, but they have different ranges. It's probably not a big deal for this data, but we can standardize it anyways to be safe.
 
-```{r}
+```{r standardize}
 data_cluster_wis <- 
   data %>% 
   select(starts_with('wis') & ends_with('total') & !wis_total) %>% 
   scale()
 ```
 
+Then we can use tools from the packages we loaded to compare different the number of clusters.
 
-Then we can use tools from the packages we loaded to compare different the number of clusters. 
+We will start with the elbow method. This is a graphic technique. We look to see where there is an "elbow" in the graph -- basically, where it bends the most. 
 
-We will start with the elbow method. 
-
-```{r}
-plot_elbow <-  
+```{r elbow}
+(plot_elbow <-  
 fviz_nbclust(data_cluster_wis, kmeans, method = "wss") +
-    geom_vline(xintercept = 3, linetype = 2)+
-    labs(subtitle = "k-Means Clustering: Elbow method suggests 3-cluster solution")
+    geom_vline(xintercept = 3, linetype = 2) +
+    labs(
+      title = "The elbow method is a little ambiguous",
+      subtitle = "But 3 appears to be the elbow"
+      ) +
+  theme_custom
+)
 
 ```
 
+The silhouette method is another graphical method for finding the best fitting number of clusters. Here we are looking for the greatest value on the y-axis.
 
-The silhouette method is similar to the elbow method. 
-
-```{r}
-plot_silhouette <-
+```{r silhouette}
+(plot_silhouette <-
   fviz_nbclust(data_cluster_wis, kmeans, method = "silhouette")+
-    labs(subtitle = "k-Means Clustering: Silhouette method suggests 2-cluster solution")
+    labs(title = "The silouette methods suggests 2 clusters is best") +
+   theme_custom
+)
 ```
 
-The gap statistic.
+The gap statistic is yet another method. This compares the fit of cluster solutions to the expected fit if the data were random. 
 
-If the gap statistic suggests 1 cluster. That isn't really a cluster now is it. Basically, this is an inability to reject the null hypothesis that the data clusters into latent groups at all. 
 
-```{r}
-plot_gap_stat <-
+```{r gap}
+(plot_gap_stat <-
   fviz_nbclust(data_cluster_wis, 
                kmeans, 
                nstart = 25,  
-               print.summary = T, 
+               print.summary = TRUE, 
                method = "gap_stat", 
                nboot = 500)  +
-   labs(subtitle = "k-Means Clustering: Gap statistic method")
+   labs(title = "Gap stat doesn't find a solution",
+        subtitle = "The greatest gap stat is for 1 cluster",
+        caption = "A 1-cluster solution is basically an inability to reject the null hypothesis that the data clusters into groups at all.") +
+   theme_custom
+)
+
 ```
 
 We can try a suite of metrics, comparing a wide range of solutions. In this case, let's compare 2 to 15 groups.
 
-```{r}
+```{r compare}
 results_kmeans <- 
   NbClust(data = data_cluster_wis, 
         diss = NULL, 
@@ -199,13 +236,11 @@ results_kmeans <-
         method = 'kmeans',
         index = 'alllong')
 
-results_kmeans$All.index %>% as.data.frame() %>% tibble() %>% slice(2,3)
-results_kmeans$Best.nc
 ```
 
-Going by those results, the 2-group and 3- group solution look the best. Let's limit the number of clusters to compare head-to-head just those 2- and 3-group solutions.
+Going by those results, the 2-group and 3- group solution look the best. Let's limit the number of clusters to compare head-to-head just those 2- and 3-group solutions. Actually, we can only compare
 
-```{r}
+```{r compare-limited}
 results_kmeans_limited = 
   NbClust(data = data_cluster_wis, 
             diss = NULL, 
@@ -216,9 +251,7 @@ results_kmeans_limited =
             index = 'alllong')
 ```
 
-
-
-### Validating Clusters
+## Validating the Clusters
 
 A key issue with unsupervised learning is how to externally validate the clusters. How do we know if these classifications are real or just an artifact of the data?
 
@@ -227,9 +260,9 @@ In supervised learning, validation is easier. You use the model to make some pre
 First, the model should have some "predictive" validity. That is, the clusters should be able to predict other variables. For this project, veterans identity should predict how well they reintegrate into civilian society. Using the clusters as a predictor variable, I fit a linear regression model to a measure of reintegration.\
 Second, the cluster groupings should be replicable in other data sets. That is, if we collect new data, we should find similar groupings if the grouping are real. With this in mind, I collected some more data with a new survey. Then, I repeated the clustering in the new data set.
 
-If we choose the 3-cluster solution, we can inspect the groups. Let's plot the data and take a look. 
+If we choose the 3-cluster solution, we can inspect the groups. Let's plot the data and take a look.
 
-```{r}
+```{r plots, eval = FALSE}
 plot_profiles <-
   data %>% 
   mutate(wis_skills_total = wis_skills_total / 3,
@@ -285,10 +318,4 @@ plot_profiles <-
   ) +
   theme(axis.text = element_text(size = 11),
         text = element_text(size = 14))
-
-plot_profiles %>% print()
-
-ggsave(plot = plot_profiles,
-       filename = paste0('output/figures/profiles-identity-', clustering, '.jpg'))
- 
 ```

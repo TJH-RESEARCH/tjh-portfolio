@@ -151,12 +151,11 @@ We can detect two kinds of careless responding: longstringing and random respond
 
 #### Longstringing
 
-There are 4 kinds of straightlining to watch out for. This is a combination of 2 factors: longest string or average string; and reverse-coded or not. 
+There are 4 kinds of straightlining to watch out for. This is a combination of 2 factors: longest string or average string; and reverse-coded or not.
 
-First, there are two ways to calculate long strings, either as the longest string legnth or as the average string length. The average string is useful to detect careless responders who occasionally vary their response. The longest string is useful to catch people who do not vary their response in the slightest. 
+First, there are two ways to calculate long strings, either as the longest string legnth or as the average string length. The average string is useful to detect careless responders who occasionally vary their response. The longest string is useful to catch people who do not vary their response in the slightest.
 
-Second, longstring can be calucaled on data that has been reverse scored or that has not yet been reverse scored. The idea here is that some respondents who long string might pay attention to the valence of the question, looking for times that the wording switches from positive to negative, and varying their responses in accordance. Therefore, it might sense to calculate longstring with both reverse-scored and non-reverse scored answers. Each can be used to detect a slightly different type of careless survey responding behavior. 
-
+Second, longstring can be calucaled on data that has been reverse scored or that has not yet been reverse scored. The idea here is that some respondents who long string might pay attention to the valence of the question, looking for times that the wording switches from positive to negative, and varying their responses in accordance. Therefore, it might sense to calculate longstring with both reverse-scored and non-reverse scored answers. Each can be used to detect a slightly different type of careless survey responding behavior.
 
 ```{r}
 # Longstring
@@ -176,14 +175,13 @@ data %>% ggplot(aes(longstring)) + geom_histogram()
 data %>% ggplot(aes(longstring_avg)) + geom_histogram()
 ```
 
-
 #### Random Responding
 
-Also known as Christmas-Treeing, to respond randomly to a survey means to select each answer at random, without regard for answering truthfully. 
+Also known as Christmas-Treeing, to respond randomly to a survey means to select each answer at random, without regard for answering truthfully.
 
-While there might be a few reasons that people respond randomly to a survey, one of the main reason is probably to finish the survey quickly. Additionally, they may seek to avoid detection for their carelessness, thus opting not to use straightlining. 
+While there might be a few reasons that people respond randomly to a survey, one of the main reason is probably to finish the survey quickly. Additionally, they may seek to avoid detection for their carelessness, thus opting not to use straightlining.
 
-The tools to detect random responding are more varied than straightlining. 
+The tools to detect random responding are more varied than straightlining.
 
 ```{r}
 ## Arrange the data and calculate the metric

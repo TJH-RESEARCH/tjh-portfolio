@@ -10,7 +10,17 @@ categories:
 draft: false
 ---
 
+- Bayesian data analysis
+- Prior selection and justification
+- Prior predictive checks
+- Posterior predictions
+- Marginal effects
+
+
 ## Project Summary
+
+> This post explains a data science project I have worked on. The complete analysis code is available on [GitHub](https://github.com/TJH-RESEARCH/trauma-psychosocial-functioning). A paper detailing the analysis is currently in the works. I will present the work in progress at the 2025 VA Atlanta Joint Research Symposium.
+
 
 This projects uses advanced statistics to describe the relationship between trauma and functioning. I used data from three surveys collected over 4 years. The first asks about the relationship between PTSD and functioning. The second focuses on a different kind of trauma, moral injury. The third data set has both PTSD and moral injury. This analysis could help clinicians working with military veterans to understand how different kinds of trauma affect daily living.
 
@@ -20,25 +30,7 @@ There were several challenges to this analysis:
 2.  **The data was zero-inflated**: There were lots of 0s in the data, which is a problem for linear models. To overcome this, I fit a zero-inflated gamma regression.
 3.  **I had three similar but not identical data sets**: I used Bayesian methods to integrate the findings.
 
-The complete [analysis code is available on GitHub](https://github.com/TJH-RESEARCH/trauma-psychosocial-functioning), but below you can find the highlights.
 
-A paper detailing the analysis and its findings is currently in the works.
-
-I will present the work in progress at the 2025 VA Atlanta Joint Research Symposium.
-
-## Skills Demonstrated
-
-1.  Advanced statistics:
-
-    1.  Bayesian data analysis
-    2.  prior selection and justification
-    3.  prior predictive checks
-    4.  posterior predictions
-    5.  marginal effects
-
-2.  R programming
-
-3.  Data Visualization
 
 ## Real-World Applications
 
