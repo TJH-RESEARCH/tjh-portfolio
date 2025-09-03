@@ -32,7 +32,7 @@ During my PhD studies, I helped to found the [AMES Research Center](https://www.
 
 I wear a lot of hats. I developed our conflict management training program, training over 150 individuals in constructive conflict resolution. I also act as a project manager, data scientist, and consultant. I’ve given [23 public presentations](talks/index.qmd), published [8 articles](research/index.qmd), and written [3 reports for state agencies.](research/index.qmd)\
 \
-I’ve had a nonlinear [career path.](cv/index.qmd) Before my PhD, I worked a few years in HR and Business Development. But I developed a temporary disability, overcame it, then took time to travel, volunteer, intern, and go to grad school. I’ve been driven by learning and growing into a person who can have an impact.\
+I’ve had a nonlinear [career path.](cv/index.qmd) Before my PhD, I worked a few years in HR and Business Development. But I developed a temporary disability, overcame it, then took time to travel, volunteer, intern, and go to grad school. I’ve been driven by learning and growing into a person who can have a positive impact on the health and well-being of communities.\
 
 My work has been published in Psychology journals such as *Aggression and Violent Behavior*, *Traumatology,* and *Military Psychology,* as well as community-focused journals like the *Journal of Community Engagement and Scholarship*.
 :::
