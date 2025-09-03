@@ -31,7 +31,11 @@ include-back-link: false
 toc-location: right
 ---
 
-I do applied research in workplaces and communities. My research focuses on understanding factors that impact people's mental health. I draw on organizational psychology, conflict resolution, international affairs, sociology, and other fields.
+I do applied psychological research in communities and workplaces.
+
+My research is dedicated to advancing the psychological science and practice of conflict resolution to address interconnected crises facing American communities in the 21st century.
+
+My work has been published in Psychology journals such as *Aggression and Violent Behavior*, *Traumatology,* and *Military Psychology,* as well as community-focused journals like the *Journal of Community Engagement and Scholarship*.
 
 Currently, I am a Senior Research Associate for the [Center for the Advancement of Military and Emergency Services Research (AMES)](https://www.kennesaw.edu/research/centers-facilities/ames-center/index.php) at [Kennesaw State University](kennesaw.edu).
 

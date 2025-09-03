@@ -241,9 +241,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#dirty-data-careless-survey-responding.-examples-using-r-visualizations" id="toc-dirty-data-careless-survey-responding.-examples-using-r-visualizations" class="nav-link" data-scroll-target="#dirty-data-careless-survey-responding.-examples-using-r-visualizations">Dirty Data: Careless survey responding. Examples using R visualizations</a></li>
   <li><a href="#cutpoints" id="toc-cutpoints" class="nav-link" data-scroll-target="#cutpoints">Cutpoints</a></li>
-  <li><a href="#developing-an-order-of-operations" id="toc-developing-an-order-of-operations" class="nav-link" data-scroll-target="#developing-an-order-of-operations">Developing an Order of Operations</a></li>
+  <li><a href="#order-of-operations-putting-it-all-together" id="toc-order-of-operations-putting-it-all-together" class="nav-link" data-scroll-target="#order-of-operations-putting-it-all-together">Order of Operations: Putting it all together</a></li>
   </ul></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul>
 </nav>
     </div>
@@ -366,7 +365,7 @@ lgl   (7): RecipientLastName, RecipientFirstName, RecipientEmail, ExternalRe...
 2              1   186  0.93</code></pre>
 </div>
 </div>
-<p>14 of the 200 people who said they were veterans did not answer a simple question testing their basic military knowledge. For an online survey, that’s grounds for screening your response. Let’s go ahead and filter based on the screener questions and validity checks.:</p>
+<p>14 of the 200 people who said they were veterans did not answer a simple question testing their basic military knowledge. For an online survey, that’s grounds for screening your response. Let’s go ahead and filter based on the screening questions and validity checks.:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span> </span>
@@ -407,10 +406,10 @@ lgl   (7): RecipientLastName, RecipientFirstName, RecipientEmail, ExternalRe...
 <p>A score of greater than or equal to 75 means the response is likely a duplicate. https://www.qualtrics.com/support/survey-platform/survey-module/survey-checker/fraud-detection/#RelevantID )</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Q_RecaptchaScore &gt;= .5</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Q_RelevantIDFraudScore &lt; 30</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Q_RelevantIDDuplicateScore &lt; 75</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(Q_RecaptchaScore)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(Q_RecaptchaScore)) <span class="sc">+</span> </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span> </span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Bots"</span>, <span class="at">x =</span> <span class="st">"ReCAPTCHA Score"</span>, <span class="at">y =</span> <span class="st">"n"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
@@ -421,69 +420,13 @@ lgl   (7): RecipientLastName, RecipientFirstName, RecipientEmail, ExternalRe...
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(Q_RelevantIDFraudScore)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(Q_RelevantIDDuplicateScore)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-3-3.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>But a big problem with surveys is data quality. People skip answers, they lie, they straight-line, they respond in a random pattern, they take the wrong version of surveys. Depending how the data was collected, some of these problems can be worse than others.</p>
-<p>In this case, we recruited the survey participants online. You know how easy it is to lie online. Some people probably took the survey who were not supposed to. We used a screener question to automatically kick these people out, but some may have lied. In this case, we asked two questions.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Psychometric Synonyms/Antonyms ------------------------------------------------</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="do">## set the cutoffs</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>cutoff_psychsyn <span class="ot">&lt;-</span> <span class="dv">0</span> <span class="co"># set the cutoff to screen results for psychometric synonyms</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>cutoff_psychant <span class="ot">&lt;-</span> <span class="dv">0</span> <span class="co"># set the cutoff to screen results for psychometric antonyms</span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="do">## calculate the metric  </span></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> </span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span> </span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(mios_1<span class="sc">:</span>cos_16) <span class="sc">%&gt;%</span>  <span class="co"># select only the scale items</span></span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">psychsyn =</span> careless<span class="sc">::</span><span class="fu">psychsyn</span>(., <span class="at">critval =</span> <span class="fl">0.60</span>), <span class="co"># calculate the psychometric synonyms using a critical value of r = .60</span></span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">psychant =</span> careless<span class="sc">::</span><span class="fu">psychant</span>(., <span class="at">critval =</span> <span class="sc">-</span><span class="fl">0.60</span>) <span class="co"># calculate the psychometric antonyms using a critical value of r = -.60</span></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_cols</span>(data) <span class="co"># add the psychometrics synonym/antonym scores to the data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: There were 2 warnings in `transmute()`.
-The first warning was:
-ℹ In argument: `psychsyn = careless::psychsyn(., critval = 0.6)`.
-Caused by warning in `stats::cor()`:
-! the standard deviation is zero
-ℹ Run `dplyr::last_dplyr_warnings()` to see the 1 remaining warning.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Longstring</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate longstring and average string without reverse scoring</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span> </span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(biis_1<span class="sc">:</span>cos_16) <span class="sc">%&gt;%</span>         <span class="co"># select only the scale items after PCL and MIOS</span></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">longstring =</span> careless<span class="sc">::</span><span class="fu">longstring</span>(.),</span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">longstring_avg =</span> careless<span class="sc">::</span><span class="fu">longstring</span>(., <span class="at">avg =</span> <span class="cn">TRUE</span>)[,<span class="dv">2</span>]</span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_cols</span>(data)</span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="do">## Plot the long strings. Without the previous removals, there are 3 outliers for longstring (&gt;15) and one for average string (&gt;5)</span></span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(longstring)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Q_RelevantIDDuplicateScore &lt; 75</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(Q_RelevantIDFraudScore)) <span class="sc">+</span> </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Frauds"</span>, <span class="at">x =</span> <span class="st">"Fraud Score"</span>, <span class="at">y =</span> <span class="st">"n"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
@@ -494,102 +437,154 @@ Caused by warning in `stats::cor()`:
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(longstring_avg)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Q_RelevantIDFraudScore &lt; 30</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(Q_RelevantIDDuplicateScore)) <span class="sc">+</span> </span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span> </span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Duplicates"</span>, <span class="at">x =</span> <span class="st">"Duplicate Score"</span>, <span class="at">y =</span> <span class="st">"n"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-4-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Remove the longstring/average string outliers</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> </span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span> </span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(longstring <span class="sc">&lt;</span> <span class="dv">15</span>,</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>         longstring_avg <span class="sc">&lt;</span> <span class="dv">5</span>)</span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Arrange the data and calculate the metric</span></span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
-<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span> </span>
-<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(mios_1<span class="sc">:</span>cos_16) <span class="sc">%&gt;%</span>         <span class="co"># select only the scale items</span></span>
-<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>mios_9) <span class="sc">%&gt;%</span>              <span class="co"># issue with original did not include all 14 items</span></span>
-<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">starts_with</span>(<span class="st">'bipf'</span>)) <span class="sc">%&gt;%</span>  <span class="co"># Drop the inventory</span></span>
-<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
-<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>         <span class="co"># MIOS Shame</span></span>
-<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>         mios_1, </span>
-<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>         mios_3, </span>
-<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a>         mios_7, </span>
-<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a>         mios_8, </span>
-<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a>         mios_12, </span>
-<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a>         mios_13, </span>
-<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a>         mios_14,</span>
-<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a>         </span>
-<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a>         <span class="co"># MIOS Trust</span></span>
-<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a>         mios_2,</span>
-<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a>         mios_4,</span>
-<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a>         mios_5,</span>
-<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a>         mios_6,</span>
-<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a>         <span class="co">#mios_9,</span></span>
-<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a>         mios_10,</span>
-<span id="cb29-32"><a href="#cb29-32" aria-hidden="true" tabindex="-1"></a>         mios_11,</span>
-<span id="cb29-33"><a href="#cb29-33" aria-hidden="true" tabindex="-1"></a>         </span>
-<span id="cb29-34"><a href="#cb29-34" aria-hidden="true" tabindex="-1"></a>         <span class="co"># DRDI Dysfunction</span></span>
-<span id="cb29-35"><a href="#cb29-35" aria-hidden="true" tabindex="-1"></a>         drdi_2,</span>
-<span id="cb29-36"><a href="#cb29-36" aria-hidden="true" tabindex="-1"></a>         drdi_4,</span>
-<span id="cb29-37"><a href="#cb29-37" aria-hidden="true" tabindex="-1"></a>         drdi_5,</span>
-<span id="cb29-38"><a href="#cb29-38" aria-hidden="true" tabindex="-1"></a>         drdi_8,</span>
-<span id="cb29-39"><a href="#cb29-39" aria-hidden="true" tabindex="-1"></a>         drdi_10,</span>
-<span id="cb29-40"><a href="#cb29-40" aria-hidden="true" tabindex="-1"></a>         drdi_13,</span>
-<span id="cb29-41"><a href="#cb29-41" aria-hidden="true" tabindex="-1"></a>         drdi_14,</span>
-<span id="cb29-42"><a href="#cb29-42" aria-hidden="true" tabindex="-1"></a>         </span>
-<span id="cb29-43"><a href="#cb29-43" aria-hidden="true" tabindex="-1"></a>         <span class="co"># DRDI recovery</span></span>
-<span id="cb29-44"><a href="#cb29-44" aria-hidden="true" tabindex="-1"></a>         drdi_1,</span>
-<span id="cb29-45"><a href="#cb29-45" aria-hidden="true" tabindex="-1"></a>         drdi_3,</span>
-<span id="cb29-46"><a href="#cb29-46" aria-hidden="true" tabindex="-1"></a>         drdi_6,</span>
-<span id="cb29-47"><a href="#cb29-47" aria-hidden="true" tabindex="-1"></a>         drdi_7,</span>
-<span id="cb29-48"><a href="#cb29-48" aria-hidden="true" tabindex="-1"></a>         drdi_9,</span>
-<span id="cb29-49"><a href="#cb29-49" aria-hidden="true" tabindex="-1"></a>         drdi_11,</span>
-<span id="cb29-50"><a href="#cb29-50" aria-hidden="true" tabindex="-1"></a>         drdi_12,</span>
-<span id="cb29-51"><a href="#cb29-51" aria-hidden="true" tabindex="-1"></a>         <span class="fu">everything</span>()</span>
-<span id="cb29-52"><a href="#cb29-52" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb29-53"><a href="#cb29-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(<span class="at">evenodd =</span> </span>
-<span id="cb29-54"><a href="#cb29-54" aria-hidden="true" tabindex="-1"></a>              careless<span class="sc">::</span><span class="fu">evenodd</span>(<span class="at">x =</span>., </span>
-<span id="cb29-55"><a href="#cb29-55" aria-hidden="true" tabindex="-1"></a>                                <span class="co"># nItems in each subscale in order:</span></span>
-<span id="cb29-56"><a href="#cb29-56" aria-hidden="true" tabindex="-1"></a>                                <span class="at">factors =</span> <span class="fu">c</span>(</span>
-<span id="cb29-57"><a href="#cb29-57" aria-hidden="true" tabindex="-1"></a>                                  </span>
-<span id="cb29-58"><a href="#cb29-58" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">7</span>,  <span class="co"># MIOS Shame</span></span>
-<span id="cb29-59"><a href="#cb29-59" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">6</span>,  <span class="co"># MIOS Trust</span></span>
-<span id="cb29-60"><a href="#cb29-60" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">7</span>,  <span class="co"># DRDI Dysfunction</span></span>
-<span id="cb29-61"><a href="#cb29-61" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">7</span>,  <span class="co"># DRDI Recovery</span></span>
-<span id="cb29-62"><a href="#cb29-62" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">20</span>, <span class="co"># PCL</span></span>
-<span id="cb29-63"><a href="#cb29-63" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">10</span>, <span class="co"># BIIS Harmony</span></span>
-<span id="cb29-64"><a href="#cb29-64" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">7</span>,  <span class="co"># BIIS Blended</span></span>
-<span id="cb29-65"><a href="#cb29-65" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">6</span>,  <span class="co"># MCARM Purpose </span></span>
-<span id="cb29-66"><a href="#cb29-66" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">4</span>,  <span class="co"># MCARM Help</span></span>
-<span id="cb29-67"><a href="#cb29-67" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">3</span>,  <span class="co"># MCARM Civilians</span></span>
-<span id="cb29-68"><a href="#cb29-68" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">3</span>,  <span class="co"># MCARM Resentment</span></span>
-<span id="cb29-69"><a href="#cb29-69" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">5</span>,  <span class="co"># MCARM Regimentation</span></span>
-<span id="cb29-70"><a href="#cb29-70" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">7</span>,  <span class="co"># WIS Private Regard</span></span>
-<span id="cb29-71"><a href="#cb29-71" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">7</span>,  <span class="co"># WIS Interdependent</span></span>
-<span id="cb29-72"><a href="#cb29-72" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">3</span>,  <span class="co"># WIS Connection</span></span>
-<span id="cb29-73"><a href="#cb29-73" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">3</span>,  <span class="co"># WIS Family</span></span>
-<span id="cb29-74"><a href="#cb29-74" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">4</span>,  <span class="co"># WIS Centrality</span></span>
-<span id="cb29-75"><a href="#cb29-75" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">4</span>,  <span class="co"># WIS Public Regard</span></span>
-<span id="cb29-76"><a href="#cb29-76" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">3</span>,  <span class="co"># WIS Skills</span></span>
-<span id="cb29-77"><a href="#cb29-77" aria-hidden="true" tabindex="-1"></a>                                </span>
-<span id="cb29-78"><a href="#cb29-78" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">12</span>,  <span class="co"># SCC </span></span>
-<span id="cb29-79"><a href="#cb29-79" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">6</span>,  <span class="co"># MPSS</span></span>
-<span id="cb29-80"><a href="#cb29-80" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">8</span>,  <span class="co"># SSS</span></span>
-<span id="cb29-81"><a href="#cb29-81" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">8</span>,  <span class="co"># COS</span></span>
-<span id="cb29-82"><a href="#cb29-82" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">8</span>)  <span class="co"># COS</span></span>
-<span id="cb29-83"><a href="#cb29-83" aria-hidden="true" tabindex="-1"></a>                                </span>
-<span id="cb29-84"><a href="#cb29-84" aria-hidden="true" tabindex="-1"></a>              )</span>
-<span id="cb29-85"><a href="#cb29-85" aria-hidden="true" tabindex="-1"></a>            ) <span class="sc">%&gt;%</span> <span class="fu">bind_cols</span>(data) <span class="co"># Add the results back to the original data. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="dirty-data-careless-survey-responding.-examples-using-r-visualizations" class="level3">
+<h3 class="anchored" data-anchor-id="dirty-data-careless-survey-responding.-examples-using-r-visualizations">Dirty Data: Careless survey responding. Examples using R visualizations</h3>
+<p>Even once you screen out the cheaters and bots, survey data can still have problems. People skip answers, they lie, they straight-line, they respond in a random pattern, they take the wrong version of surveys. Depending how the data was collected, some of these problems can be worse than others.</p>
+<p>We can detect two kinds of careless responding: longstringing and random responding.</p>
+<section id="longstringing" class="level4">
+<h4 class="anchored" data-anchor-id="longstringing">Longstringing</h4>
+<p>There are 4 kinds of straightlining to watch out for. This is a combination of 2 factors: longest string or average string; and reverse-coded or not.</p>
+<p>First, there are two ways to calculate long strings, either as the longest string legnth or as the average string length. The average string is useful to detect careless responders who occasionally vary their response. The longest string is useful to catch people who do not vary their response in the slightest.</p>
+<p>Second, longstring can be calucaled on data that has been reverse scored or that has not yet been reverse scored. The idea here is that some respondents who long string might pay attention to the valence of the question, looking for times that the wording switches from positive to negative, and varying their responses in accordance. Therefore, it might sense to calculate longstring with both reverse-scored and non-reverse scored answers. Each can be used to detect a slightly different type of careless survey responding behavior.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Longstring</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate longstring and average string without reverse scoring</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span> </span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(biis_1<span class="sc">:</span>cos_16) <span class="sc">%&gt;%</span>         <span class="co"># select only the scale items after PCL and MIOS</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">longstring =</span> careless<span class="sc">::</span><span class="fu">longstring</span>(.),</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">longstring_avg =</span> careless<span class="sc">::</span><span class="fu">longstring</span>(., <span class="at">avg =</span> <span class="cn">TRUE</span>)[,<span class="dv">2</span>]</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_cols</span>(data)</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="do">## Plot the long strings. Without the previous removals, there are 3 outliers for longstring (&gt;15) and one for average string (&gt;5)</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(longstring)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(longstring_avg)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="random-responding" class="level4">
+<h4 class="anchored" data-anchor-id="random-responding">Random Responding</h4>
+<p>Also known as Christmas-Treeing, to respond randomly to a survey means to select each answer at random, without regard for answering truthfully.</p>
+<p>While there might be a few reasons that people respond randomly to a survey, one of the main reason is probably to finish the survey quickly. Additionally, they may seek to avoid detection for their carelessness, thus opting not to use straightlining.</p>
+<p>The tools to detect random responding are more varied than straightlining.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Arrange the data and calculate the metric</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span> </span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(mios_1<span class="sc">:</span>cos_16) <span class="sc">%&gt;%</span>         <span class="co"># select only the scale items</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>mios_9) <span class="sc">%&gt;%</span>              <span class="co"># issue with original did not include all 14 items</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">starts_with</span>(<span class="st">'bipf'</span>)) <span class="sc">%&gt;%</span>  <span class="co"># Drop the inventory</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>         <span class="co"># MIOS Shame</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>         mios_1, </span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>         mios_3, </span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>         mios_7, </span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>         mios_8, </span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>         mios_12, </span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>         mios_13, </span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>         mios_14,</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>         </span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>         <span class="co"># MIOS Trust</span></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>         mios_2,</span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>         mios_4,</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>         mios_5,</span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>         mios_6,</span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>         <span class="co">#mios_9,</span></span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a>         mios_10,</span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a>         mios_11,</span>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a>         </span>
+<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a>         <span class="co"># DRDI Dysfunction</span></span>
+<span id="cb27-27"><a href="#cb27-27" aria-hidden="true" tabindex="-1"></a>         drdi_2,</span>
+<span id="cb27-28"><a href="#cb27-28" aria-hidden="true" tabindex="-1"></a>         drdi_4,</span>
+<span id="cb27-29"><a href="#cb27-29" aria-hidden="true" tabindex="-1"></a>         drdi_5,</span>
+<span id="cb27-30"><a href="#cb27-30" aria-hidden="true" tabindex="-1"></a>         drdi_8,</span>
+<span id="cb27-31"><a href="#cb27-31" aria-hidden="true" tabindex="-1"></a>         drdi_10,</span>
+<span id="cb27-32"><a href="#cb27-32" aria-hidden="true" tabindex="-1"></a>         drdi_13,</span>
+<span id="cb27-33"><a href="#cb27-33" aria-hidden="true" tabindex="-1"></a>         drdi_14,</span>
+<span id="cb27-34"><a href="#cb27-34" aria-hidden="true" tabindex="-1"></a>         </span>
+<span id="cb27-35"><a href="#cb27-35" aria-hidden="true" tabindex="-1"></a>         <span class="co"># DRDI recovery</span></span>
+<span id="cb27-36"><a href="#cb27-36" aria-hidden="true" tabindex="-1"></a>         drdi_1,</span>
+<span id="cb27-37"><a href="#cb27-37" aria-hidden="true" tabindex="-1"></a>         drdi_3,</span>
+<span id="cb27-38"><a href="#cb27-38" aria-hidden="true" tabindex="-1"></a>         drdi_6,</span>
+<span id="cb27-39"><a href="#cb27-39" aria-hidden="true" tabindex="-1"></a>         drdi_7,</span>
+<span id="cb27-40"><a href="#cb27-40" aria-hidden="true" tabindex="-1"></a>         drdi_9,</span>
+<span id="cb27-41"><a href="#cb27-41" aria-hidden="true" tabindex="-1"></a>         drdi_11,</span>
+<span id="cb27-42"><a href="#cb27-42" aria-hidden="true" tabindex="-1"></a>         drdi_12,</span>
+<span id="cb27-43"><a href="#cb27-43" aria-hidden="true" tabindex="-1"></a>         <span class="fu">everything</span>()</span>
+<span id="cb27-44"><a href="#cb27-44" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb27-45"><a href="#cb27-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(<span class="at">evenodd =</span> </span>
+<span id="cb27-46"><a href="#cb27-46" aria-hidden="true" tabindex="-1"></a>              careless<span class="sc">::</span><span class="fu">evenodd</span>(<span class="at">x =</span>., </span>
+<span id="cb27-47"><a href="#cb27-47" aria-hidden="true" tabindex="-1"></a>                                <span class="co"># nItems in each subscale in order:</span></span>
+<span id="cb27-48"><a href="#cb27-48" aria-hidden="true" tabindex="-1"></a>                                <span class="at">factors =</span> <span class="fu">c</span>(</span>
+<span id="cb27-49"><a href="#cb27-49" aria-hidden="true" tabindex="-1"></a>                                  </span>
+<span id="cb27-50"><a href="#cb27-50" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">7</span>,  <span class="co"># MIOS Shame</span></span>
+<span id="cb27-51"><a href="#cb27-51" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">6</span>,  <span class="co"># MIOS Trust</span></span>
+<span id="cb27-52"><a href="#cb27-52" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">7</span>,  <span class="co"># DRDI Dysfunction</span></span>
+<span id="cb27-53"><a href="#cb27-53" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">7</span>,  <span class="co"># DRDI Recovery</span></span>
+<span id="cb27-54"><a href="#cb27-54" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">20</span>, <span class="co"># PCL</span></span>
+<span id="cb27-55"><a href="#cb27-55" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">10</span>, <span class="co"># BIIS Harmony</span></span>
+<span id="cb27-56"><a href="#cb27-56" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">7</span>,  <span class="co"># BIIS Blended</span></span>
+<span id="cb27-57"><a href="#cb27-57" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">6</span>,  <span class="co"># MCARM Purpose </span></span>
+<span id="cb27-58"><a href="#cb27-58" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">4</span>,  <span class="co"># MCARM Help</span></span>
+<span id="cb27-59"><a href="#cb27-59" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">3</span>,  <span class="co"># MCARM Civilians</span></span>
+<span id="cb27-60"><a href="#cb27-60" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">3</span>,  <span class="co"># MCARM Resentment</span></span>
+<span id="cb27-61"><a href="#cb27-61" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">5</span>,  <span class="co"># MCARM Regimentation</span></span>
+<span id="cb27-62"><a href="#cb27-62" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">7</span>,  <span class="co"># WIS Private Regard</span></span>
+<span id="cb27-63"><a href="#cb27-63" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">7</span>,  <span class="co"># WIS Interdependent</span></span>
+<span id="cb27-64"><a href="#cb27-64" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">3</span>,  <span class="co"># WIS Connection</span></span>
+<span id="cb27-65"><a href="#cb27-65" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">3</span>,  <span class="co"># WIS Family</span></span>
+<span id="cb27-66"><a href="#cb27-66" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">4</span>,  <span class="co"># WIS Centrality</span></span>
+<span id="cb27-67"><a href="#cb27-67" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">4</span>,  <span class="co"># WIS Public Regard</span></span>
+<span id="cb27-68"><a href="#cb27-68" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">3</span>,  <span class="co"># WIS Skills</span></span>
+<span id="cb27-69"><a href="#cb27-69" aria-hidden="true" tabindex="-1"></a>                                </span>
+<span id="cb27-70"><a href="#cb27-70" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">12</span>,  <span class="co"># SCC </span></span>
+<span id="cb27-71"><a href="#cb27-71" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">6</span>,  <span class="co"># MPSS</span></span>
+<span id="cb27-72"><a href="#cb27-72" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">8</span>,  <span class="co"># SSS</span></span>
+<span id="cb27-73"><a href="#cb27-73" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">8</span>,  <span class="co"># COS</span></span>
+<span id="cb27-74"><a href="#cb27-74" aria-hidden="true" tabindex="-1"></a>                                  <span class="dv">8</span>)  <span class="co"># COS</span></span>
+<span id="cb27-75"><a href="#cb27-75" aria-hidden="true" tabindex="-1"></a>                                </span>
+<span id="cb27-76"><a href="#cb27-76" aria-hidden="true" tabindex="-1"></a>              )</span>
+<span id="cb27-77"><a href="#cb27-77" aria-hidden="true" tabindex="-1"></a>            ) <span class="sc">%&gt;%</span> <span class="fu">bind_cols</span>(data) <span class="co"># Add the results back to the original data. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: There was 1 warning in `transmute()`.
 ℹ In argument: `evenodd = careless::evenodd(...)`.
@@ -600,33 +595,79 @@ Caused by warning in `careless::evenodd()`:
           you have previously written code to cut score based on the output of
           this function, you should revise that code accordingly.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Plot the even-odd correlation. The outliers are around -.50, but that is a fairly strong correlation, which indicates careful responding. I wont remove any based on this. </span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(evenodd)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Plot the even-odd correlation. The outliers are around -.50, but that is a fairly strong correlation, which indicates careful responding. I wont remove any based on this. </span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(evenodd)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-4-3.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<section id="dirty-data-careless-survey-responding.-examples-using-r-visualizations" class="level3">
-<h3 class="anchored" data-anchor-id="dirty-data-careless-survey-responding.-examples-using-r-visualizations">Dirty Data: Careless survey responding. Examples using R visualizations</h3>
+</section>
 </section>
 <section id="cutpoints" class="level3">
 <h3 class="anchored" data-anchor-id="cutpoints">Cutpoints</h3>
+<p>Data science is full of decisions. Some people don’t want you to know that. They want you think that data is objective. That data speaks for itself. That the numbers don’t lie.</p>
+<p>It’s true that data can be used to make more objective decisions, but that doesn’t mean a whole lot of (potentially subjective) decisions have to be made just to analyze the data in the first place.</p>
+<p>When it comes to screening and cleaning survey data, the biggest decision is the cutpoint to use. That is, we can calculate longstring metrics and even-odd correlation, but at what value of these measures do we determine a response is bad enough to throw it out?</p>
+<p>The truth is, we do not know for sure. These are “unsupervised” models: we do not have a variable that tells us if they are truly a careful responder or not. Still, we have to make a decision, and we want it to be reasonable and well justified.</p>
+<p>My approach was to adopt cutpoints that were hard to dispute. Take for example psychometric synonyms and antonyms. Let’s visualize these scores&gt;:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Psychometric Synonyms/Antonyms ------------------------------------------------</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="do">## set the cutoffs</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>cutoff_psychsyn <span class="ot">&lt;-</span> <span class="dv">0</span> <span class="co"># set the cutoff to screen results for psychometric synonyms</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>cutoff_psychant <span class="ot">&lt;-</span> <span class="dv">0</span> <span class="co"># set the cutoff to screen results for psychometric antonyms</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="do">## calculate the metric  </span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> </span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span> </span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(mios_1<span class="sc">:</span>cos_16) <span class="sc">%&gt;%</span>  <span class="co"># select only the scale items</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">psychsyn =</span> careless<span class="sc">::</span><span class="fu">psychsyn</span>(., <span class="at">critval =</span> <span class="fl">0.60</span>), <span class="co"># calculate the psychometric synonyms using a critical value of r = .60</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">psychant =</span> careless<span class="sc">::</span><span class="fu">psychant</span>(., <span class="at">critval =</span> <span class="sc">-</span><span class="fl">0.60</span>) <span class="co"># calculate the psychometric antonyms using a critical value of r = -.60</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_cols</span>(data) <span class="co"># add the psychometrics synonym/antonym scores to the data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: There were 2 warnings in `transmute()`.
+The first warning was:
+ℹ In argument: `psychsyn = careless::psychsyn(., critval = 0.6)`.
+Caused by warning in `stats::cor()`:
+! the standard deviation is zero
+ℹ Run `dplyr::last_dplyr_warnings()` to see the 1 remaining warning.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(psychsyn, psychant) <span class="sc">%&gt;%</span> </span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="fu">everything</span>()) <span class="sc">%&gt;%</span> </span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(value, <span class="at">fill =</span> name)) <span class="sc">+</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="developing-an-order-of-operations" class="level3">
-<h3 class="anchored" data-anchor-id="developing-an-order-of-operations">Developing an Order of Operations</h3>
-</section>
-</section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<section id="order-of-operations-putting-it-all-together" class="level3">
+<h3 class="anchored" data-anchor-id="order-of-operations-putting-it-all-together">Order of Operations: Putting it all together</h3>
+<p>Besides setting cutpoints, a second major decision to make is how to combine different screening tools.</p>
+<p>Curran advises using a “many small hurdles” approach. By that, he suggests using lots of if different tools, e.g., longstring, even-odd, psychometric synonyms/antonyms – but being lenient with the cutoff. They idea is that a lenient cutoff will only remove the responses that are most likely to be bad. In more technical terms, the small hurdles approach is about minimizing false negatives (data we throw away but shouldn’t have). If we would make the hurdles more stringent, then we are likely to catch more bad data at the expense of throwing out good data.</p>
+<p>While the small hurdles approach makes sense, there is still little guidance about how to implement it. For example, should longstringers be removed first or last? I ask because the order of operations matters. If you remove respondents for longstringing, then calculate even-odd correlation, then the even-odd metric will be different that if the longstringers were not removed. This is especially a problem when the metrics makes use of the entire sample, such as when calculating psychometric synynonyms and antonyms. It is also a problem when using relative criteria to remove responmses. For example, by removing anyone with a longstring score 2 standard deviations above the mean.</p>
+<p>In the end, I had to make a decision and do something that was reasonable, even if there was no precedent.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

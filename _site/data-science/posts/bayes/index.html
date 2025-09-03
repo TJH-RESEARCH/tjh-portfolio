@@ -201,7 +201,6 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#project-summary" id="toc-project-summary" class="nav-link active" data-scroll-target="#project-summary">Project Summary</a></li>
-  <li><a href="#skills-demonstrated" id="toc-skills-demonstrated" class="nav-link" data-scroll-target="#skills-demonstrated">Skills Demonstrated</a></li>
   <li><a href="#real-world-applications" id="toc-real-world-applications" class="nav-link" data-scroll-target="#real-world-applications">Real-World Applications</a></li>
   <li><a href="#key-highlights" id="toc-key-highlights" class="nav-link" data-scroll-target="#key-highlights">Key Highlights</a>
   <ul class="collapse">
@@ -219,32 +218,24 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<ul>
+<li>Bayesian data analysis</li>
+<li>Prior selection and justification</li>
+<li>Prior predictive checks</li>
+<li>Posterior predictions</li>
+<li>Marginal effects</li>
+</ul>
 <section id="project-summary" class="level2">
 <h2 class="anchored" data-anchor-id="project-summary">Project Summary</h2>
+<blockquote class="blockquote">
+<p>This post explains a data science project I have worked on. The complete analysis code is available on <a href="https://github.com/TJH-RESEARCH/trauma-psychosocial-functioning">GitHub</a>. A paper detailing the analysis is currently in the works. I will present the work in progress at the 2025 VA Atlanta Joint Research Symposium.</p>
+</blockquote>
 <p>This projects uses advanced statistics to describe the relationship between trauma and functioning. I used data from three surveys collected over 4 years. The first asks about the relationship between PTSD and functioning. The second focuses on a different kind of trauma, moral injury. The third data set has both PTSD and moral injury. This analysis could help clinicians working with military veterans to understand how different kinds of trauma affect daily living.</p>
 <p>There were several challenges to this analysis:</p>
 <ol type="1">
 <li><strong>The data was messy</strong>: Answers were missing and some responses were straight-lined or Christmas-treed. All three data sets required cleaning and screening. See my other portfolio post to learn how I tackled this challenge.</li>
 <li><strong>The data was zero-inflated</strong>: There were lots of 0s in the data, which is a problem for linear models. To overcome this, I fit a zero-inflated gamma regression.</li>
 <li><strong>I had three similar but not identical data sets</strong>: I used Bayesian methods to integrate the findings.</li>
-</ol>
-<p>The complete <a href="https://github.com/TJH-RESEARCH/trauma-psychosocial-functioning">analysis code is available on GitHub</a>, but below you can find the highlights.</p>
-<p>A paper detailing the analysis and its findings is currently in the works.</p>
-<p>I will present the work in progress at the 2025 VA Atlanta Joint Research Symposium.</p>
-</section>
-<section id="skills-demonstrated" class="level2">
-<h2 class="anchored" data-anchor-id="skills-demonstrated">Skills Demonstrated</h2>
-<ol type="1">
-<li><p>Advanced statistics:</p>
-<ol type="1">
-<li>Bayesian data analysis</li>
-<li>prior selection and justification</li>
-<li>prior predictive checks</li>
-<li>posterior predictions</li>
-<li>marginal effects</li>
-</ol></li>
-<li><p>R programming</p></li>
-<li><p>Data Visualization</p></li>
 </ol>
 </section>
 <section id="real-world-applications" class="level2">

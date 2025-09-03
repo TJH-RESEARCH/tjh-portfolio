@@ -93,7 +93,7 @@ The .gitignore file will tell git not to track certain kinds of files. We'll use
 
 The license will tell other people what they can do with your project. Research the optional licenses with a quick search, and pick one that suits your needs.
 
-Finally, we will add a ReadMe file. It will say in plain langauge how the project works and why.
+Finally, we will add a ReadMe file. It will say in plain languge how the project works and why.
 
 ``` md
 # War

@@ -12,22 +12,56 @@ draft: false
 
 ```{r, options, include=FALSE}
 knitr::opts_chunk$set(
-  comment = '', fig.width = 6, fig.height = 6,
-  warning = FALSE, message = FALSE, cache = TRUE
+  comment = '', 
+  fig.width = 6, 
+  fig.height = 6,
+  warning = FALSE, 
+  message = FALSE, 
+  cache = TRUE
 )
 
 
 ```
 
+> This post explains a data science project I have worked on. The complete [analysis code is available on GitHub](https://github.com/TJH-RESEARCH/identity-reintegration), but you can also find some code snippets in this post. A [paper detailing the analysis](../../../research/working-papers/identity-reintegration/index.qmd) is currently in the works. I presented a [poster based on this work](../../../talks/index.qmd) at the Atlanta VA on May 16, 2024.
+
 ## More data, more problems
 
-> This post explains a data science project I have worked on. The complete [analysis code is available on GitHub](https://github.com/TJH-RESEARCH/identity-reintegration). A [paper detailing the analysis](../research/working-papers/identity-reintegration/index.qmd) is currently in the works. I presented a [poster based on this work](../../talks.index) at the Atlanta VA.
+Ever heard the phrase "more money, more problems?" It is possible to have too much of a good thing. A similar idea exists for a data set: more data, more problems. Yes, having more data is better. Having more data points (e.g., cases, rows, observations) can increase the precision and generalizability of your analysis. But but having too many cases (e.g., rows, observations) takes a lot of computing power, memory, and energy to. Having too many variables or columns is also computationally expensive. For example, machine learning models face the "curse of dimensionality" where having lots of variables slows down models and makes them take lots of memory. Like too much memory to train a neural network on your laptop, or taking 16 hours to tune the hyperparameters for XGBoost. But too many variables can also challenge you conceptually. Which ones should you focus on? Or should you try to use them all? 
 
-Ever heard the phrase "more money, more problems?" A similar idea exists in data science: more data, more problems. There are a few ways this comes about. Having too many cases (e.g., rows, observations) takes a lot of computing power, and can sometimes require different sets of tools and analyses. But having too many variables (e.g., columns, features) can also be a problem.
+I had this problem with some survey data I collected with military veterans. I wanted to learn about how joining the [military becomes a part of people's identities](https://digitalcommons.kennesaw.edu/incmdoc_etd/52/). It is important because veterans may feel they lose part of their identities when they leave the military; and they need to start a civilian career, live independently, and deal with military-connected health issues, including physical and psychological injuries. Understanding veterans identities can help businesses hire, retain, and create good work climates for veterans. Community groups can relate better to veterans find housing and make connections. And healthcare, social workers, and therapists can relate better.  
 
-That's the case with a set of variables from a survey I collected with some veterans. I want to know how veteran identities affects a person's integration into civilian life. Conveniently, there is a validated measure of veterans identity: the "Warrior Identity Scale." Inconveniently, it measures 7 different aspects of military identity, each of which is considered a separate variable.
+Conveniently, there is a questionnaire to measure veteran's military identity, the [Warrior Identity Scale](https://osf.io/2fq5d/). It's adapted from measures of ethnic and racial identity, which are widely used in cross-cultural psychology. The version of the Warrior Identity Scale I used actually measures 7 different aspects of identity.
 
-This presented me with the "curse of dimensionality," having more dimensions to the data than I can easily use. Several options were available. First, I could have used all 7 of the variables. Second, I could have chosen 1 or more of the variables as the most important variables. There are problems with both of these options. Using all the variables leads to a messier model. It has lots of predictor variables — all 7 of the Warrior Identity Scale measures — but it is hard to make sense of how those predictor variables are related. And we should expect some sort of relationship(s). After all, these are all aspects of the same phenomenon, identity.
+These include "centrality" which measures the overall importance of identity to a person's sense of self. 
+
+"Regard" refers to how highly valued you think your identity group is. Regard can be either "private" -- your value of the group -- or "public" - meaning your perception of how other people value your group. 
+
+"Connection" refers to how 
+
+"Interdependence" is similar to connection.
+
+"Family" is to
+
+"Skills" measure how much a person values the skills they learned in the military. 
+
+How are we supposed to make sense of the different ways that identity is measured?
+
+Well we could just use centrality, which is the most general. Or we could use concepts and theory to think about their differences, then pick the one that suits us. 
+
+One such conceptualization is the A,B,Cs of psychology, Attitude, Behavior, and Cognition. Regard measures attitudes, connection, family, and interdependence measure behaviors, and centrality measures cognition. 
+
+Of course, having to pick and choose is it's own problem: [the garden of forking paths](https://sites.stat.columbia.edu/gelman/research/unpublished/p_hacking.pdf). Presented with so many options, which way do you choose? These [analyst degrees of freedoms](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2016.01832) can 
+
+This is a problem to the extent that we randomly pick which identity variables to use. We would ideally choose what variables to use by referencing a theory.
+
+The original authors and other study/ies? use all of these variables in a single regression model. 
+
+But how are they related? DAGs - [Table 2 Fallacy](https://doi.org/10.1093/aje/kws412)
+
+
+You need to be 
+
 
 The second option would be to select 1 or more of the identity variables. This is a problem to the extent that we arbitrarily pick which identity variables to include. We would ideally choose what variables to use by referencing a theory.
 
@@ -39,7 +73,7 @@ A key issue with unsupervised learning is not having a ground truth to compare t
 
 Clustering analysis can be used to address the "curse of dimensionality." It is one tool for "dimensional reduction," reducing the number of variables you have. Take the following 2 dimensional plot. Can you use it to spot groups in the data, reducing our two-dimensions to a 1-dimension categorical variable?
 
-```{r cluster}
+```{r cluster, include = FALSE}
 library(tidyverse) # for a suite of useful functions
 library(palmerpenguins) # for example data
 
@@ -79,7 +113,7 @@ plot_penguins +
 
 ```
 
-```{r cluster-penguins}
+```{r cluster-penguins, include = FALSE}
 plot_penguins + 
   geom_point(aes(color = species, 
                  shape = species),
@@ -89,7 +123,8 @@ plot_penguins +
     title = "Adding color and shape makes these groups easier to spot",
     color = "Penguin Species", 
     shape = "Penguin Species") +
-  theme(legend.position = 'bottom')
+  theme(legend.position = 'bottom') + 
+  theme_custom
   
 ```
 
@@ -97,7 +132,7 @@ While we cannot [easily visualize past two or three dimensions](https://www.data
 
 Let's use one unsupervised learning tool to see if it can find the same 3 groups that we did. In R, we can do this with the `kmeans()` which is in base R's stats package. We will work with the same penguin data and see if the k-means algorithm can find the species groups (note: with unsupervised learning, we typically wouldn't try to spot groups that we already have labels for, like these penguin species in this toy data set):
 
-```{r cluster-demo}
+```{r cluster-demo, include = FALSE}
 results <-
   penguins %>% 
   select(bill_length_mm, bill_depth_mm) %>% 
@@ -130,13 +165,13 @@ Besides k-means, there are other unsupervised algorithms we can use. These are:
 1.  Hierarchical Clustering
 2.  DBSCAN
 
--   What unsupervised learning method is best for my problem?
+### What unsupervised learning method is best for my problem?  
 
 k-means (or related "centroid-based" clustering methods) work best when:
 
-**1.** **Euclidean Distance**. For k-means to work best, the measures are related to each other in Euclidean distance. That is, the distance between two points should be in a standard n-dimension space. Just like the distance between two houses, or between your house and the moon. This would not apply to the distance between two nodes in a social network graph. In that case, the distance between nodes is not Euclidean but rather measured in degrees of Kevin Bacon separation.
+**1.** **Euclidean Distance**. For k-means to work best, the measures are related to each other in Euclidean distance. That is, the distance between two points should be in a standard n-dimension space. Just like the distance between two houses, or between the earth and the moon. This would **not** apply to the distance between two nodes in a social network graph. In that case, the distance between nodes is not Euclidean but rather measured in degrees of Kevin Bacon separation.
 
-A consequence of the Euclidean-distance-based algorithm is that the clusters found by k-means will be spherical. The
+A consequence of the Euclidean-distance-based algorithm is that the clusters found by k-means will be spherical. Just like planets in the orbit of the sun, the data points for each group will be spaced out around a center (the "mean" in k-means). 
 
 **2. Known number of clusters.** k-means is also best when you know the correct number of clusters. Most of the time, with unsupervised learning, we do not know the number of clusters.
 
@@ -148,17 +183,15 @@ But it is still possible to use k-means for unsupervised learning, only we need 
 
 The more clusters chosen, the lower the variance, but having the number of clusters equal to the number of data points (k = n) does us no help in reducing dimensions. Ultimately, we have to choose which solution (i.e., number of clusters) to choose, and we need to balance parsimony with fit. When we already know how many clusters to choose, this is not a difficult problem. But when we have no idea how many clusters are appropriate, we compare how well the different solutions fit the data.
 
--   How many clusters should I ask the k-means to find? Compare the fit of different solutions.
-
 Hierarchical clustering provides a built-in solution to learning the best number of clusters.
 
 DBSCAN, which stands for density-based spatial clustering of applications with noise, is best suited to data that have irregularly shaped clusters in a Euclidean space. In other words, things that are not groups shaped as spheres.
 
 ## Clustering Military Identity Data
 
-Let's see how to compare different cluster solutions with the WIS veteran identity data.
+Let's see how to compare different cluster solutions with the WIS veteran identity data that I told you about at the top of this post. Remember, there are 7 variables, and that's too many. We need to reduce the number of dimensions with clustering. 
 
-First we will load some packages and set a seed number for the pseudo-random number generator. That will allow us to repeat the result. Finally, we will load the data. I've made this data set publicly available on GitHub. The code will allow you to download the data yourself and follow along.
+Let me walk you through the R code for the analysis. First we will load some packages and set a seed number for the pseudo-random number generator. That will allow us to repeat the result. Finally, we will load the data. I've made this data set publicly available on GitHub. The code will allow you to download the data yourself and follow along.
 
 ```{r setup}
 library(factoextra) # to visualize cluster
@@ -169,7 +202,7 @@ set.seed(10001) # to reproduce the results
 data <- read_csv("data_main_replicate.csv") # download the data
 ```
 
-Then we will standardize the data. Each variable used a standardized scale, but they have different ranges. It's probably not a big deal for this data, but we can standardize it anyways to be safe.
+Then we will standardize the data. Each variable used a standardized scale, so it is probably not a big deal for this data, but they do have different ranges, so let's standardize it anyways to be safe.
 
 ```{r standardize}
 data_cluster_wis <- 
@@ -180,33 +213,33 @@ data_cluster_wis <-
 
 Then we can use tools from the packages we loaded to compare different the number of clusters.
 
-We will start with the elbow method. This is a graphic technique. We look to see where there is an "elbow" in the graph -- basically, where it bends the most. 
+The first package is `factoextra`. It will calculate and visualize 3 different indices: the within sum of square, the silhouette index, and the gap statistic. 
+
+We will start with the within sum of squares, using something called the elbow method to assess the metric. The elbow method is a graphical technique. We look to see where there is an "elbow" in the graph -- that is, where the line bends the most.
 
 ```{r elbow}
 (plot_elbow <-  
-fviz_nbclust(data_cluster_wis, kmeans, method = "wss") +
+fviz_nbclust(data_cluster_wis, kmeans, method = "wss") + # fviz is built on ggplot2, so just add ggplot elements to it
     geom_vline(xintercept = 3, linetype = 2) +
     labs(
       title = "The elbow method is a little ambiguous",
       subtitle = "But 3 appears to be the elbow"
-      ) +
-  theme_custom
+      ) + 
+    theme_custom
 )
-
 ```
 
-The silhouette method is another graphical method for finding the best fitting number of clusters. Here we are looking for the greatest value on the y-axis.
+The silhouette method is another technique that we can graph. Here we are looking for the greatest value.
 
 ```{r silhouette}
 (plot_silhouette <-
   fviz_nbclust(data_cluster_wis, kmeans, method = "silhouette")+
-    labs(title = "The silouette methods suggests 2 clusters is best") +
-   theme_custom
+    labs(title = "The silouette method favors 2 clusters") +
+  theme_custom
 )
 ```
 
-The gap statistic is yet another method. This compares the fit of cluster solutions to the expected fit if the data were random. 
-
+The gap statistic is yet another index.
 
 ```{r gap}
 (plot_gap_stat <-
@@ -216,15 +249,21 @@ The gap statistic is yet another method. This compares the fit of cluster soluti
                print.summary = TRUE, 
                method = "gap_stat", 
                nboot = 500)  +
-   labs(title = "Gap stat doesn't find a solution",
+   labs(title = "The gap stat can't find a solution with this data",
         subtitle = "The greatest gap stat is for 1 cluster",
-        caption = "A 1-cluster solution is basically an inability to reject the null hypothesis that the data clusters into groups at all.") +
+        caption = "A 1-cluster solution isn't really a cluster") +
    theme_custom
 )
 
 ```
 
-We can try a suite of metrics, comparing a wide range of solutions. In this case, let's compare 2 to 15 groups.
+The gap statistic was not very helpful. It suggests a 1-cluster solution, which isn't really a cluster, now is it? Another way of thinking about this 1-cluster gap stat is an inability to reject the null hypothesis that the data clusters into groups at all.
+
+The graphical methods are interesting. At least they give us something to look at. But there is another way to find the best number of clusters. 
+
+Using the [`NbClust`](https://www.jstatsoft.org/article/view/v061i06) package, we can compare lots of different cluster solutions with a suite of 30 different metrics.
+
+In this case, let's compare solutions from 2 to 15 groups.
 
 ```{r compare}
 results_kmeans <- 
@@ -238,7 +277,7 @@ results_kmeans <-
 
 ```
 
-Going by those results, the 2-group and 3- group solution look the best. Let's limit the number of clusters to compare head-to-head just those 2- and 3-group solutions. Actually, we can only compare
+Going by those results, the 2-group and 3- group solution look the best. Let's limit the number of clusters to compare head-to-head just those 2- and 3-group solutions. Actually, `NbClust` makes us compare at least three different solutions, so we will compare the 2-, 3-, and 4-group solutions.
 
 ```{r compare-limited}
 results_kmeans_limited = 

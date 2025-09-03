@@ -23,6 +23,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -200,18 +234,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-summary" id="toc-project-summary" class="nav-link active" data-scroll-target="#project-summary">Project Summary</a></li>
-  <li><a href="#skills-demonstrated" id="toc-skills-demonstrated" class="nav-link" data-scroll-target="#skills-demonstrated">Skills Demonstrated</a></li>
-  <li><a href="#real-world-applications" id="toc-real-world-applications" class="nav-link" data-scroll-target="#real-world-applications">Real-World Applications</a>
+  <li><a href="#more-data-more-problems" id="toc-more-data-more-problems" class="nav-link active" data-scroll-target="#more-data-more-problems">More data, more problems</a></li>
+  <li><a href="#unsupervised-learning" id="toc-unsupervised-learning" class="nav-link" data-scroll-target="#unsupervised-learning">Unsupervised Learning</a>
   <ul class="collapse">
-  <li><a href="#dimension-reduction" id="toc-dimension-reduction" class="nav-link" data-scroll-target="#dimension-reduction">Dimension Reduction</a></li>
-  <li><a href="#data-mining-hidden-patterns" id="toc-data-mining-hidden-patterns" class="nav-link" data-scroll-target="#data-mining-hidden-patterns">Data Mining Hidden patterns</a></li>
+  <li><a href="#what-unsupervised-learning-method-is-best-for-my-problem" id="toc-what-unsupervised-learning-method-is-best-for-my-problem" class="nav-link" data-scroll-target="#what-unsupervised-learning-method-is-best-for-my-problem">What unsupervised learning method is best for my problem?</a></li>
   </ul></li>
-  <li><a href="#key-highlights" id="toc-key-highlights" class="nav-link" data-scroll-target="#key-highlights">Key Highlights</a>
-  <ul class="collapse">
-  <li><a href="#cluster-analysis" id="toc-cluster-analysis" class="nav-link" data-scroll-target="#cluster-analysis">Cluster Analysis</a></li>
-  <li><a href="#validating-clusters" id="toc-validating-clusters" class="nav-link" data-scroll-target="#validating-clusters">Validating Clusters</a></li>
-  </ul></li>
+  <li><a href="#clustering-military-identity-data" id="toc-clustering-military-identity-data" class="nav-link" data-scroll-target="#clustering-military-identity-data">Clustering Military Identity Data</a></li>
+  <li><a href="#validating-the-clusters" id="toc-validating-the-clusters" class="nav-link" data-scroll-target="#validating-the-clusters">Validating the Clusters</a></li>
   </ul>
 </nav>
     </div>
@@ -222,53 +251,292 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="project-summary" class="level2">
-<h2 class="anchored" data-anchor-id="project-summary">Project Summary</h2>
-<p>Sometimes you have too many variables. Which ones do you choose? That’s the case with a set of variables from a survey I collected with some veterans. I want to know how veteran identities affects a person’s integration into civilian life. Luckily, there is a validated measure of veterans identity: the “Warrior Identity Scale.” Unluckily, it measures 7 different aspects of military identity, each of which is considered a separate variable.</p>
+<blockquote class="blockquote">
+<p>This post explains a data science project I have worked on. The complete <a href="https://github.com/TJH-RESEARCH/identity-reintegration">analysis code is available on GitHub</a>, but you can also find some code snippets in this post. A <a href="../../../research/working-papers/identity-reintegration/index.html">paper detailing the analysis</a> is currently in the works. I presented a <a href="../../../talks/index.html">poster based on this work</a> at the Atlanta VA on May 16, 2024.</p>
+</blockquote>
+<section id="more-data-more-problems" class="level2">
+<h2 class="anchored" data-anchor-id="more-data-more-problems">More data, more problems</h2>
+<p>Ever heard the phrase “more money, more problems?” A similar idea exists in data science: more data, more problems. There are a few ways this comes about. Having too many cases (e.g., rows, observations) takes a lot of computing power, and can sometimes require different sets of tools and analyses. But having too many variables (e.g., columns, features) can also be a problem.</p>
+<p>That’s the case with a set of variables from a survey I collected with some veterans. I want to know how veteran identities affects a person’s integration into civilian life. Conveniently, there is a validated measure of veterans identity: the “Warrior Identity Scale.” Inconveniently, it measures 7 different aspects of military identity, each of which is considered a separate variable.</p>
 <p>This presented me with the “curse of dimensionality,” having more dimensions to the data than I can easily use. Several options were available. First, I could have used all 7 of the variables. Second, I could have chosen 1 or more of the variables as the most important variables. There are problems with both of these options. Using all the variables leads to a messier model. It has lots of predictor variables — all 7 of the Warrior Identity Scale measures — but it is hard to make sense of how those predictor variables are related. And we should expect some sort of relationship(s). After all, these are all aspects of the same phenomenon, identity.</p>
-<p>The second option would be to select 1 or more of the identity variables. The problem is this becomes picking and choosing which identity variables matter if it is not done in regards to a particular theory. As research on military identity is still growing, it makes sense to learn from the data about configurations of military identity.</p>
-<p>I used <strong>clustering</strong> to uncover latent groups of veterans based on their identity.</p>
-<p>The complete <a href="https://github.com/TJH-RESEARCH/identity-reintegration">analysis code is available on GitHub</a>. A <a href="../research/working-papers/identity-reintegration/index.qmd">paper detailing the analysis</a> is currently in the works. I presented a <a href="../../talks.index">poster based on this work</a> at the Atlanta VA. Below you can find a walkthrough of the data analysis.</p>
+<p>The second option would be to select 1 or more of the identity variables. This is a problem to the extent that we arbitrarily pick which identity variables to include. We would ideally choose what variables to use by referencing a theory.</p>
+<p>There is a third approach which is less dependent on theory and more data-driven: unsupervised learning to combine the 7 variables, reducing the 7 dimensions into 1. <strong>Unsupervised learning</strong> is a form of machine learning we can use to categorize data without having a “true” reference category. We are trying to uncover hidden patterns or “latent” groups.</p>
+<p>A key issue with unsupervised learning is not having a ground truth to compare the model. No matter how good it fits the data you have, it is not possible to know if clusters corresponds to real groupings. In this project, I mitigated this issue by collecting an additional sample to see if the results would replicate.</p>
 </section>
-<section id="skills-demonstrated" class="level2">
-<h2 class="anchored" data-anchor-id="skills-demonstrated">Skills Demonstrated</h2>
+<section id="unsupervised-learning" class="level2">
+<h2 class="anchored" data-anchor-id="unsupervised-learning">Unsupervised Learning</h2>
+<p>Clustering analysis can be used to address the “curse of dimensionality.” It is one tool for “dimensional reduction,” reducing the number of variables you have. Take the following 2 dimensional plot. Can you use it to spot groups in the data, reducing our two-dimensions to a 1-dimension categorical variable?</p>
+<p>While we cannot <a href="https://www.data-to-viz.com/caveat/3d.html">easily visualize past two or three dimensions</a>, mathematically we can use the same unsupervised learning tools in as many dimensions as we want. Instead of using human eyes, unsupervised learning algorithms use math to find the clusters.</p>
+<p>Let’s use one unsupervised learning tool to see if it can find the same 3 groups that we did. In R, we can do this with the <code>kmeans()</code> which is in base R’s stats package. We will work with the same penguin data and see if the k-means algorithm can find the species groups (note: with unsupervised learning, we typically wouldn’t try to spot groups that we already have labels for, like these penguin species in this toy data set):</p>
+<p>Besides k-means, there are other unsupervised algorithms we can use. These are:</p>
 <ol type="1">
-<li>Machine Learning</li>
-<li>Unsupervised Learning</li>
-<li>Regression analysis</li>
+<li>Hierarchical Clustering</li>
+<li>DBSCAN</li>
 </ol>
-</section>
-<section id="real-world-applications" class="level2">
-<h2 class="anchored" data-anchor-id="real-world-applications">Real-World Applications</h2>
-<section id="dimension-reduction" class="level3">
-<h3 class="anchored" data-anchor-id="dimension-reduction">Dimension Reduction</h3>
-<p>Clustering analysis can be used to address the “curse of dimensionality.” It is one tool for “dimensional reduction,” reducing the number of variables you have.</p>
-<p>I used <strong>clustering</strong> to uncover latent groups of veterans based on their identity. Clustering analysis is an type of unsupervised learning. It finds groups of variables in multiple dimensions. That is, if on a 2 dimensional plot, we could circle apparent groups:</p>
-<p>[image]</p>
-<p>The same could be done with a 3D plot</p>
-<p>[image]</p>
-<p>While we cannot visualize past three dimensions, mathematically we can use the same clustering algorithms in more than three dimensions.</p>
-</section>
-<section id="data-mining-hidden-patterns" class="level3">
-<h3 class="anchored" data-anchor-id="data-mining-hidden-patterns">Data Mining Hidden patterns</h3>
-<p>This approach of learning from the data can be called <strong>data mining</strong>….Another way of thinking about it is <strong>unsupervised learning</strong>, a form of machine learning where we use a model to categorize data without having a “true” category to compare the model categorizations to. In other words, there are no “true” configurations of veterans identity that have been named and observed in the data. We are trying to uncover these unlabeled “latent” groupings in the data.</p>
-<p>In the real world…</p>
-<p>In this project….</p>
-<p>A key issue with unsupervised learning is not having a ground truth to compare the model. No matter how good it fits the data you have, it is not possible to know if clusters corresponds to real groupings.</p>
-<p>In the real world….</p>
-<p>In this project….</p>
+<section id="what-unsupervised-learning-method-is-best-for-my-problem" class="level3">
+<h3 class="anchored" data-anchor-id="what-unsupervised-learning-method-is-best-for-my-problem">What unsupervised learning method is best for my problem?</h3>
+<p>k-means (or related “centroid-based” clustering methods) work best when:</p>
+<p><strong>1.</strong> <strong>Euclidean Distance</strong>. For k-means to work best, the measures are related to each other in Euclidean distance. That is, the distance between two points should be in a standard n-dimension space. Just like the distance between two houses, or between the earth and the moon. This would <strong>not</strong> apply to the distance between two nodes in a social network graph. In that case, the distance between nodes is not Euclidean but rather measured in degrees of Kevin Bacon separation.</p>
+<p>A consequence of the Euclidean-distance-based algorithm is that the clusters found by k-means will be spherical. Just like planets in the orbit of the sun, the data points for each group will be spaced out around a center (the “mean” in k-means).</p>
+<p><strong>2. Known number of clusters.</strong> k-means is also best when you know the correct number of clusters. Most of the time, with unsupervised learning, we do not know the number of clusters.</p>
+<p>Under the hood, the algorithm is trying to group the data to minimize within cluster variance. In other words, it tries to find the multidimensional distance from each data point to every other data point in its cluster.</p>
+<p>One main issue with k-means is that it requires specifying how many clusters there are. In this case, we told k-means that there are 3 clusters, knowing that’s how many species are in the data. But truly unsupervised learning would not know the appropriate number of clusters. In these cases, it may be more appropriate to use.</p>
+<p>But it is still possible to use k-means for unsupervised learning, only we need to try different numbers of clusters and then compare these solutions.</p>
+<p>The more clusters chosen, the lower the variance, but having the number of clusters equal to the number of data points (k = n) does us no help in reducing dimensions. Ultimately, we have to choose which solution (i.e., number of clusters) to choose, and we need to balance parsimony with fit. When we already know how many clusters to choose, this is not a difficult problem. But when we have no idea how many clusters are appropriate, we compare how well the different solutions fit the data.</p>
+<p>Hierarchical clustering provides a built-in solution to learning the best number of clusters.</p>
+<p>DBSCAN, which stands for density-based spatial clustering of applications with noise, is best suited to data that have irregularly shaped clusters in a Euclidean space. In other words, things that are not groups shaped as spheres.</p>
 </section>
 </section>
-<section id="key-highlights" class="level2">
-<h2 class="anchored" data-anchor-id="key-highlights">Key Highlights</h2>
-<section id="cluster-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="cluster-analysis">Cluster Analysis</h3>
+<section id="clustering-military-identity-data" class="level2">
+<h2 class="anchored" data-anchor-id="clustering-military-identity-data">Clustering Military Identity Data</h2>
+<p>Let’s see how to compare different cluster solutions with the WIS veteran identity data that I told you about at the top of this post. Remember, there are 7 variables, and that’s too many. We need to reduce the number of dimensions with clustering.</p>
+<p>Let me walk you through the R code for the analysis. First we will load some packages and set a seed number for the pseudo-random number generator. That will allow us to repeat the result. Finally, we will load the data. I’ve made this data set publicly available on GitHub. The code will allow you to download the data yourself and follow along.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(factoextra) <span class="co"># to visualize cluster</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(NbClust) <span class="co"># to visualize cluster fits</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">10001</span>) <span class="co"># to reproduce the results</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data_main_replicate.csv"</span>) <span class="co"># download the data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then we will standardize the data. Each variable used a standardized scale, so it is probably not a big deal for this data, but they do have different ranges, so let’s standardize it anyways to be safe.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data_cluster_wis <span class="ot">&lt;-</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">'wis'</span>) <span class="sc">&amp;</span> <span class="fu">ends_with</span>(<span class="st">'total'</span>) <span class="sc">&amp;</span> <span class="sc">!</span>wis_total) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then we can use tools from the packages we loaded to compare different the number of clusters.</p>
+<p>We will start with the elbow method. This is a graphical technique. We look to see where there is an “elbow” in the graph – that is, where the line bends the most.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(plot_elbow <span class="ot">&lt;-</span>  </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">fviz_nbclust</span>(data_cluster_wis, kmeans, <span class="at">method =</span> <span class="st">"wss"</span>) <span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">3</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="st">"The elbow method is a little ambiguous"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">subtitle =</span> <span class="st">"But 3 appears to be the elbow"</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>      ) <span class="sc">+</span> theme_custom</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/elbow-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The silhouette method is another graphical method for finding the best fitting number of clusters. Here we are looking for the greatest value on the y-axis.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(plot_silhouette <span class="ot">&lt;-</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fviz_nbclust</span>(data_cluster_wis, kmeans, <span class="at">method =</span> <span class="st">"silhouette"</span>)<span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"The silouette method favors 2 clusters"</span>) <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  theme_custom</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/silhouette-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The gap statistic is yet another method. This compares the fit of cluster solutions to the expected fit if the data were random.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(plot_gap_stat <span class="ot">&lt;-</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fviz_nbclust</span>(data_cluster_wis, </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>               kmeans, </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">nstart =</span> <span class="dv">25</span>,  </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">print.summary =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">method =</span> <span class="st">"gap_stat"</span>, </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">nboot =</span> <span class="dv">500</span>)  <span class="sc">+</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>   <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"The gap stat can't find a solution with this data"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">"The greatest gap stat is for 1 cluster"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">caption =</span> <span class="st">"A 1-cluster solution isn't really a cluster"</span>) <span class="sc">+</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>   theme_custom</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/gap-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The gap statistic was not very helpful. It suggests a 1-cluster solution, which isn’t really a cluster, now is it? Another way of thinking about this 1-cluster gap stat is an inability to reject the null hypothesis that the data clusters into groups at all.</p>
+<p>The graphical methods are interesting. At least they give us something to look at. But there is another way to find the best number of clusters.</p>
+<p>Using the <a href="https://www.jstatsoft.org/article/view/v061i06"><code>NbClust</code></a> package, we can compare lots of different cluster solutions with a suite of 30 metrics.</p>
+<p>In this case, let’s compare solutions from 2 to 15 groups.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>results_kmeans <span class="ot">&lt;-</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">NbClust</span>(<span class="at">data =</span> data_cluster_wis, </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">diss =</span> <span class="cn">NULL</span>, </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">distance =</span> <span class="st">"euclidean"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">min.nc =</span> <span class="dv">2</span>, </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">max.nc =</span> <span class="dv">15</span>, </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">method =</span> <span class="st">'kmeans'</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">index =</span> <span class="st">'alllong'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/compare-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>*** : The Hubert index is a graphical method of determining the number of clusters.
+                In the plot of Hubert index, we seek a significant knee that corresponds to a 
+                significant increase of the value of the measure i.e the significant peak in Hubert
+                index second differences plot. 
+ </code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/compare-2.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>*** : The D index is a graphical method of determining the number of clusters. 
+                In the plot of D index, we seek a significant knee (the significant peak in Dindex
+                second differences plot) that corresponds to a significant increase of the value of
+                the measure. 
+ 
+******************************************************************* 
+* Among all indices:                                                
+* 11 proposed 2 as the best number of clusters 
+* 9 proposed 3 as the best number of clusters 
+* 1 proposed 4 as the best number of clusters 
+* 1 proposed 13 as the best number of clusters 
+* 2 proposed 14 as the best number of clusters 
+* 3 proposed 15 as the best number of clusters 
+
+                   ***** Conclusion *****                            
+ 
+* According to the majority rule, the best number of clusters is  2 
+ 
+ 
+******************************************************************* </code></pre>
+</div>
+</div>
+<p>Going by those results, the 2-group and 3- group solution look the best. Let’s limit the number of clusters to compare head-to-head just those 2- and 3-group solutions. Actually, <code>NbClust</code> makes us compare at least three different solutions, so we will compare the 2-, 3-, and 4-group solutions.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>results_kmeans_limited <span class="ot">=</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">NbClust</span>(<span class="at">data =</span> data_cluster_wis, </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">diss =</span> <span class="cn">NULL</span>, </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">distance =</span> <span class="st">"euclidean"</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">min.nc =</span> <span class="dv">2</span>, </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">max.nc =</span> <span class="dv">4</span>, </span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">method =</span> <span class="st">'kmeans'</span>,</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">index =</span> <span class="st">'alllong'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/compare-limited-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>*** : The Hubert index is a graphical method of determining the number of clusters.
+                In the plot of Hubert index, we seek a significant knee that corresponds to a 
+                significant increase of the value of the measure i.e the significant peak in Hubert
+                index second differences plot. 
+ </code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/compare-limited-2.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>*** : The D index is a graphical method of determining the number of clusters. 
+                In the plot of D index, we seek a significant knee (the significant peak in Dindex
+                second differences plot) that corresponds to a significant increase of the value of
+                the measure. 
+ 
+******************************************************************* 
+* Among all indices:                                                
+* 13 proposed 2 as the best number of clusters 
+* 10 proposed 3 as the best number of clusters 
+* 4 proposed 4 as the best number of clusters 
+
+                   ***** Conclusion *****                            
+ 
+* According to the majority rule, the best number of clusters is  2 
+ 
+ 
+******************************************************************* </code></pre>
+</div>
+</div>
 </section>
-<section id="validating-clusters" class="level3">
-<h3 class="anchored" data-anchor-id="validating-clusters">Validating Clusters</h3>
+<section id="validating-the-clusters" class="level2">
+<h2 class="anchored" data-anchor-id="validating-the-clusters">Validating the Clusters</h2>
+<p>A key issue with unsupervised learning is how to externally validate the clusters. How do we know if these classifications are real or just an artifact of the data?</p>
+<p>In supervised learning, validation is easier. You use the model to make some predictions on data it wasn’t trained on. Then you calculate how accurate the predictions were. With unsupervised learning, we have no idea how accurate we are. Instead, we need to validate the categories in different ways. In this project, I used two different validation methods.</p>
+<p>First, the model should have some “predictive” validity. That is, the clusters should be able to predict other variables. For this project, veterans identity should predict how well they reintegrate into civilian society. Using the clusters as a predictor variable, I fit a linear regression model to a measure of reintegration.<br>
+Second, the cluster groupings should be replicable in other data sets. That is, if we collect new data, we should find similar groupings if the grouping are real. With this in mind, I collected some more data with a new survey. Then, I repeated the clustering in the new data set.</p>
+<p>If we choose the 3-cluster solution, we can inspect the groups. Let’s plot the data and take a look.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>plot_profiles <span class="ot">&lt;-</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span> </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">wis_skills_total =</span> wis_skills_total <span class="sc">/</span> <span class="dv">3</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">wis_centrality_total =</span> wis_centrality_total <span class="sc">/</span> <span class="dv">4</span>,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">wis_connection_total =</span> wis_connection_total <span class="sc">/</span> <span class="dv">3</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">wis_family_total =</span> wis_family_total <span class="sc">/</span> <span class="dv">3</span>,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">wis_interdependent_total =</span> wis_interdependent_total <span class="sc">/</span> <span class="dv">7</span>,</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">wis_private_regard_total =</span> wis_private_regard_total <span class="sc">/</span> <span class="dv">7</span>,</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">wis_public_regard_total =</span> wis_public_regard_total <span class="sc">/</span> <span class="dv">4</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(wis_skills_total,</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>         wis_centrality_total,</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>         wis_connection_total,</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>         wis_family_total,</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>         wis_interdependent_total,</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>         wis_private_regard_total,</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>         wis_public_regard_total,</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>         cluster) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(cluster) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">cluster =</span> <span class="fu">factor</span>(cluster)) <span class="sc">%&gt;%</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">mean</span>(.x))) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">!</span>cluster) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>      name, </span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>      value, </span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> cluster,</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>      <span class="at">group =</span> cluster)) <span class="sc">+</span> </span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">shape =</span> cluster), </span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span> </span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(</span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>      <span class="at">linetype =</span> cluster)) <span class="sc">+</span></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'#440154'</span>, <span class="st">'#3b528b'</span>, <span class="st">'#5ec962'</span>)) <span class="sc">+</span></span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_color_viridis(option = 'C', discrete = TRUE) +</span></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste0</span>(<span class="st">'Military Identity by Latent Groups'</span>), </span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">'Aspect of Military Identity'</span>, </span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">'Identity (mean item score)'</span>) <span class="sc">+</span> </span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="sc">-</span><span class="dv">30</span>, <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">hjust =</span> <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">color =</span> <span class="st">'Cluster'</span>,</span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a>       <span class="at">shape =</span> <span class="st">'Cluster'</span>,</span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>       <span class="at">linetype =</span> <span class="st">'Cluster'</span>) <span class="sc">+</span></span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(</span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'Centrality'</span>, </span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a>             <span class="st">'Connection'</span>,</span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a>             <span class="st">'Family'</span>,</span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>             <span class="st">'Interdependence'</span>,</span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>             <span class="st">'Private Regard'</span>,</span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>             <span class="st">'Public Regard'</span>,</span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>             <span class="st">'Skills'</span>)</span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a>        <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
