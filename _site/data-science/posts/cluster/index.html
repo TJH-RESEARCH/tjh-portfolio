@@ -256,9 +256,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <section id="more-data-more-problems" class="level2">
 <h2 class="anchored" data-anchor-id="more-data-more-problems">More data, more problems</h2>
-<p>Ever heard the phrase “more money, more problems?” A similar idea exists in data science: more data, more problems. There are a few ways this comes about. Having too many cases (e.g., rows, observations) takes a lot of computing power, and can sometimes require different sets of tools and analyses. But having too many variables (e.g., columns, features) can also be a problem.</p>
-<p>That’s the case with a set of variables from a survey I collected with some veterans. I want to know how veteran identities affects a person’s integration into civilian life. Conveniently, there is a validated measure of veterans identity: the “Warrior Identity Scale.” Inconveniently, it measures 7 different aspects of military identity, each of which is considered a separate variable.</p>
-<p>This presented me with the “curse of dimensionality,” having more dimensions to the data than I can easily use. Several options were available. First, I could have used all 7 of the variables. Second, I could have chosen 1 or more of the variables as the most important variables. There are problems with both of these options. Using all the variables leads to a messier model. It has lots of predictor variables — all 7 of the Warrior Identity Scale measures — but it is hard to make sense of how those predictor variables are related. And we should expect some sort of relationship(s). After all, these are all aspects of the same phenomenon, identity.</p>
+<p>Ever heard the phrase “more money, more problems?” It is possible to have too much of a good thing. A similar idea exists for a data set: more data, more problems. Yes, having more data is better. Having more data points (e.g., cases, rows, observations) can increase the precision and generalizability of your analysis. But but having too many cases (e.g., rows, observations) takes a lot of computing power, memory, and energy to. Having too many variables or columns is also computationally expensive. For example, machine learning models face the “curse of dimensionality” where having lots of variables slows down models and makes them take lots of memory. Like too much memory to train a neural network on your laptop, or taking 16 hours to tune the hyperparameters for XGBoost. But too many variables can also challenge you conceptually. Which ones should you focus on? Or should you try to use them all?</p>
+<p>I had this problem with some survey data I collected with military veterans. I wanted to learn about how joining the <a href="https://digitalcommons.kennesaw.edu/incmdoc_etd/52/">military becomes a part of people’s identities</a>. It is important because veterans may feel they lose part of their identities when they leave the military; and they need to start a civilian career, live independently, and deal with military-connected health issues, including physical and psychological injuries. Understanding veterans identities can help businesses hire, retain, and create good work climates for veterans. Community groups can relate better to veterans find housing and make connections. And healthcare, social workers, and therapists can relate better.</p>
+<p>Conveniently, there is a questionnaire to measure veteran’s military identity, the <a href="https://osf.io/2fq5d/">Warrior Identity Scale</a>. It’s adapted from measures of ethnic and racial identity, which are widely used in cross-cultural psychology. The version of the Warrior Identity Scale I used actually measures 7 different aspects of identity.</p>
+<p>These include “centrality” which measures the overall importance of identity to a person’s sense of self.</p>
+<p>“Regard” refers to how highly valued you think your identity group is. Regard can be either “private” – your value of the group – or “public” - meaning your perception of how other people value your group.</p>
+<p>“Connection” refers to how</p>
+<p>“Interdependence” is similar to connection.</p>
+<p>“Family” is to</p>
+<p>“Skills” measure how much a person values the skills they learned in the military.</p>
+<p>How are we supposed to make sense of the different ways that identity is measured?</p>
+<p>Well we could just use centrality, which is the most general. Or we could use concepts and theory to think about their differences, then pick the one that suits us.</p>
+<p>One such conceptualization is the A,B,Cs of psychology, Attitude, Behavior, and Cognition. Regard measures attitudes, connection, family, and interdependence measure behaviors, and centrality measures cognition.</p>
+<p>Of course, having to pick and choose is it’s own problem: <a href="https://sites.stat.columbia.edu/gelman/research/unpublished/p_hacking.pdf">the garden of forking paths</a>. Presented with so many options, which way do you choose? These <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2016.01832">analyst degrees of freedoms</a> can</p>
+<p>This is a problem to the extent that we randomly pick which identity variables to use. We would ideally choose what variables to use by referencing a theory.</p>
+<p>The original authors and other study/ies? use all of these variables in a single regression model.</p>
+<p>But how are they related? DAGs - <a href="https://doi.org/10.1093/aje/kws412">Table 2 Fallacy</a></p>
+<p>You need to be</p>
 <p>The second option would be to select 1 or more of the identity variables. This is a problem to the extent that we arbitrarily pick which identity variables to include. We would ideally choose what variables to use by referencing a theory.</p>
 <p>There is a third approach which is less dependent on theory and more data-driven: unsupervised learning to combine the 7 variables, reducing the 7 dimensions into 1. <strong>Unsupervised learning</strong> is a form of machine learning we can use to categorize data without having a “true” reference category. We are trying to uncover hidden patterns or “latent” groups.</p>
 <p>A key issue with unsupervised learning is not having a ground truth to compare the model. No matter how good it fits the data you have, it is not possible to know if clusters corresponds to real groupings. In this project, I mitigated this issue by collecting an additional sample to see if the results would replicate.</p>
@@ -307,16 +321,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then we can use tools from the packages we loaded to compare different the number of clusters.</p>
-<p>We will start with the elbow method. This is a graphical technique. We look to see where there is an “elbow” in the graph – that is, where the line bends the most.</p>
+<p>The first package is <code>factoextra</code>. It will calculate and visualize 3 different indices: the within sum of square, the silhouette index, and the gap statistic.</p>
+<p>We will start with the within sum of squares, using something called the elbow method to assess the metric. The elbow method is a graphical technique. We look to see where there is an “elbow” in the graph – that is, where the line bends the most.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(plot_elbow <span class="ot">&lt;-</span>  </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">fviz_nbclust</span>(data_cluster_wis, kmeans, <span class="at">method =</span> <span class="st">"wss"</span>) <span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">fviz_nbclust</span>(data_cluster_wis, kmeans, <span class="at">method =</span> <span class="st">"wss"</span>) <span class="sc">+</span> <span class="co"># fviz is built on ggplot2, so just add ggplot elements to it</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">3</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="st">"The elbow method is a little ambiguous"</span>,</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">subtitle =</span> <span class="st">"But 3 appears to be the elbow"</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>      ) <span class="sc">+</span> theme_custom</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>      ) <span class="sc">+</span> </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    theme_custom</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -325,7 +341,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>The silhouette method is another graphical method for finding the best fitting number of clusters. Here we are looking for the greatest value on the y-axis.</p>
+<p>The silhouette method is another technique that we can graph. Here we are looking for the greatest value.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(plot_silhouette <span class="ot">&lt;-</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fviz_nbclust</span>(data_cluster_wis, kmeans, <span class="at">method =</span> <span class="st">"silhouette"</span>)<span class="sc">+</span></span>
@@ -340,7 +356,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>The gap statistic is yet another method. This compares the fit of cluster solutions to the expected fit if the data were random.</p>
+<p>The gap statistic is yet another index.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(plot_gap_stat <span class="ot">&lt;-</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fviz_nbclust</span>(data_cluster_wis, </span>
@@ -364,7 +380,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The gap statistic was not very helpful. It suggests a 1-cluster solution, which isn’t really a cluster, now is it? Another way of thinking about this 1-cluster gap stat is an inability to reject the null hypothesis that the data clusters into groups at all.</p>
 <p>The graphical methods are interesting. At least they give us something to look at. But there is another way to find the best number of clusters.</p>
-<p>Using the <a href="https://www.jstatsoft.org/article/view/v061i06"><code>NbClust</code></a> package, we can compare lots of different cluster solutions with a suite of 30 metrics.</p>
+<p>Using the <a href="https://www.jstatsoft.org/article/view/v061i06"><code>NbClust</code></a> package, we can compare lots of different cluster solutions with a suite of 30 different metrics.</p>
 <p>In this case, let’s compare solutions from 2 to 15 groups.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>results_kmeans <span class="ot">&lt;-</span> </span>

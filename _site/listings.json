@@ -1,7 +1,12 @@
 [
   {
-    "listing": "/data/index.html",
-    "items": []
+    "listing": "/data-science/index.html",
+    "items": [
+      "/data-science/posts/data-cleaning/index.html",
+      "/data-science/posts/cluster/index.html",
+      "/data-science/posts/bayes/index.html",
+      "/data-science/posts/war/index.html"
+    ]
   },
   {
     "listing": "/research/index.html",
@@ -22,20 +27,11 @@
     ]
   },
   {
-    "listing": "/blog/index.html",
-    "items": []
-  },
-  {
     "listing": "/talks/index.html",
     "items": []
   },
   {
-    "listing": "/data-science/index.html",
-    "items": [
-      "/data-science/posts/data-cleaning/index.html",
-      "/data-science/posts/cluster/index.html",
-      "/data-science/posts/bayes/index.html",
-      "/data-science/posts/war/index.html"
-    ]
+    "listing": "/blog/index.html",
+    "items": []
   }
 ]
