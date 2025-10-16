@@ -1,8 +1,0 @@
-[build]
-  publish = "_site"
-  command = """
-  curl -fsSL https://quarto.org/download/latest/quarto-linux-amd64.deb -o quarto.deb
-  sudo dpkg -i quarto.deb || true
-  sudo apt-get install -f -y
-  quarto render
-  """
