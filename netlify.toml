@@ -2,7 +2,7 @@
   command = """
   curl -L -o quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.56/quarto-1.5.56-linux-amd64.deb
   dpkg -x quarto.deb /opt/buildhome/quarto
-  export PATH="/opt/buildhome/quarto/usr/bin:$PATH"
-  quarto render
+  /opt/buildhome/quarto/usr/bin/quarto check install
+  /opt/buildhome/quarto/usr/bin/quarto render
   """
   publish = "_site"
