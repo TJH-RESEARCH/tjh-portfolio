@@ -1,7 +1,8 @@
 [build]
   command = """
-  curl -L https://quarto.org/docs/get-started/install/linux.sh -o install-quarto.sh
-  bash install-quarto.sh
+  curl -L -o quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.56/quarto-1.5.56-linux-amd64.deb
+  dpkg -x quarto.deb /opt/buildhome/quarto
+  export PATH="/opt/buildhome/quarto/usr/bin:$PATH"
   quarto render
   """
   publish = "_site"
