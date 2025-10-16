@@ -1,8 +1,19 @@
 [build]
+  publish = "_site"
   command = """
   curl -L -o quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.56/quarto-1.5.56-linux-amd64.deb
   dpkg -x quarto.deb /opt/buildhome/quarto
-  /opt/buildhome/quarto/usr/bin/quarto check install
-  /opt/buildhome/quarto/usr/bin/quarto render
+
+  # Check which path Quarto installed into
+  if [ -f /opt/buildhome/quarto/usr/local/bin/quarto ]; then
+    /opt/buildhome/quarto/usr/local/bin/quarto check install
+    /opt/buildhome/quarto/usr/local/bin/quarto render
+  elif [ -f /opt/buildhome/quarto/usr/bin/quarto ]; then
+    /opt/buildhome/quarto/usr/bin/quarto check install
+    /opt/buildhome/quarto/usr/bin/quarto render
+  else
+    echo "❌ Quarto binary not found after extraction"
+    ls -R /opt/buildhome/quarto
+    exit 1
+  fi
   """
-  publish = "_site"
