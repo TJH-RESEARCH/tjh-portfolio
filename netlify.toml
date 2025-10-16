@@ -1,8 +1,7 @@
 [build]
   command = """
-  apt-get update && apt-get install -y gdebi-core
-  curl -fsSL https://quarto.org/download/latest/quarto-linux-amd64.deb -o quarto.deb
-  gdebi -n quarto.deb
+  curl -L https://quarto.org/docs/get-started/install/linux.sh -o install-quarto.sh
+  bash install-quarto.sh
   quarto render
   """
   publish = "_site"
