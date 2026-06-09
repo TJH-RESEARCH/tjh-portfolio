@@ -1,0 +1,43 @@
+---
+title: "Thomas Hodges"
+page-layout: article
+main-photo: /files/profiles/headshot.jpg
+main-photo-square: /files/profiles/headshot-square.jpg
+title-block-banner: false
+---
+
+::::: grid
+::: {.g-col-12 .g-col-md-4}
+```{=html}
+<div class="grid" style="--bs-columns: 5; row-gap: 0;">
+  <div class="g-col-1 g-col-sm-0"></div>
+  <div class="g-col-3 g-col-sm-5">
+    <picture>
+      <source media="(max-width: 576px)" srcset="{{< meta main-photo-square >}}">
+      <source media="(min-width: 576px)" srcset="{{< meta main-photo >}}">
+      <img class="img-fluid" src="{{< meta main-photo >}}" alt="">
+    </picture>
+  </div>
+  <div class="g-col-1 g-col-sm-0"></div>
+</div>
+```
+:::
+
+::: {.g-col-12 .g-col-md-8}
+### About me
+
+I am a psychologist, data scientist, and researcher in conflict resolution.
+
+My current research is dedicated to advancing the psychological science and practice of conflict resolution to address interconnected crises facing American communities in the 21st century.
+
+I have a doctoral degree in International Conflict Management — an interdisciplinary study of war, peace, and violence, with an attention to culture and global affairs. I also hold master's degrees in psychology and international relations, and an bachelor's degree in political science.
+
+During my PhD studies, I helped to found the [AMES Research Center](https://www.kennesaw.edu/research/centers-facilities/ames-center/index.php). We use analytics and research-based programs to improve the workplace well-being of military veterans, police, firefighters, and medics. In 3 years, we grew to a staff of 20 with a yearly revenue of \$1.9M in contracts and grants. We have trained 1.6K employees and conducted assessments for 38 client organizations and 13.5K personnel.
+
+I wear a lot of hats. I developed our conflict management training program, training over 150 individuals in constructive conflict resolution. I also act as a project manager, data scientist, and consultant. I’ve given [23 public presentations](talks/index.qmd), published [8 articles](research/index.qmd), and written [3 reports for state agencies.](research/index.qmd)\
+\
+I’ve had a nonlinear [career path.](cv/index.qmd) Before my PhD, I worked a few years in HR and Business Development. But I developed a temporary disability, overcame it, then took time to travel, volunteer, intern, and go to grad school. I’ve been driven by learning and growing into a person who can have a positive impact on the health and well-being of communities.\
+
+My work has been published in Psychology journals such as *Aggression and Violent Behavior*, *Traumatology,* and *Military Psychology,* as well as community-focused journals like the *Journal of Community Engagement and Scholarship* and peace and conflict journals such as *Peace Chronicle.*
+:::
+:::::

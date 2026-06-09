@@ -121,7 +121,64 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&fa
   }
 }
 
+// Landing
+html {
+  scroll-behavior: smooth;
+}
 
+.landing-container {
+  width: 100%;
+}
+
+.snap-panel,
+.landing-panel {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  width: 100%;
+}
+
+.panel-content {
+  width: min(900px, 90vw);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.hero-panel h1 {
+  font-size: clamp(3.75rem, 9vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.research-panel h2 {
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  margin-bottom: 1.25rem;
+}
+
+/* Mobile: avoid trapping users in full-screen scroll behavior */
+@media (max-width: 768px) {
+  .landing-container {
+    height: auto;
+    overflow-y: visible;
+    scroll-snap-type: none;
+  }
+
+  .snap-panel,
+  .landing-panel {
+    min-height: auto;
+    scroll-snap-align: none;
+    padding: 5rem 1.25rem;
+  }
+}
+
+
+
+// Landing page
 
 
 

@@ -1,43 +1,86 @@
 ---
-title: "Thomas Hodges"
-page-layout: article
-main-photo: /files/profiles/headshot.jpg
-main-photo-square: /files/profiles/headshot-square.jpg
+title: ""
+page-layout: full
 title-block-banner: false
+format:
+  html:
+    page-layout: full
+    toc: false
 ---
 
-::::: grid
-::: {.g-col-12 .g-col-md-4}
-```{=html}
-<div class="grid" style="--bs-columns: 5; row-gap: 0;">
-  <div class="g-col-1 g-col-sm-0"></div>
-  <div class="g-col-3 g-col-sm-5">
-    <picture>
-      <source media="(max-width: 576px)" srcset="{{< meta main-photo-square >}}">
-      <source media="(min-width: 576px)" srcset="{{< meta main-photo >}}">
-      <img class="img-fluid" src="{{< meta main-photo >}}" alt="">
-    </picture>
-  </div>
-  <div class="g-col-1 g-col-sm-0"></div>
-</div>
-```
+::: {.landing-container}
+
+::: {.snap-panel .hero-panel}
+::: {.panel-content}
+
+# In an era of systemic disruption
+
+how do institutions respond to conflict, mistrust, and uncertainty?
+
+Across business and the public sector, the ground is shifting under our feet. We can no longer count on cohesive societies, trust in authority, or a stable rules-based order. What happens when the old models of science, health, and political economy no longer fit the problems they face? My work confronts these 21st century challenges and their implications for academia, government, and industry.
+
+:::
 :::
 
-::: {.g-col-12 .g-col-md-8}
-### About me
+::: {.landing-panel .hero-panel}
+::: {.panel-content}
 
-I am a psychologist, data scientist, and researcher in conflict resolution.
 
-My current research is dedicated to advancing the psychological science and practice of conflict resolution to address interconnected crises facing American communities in the 21st century.
 
-I have a doctoral degree in International Conflict Management — an interdisciplinary study of war, peace, and violence, with an attention to culture and global affairs. I also hold master's degrees in psychology and international relations, and an bachelor's degree in political science.
 
-During my PhD studies, I helped to found the [AMES Research Center](https://www.kennesaw.edu/research/centers-facilities/ames-center/index.php). We use analytics and research-based programs to improve the workplace well-being of military veterans, police, firefighters, and medics. In 3 years, we grew to a staff of 20 with a yearly revenue of \$1.9M in contracts and grants. We have trained 1.6K employees and conducted assessments for 38 client organizations and 13.5K personnel.
-
-I wear a lot of hats. I developed our conflict management training program, training over 150 individuals in constructive conflict resolution. I also act as a project manager, data scientist, and consultant. I’ve given [23 public presentations](talks/index.qmd), published [8 articles](research/index.qmd), and written [3 reports for state agencies.](research/index.qmd)\
-\
-I’ve had a nonlinear [career path.](cv/index.qmd) Before my PhD, I worked a few years in HR and Business Development. But I developed a temporary disability, overcame it, then took time to travel, volunteer, intern, and go to grad school. I’ve been driven by learning and growing into a person who can have a positive impact on the health and well-being of communities.\
-
-My work has been published in Psychology journals such as *Aggression and Violent Behavior*, *Traumatology,* and *Military Psychology,* as well as community-focused journals like the *Journal of Community Engagement and Scholarship* and peace and conflict journals such as *Peace Chronicle.*
+::: {.scroll-cue}
+Scroll to explore my research areas.
 :::
-:::::
+
+:::
+:::
+
+::: {.landing-panel .research-panel}
+::: {.panel-content}
+
+::: {.eyebrow}
+Research Area 1
+:::
+
+## The Art of Quantitative Research
+
+An introductory project on Bayesian analysis for peace and conflict studies, with attention to research ethics, transparency, open science, and the craft of becoming a researcher.
+
+[Read more](/research/){.btn .btn-outline-primary}
+
+:::
+:::
+
+::: {.landing-panel .research-panel}
+::: {.panel-content}
+
+::: {.eyebrow}
+Research Area 2
+:::
+
+## Conflict and American Health in the Turbulent 21st Century
+
+A research agenda on how conflict resolution, behavioral science, and organizational interventions can address medical mistrust, workplace stress, and community health risks.
+
+[Read more](/research/){.btn .btn-outline-primary}
+
+:::
+:::
+
+::: {.landing-panel .research-panel}
+::: {.panel-content}
+
+::: {.eyebrow}
+Research Area 3
+:::
+
+## Political Risk in the Era of Economic Statecraft
+
+A research agenda on how geopolitical competition, sanctions, supply chains, industrial policy, and economic statecraft shape organizational and strategic risk.
+
+[Read more](/research/){.btn .btn-outline-primary}
+
+:::
+:::
+
+:::
