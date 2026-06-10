@@ -10,77 +10,255 @@ format:
 
 ::: {.landing-container}
 
-::: {.snap-panel .hero-panel}
+
+<!-- 
+Hero panel: The Hook
+-->
+
+::: {.landing-panel .panel-light}
 ::: {.panel-content}
 
-# In an era of systemic disruption
-
-how do institutions respond to conflict, mistrust, and uncertainty?
-
-Across business and the public sector, the ground is shifting under our feet. We can no longer count on cohesive societies, trust in authority, or a stable rules-based order. What happens when the old models of science, health, and political economy no longer fit the problems they face? My work confronts these 21st century challenges and their implications for academia, government, and industry.
-
-:::
+::: {.hero-title}
+In an era of systemic disruption
 :::
 
-::: {.landing-panel .hero-panel}
-::: {.panel-content}
+::: {.hero-subtitle}
+How do institutions respond to conflict, mistrust, and uncertainty?
+:::
 
+::: {.hero-panel-content}
+Across business and the public sector, the ground is shifting under our feet. We can no longer count on cohesive societies, trust in authority, or a stable rules-based order. The old models of science, health, and government no longer fit the problems they face. Going back is not an option, but neither is abandoning hope that we can build cohesion, trust, and shared understanding. 
 
+My name is Thomas Hodges. I help organizations manage risk and build resiliency to emerging challenges. 
 
+:::
 
 ::: {.scroll-cue}
-Scroll to explore my research areas.
+Scroll to learn more about me and my current projects.
 :::
 
 :::
 :::
 
-::: {.landing-panel .research-panel}
+
+
+<!-- 
+About Me
+-->
+
+::: {.landing-panel .panel-light}
+::: {.panel-content .panel-two-column}
+
+::: {.panel-text}
+
+::: {.research-panel-title}
+About me
+:::
+
+::: {.research-panel-content}
+
+I am a researcher and consultant based in Atlanta, Georgia, USA. 
+
+During my PhD studies, I helped found the AMES Research Center to address the mental health crisis in Georgia. In 2025, we were awarded the Public Impact Research Award for North America by the APLU. 
+
+My work has been published in journals such as Peace and Conflict, Aggression and Violent Behavior, Traumatology, Military Psychology, Peace Chronicle, and the Journal of Community Engagement and Scholarship.
+
+[CV](/research/){.btn .btn-outline-primary}
+:::
+
+:::
+
+::: {.panel-image}
+![](/files/profiles/headshot-square-edit.png)
+:::
+
+:::
+:::
+
+
+
+<!-- 
+MY CONSULTING
+-->
+
+
+::: {.landing-panel .panel-muted}
+::: {.panel-content}
+::: {.eyebrow}
+Supply Chain Consulting
+:::
+
+::: {.research-panel-title}
+My work
+:::
+
+::: {.research-panel-content}
+
+As the founder of Bongiorno Risk Partners, I translate complex evidence into practical strategy for leaders navigating supply chain risk and conflict. I guide implementation by centering communication between people.
+
+Our supply chain risk mapping and scenario workshops help you future-proof your business in an age of uncertainty. 
+
+[Learn more](/research/){.btn .btn-outline-primary}
+:::
+
+:::
+:::
+
+
+<!-- 
+MY RESEARCH
+-->
+
+
+::: {.landing-panel .panel-accent}
+::: {.eyebrow}
+Research
+:::
+
 ::: {.panel-content}
 
-::: {.eyebrow}
-Research Area 1
+::: {.research-panel-title}
+My Research
 :::
 
-## The Art of Quantitative Research
+::: {.research-panel-content}
+My research spans academic disciplines, including international relations, psychology, and conflict resolution. I approach research with a focus on transparency, public engagement, and applied impact. 
 
-An introductory project on Bayesian analysis for peace and conflict studies, with attention to research ethics, transparency, open science, and the craft of becoming a researcher.
+My research portfolio has 3 main agendas:
+
+1. Conflict, Trust, and American Health
+
+2. Political Risk in the Era of Economic Statecraft
+
+3. Quantitative Conflict Research: Bayesian Methods, Vocation, and Transparency in Peace and Conflict Studies
+
+Whether it is health, business, or academia, there are real issues that need to be addressed. But there are also misinformation and disinformation being utilized to exacerbate these issues. My vision to use research and applied interventions to bridge the gap between supporters and detractors of standard institutions, not by sweeping under the rug, their problems, not by chastising people who mistrust these institutions, but by taking seriously concerns, working to correct misbeliefs, but doing so the resolving conflict not by inadvertently playing into it.
+
+::: {.scroll-cue}
+Scroll to learn more about my research.
+:::
+
 
 [Read more](/research/){.btn .btn-outline-primary}
+:::
 
 :::
 :::
 
-::: {.landing-panel .research-panel}
+
+
+<!-- 
+RESEARCH PANEL 1
+-->
+
+
+::: {.landing-panel .panel-accent}
+::: {.eyebrow}
+Research
+:::
+
 ::: {.panel-content}
 
-::: {.eyebrow}
-Research Area 2
+::: {.research-panel-title}
+Conflict, Trust, and American Health
 :::
 
-## Conflict and American Health in the Turbulent 21st Century
+::: {.research-panel-content}
+Healthy skepticism has turned to unhealthy mistrust.
 
-A research agenda on how conflict resolution, behavioral science, and organizational interventions can address medical mistrust, workplace stress, and community health risks.
+It would be easy to dismiss MAHA as yet another group of misinformed voters. The problem is that their concerns are undergirded by real concerns: worsening health among children, health disparities, discrimination among providers, and a healthcare system that enriches insurers and pharmaceutical companies at the expense of patients. 
+
+Conspiracy theories are unlikely to address these issues, but the energy to “do something” exists. Conflict resolution it’s well positioned to capitalize on this energy, helping patients and providers build relationships based on trust instead of authority. 
+
+My research examines medical mistrust from a conflict resolution perspective. It develops and evaluates interventions to address medical mistrust that are rooted in conflict resolution processes. 
 
 [Read more](/research/){.btn .btn-outline-primary}
+:::
 
 :::
 :::
 
-::: {.landing-panel .research-panel}
+
+<!-- 
+RESEARCH PANEL 2
+-->
+
+::: {.landing-panel .panel-light}
+::: {.eyebrow}
+Research
+:::
 ::: {.panel-content}
 
-::: {.eyebrow}
-Research Area 3
+::: {.research-panel-title}
+Political Risk in the Era of Economic Statecraft
 :::
 
-## Political Risk in the Era of Economic Statecraft
-
+::: {.research-panel-content}
 A research agenda on how geopolitical competition, sanctions, supply chains, industrial policy, and economic statecraft shape organizational and strategic risk.
 
 [Read more](/research/){.btn .btn-outline-primary}
+:::
 
 :::
 :::
 
+
+<!-- 
+NEW PANEL
+-->
+
+::: {.landing-panel .panel-muted}
+::: {.eyebrow}
+Research
+:::
+::: {.panel-content}
+
+::: {.research-panel-title}
+Quantitative Conflict Research
+:::
+
+::: {.research-panel-content}
+An introductory textbook on Bayesian analysis for peace and conflict doctoral students. More than stats, I focus on developing scholars with a sense of vocation, an ethics of transparency, and an ability to change the academy for the better.
+
+[Read the first draft](/research/){.btn .btn-outline-primary}
+[Explore the GitHub repo](/research/){.btn .btn-outline-primary}
+:::
+
+:::
+:::
+
+
+
+
+
+
+<!-- 
+CONTACT INFO
+-->
+
+
+::: {.landing-panel .panel-muted}
+::: {.panel-content}
+
+::: {.research-panel-title}
+Contact
+:::
+
+::: {.research-panel-content}
+Let's talk. Send me an email. 
+
+[Email](/research/){.btn .btn-outline-primary}
+[LinkedIn](/research/){.btn .btn-outline-primary}
+[Research Gate](/research/){.btn .btn-outline-primary}
+
+:::
+
+:::
+:::
+
+
+
+<!-- 
+END .landing-container
+-->
 :::
