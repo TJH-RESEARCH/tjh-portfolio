@@ -5,6 +5,11 @@
 /.quarto/
 /_site/
 
+# Quarto CLI downloads/extractions
+quarto-*/
+quarto-cli/
+quarto.tar.gz
+
 # R/RStudio
 .Rproj.user/
 .Rhistory

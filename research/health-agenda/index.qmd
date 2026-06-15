@@ -9,10 +9,51 @@ categories:
 toc: false
 ---
 
-In the United States, healthy skepticism of medicine has turned to unhealthy mistrust. The rise of the Make American Healthy Again (MAHA) movement has drawn on conspiracy theories to undermine public health institutions. Yet underlying MAHA’s concerns are real issues with American health: a history of bias, worsening health among children, and a healthcare system that enriches insurers and pharmaceutical companies at the expense of patients.
+American communities face a host of threats to their well-being, including an [epidemic of loneliness](https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf),[^1] a [decline in children’s health](https://doi.org/10.1001/jama.2025.9855),[^2] and a [mistrust in vaccines and health experts](https://doi.org/10.1038/s41541-025-01217-7).[^3] These health problems are embedded in a complex context of escalated social conflict,[^4] magnified by a shifting media landscape in which traditional journalism is overtaken by social media that promotes [arguments, misinformation, and radicalism](https://doi.org/10.35760/dimedcom.2024.v3i1.11681).[^5]
 
-While conspiracy theories will not solve the real issues, the energy to “do something” exists. Conflict resolution has a pivotal role to play, helping channel energy toward rebuilding trust, changing how patients and providers relate to each other, and ultimately reforming the deeper issues with the American health system.
+Multiple channels are required for addressing America’s complex health challenges, including conflict resolution. Individuals need conflict resolution skills to cooperate, cope with stress, and build meaningful relationships, which in turn can improve their daily lives, work, and citizenship.
 
-My research examines medical mistrust from a conflict resolution perspective. It develops and evaluates interventions to address medical mistrust that are rooted in conflict resolution processes.
+My mission is to utilize my expertise in conflict resolution research to improve the health and well-being of Americans in the turbulent 21^st^ century.
 
-This research agenda builds on my prior studies of mistrust, stigma, and mental health, as well as applied conflict interventions with communities.
+I conduct research using an approach that is informed by culturally sensitive interventions and designed to target interventions towards populations in need. Additionally, I evaluate those interventions, including their efficacy in improving health and changing conflict behaviors, as well as assess the impact of theoretically important variables, including timing, critical mass, and relationships.
+
+The aims of my research agenda are to:
+
+1.  Advance the role of conflict management research in the context of emerging threats to community and organizational well-being.
+
+2.  Engage at-risk communities and occupations in the development of skills and processes for constructively, nonviolently, and fairly resolving conflicts.
+
+3.  Build community and organizational capacity to implement interventions that address conflict at both community and systemic levels.
+
+My research program will have practical benefits and make significant theoretical contributions to the fields of conflict resolution, health psychology, and polarization studies:
+
+1.  **Conflict Resolution:** Questions persist among scholars of Interactive Conflict Resolution regarding the [“generalizability” of interventions to broader conflicts](https://doi.org/10.4324/9781003340522).[^6] My research will address these questions and focus on the role that relationships, timing, and complexity play in generalizing interventions to broader health-related conflicts.
+
+2.  **Health Psychology:** Currently, most research on health and conflict is conducted with employees in workplaces or focuses on the health impacts of war. Yet, conflict resolution can improve health in a wide variety of interpersonal, familial, and social contexts, making it an under-researched tool for promoting the health and wellness of individuals and communities. Therefore, I will investigate the relationship and potential causal connections between health and conflict resolution at both the individual and community levels.
+
+3.  **Polarization Studies:** Several strategies exist for [reducing partisan animosity and anti-democratic sentiment](https://www.science.org/doi/10.1126/science.adh4764).[^7] However, these have primarily been developed and tested in laboratory settings devoid of real-world considerations. By implementing and evaluating interventions in natural settings, I will advance understanding of the complexity underlying the use of depolarization techniques in social conflicts.
+
+To accomplish my research agenda, I will draw on prior experience researching the health and well-being of at-risk communities and occupations, including [public safety personnel](/research/2025-eap/index.qmd), [military veterans](/researc/2025-moral-injury/index.qmd), and their families. Additionally, I will use skills gained by facilitating [conflict resolution workshops](/research/2022-avp/index.qmd) and designing [workplace and community interventions in conflict resolution](/research/ames-conflict-training/index.qmd) and mental health. Finally, I will establish partnerships with communities, organizations, and other researchers to implement targeted interventions. I expect this work to have a strong appeal to public health funders who are interested in reducing violence, increasing social connections, improving community resilience, and preventing suicide.
+
+Some potential projects within this research program include:
+
+- An extensive epidemiological-style survey on the association between conflict and health to identify occupations, communities, and cultural groups at high risk for conflict-related dysfunction.
+
+- The development, implementation, and evaluation of an interactive conflict resolution program to address vaccine and public health skepticism.
+
+- The creation, delivery, and evaluation of a negotiation training for military and public safety personnel.
+
+
+[^1]: Office of the Surgeon General. (2023). [Our epidemic of loneliness and isolation: The U.S. Surgeon General’s advisory on the healing effects of social connection and community.](https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf)
+
+[^2]: Forrest, C. B., Koenigsberg, L. J., Eddy Harvey, F., Maltenfort, M. G., & Halfon, N. (2025). Trends in US children’s mortality, chronic conditions, obesity, functional status, and symptoms. JAMA, 334(6), 509. [https://doi.org/10.1001/jama.2025.9855](https://doi.org/10.1001/jama.2025.9855)
+
+[^3]: Liu, B., Zhang, X., Lai, Y., Sun, T., Wang, C., Zhao, T., Zhang, S., Shi, B., Li, Y., & Cui, F. (2025). Global vaccine confidence trends among adults above and below age 65. NPJ Vaccines, 10(1), 160. [https://doi.org/10.1038/s41541-025-01217-7](https://doi.org/10.1038/s41541-025-01217-7)
+
+[^4]: Iyengar, S., Lelkes, Y., Levendusky, M., Malhotra, N., & Westwood, S. J. (2019). The origins and consequences of affective polarization in the United States. Annual Review of Political Science, 22(1), 129–146. [https://doi.org/10.1146/annurev-polisci-051117-073034](https://doi.org/10.1146/annurev-polisci-051117-073034)
+
+[^5]: Latuheru, R. D., & Cangara, H. (2024). The role of social media algorithms in shaping and conflict resolution. Journal of Digital Media Communication, 3(1), 19–27. [https://doi.org/10.35760/dimedcom.2024.v3i1.11681](https://doi.org/10.35760/dimedcom.2024.v3i1.11681)
+
+[^6]: d’Estrée, T. P. (2023). Shifting protracted conflict systems through local interactions: Extending Kelman’s legacy (1st ed.). Routledge. [https://doi.org/10.4324/9781003340522](https://doi.org/10.4324/9781003340522)
+
+[^7]: Voelkel, J. G., Stagnaro, M. N., Chu, J. Y., Pink, S. L., Mernyk, J. S., Redekopp, C., Ghezae, I., Cashman, M., Adjodah, D., Allen, L. G., Allis, L. V., Baleria, G., Ballantyne, N., Van Bavel, J. J., Blunden, H., Braley, A., Bryan, C. J., Celniker, J. B., Cikara, M., … Willer, R. (2024). Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity. Science, 386(6719), eadh4764. [https://www.science.org/doi/10.1126/science.adh4764](https://www.science.org/doi/10.1126/science.adh4764)

@@ -93,19 +93,26 @@ My Research
 :::: research-panel-content
 My research examines ways that institutions respond to conflict, mistrust, and uncertainty in an era of systemic disruption.
 
-Currently, I am focusing on three areas:
+I focus on three areas:
 
 1.  [Conflict, Trust, and American Health](/#health)
 
 2.  [Conflict and Risk in the Era of Economic Statecraft](/#economic-statecraft)
 
-3.  [Quantitative Conflict Research: Bayesian Methods, Vocation, and Transparency in Peace and Conflict Studies](/#bayes)
+3.  [Academic Vocation amid Mistrust, Anti-Intellectualism, and Technological Change](/#bayes)
 
-Each of these areas addresses the emerging challenges of the 21st century. Whether it is health, business, or academia, the old models that relied on trust, stability, and authority have broken down. Mistrust of healthcare is rampant; the rules-based order of globalization has given way to competition; and academia is under attack from critics who espouse anti-intellectualism. 
+While these are different subjects, each area addresses the emerging challenges of the 21st century. Whether it is health, business, or academia, the old models that relied on trust, stability, and authority have broken down. Mistrust of healthcare is rampant; the rules-based order of globalization has given way to competition; and academia is under attack from critics who espouse anti-intellectualism.
 
-These emerging challenges require emerging solution: new ways of thinking and doing that resolve underlying issues and take seriously the drivers of conflict and division. 
+The problem is, there were serious issues with the old ways of doing things: Healthcare prioritizes profits over people and discriminates against people based on their gender, race, and other characteristics. The liberal order has not ended global inequality, and its rules always have an exception for the US and allies. Academia has been insular, corrupted by numbers games, and implicated in the unaffordability of higher education.  
 
-[Read more about my research portfolio](/research/){.btn .btn-outline-primary}
+In all of these areas, the response to critics has been condescension: "You just don't get it. Leave it to us, the experts, doctors, policymakers, and professors. We know there are problems, but this is better than the alternative." The result has been mistrust. Some of that mistrust is exacerbated by cynical political entrepreneurs and enabled by new media. But a lot of that mistrust has been earned by institutions failing to address their problems, all while the representatives of those institutions patronize people who point out issues.
+
+Conflict resolution is part of a solution to these issues. It can be harnessed to bring together the different interests and worldviews; to help people build coalitions that can address problems and take on the self-interested spoilers who have capitalized on conflict without themselves addressing the problems. 
+
+My research is about understanding the conflict dynamics across these institutions, and applying that understanding to build trust and solve problems in communities and organizations.
+
+Scroll to see more about my research in each of these areas. 
+
 [See all of my articles, presentations, and projects](/research/){.btn .btn-outline-primary}
 ::::
 ::::::
