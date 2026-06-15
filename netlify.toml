@@ -1,10 +1,10 @@
 [build]
   publish = "_site"
   command = """
-    curl -fsSL https://quarto.org/download/latest/quarto-linux-amd64.deb -o quarto.deb &&
-    ar x quarto.deb &&
-    tar -xJf data.tar.xz &&
-    export PATH="$PWD/usr/bin:$PATH" &&
+    curl -fsSL https://quarto.org/download/latest/quarto-linux-amd64.tar.gz -o quarto.tar.gz &&
+    mkdir quarto-cli &&
+    tar -xzf quarto.tar.gz -C quarto-cli --strip-components=1 &&
+    export PATH="$PWD/quarto-cli/bin:$PATH" &&
     quarto --version &&
     quarto render
-  """
+  """   
