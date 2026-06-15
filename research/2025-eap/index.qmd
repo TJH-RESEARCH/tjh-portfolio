@@ -1,0 +1,54 @@
+---
+title: "Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters"
+#date: 2025-06-12
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+    affiliation: Center for the Advancement of Military and Emergency Services (AMES) Research, Kennesaw State University
+  - name: Kristin A. Horan
+    orcid: 0000-0001-9318-044X
+  - name: Adrian Alicea
+    #orcid:
+  - name: Edwin Trejo-Rivera
+    orcid: 0009-0001-0540-5766
+  - name: Sophie R. Vincent
+    orcid: 0009-0008-5320-9808
+  - name: Phaina Dubuisson
+    orcid: 0009-0000-8236-6820
+  - name: Katherine Moore
+    orcid: 0009-0009-6151-5475
+  - name: Bianca Channer
+    orcid: 0009-0000-6151-488X
+  - name: Chris Hess
+    url: https://hesscl.com
+    orcid: 0000-0003-3005-7780
+  - name: Brian A. Moore
+    orcid: 0000-0003-0273-7236
+type: "Book Chapter"
+categories:
+  - Health
+pub-info:
+  links:
+    - name: 
+      url: 
+      icon: fa-solid fa-scroll
+toc: false
+---
+
+## Abstract
+
+Police and firefighters experience high levels of occupational stress and trauma and a high prevalence of mental health concerns. While public safety personnel can access resources and treatments at no cost through employer-provided Employee Assistance Programs (EAPs), reported utilization rates of EAPs in public safety workplaces are low. The aim of the current study is to examine the role of trust in first responders’ awareness, attitudes, and utilization of EAPs. We conducted eight focus group interviews and one individual interview with police and firefighters in the southeastern United States (*N* = 36). We thematically analyzed transcripts of the interviews. Participants discussed trust in peers, trust in the EAP provider, and organizational factors as important for their awareness, attitudes, and utilization of EAPs. Based on these findings, we make multiple recommendations for improving EAPs in public safety workplaces, including ways that EAP providers can build rapport and trust with first responders.
+
+## Citation
+
+Hodges, T. J., Horan, K., Alicera, A., Trejo-Rivera, E., Vincent, S., Dubuisson, P., Moore, K., Channer, B., Hess, C., & Moore, B. A. (in press). Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters. In V. B. Van Hasselt & R. A. Black (Eds.), *Advances in first responder mental health: Research, training, and practice*. Springer.
+
+``` bibtex
+@incollection{HodgesHoranEtAl:2025,
+    Author = {Thomas J. Hodges and Kristin A. Horan and Adrian Alicea and Edwin Trejo-Rivera and Sophie R. Vincent and Phaina Dubuisson and Katherine Moore and Bianca Channer and Chris Hess and Brian A. Moore},
+    Booktitle = {Advances in First Responder Mental Health: Research, Training, and Practice},
+    Title = {Building Trust in Employee Assistance Programs for Emergency Services Personnel: The Role of Trust in Employee Assistance Program Awareness, Usage, and Attitudes Among Police and Firefighters},
+    Editor = {Vincent Van Hasselt and Ryan Black},
+    Publisher = {Springer},
+    Year = {in press}}
+```

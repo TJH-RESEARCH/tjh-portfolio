@@ -1,0 +1,18 @@
+---
+title: "Conflict, Trust, and American Health: A Research Agenda"
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+type: "Research Agenda"
+categories:
+  - Health
+toc: false
+---
+
+In the United States, healthy skepticism of medicine has turned to unhealthy mistrust. The rise of the Make American Healthy Again (MAHA) movement has drawn on conspiracy theories to undermine public health institutions. Yet underlying MAHA’s concerns are real issues with American health: a history of bias, worsening health among children, and a healthcare system that enriches insurers and pharmaceutical companies at the expense of patients.
+
+While conspiracy theories will not solve the real issues, the energy to “do something” exists. Conflict resolution has a pivotal role to play, helping channel energy toward rebuilding trust, changing how patients and providers relate to each other, and ultimately reforming the deeper issues with the American health system.
+
+My research examines medical mistrust from a conflict resolution perspective. It develops and evaluates interventions to address medical mistrust that are rooted in conflict resolution processes.
+
+This research agenda builds on my prior studies of mistrust, stigma, and mental health, as well as applied conflict interventions with communities.

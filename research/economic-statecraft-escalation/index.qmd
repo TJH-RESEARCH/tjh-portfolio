@@ -1,0 +1,14 @@
+---
+title: "Dynamics of Escalation and De-Escalation in Economic Statecraft"
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+type: "Working Paper"
+categories:
+  - Economic Statecraft
+toc: false
+---
+
+The role for conflict scholars is to examine how that economic statecraft leads to escalation of conflicts. We understand that ["grey zone" operations have their own escalation dynamics](https://journals.sagepub.com/doi/10.1177/00220027231166345), but it remains unclear how economic statecraft differs from other grey zone operations, such as cyber warfare. While both are conflictual, sub-war behaviors, they are implemented in different ways. For instance, the principal-agent problem looks different for economic statecraft than say, cyber warfare or standard military operations. Economic statecraft works [by shaping the incentives faced by firms](https://bookshop.org/p/books/chinese-economic-statecraft-commercial-actors-grand-strategy-and-state-control-william-j-norris/a769b67938a540b9?ean=9781501725913&next=t). A principal (say the US president) works via an agent (such as the US Treasury) to influence economic actors, which themselves are not agents in the traditional sense. Another difference is that tools of economic statecraft are often overt rather than covert, leaving little room for the plausible deniability that pervades grey zone conflict.
+
+This line of research can inform states in their use of economic statecraft as well as firms navigating the increased risk of a world where economic statecraft is commonplace. Ultimately, it is about learning how to prevent unintended escalation where using these tools, as well learning how to de-escalate conflicts through economic means.

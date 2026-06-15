@@ -1,32 +1,41 @@
 ```{=html}
 
 <div class="research project-list">
-<ul class="list">
+  <ul class="list">
     <% for (const item of items) { %>
-    <div class="item-entry">
+      <li class="item-entry" <%= metadataAttrs(item) %>>
         
         <div class="metadata">          
-            <p class="date"><%= item.date %></p>         
+          <% if (item.type) { %>
+            <p class="type listing-type"><%= item.type %></p>
+          <% } %>
+
+          <% if (item.date) { %>
+            <p class="date listing-date"><%= item.date %></p>
+          <% } %>
         </div>
 
         <div class="body">  
-            <div class="title"> <a href="<%- item.path %>" > <%= item.title %> </a> </div>
+          <div class="title listing-title">
+            <a href="<%- item.path %>"><%= item.title %></a>
+          </div>
 
-            <p class="author"><%= item.author %></p>
+          <% if (item.author) { %>
+            <p class="author listing-author"><%= item.author %></p>
+          <% } %>
             
-            <% if(item.categories) { %>
-                <div class="project-categories">
-                    <% for (const cat of item.categories) { %>
-                        <div class="project-category"><a href="#category=<%= cat %>">
-                                <%= cat %>
-                            </a></div>
-                    <% } %>
-                </div>
-            <% } %>
+          <% if (item.categories) { %>
+            <div class="project-categories listing-categories">
+              <% for (const cat of item.categories) { %>
+                <div class="project-category"><%= cat %></div>
+              <% } %>
+            </div>
+          <% } %>
         </div>
         
-    </div>
+      </li>
     <% } %>
-</ul>
+  </ul>
 </div>
+
 ```

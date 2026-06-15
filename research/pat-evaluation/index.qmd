@@ -1,0 +1,28 @@
+---
+title: "Police Physical Ability Tests: A Comparison of Incumbent Police"
+author:
+  - name: Sarah Lanham
+    affiliation: AMES Research Center, Kennesaw State University
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+    affiliation: AMES Research Center, Kennesaw State University
+  - name: Charles Bowen
+    affiliation: Department of Criminal Justice, University of North Georgia
+  - name: Tom R. Nagel
+    affiliation: Training Division, Forsyth County Sheriff's Department
+  - name: Brian A. Moore
+    orcid: 0000-0003-0273-7236
+    affiliation: AMES Research Center, Kennesaw State University
+type: "Working Paper"
+categories:
+  - Health
+toc: false
+---
+
+While policing is physically demanding work, many police officers are in poor physical condition, owing to occupational and cultural factors. Recently, many states have mandated physical ability testing for new police officers. Yet few of these programs have been evaluated. In this project, I conducted a Bayesian data analysis of two groups: police who took and passed Georgia's physical ability test, and a group who has not. The complete analysis code is [available on my GitHub](https://github.com/TJH-RESEARCH/pat-evaluation).
+
+For more on Bayesian data analysis, read [this post]().
+
+### Citation
+
+Lanham, S., Bowen, C., Hodges, T.J., Nagel, T.R., Moore, B.A. Police Physical Ability Tests: A Comparison of Incumbent Police. Target Journal: Police Quarterly.

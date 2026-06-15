@@ -1,0 +1,22 @@
+---
+title: "Using research to enhance the practice of suicide prevention"
+date: 2023-05-25
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+type: "Presentation"
+categories:
+  - Health
+  - Vocation
+pub-info:
+  links:
+  - name: Let's Connect Summit 2023
+    url: https://www.kennesaw.edu/research/centers-facilities/ames-center/lets-connect-summit/docs/lets-connect-summit-conference-program-final.pdf
+    icon: fa-solid fa-circle-info
+  - name: AMES Research Center
+    url: https://www.kennesaw.edu/research/centers-facilities/ames-center/index.php
+    icon: fa-solid fa-building-columns
+toc: false
+---
+
+I moderated a panel discussion at the [Let's Connect Summit](https://www.kennesaw.edu/research/centers-facilities/ames-center/lets-connect-summit/docs/lets-connect-summit-conference-program-final.pdf) hosted by the [AMES Research Center](https://www.kennesaw.edu/research/centers-facilities/ames-center/index.php). The panel discussed ways to integrate research and practice in communities.

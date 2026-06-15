@@ -1,0 +1,25 @@
+---
+title: "Conflict training in high-risk occupations: Recommendations and pilot evaluation for conflict resolution with public safety and military professionals"
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+    affiliation: AMES Research Center, Peacebuilding and Development, Kennesaw State University
+  - name: Charles Bowen
+    affiliation: Department of Criminal Justice, University of North Georgia
+  - name: Brian A. Moore
+    orcid: 0000-0003-0273-7236
+    affiliation: AMES Research Center, Kennesaw State University
+type: "Working Paper"
+categories:
+  - Health
+  - Conflict Resolution
+toc: false
+---
+
+## Links
+
+## Abstract
+
+## Citation
+
+**Hodges, T. J.,** Brown, C. & Moore, B.A. (Under Review). “Conflict Training in High-Risk Occupations: Recommendations and Evaluation for Conflict Resolution with Public Safety and Military Professionals.” Target Journal: *Peace & Conflict*.

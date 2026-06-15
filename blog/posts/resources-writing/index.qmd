@@ -1,0 +1,51 @@
+---
+title: "Writing Resources"
+description: "Sure, you've been writing since elementary school, but not professionally. If you want to make your writing something people employ you to do, you need some help. Here are some resources to take your writing from amateur to professional."
+# author:
+#   - name: Thomas Hodges
+#     orcid: 0000-0002-5184-7346
+# date: 2026-06-11
+categories: 
+  - Resources for Students
+#citation: 
+#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
+#image: 
+draft: false
+---
+
+
+# Motivation
+
+One of the hardest parts of writing is finding time to write. Usually, it isn't that you don't have spare time. It's that your spare time doesn't align with your motivation or you aren't in the right head space.  
+
+Luckily, you can learn from professional writers -- people who write books and screenplays. If they don't write, they can't pay their bills. So they develop routines and habits to stay motivated and overcome writer's block. 
+
+Check out the [Making Time to Write](https://www.youtube.com/watch?v=BoFa0dM44ys&list=PLez8jOvskc-NGq5O3zAIF1m9dz3_lVOe3) playlist of interviews with screenwriters from the YouTube channel [Film Courage](https://www.youtube.com/@filmcourage). There's lots of good advice, [including how to write everyday](https://youtu.be/rx0Qb3RU5jI?si=BtX9tbbH-AkNHQbA), how to [squeeze writing time into a busy schedule](https://youtu.be/WVAt898HklI?si=j6d-7ygu0D4cqAx9), and how to [shift into a writing mindset after a long day](https://youtu.be/glWCU0_sEH8?si=778JNu2h8lasdKNM). 
+
+You might also benefit from hearing Stephen King's writing routine, as well as his other advice [On Writing](https://bookshop.org/p/books/on-writing-a-memoir-of-the-craft-stephen-king/35694917f8e2e375?ean=9781982159375&next=t).
+
+
+# On writing the thesis or dissertation
+
+Writing short essays, class assignments, blogs, and even journal articles can be difficult. But the challenge is greater when the length of the work increases, say for a thesis, dissertation, or book. 
+
+I have found Patrick Dunleavy's [Authoring a PhD](https://thenigerianprofessionalaccountant.wordpress.com/wp-content/uploads/2013/04/writing-doctoral-thesis.pdf) to be helpful. Chapter 1 and 2, especially, deal with how to structure the work as a whole as well as individual chapters. 
+
+Another great resource is Howard Becker's [Writing for social scientists](https://bookshop.org/p/books/writing-for-social-scientists-third-edition-how-to-start-and-finish-your-thesis-book-or-article-howard-s-becker/c05ec2f0ff8fe1b9?ean=9780226643939&next=t), which you should be able to find as an ebook via your school library. It's a relatable, quick read with a lot of good wisdom.
+
+# Problematization
+
+Sometimes you hear that research needs to be novel; it needs to do something new. That is not entirely true. Really, research needs to be valuable to people who consume it (e.g., read it). Value lives in your reader's mind. Or really, it is something that you create in your reader's mind through language. Larry McEnerney, from the University of Chicago's writing program, has [a brilliant lecture](https://youtu.be/aFwVf5a3pZM?si=-868zET66yny8zGo) that shows you how to construct problems that your research addresses. It's advice that works for academia as well as business or any written product. And it's more than just writing advice, it's advice on how to build research programs that are valuable to your audience. McEnerney also has [another lecture on the Gettysburg Address](https://youtu.be/F0M6eIfgUK4?si=tzEN0zEO5IaeOXA6) which touches on problematization as well as style and coherence. Both are well worth watching multiple times. 
+
+One implication of McEnerney's advice is that a literature review should not simply recount prior literature. It does need to do that, but it should do so in a way that enriches the problem, not simply state things that your audience already knows. For a great example of what McEnerney is talking about, check on the literature review in this [2012 article in the American Sociological Review](https://doi.org/10.1177/0003122412438225). The literature review builds the problem further. It doesn't just add background information. 
+
+# Style
+
+Don't neglect style. There is a tendency for academics to think their ideas will speak for themselves. They don't. You have to communicate them, and you need to communicate them clearly. Steven Pinker, the popular science writer and psychologist, has some great ideas about how to do that. He also has a lot of experience translating scientific ideas for regular people. His [book is an in-depth how-to](https://bookshop.org/p/books/the-sense-of-style-the-thinking-person-s-guide-to-writing-in-the-21st-century-steven-pinker/7c09a3cbd73891dd?ean=9780143127796&next=t), including a new way of thinking about grammar. He also has several lectures you can find on YouTube that go over what he covers in chapter 1 of the book, like [this one](https://youtu.be/IE-TTz13P7w?si=y0MWkHgT0y8lhdoX). 
+
+The Chronicle of Higher Education actually did a whole [special issue on Pinker's writing style advice](https://grad.ncsu.edu/wp-content/uploads/2016/06/Why-Academics-Stink-at-Writing-1-2.pdf). The responses to Pinker are worth a read, especially a rebuttal from Helen Sword which shows us that it is actually okay to use jargon, sometimes and for the right reasons. 
+
+Finally, check out [this talk from Judy Swan](https://youtu.be/jLPCdDp_LE0?si=hBZ9Ba_M47ZC_1fJ), which has some fantastic tips on construction of sentences. One big takeaway is that the same information, even the same exact words, can be interpreted differently by a reader depending on how they are arranged in a sentence (e.g., what comes first vs. last, what is in the primary vs. subordinate clause). A second takeaway is that brevity of a sentence is not always better. That's right, being concise is not always the best way to communicate information. This flies in the face of the classic advice -- given by [George Orwell](https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/) and others -- that "if it is possible to cut a word out, always cut it out." Usually, that is good advice, especially if readers find your prose unclear or verbose. Watch the video to find out when it makes sense to lengthen your sentences instead of cutting out every last word. 
+
+
+

@@ -1,0 +1,21 @@
+---
+title: "Conflict and Risk in an Era of Economic Statecraft: A Research Agenda"
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+type: "Research Agenda"
+categories:
+  - Economic Statecraft
+toc: false
+---
+
+The rules-based global economy is gone. It was underwritten by American power, but Washington now sees this as a vulnerability. Namely, US policymakers fear the rise of China, and recognize that China has not been playing by the rules. China has engaged heavily in economic statecraft – [actions intended to affect security as a side effect of business](https://bookshop.org/p/books/chinese-economic-statecraft-commercial-actors-grand-strategy-and-state-control-william-j-norris/a769b67938a540b9?ean=9781501725913&next=t). Now, foreign policy experts are [calling on the US to engage in economic statecraft of its own](https://warontherocks.com/economic-statecraft-is-back-is-america-ready/). Primarily, this means creating a unified strategy [across numerous government organizations](https://warontherocks.com/economic-statecraft-and-the-federal-institutional-architecture/). It also means creating policy to allow [greater coordination with the private sector](https://warontherocks.com/fighting-an-economic-war-without-fused-intelligence/), not unlike similar measures already taken to combat [cyber warfare](https://warontherocks.com/seeing-the-cyber-in-economic-statecraft/). It may also require expanded authorities, such as allowing allowing the [Committee on Foreign Investment in the United States](https://home.treasury.gov/policy-issues/international/the-committee-on-foreign-investment-in-the-united-states-cfius) to review minority acquisitions or other, more pro-active measures.
+
+How this all unfolds remains to be seen, but offers a chance to understand the way that economic statecraft is made, why, and to what effect.
+
+Currently, I'm working on the following projects aligned with this research agenda:
+
+1.  [Dynamics of escalation and de-escalation in economic statecraft](/research/economic-statecraft-escalation/index.qmd)
+2.  [Political risk management in the era of economic statecraft](/research/economic-statecraft-risk/index.qmd)
+
+[See my related research](/research/#category=Economic%20Statecraft){.btn .btn-outline-primary}

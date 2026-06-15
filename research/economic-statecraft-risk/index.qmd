@@ -1,0 +1,28 @@
+---
+title: "Political Risk Management in the Era of Economic Statecraft"
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+type: "Working Paper"
+categories:
+  - Economic Statecraft
+toc: false
+---
+
+Recently, the national security website [War on the Rocks](https://warontherocks.com) hosted a [series of articles on economic statecraft](https://warontherocks.com/category/special-series/war-by-other-ledgers/) from the [Potomac Institute of Policy Studies](https://potomacinstitute.org). The series, War by Other Ledgers, is great, walking through different issues related to US economic statecraft. The overarching issue, however, is that the US has no strategy and no coordination. 
+
+The articles offer a host of recommendations. Nearly all are aimed at government policymakers rather than firms. Even in [the article focused role of firms](https://warontherocks.com/rethinking-corporate-risk-and-alignment-in-an-era-of-economic-statecraft/)  is mainly concerned with what Congress should do. But firms play a vital role in economic statecraft. They are the conduit for economic statecraft. They are also in the receiving end of adversarial actions in this realm. Another way of saying that is to call firms the battlefield. They are the ones primarily affected, and thus have lots of information about what is happening.
+
+Despite the importance of firms to economic statecraft, the US government has no system for communicating and coordinating with firms. Some analysts draw an analogy to cyber. The policy landscape looked similar 10 years ago. Then legislation made it possible for greater coordinators in government, and made it mandatory for the government to share information on cyber attacks with affected individuals and companies. This increased the amount of cooperation between firms and the government.
+
+It is not clear if US economic statecraft will similarly lead to a closer relationship with firms. To start, economic statecraft works through affecting the incentives facing economic actors. Often, this means making it harder for foreign firms and easier for domestic ones, but US firms are globalized and tend to have advantageous positions in global supply chains, extracting relatively more value from those supply c chains than firms in the rising power such as China. A decoupling of economies, or other measures intended to change incentives, may actually lead to worse absolute conditions for us firms. This may drive a wedge between firms and government and even accelerate great power transition.
+
+A country like the US has a strong tradition of lobbying from economic actors; and firms may try to shape economic statecraft policy in their advantage.
+
+What is clear is that old models of political risk, mainly US-centric models, assume that risk is something that occurs because of foreign governments. There is generally the assumption that a firm’s domestic government will support. Support is one form of economic statecraft, but it is et the only one, and the economy is an interconnected set of transactions. This makes no guarantee that the US will not be a major source of risk to its own firms, especially relative to the role it has played in the post-war era.
+
+In short, it’s no longer about being pro-economy, it’s about about using the economy to be pro-security.
+
+This research agenda needs to address several questions.
+
+First, there are questions that confirm — or help modify— the agenda premise. Is it really true we are in a new era of economic statecraft? Critical theorists were always skeptical of the liberal order. Economic power has long played a role in international affairs. What extent has an economic power change? Is the use of economic statecraft by the United States in Europe, traditionally, liberal actors, increasing? These largely descriptive questions provide important foundation for studying economics statecraft in the 21st-century.

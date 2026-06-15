@@ -1,0 +1,16 @@
+---
+title: "An Apprenticship in Quantitative Conflict Research: The Art of Bayesian Statistics and Open Science in Peace and Conflict Studies"
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+type: "Book (in preparation)"
+categories:
+  - Vocation
+toc: false
+---
+
+I'm writing a textbook. It's nominally a statistics textbook; An introductory guide for PhD students who study war, peace, conflict, and international relations. Programs in these disciplines usually attract students who are afraid of statistics. Not always. But there are a lot of students who don't want to do quantitative research or don't believe they can learn. These students need stats textbooks that speak their language, one that knows their discipline and recognize their concerns. More importantly, they need a book that orients them to the world of research.
+
+What they don't need is a long list of statistical tests to memorize. I use a generalized linear model framework in my own research, and it's what I teach in the book. But more than a stats textbook, this book is about helping researchers develop vocation and good taste. I want them to understand the pitfalls with standard methods, like stargazing for p-values instead of understanding effect sizes and distributions. This pitfalls are one part of the problems that plague academia. They need to recognize these problems and take steps to mitigate them in their own research, as well as work to address them throughout their careers.
+
+The book does all of this with an artistic motif. I use metaphors like artistiry, forgeries, provenance, apprenticeships, taste, and genre to communicate these issues. At least, that is the plan so far. Feel free to read [a draft of the first chapter](../../files/bayesian-textbook-chapter-1.pdf) and offer any ideas you have.

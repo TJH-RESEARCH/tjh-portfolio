@@ -3,41 +3,23 @@ project:
   output-dir: _site
 
 website:
-  title: "Thomas Hodges"
+  title: "TJH Research"
+  search: false
   navbar:
     left:
-      - href: about/index.qmd
-        text: About Me
-      - href: cv/index.qmd
-        text: CV
-      #- href: blog/index.qmd
-      #  text: Blog
-      - href: data-science/index.qmd
-        text: Data
-      - href: research/index.qmd
+      - href: /#about
+        text: About
+      #- href: cv/index.qmd
+      #  text: CV
+      - href: /#research
         text: Research
-      - href: talks/index.qmd
-        text: Talks
+      - href: /#contact
+        text: Contact
+      - href: blog/index.qmd
+        text: Blog
+      - href: research/index.qmd
+        text: Articles, Presentations & Projects
         
-    right: 
-      - text: "{{< iconify bi envelope size=1.1em title='E-mail' >}}"
-        href: "mailto:tommyjhodges@gmail.com"
-      - text: "{{< iconify bi github size=1.1em title='GitHub' >}}"
-        href: https://github.com/TJH-RESEARCH
-        rel: me
-      - text: "{{< iconify bi linkedin size=1.1em title='LinkedIn' >}}"
-        href: https://www.linkedin.com/in/tom-hodges
-        rel: me
-      - text: "{{< iconify fa-brands:researchgate size=1.1em title='Research Gate' >}}"
-        href: https://www.researchgate.net/profile/Thomas-Hodges-4?ev=hdr_xprf
-        rel: me
-      - text: "{{< ai google-scholar size=1.1em title='Google Scholar' >}}"
-        href: https://scholar.google.com/citations?hl=en&authuser=3&user=wG3FltQAAAAJ
-        rel: me
-      - text: "{{< ai orcid size=1.1em title='ORCID' >}}"
-        href: https://orcid.org/0000-0002-5184-7346
-        rel: me
-
   page-footer:
     center: |
       <span>{{< fa brands creative-commons >}} {{< var years >}} Thomas Hodges </span>

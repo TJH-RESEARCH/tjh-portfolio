@@ -1,0 +1,26 @@
+---
+title: "Role of grassroots workers in bringing peace to local communities"
+date: 2021-08-21
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+type: "Presentation"
+categories:
+  - Conflict Resolution
+pub-info:
+  links:
+    - name: Alternatives to Violence Project
+      url: https://avpusa.org
+      icon: fa-solid fa-circle-info
+    - name: Manuscript
+      url: ../research/articles/2022-avp/index.qmd
+      icon: fa-solid fa-file
+    - name: Peace 360
+      url: https://peace360initiative.org
+      icon: fa-solid fa-peace
+toc: false
+---
+
+I participated in a panel discussion hosted by [Peace360](https://peace360initiative.org). I discussed my work as a facilitator for [Alternatives to Violence Project (AVP)](https://avpusa.org), the nonviolent conflict resolution training program. During the panel, I argued that the reason AVP works is because it is based on trust. Participants in the workshop have to trust each other in order to open up. They open up about themselves, leading to better self-understanding and less defensiveness. They are also able to be open minded to other people, accepting their differences. Finally, the trust is the basis for experiential learning -- role plays, practice negotiations, and other activities. These activities don't work unless you are willing to be vulnerable, take chances, and make mistakes. That's how people actually learn to do "conflict resolution" -- not from a textbook but from experience. Trust makes that possible, and AVP provides a process to build that trust.
+
+My ideas from this discussion evolved into a [research paper](https://linkinghub.elsevier.com/retrieve/pii/S1359178922000179). Here is the [paywall-free paper](https://www.researchgate.net/publication/359047556_Conflict_resolution_workshops_for_service_members_and_families_The_potentials_of_Alternatives_to_Violence_Project_AVP_to_address_military_domestic_violence).

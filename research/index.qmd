@@ -1,65 +1,17 @@
 ---
-title: "Research"
+title: "Articles, Presentations, and Projects"
 listing:
-  - id: articles
-    contents: "articles/*/index.qmd"
-    sort: "date desc"
+  - id: research
+    contents: "*/index.qmd"
+    sort:
+      - "date desc"
+      - "title"
     template: ../html/research/listing.ejs
-    categories: true
-  - id: reviews
-    contents: "reviews/*/index.qmd"
-    sort: "date desc"
-    template: ../html/research/listing.ejs
-    categories: true
-  - id: chapters
-    contents: "book-chapters/*/index.qmd"
-    sort: "date desc"
-    template: ../html/research/listing.ejs
-    categories: true
-  - id: dissertation
-    contents: "dissertation/*/index.qmd"
-    sort: "date desc"
-    template: ../html/research/listing.ejs
-    categories: true
-  - id: working
-    contents: "working-papers/*/index.qmd"
-    sort: "date desc"
-    template: ../html/research/listing.ejs
-    categories: true
+    categories: unnumbered
 page-layout: full
 include-back-link: false
 toc-location: right
 ---
 
-I do applied psychological research in communities and workplaces.
-
-My research is dedicated to advancing the psychological science and practice of conflict resolution to address interconnected crises facing American communities in the 21st century.
-
-My work has been published in Psychology journals such as *Aggression and Violent Behavior*, *Traumatology,* and *Military Psychology,* as well as community-focused journals like the *Journal of Community Engagement and Scholarship*.
-
-Currently, I am a Senior Research Associate for the [Center for the Advancement of Military and Emergency Services Research (AMES)](https://www.kennesaw.edu/research/centers-facilities/ames-center/index.php) at [Kennesaw State University](kennesaw.edu).
-
-## Journal articles
-
-::: {#articles}
-:::
-
-## Book and Film Reviews
-
-::: {#reviews}
-:::
-
-## Book Chapters
-
-::: {#chapters}
-:::
-
-## Dissertation
-
-::: {#dissertation}
-:::
-
-## Working Papers
-
-::: {#working}
+::: {#research}
 :::

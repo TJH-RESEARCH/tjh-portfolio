@@ -1,0 +1,38 @@
+---
+title: "An evaluation of the impact of social determinants of health in military reservists"
+author:
+  - name: Brian A. Moore
+    orcid: 0000-0003-0273-7236
+    affiliation: AMES Research Center, Kennesaw State University
+  - name: Chris Hess
+    #orcid: 0000-0003-0273-7236
+    affiliation: AMES Research Center, Kennesaw State University
+  - name: Kimberly Gomes
+    #orcid: 0000-0003-0273-7236
+    #affiliation: AMES Research Center, Kennesaw State University
+  - name: Tyler L. Collette
+    affiliation: AMES Research Center, Kennesaw State University
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+    affiliation: AMES Research Center, Kennesaw State University
+  - name: Kristin A. Horan
+    affiliation: AMES Research Center, Kennesaw State University
+  - name: Bianca Channer
+    affiliation: AMES Research Center, Kennesaw State University
+  - name: Katherine E. Moore
+    affiliation: AMES Research Center, Kennesaw State University
+  - name: Patricia Ross
+    affiliation: Georgia Department of Veterans Services
+  - name: Israel Sánchez-Cardona
+    affiliation: AMES Research Center, Kennesaw State University
+type: "Journal Article"
+categories:
+  - Health
+toc: false
+---
+
+## Abstract
+
+## Citation
+
+Moore, B. A., Hess, C., Gomes, K. D., Collette, T. L., Horan, K., Channer, B., **Hodges, T.J.**, Moore, K. E., Ross, P. M., & Sanchez-Cardona, I. (2025). An Evaluation of the Impact of Social Determinants of Health in Military Reservists. *Military Psychology*.

@@ -1,0 +1,23 @@
+---
+title: "Constructive conflict management for suicide prevention"
+date: 2022-09-01
+author:
+  - name: Thomas J. Hodges
+    orcid: 0000-0002-5184-7346
+    affiliation: School of Conflict Management, Peacebuilding and Development, Kennesaw State University
+type: "Presentation"
+categories:
+  - Conflict Resolution
+  - Health
+toc: false
+---
+
+Conflict resolution is valuable in its own right — it improves people's lives, their work, families, and societies. But it can also be harnessed to address health. One area this is possible is suicide prevention. There are at least 3 ways that is possible.
+
+On one hand, conflict is stressful, and the productive resolution of conflict can improve people's lives, reducing stress.
+
+Additionally, interpersonal conflicts -– arguments, fights, and disputes — are a common trigger that can lead to suicide attempts. I've seen that through my work on \[Georgia's Suicide Mortality Review Committee\]().
+
+Finally, there are conflicts around suicide prevention efforts. For example, "lethal means safety" — putting time and space between you and things that can kill you — can be controversial, especially when it comes to guns. Health workers, therapists, counselors, and concerned family members need to be able to have these difficult conversations, taking into account other people's concerns while also standing up for what's right. That's conflict resolution.
+
+I laid out these benefits at the [Let's Connect Summit 2025]() for an audience of health workers. You can read more about the ways that conflict can improve health in one of my articles, like [this one](/research/2022-avp/index.qmd) or [this one](/research/ames-conflict-training/index.qmd) .
