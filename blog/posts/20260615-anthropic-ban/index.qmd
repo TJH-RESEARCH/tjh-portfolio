@@ -1,0 +1,24 @@
+  ---
+title: "The Anthropic Ban and Economic Statecraft"
+description: "Maybe it's a good idea, but it's not the policy coordination the US needs."
+author:
+  - name: Thomas Hodges
+    orcid: 0000-0002-5184-7346
+date: 2026-06-15
+categories: 
+  - Economic Statecraft
+# citation: 
+#   url: https://thomasjhodges.com/posts/blog/20260615-anthropic-ban/
+#image: 
+draft: true
+---
+
+The White House just [banned Anthropic from letting foreign nationals use its newest AI models](https://www.nytimes.com/2026/06/12/technology/anthropic-mythos-fable5-blocked.html?smid=nytcore-ios-share). It’s the administration’s latest instance of “economic statecraft” — attempts to improve national security by influencing economic actors.
+
+This administration has been active in economic statecraft, including its use of tariffs and government investments in critical minerals. About one quarter of its executive orders deal with ways that economic tools can be used to improve national security. In percentages, that’s only slightly higher than the Biden, Trump I, and Obama administrations, but in absolute terms it’s about 4x as many given how much this administration relies on executive orders.
+
+The reliance on executive orders is one of the shortcomings of this administration's economic statecraft: executive orders are not the same as legislation. The administration hasn’t focused on [legislation that would improve the government’s ability to defend against adversarial economic statecraft](https://warontherocks.com/sun-tzu-in-the-supply-chain-the-new-face-of-economic-war-with-china/), let alone use economic tools for strategic advantage.
+
+Coordination is needed. There are [hundreds of economic policy authorities that can be used](https://warontherocks.com/economic-statecraft-and-the-federal-institutional-architecture/), mostly across four Departments (State, Defense, Treasury, and Commerce), and these are divided among dozens of agencies and offices. Besides the White House, no office exists to coordinate these tools or assemble intelligence on adversarial economic statecraft. Besides coordinating government tools, such an office could also [work with companies](https://warontherocks.com/fighting-an-economic-war-without-fused-intelligence/) to share intelligence and learn about ways that adversaries are influencing markets and US businesses.
+
+If you want to read more about the problems facing US economic statecraft, the national security website [War on the Rocks](https://warontherocks.com) is running a [series on the topic](https://warontherocks.com/category/special-series/war-by-other-ledgers/) in partnership with the [Potomac Institute for Policy Studies](https://potomacinstitute.org).

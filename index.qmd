@@ -8,15 +8,15 @@ format:
     toc: false
 ---
 
-::::::::::::::::::::::::::::::::::::::::::::: landing-container
+::::::::::::::::::::::::::::::::::::::: landing-container
 ```{=html}
 <!-- 
 Hero panel: The Hook
 -->
 ```
 
-:::::::: {.landing-panel .panel-light}
-::::::: panel-content
+::::::: {.landing-panel .panel-light}
+:::::: panel-content
 ::: hero-title
 In an era of systemic disruption
 :::
@@ -28,16 +28,12 @@ How do institutions respond to conflict, mistrust, and uncertainty?
 ::: hero-panel-content
 Across business and the public sector, the ground is shifting under our feet. We can no longer count on cohesive societies, trust in authority, or a stable rules-based order. The old models of science, health, and government no longer fit the problems they face. Going back is not an option, but neither is abandoning hope that we can build cohesion, trust, and shared understanding.
 
-My name is Thomas J. Hodges. My research addresses emerging challenges through open science, interdisciplinarity, and enagement with communities, businesses, and government. 
-
+My name is Thomas J. Hodges. My research addresses emerging challenges through open science, interdisciplinarity, and enagement with communities, businesses, and government.
 :::
 
-[About](/#about){.btn .btn-outline-primary}
-[Research](/#research){.btn .btn-outline-primary}
-[Contact](/#contact){.btn .btn-outline-primary}
-[Blog](/blog/index.qmd){.btn .btn-outline-primary}
+[About](/#about){.btn .btn-outline-primary} [Research](/#research){.btn .btn-outline-primary} [Contact](/#contact){.btn .btn-outline-primary} [Blog](/blog/index.qmd){.btn .btn-outline-primary}
+::::::
 :::::::
-::::::::
 
 ```{=html}
 <!-- 
@@ -45,7 +41,7 @@ About Me
 -->
 ```
 
-:::::::: {.landing-panel .panel-muted #about}
+:::::::: {#about .landing-panel .panel-muted}
 ::::::: {.panel-content .panel-two-column}
 ::::: panel-text
 ::: research-panel-title
@@ -61,9 +57,7 @@ During my PhD studies, I helped found the AMES Research Center to address the me
 
 My work has been published in journals such as *Peace and Conflict*, *Aggression and Violent Behavior*, *Traumatology*, *Military Psychology*, *Peace Chronicle*, and the *Journal of Community Engagement and Scholarship*.
 
-
-[My CV](files/curriculum-vitae.pdf){.btn .btn-outline-primary}
-[Resources for Students](blog/#category=Resources%20for%20Students){.btn .btn-outline-primary}
+[My CV](files/curriculum-vitae.pdf){.btn .btn-outline-primary} [Resources for Students](blog/#category=Resources%20for%20Students){.btn .btn-outline-primary}
 :::
 :::::
 
@@ -73,24 +67,23 @@ My work has been published in journals such as *Peace and Conflict*, *Aggression
 :::::::
 ::::::::
 
-
 ```{=html}
 <!-- 
 MY RESEARCH
 -->
 ```
 
-:::::::: {.landing-panel .panel-accent #research}
+::::::: {#research .landing-panel .panel-accent}
 ::: eyebrow
 Research
 :::
 
-:::::: panel-content
+::::: panel-content
 ::: research-panel-title
 My Research
 :::
 
-:::: research-panel-content
+::: research-panel-content
 My research examines ways that institutions respond to conflict, mistrust, and uncertainty in an era of systemic disruption.
 
 I focus on three areas:
@@ -99,24 +92,24 @@ I focus on three areas:
 
 2.  [Conflict and Risk in the Era of Economic Statecraft](/#economic-statecraft)
 
-3.  [Academic Vocation amid Mistrust, Anti-Intellectualism, and Technological Change](/#bayes)
+3.  [Academic Vocation in the Dark Enlightenment](/#bayes)
 
 While these are different subjects, each area addresses the emerging challenges of the 21st century. Whether it is health, business, or academia, the old models that relied on trust, stability, and authority have broken down. Mistrust of healthcare is rampant; the rules-based order of globalization has given way to competition; and academia is under attack from critics who espouse anti-intellectualism.
 
-The problem is, there were serious issues with the old ways of doing things: Healthcare prioritizes profits over people and discriminates against people based on their gender, race, and other characteristics. The liberal order has not ended global inequality, and its rules always have an exception for the US and allies. Academia has been insular, corrupted by numbers games, and implicated in the unaffordability of higher education.  
+The problem is, there were serious issues with the old ways of doing things: Healthcare prioritizes profits over people and discriminates against people based on their gender, race, and other characteristics. The liberal order has not ended global inequality, and its rules always have an exception for the US and allies. Academia has been insular, corrupted by numbers games, and implicated in the unaffordability of higher education.
 
 In all of these areas, the response to critics has been condescension: "You just don't get it. Leave it to us, the experts, doctors, policymakers, and professors. We know there are problems, but this is better than the alternative." The result has been mistrust. Some of that mistrust is exacerbated by cynical political entrepreneurs and enabled by new media. But a lot of that mistrust has been earned by institutions failing to address their problems, all while the representatives of those institutions patronize people who point out issues.
 
-Conflict resolution is part of a solution to these issues. It can be harnessed to bring together the different interests and worldviews; to help people build coalitions that can address problems and take on the self-interested spoilers who have capitalized on conflict without themselves addressing the problems. 
+Conflict resolution is part of a solution to these issues. It can be harnessed to bring together the different interests and worldviews; to help people build coalitions that can address problems and take on the self-interested spoilers who have capitalized on conflict without themselves addressing the problems.
 
 My research is about understanding the conflict dynamics across these institutions, and applying that understanding to build trust and solve problems in communities and organizations.
 
-Scroll to see more about my research in each of these areas. 
+Scroll to see more about my research in each of these areas.
 
 [See all of my articles, presentations, and projects](/research/){.btn .btn-outline-primary}
-::::
-::::::
-::::::::
+:::
+:::::
+:::::::
 
 ```{=html}
 <!-- 
@@ -124,7 +117,7 @@ RESEARCH PANEL 1
 -->
 ```
 
-::::::: {.landing-panel .panel-muted #health}
+::::::: {#health .landing-panel .panel-muted}
 ::: eyebrow
 Research
 :::
@@ -137,14 +130,13 @@ Conflict, Trust, and American Health
 ::: research-panel-content
 In the United States, healthy skepticism of medicine has turned to unhealthy mistrust. The rise of the Make American Healthy Again (MAHA) movement has drawn on conspiracy theories to undermine public health institutions. Yet underlying MAHA's concerns are real issues with American health: a history of bias, worsening health among children, and a healthcare system that enriches insurers and pharmaceutical companies at the expense of patients.
 
-While conspiracy theories will not solve the real issues, the energy to “do something” exists. Conflict resolution has a pivotal role to play, helping channel energy toward rebuilding trust, changing how patients and providers relate to each other, and ultimately reforming the deeper issues with the American health system. 
+While conspiracy theories will not solve the real issues, the energy to “do something” exists. Conflict resolution has a pivotal role to play, helping channel energy toward rebuilding trust, changing how patients and providers relate to each other, and ultimately reforming the deeper issues with the American health system.
 
 My research examines medical mistrust from a conflict resolution perspective. It develops and evaluates interventions to address medical mistrust that are rooted in conflict resolution processes.
 
-This research agenda builds on my prior studies of mistrust, stigma, and mental health, as well as applied conflict interventions with communities.  
+This research agenda builds on my prior studies of mistrust, stigma, and mental health, as well as applied conflict interventions with communities.
 
-[Read more about this research agenda](/research/health-agenda/index.qmd){.btn .btn-outline-primary}
-[See my related research](/research/#category=Health){.btn .btn-outline-primary}
+[Read more about this research agenda](/research/health-agenda/index.qmd){.btn .btn-outline-primary} [See my related research](/research/#category=Health){.btn .btn-outline-primary}
 :::
 :::::
 :::::::
@@ -155,7 +147,7 @@ RESEARCH PANEL 2
 -->
 ```
 
-::::::: {.landing-panel .panel-light #economic-statecraft}
+::::::: {#economic-statecraft .landing-panel .panel-light}
 ::: eyebrow
 Research
 :::
@@ -168,8 +160,7 @@ Conflict and Risk in the Era of Economic Statecraft
 ::: research-panel-content
 A research agenda on how geopolitical competition, sanctions, supply chains, industrial policy, and economic statecraft shape organizational and strategic risk.
 
-[Read more about this research agenda](/research/economic-statecraft-agenda/index.qmd){.btn .btn-outline-primary}
-[See my related research](/research/#category=Economic%20Statecraft){.btn .btn-outline-primary}
+[Read more about this research agenda](/research/economic-statecraft-agenda/index.qmd){.btn .btn-outline-primary} [See my related research](/research/#category=Economic%20Statecraft){.btn .btn-outline-primary}
 :::
 :::::
 :::::::
@@ -180,22 +171,20 @@ NEW PANEL
 -->
 ```
 
-::::::: {.landing-panel .panel-muted #bayes}
+::::::: {#bayes .landing-panel .panel-muted}
 ::: eyebrow
 Research
 :::
 
 ::::: panel-content
 ::: research-panel-title
-Quantitative Conflict Research
+Academic Vocation in the Dark Enlightenment
 :::
 
 ::: research-panel-content
-An introductory textbook on Bayesian analysis for peace and conflict doctoral students. More than stats, I focus on developing scholars with a sense of vocation, an ethics of transparency, and an ability to change the academy for the better.
+What is the purpose of academia in an age of mistrust, democratic decline, and emerging technologies like AI that can give you instant answers? The dark enlightenment is one way of summing the multiple external challenges to academia, but academia also has internal challenges: unpaid labor, a lack of transparency, and misuse of statistics are just the start. This part of my research is focused on helping junior academics navigate these challenges; helping them chart a better path, one that is authentic to themselves and helps them confront the numerous internal and external challenges to academic vocation in these strange times. 
 
-[Read more about this project](/research/bayesian-textbook/index.qmd){.btn .btn-outline-primary}
-[See my related research](/research/){.btn .btn-outline-primary}
-[Read the first chapter](files/bayesian-textbook-chapter-1.pdf){.btn .btn-outline-primary} 
+[Read more about my textbook](/research/bayesian-textbook/index.qmd){.btn .btn-outline-primary} [See my related research](/research/){.btn .btn-outline-primary}
 :::
 :::::
 :::::::
@@ -206,17 +195,16 @@ CONTACT INFO
 -->
 ```
 
-:::::: {.landing-panel .panel-light #contact}
-::::: panel-content
+::::::: {#contact .landing-panel .panel-light}
+:::::: panel-content
 ::: research-panel-title
 Contact
 :::
 
-::: research-panel-content
-If you have questions, comments, or ideas about my research, I want to talk to you. Feel free to send me an email or connect on social media. 
+:::: research-panel-content
+If you have questions, comments, or ideas about my research, I want to talk to you. Feel free to send me an email or connect on social media.
 
-::: {.contact-buttons}
-
+::: contact-buttons
 [{{< iconify bi envelope size=1.2em title="E-mail" >}} E-mail](mailto:tommyjhodges@gmail.com){.contact-button}
 
 [{{< iconify bi github size=1.2em title="GitHub" >}} GitHub](https://github.com/TJH-RESEARCH){.contact-button rel="me"}
@@ -228,16 +216,14 @@ If you have questions, comments, or ideas about my research, I want to talk to y
 [{{< ai google-scholar size=1.2em title="Google Scholar" >}} Google Scholar](https://scholar.google.com/citations?hl=en&authuser=3&user=wG3FltQAAAAJ){.contact-button rel="me"}
 
 [{{< ai orcid size=1.2em title="ORCID" >}} ORCID](https://orcid.org/0000-0002-5184-7346){.contact-button rel="me"}
-
 :::
-
-:::
-:::::
+::::
 ::::::
+:::::::
 
 ```{=html}
 <!-- 
 END .landing-container
 -->
 ```
-:::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::
