@@ -1,0 +1,24 @@
+---
+title: "Presentation Resources"
+description: "We all hate public speaking, at first. You need to practice, and it helps to have an idea about what makes presentations good and bad."
+# author:
+#   - name: Thomas Hodges
+#     orcid: 0000-0002-5184-7346
+# date: 2026-06-11
+categories: 
+  - Resources for Students
+#citation: 
+#  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
+#image: 
+draft: false
+---
+
+Here are some resources to guide you in presentations:
+
+
+1. [How to Speak, by Patrick Winston](https://youtu.be/Unzc731iCUY?si=Y39YVjsGq8tAZsti). The legendary MIT professor gives a lecture on how to lecture. Lots of good advice here. 
+
+2. [How to avoid death by PowerPoint](https://youtu.be/Iwpi1Lm6dFo?si=UGcjCj569JZDndrA). You have seen terrible presentation slides before. You will see them again. Hell, you have likely made horrible slides. If nothing changes, you will make them again. This lecture gives practical guidance on how to make better slides and improve your presentations. 
+
+3. [Ugly sketches](https://youtu.be/Iwpi1Lm6dFo?si=TD8U05YFE-2-JULr). Sometimes a whiteboard and metaphor are all you need. This talk is about how to use ugly sketches to engage your audience in a conversation. 
+
